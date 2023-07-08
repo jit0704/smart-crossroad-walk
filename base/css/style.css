@@ -1,5 +1,7 @@
 @charset "UTF-8";
-/* reset */
+/*---------------------------------------------------------------
+  [Reset]
+-----------------------------------------------------------------*/
 html,
 body {
   font-size: 10px;
@@ -19,7 +21,27 @@ h5 {
   font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
-button,
+em,
+i {
+  font-style: normal;
+}
+
+table tbody {
+  vertical-align: top;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  background: transparent;
+  cursor: pointer;
+}
+
 input,
 optgroup,
 select,
@@ -82,10 +104,244 @@ textarea {
   font-display: swap;
   src: local("Pretendard Thin"), url("/base/font/Pretendard-Thin.woff2") format("woff2");
 }
+/*---------------------------------------------------------------
+  [overwrite style]
+  - menu
+-----------------------------------------------------------------*/
 .ui {
   font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif !important;
 }
+.ui.segment {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0;
+}
+.ui.menu {
+  margin: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0;
+  border: 0;
+}
+.ui.menu.vertical {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.ui.menu.vertical .item:hover {
+  color: #ffe298;
+}
+.ui.menu.vertical .dropdown.item:hover .dropdown.icon::before {
+  background: url("/base/images/arr_down_yellow.png") no-repeat 50% 50% !important;
+  background-size: 1.3rem 0.7rem !important;
+}
+.ui.menu.vertical .dropdown.item.active:hover {
+  color: #ffe298;
+}
+.ui.menu.vertical .dropdown.item.active:hover .dropdown.icon::before {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.ui.menu.vertical .dropdown.item:active {
+  color: #ffe298;
+}
+.ui.menu.vertical .dropdown.item > .dropdown.icon {
+  width: auto;
+  height: auto;
+  margin: 0 0 0 auto;
+}
+.ui.menu.vertical .dropdown.item > .dropdown.icon::before {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 2.5rem;
+  background: url("/base/images/arr_down_white.png") no-repeat 50% 50% !important;
+  background-size: 1.3rem 0.7rem !important;
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
+}
 
+/*---------------------------------------------------------------
+  [component]
+  - 브레드크럼
+  - 버튼
+  - 셀렉트박스
+  - 필터
+-----------------------------------------------------------------*/
+.ui.breadcrumb {
+  display: block;
+  font-size: 1.4rem;
+}
+.ui.breadcrumb .icon.home {
+  font-size: 1.7rem;
+  color: #adadad;
+}
+.ui.breadcrumb .icon.divider {
+  opacity: 1;
+  color: #adadad;
+  font-size: 1.4rem;
+}
+.ui.breadcrumb .section,
+.ui.breadcrumb .section.active {
+  color: #adadad;
+  font-weight: 400;
+}
+.ui.button {
+  font-size: 1.8rem;
+}
+.ui.button.basic.primary {
+  height: auto;
+  line-height: 3rem;
+  margin: 0;
+  padding: 0 1.6rem;
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  font-weight: 500;
+  color: #fff !important;
+  background: #1e5f8d !important;
+}
+.ui.button.basic.primary.rounded {
+  border-radius: 6px;
+}
+.ui.button.basic.primary:hover, .ui.button.basic.primary:focus, .ui.button.basic.primary:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #fff !important;
+  background: #1e5f8d !important;
+}
+.ui.button.basic.secondary {
+  width: auto;
+  height: auto;
+  line-height: 3.1rem;
+  padding: 0 1.4rem;
+  font-weight: 600;
+  color: #1e5f8d !important;
+  border: 1px solid #1e5f8d !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+.ui.button.basic.secondary.rounded {
+  border-radius: 6px;
+}
+.ui.button.basic.secondary:hover, .ui.button.basic.secondary:focus, .ui.button.basic.secondary:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+.ui.buttons.basic {
+  border: 0;
+}
+.ui.buttons.basic .button {
+  font-size: 1.8rem;
+}
+.ui.search.dropdown {
+  height: 3rem;
+  padding: 0.4rem 0 0.4rem 0.6rem;
+  border: 0;
+  font-size: 1.8rem;
+  color: #1e5f8d;
+}
+.label-dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 1.2rem;
+}
+.label-dropdown > em {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e5f8d;
+}
+
+.s-dropdown-wrap {
+  padding-right: 0.6rem;
+  border: 1px solid #e0e0e0;
+}
+
+.ui.basic.table thead th {
+  padding: 0;
+  background: #ebf8ff;
+}
+
+/* 필터 */
+.filter-grouop .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 0 1.8rem;
+}
+.filter-grouop .label-dropdown {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+/* 기능 버튼 그룹 */
+.button-function-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.button-function-group .ui.buttons {
+  gap: 0 4px;
+}
+.button-function-group .ui.secondary.button {
+  min-width: 8rem;
+}
+
+/* 데이터 테이블 */
+.data-tbl-very {
+  height: 61.6rem;
+}
+
+/*---------------------------------------------------------------
+  [공통]
+-----------------------------------------------------------------*/
 /* 레이아웃 */
 .wrapper {
   min-height: 100%;
@@ -112,20 +368,36 @@ textarea {
 }
 .ly-map {
   width: 100%;
-  height: 940px;
+  height: 94rem;
+  margin-left: 5.4rem;
 }
 .ly-map.temp-map {
   width: 100%;
-  height: 940px;
+  height: 94rem;
   background-image: url("/base/images/temp/map.png");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
 }
+.ly-sub {
+  width: 100%;
+  height: 94rem;
+  margin-left: 5.4rem;
+  padding: 0 6rem;
+}
+.ly-setting .ui.breadcrumb {
+  padding: 3.6rem 0 3.5rem;
+}
+.ly-setting .filter-grouop {
+  margin-bottom: 3.7rem;
+}
+.ly-setting .button-function-group {
+  margin-bottom: 1.3rem;
+}
 .ly-copyright {
   width: 100%;
-  height: 20px;
-  line-height: 20px;
+  height: 2rem;
+  line-height: 2rem;
   text-align: center;
   border-top: 1px solid #b8b8b8;
   background: #e7e7e7;
@@ -134,9 +406,194 @@ textarea {
 
 /* GNB */
 .gnb {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
-  bottom: 0;
-  width: 180px;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  overflow: hidden;
+  width: 5.4rem;
+  height: calc(100% - 2rem);
+  background: #1e5f8d;
+}
+.gnb:hover {
+  overflow: visible;
+  width: 18rem;
+}
+.gnb:hover > h1 {
+  overflow: auto;
+  width: 12.2rem;
+  height: auto;
+  background: none;
+}
+.gnb:hover > h1 img {
+  display: block;
+}
+.gnb:hover .ui.menu {
+  width: 100%;
+}
+.gnb > h1 {
+  overflow: hidden;
+  margin: 3.3rem 0 0 1.3rem;
+  width: 2.8rem;
+  height: 2.9rem;
+  background-image: url("/base/images/logo.png");
+  background-repeat: no-repeat;
+  background-position: 1px 0;
+  background-size: cover;
+}
+.gnb > h1 img {
+  display: none;
+}
+.gnb .ui.menu {
+  width: 18rem;
+  margin-top: 1.9rem;
+  background: transparent;
+  font-size: 1.6rem;
+}
+.gnb .ui.menu > .dropdown {
+  font-size: 1.6rem;
+}
+.gnb .ui.menu > .dropdown.upward2 > .menu {
+  position: fixed;
+  top: auto !important;
+  bottom: 2rem;
+  left: 18rem;
+}
+.gnb .ui.menu > .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 4.5rem;
+  padding: 0 0 0 1.6rem;
+  color: #fff;
+  letter-spacing: -0.07rem;
+}
+.gnb .ui.menu > .item::before {
+  position: static;
+  width: auto;
+  height: auto;
+  margin-right: 1.6rem;
+  background: none;
+}
+.gnb .ui.menu > .item .dropdown.icon {
+  float: none;
+  margin-left: auto;
+}
+.gnb .ui.menu > .item.link-dashboard::before {
+  content: "";
+  display: block;
+  width: 2.2rem;
+  height: 1.8rem;
+  background-image: url("/base/images/icon_home.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  display: block !important;
+}
+.gnb .ui.menu > .item.link-dashboard:hover::before {
+  background-image: url(/base/images/icon_home_yellow.png);
+}
+.gnb .ui.menu > .item.link-map::before {
+  content: "";
+  display: block;
+  width: 2.2rem;
+  height: 2.1rem;
+  background-image: url("/base/images/icon_map.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.gnb .ui.menu > .item.link-map:hover::before {
+  background-image: url(/base/images/icon_map_yellow.png);
+}
+.gnb .ui.menu > .item.link-set::before {
+  content: "";
+  display: block;
+  width: 2.1rem;
+  height: 2.1rem;
+  background-image: url("/base/images/icon_set.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.gnb .ui.menu > .item.link-set:hover::before {
+  background-image: url(/base/images/icon_set_yellow.png);
+}
+.gnb .ui.menu > .item.link-search::before {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-image: url("/base/images/icon_search.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  margin-right: 1.3rem;
+}
+.gnb .ui.menu > .item.link-search:hover::before {
+  background-image: url(/base/images/icon_search_yellow.png);
+}
+.gnb .ui.menu > .item.link-crossroad {
+  padding-left: 1.3rem;
+}
+.gnb .ui.menu > .item.link-crossroad::before {
+  content: "";
+  display: block;
+  width: 2.7rem;
+  height: 2rem;
+  background-image: url("/base/images/icon_crossroad.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  margin-right: 1.3rem;
+}
+.gnb .ui.menu > .item.link-crossroad:hover::before {
+  background-image: url(/base/images/icon_crossroad_yellow.png);
+}
+.gnb .ui.menu > .item.link-crosswalk {
+  padding-left: 1.3rem;
+}
+.gnb .ui.menu > .item.link-crosswalk::before {
+  content: "";
+  display: block;
+  width: 2.7rem;
+  height: 2rem;
+  background-image: url("/base/images/icon_crosswalk.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  margin-right: 1.3rem;
+}
+.gnb .ui.menu > .item.link-crosswalk:hover::before {
+  background-image: url(/base/images/icon_crosswalk_yellow.png);
+}
+.gnb .aside {
+  margin-top: auto;
 }
