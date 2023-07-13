@@ -4,13 +4,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>구역설정</title>
-    <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
     <!-- includeHTML.js : 퍼블리싱 확인용 include -->
-    <script type="text/javascript" src="/base/js/common/includeHTML.js"></script>
-    <script type="text/javascript" src="/base/js/common/ui.js"></script>
-    <link rel="stylesheet" type="text/css" href="/base/css/common.css" />
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" href="/base/css/common.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -187,15 +188,15 @@
               <div class="inner">
                 <div class="ui segment label-dropdown">
                   <em>행정구역</em>
-                  <div class="s-dropdown-wrap">
-                    <select class="ui search dropdown">
-                      <option value="전체">전체</option>
-                      <option value="아이템1">아이템1</option>
+                  <div class="selectbox-wrap primary">
+                    <select>
+                      <option value="">전체</option>
+                      <option value="">아이템1</option>
                       <option value="">아이템2</option>
                       <option value="">아이템3</option>
                     </select>
                   </div>
-                  <!-- //s-dropdown-wrap -->
+                  <!-- //selectbox-wrap -->
                 </div>
                 <!-- //segment -->
                 <button class="ui primary basic button">검색</button>
@@ -223,7 +224,12 @@
               <table class="ui very basic table">
                 <thead>
                   <tr>
-                    <th></th>
+                    <th>
+                      <div class="ui checkbox primary-chkbox txt-none c-navy">
+                        <input type="checkbox" />
+                        <label></label>
+                      </div>
+                    </th>
                     <th>No</th>
                     <th>행정구역</th>
                     <th>시군구</th>
@@ -237,7 +243,12 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td></td>
+                    <td>
+                      <div class="ui checkbox primary-chkbox txt-none c-bluesky">
+                        <input type="checkbox" />
+                        <label></label>
+                      </div>
+                    </td>
                     <td>1</td>
                     <td>서울특별시</td>
                     <td>종로구</td>
@@ -245,7 +256,34 @@
                     <td>37.477980</td>
                     <td>126.881465</td>
                     <td>15</td>
-                    <td></td>
+                    <td>
+                      <div class="ui checkbox primary-chkbox txt-none c-bluesky">
+                        <input type="checkbox" />
+                        <label></label>
+                      </div>
+                    </td>
+                    <td>2021-06-07 12:31:33</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ui checkbox primary-chkbox txt-none c-bluesky">
+                        <input type="checkbox" />
+                        <label></label>
+                      </div>
+                    </td>
+                    <td>1</td>
+                    <td>서울특별시</td>
+                    <td>종로구</td>
+                    <td>서울시 종로구</td>
+                    <td>37.477980</td>
+                    <td>126.881465</td>
+                    <td>15</td>
+                    <td>
+                      <div class="ui checkbox primary-chkbox txt-none c-bluesky">
+                        <input type="checkbox" />
+                        <label></label>
+                      </div>
+                    </td>
                     <td>2021-06-07 12:31:33</td>
                   </tr>
                 </tbody>
@@ -254,9 +292,9 @@
             <!-- //data-tbl-very -->
 
             <div class="paging-group">
-              <div class="ui basic buttons">
-                <i class="angle double left icon"></i>
-                <i class="angle left icon"></i>
+              <div class="btn-prev-angle">
+                <button type="button"><span class="screen-out">맨앞</span></button>
+                <button type="button"><span class="screen-out">이전</span></button>
               </div>
               <a href="#">1</a>
               <a href="#">2</a>
@@ -268,10 +306,18 @@
               <a href="#">7</a>
               <a href="#">8</a>
               <a href="#">10</a>
-              <div class="ui basic buttons">
-                <i class="angle double right icon"></i>
-                <i class="angle right icon"></i>
+              <div class="btn-next-angle">
+                <button type="button"><span class="screen-out">다음</span></button>
+                <button type="button"><span class="screen-out">맨끝</span></button>
               </div>
+              <div class="selectbox-wrap primary">
+                <select>
+                  <option value="">20</option>
+                  <option value="">30</option>
+                  <option value="">40</option>
+                </select>
+              </div>
+              <!-- //selectbox-wrap -->
             </div>
             <!-- //paging-group -->
           </div>
@@ -285,62 +331,5 @@
       <!-- //ly-container -->
     </div>
     <!-- //wrapper -->
-    <script>
-      const $dropdownEl = $('.gnb .ui.dropdown');
-      let isAccordionState = false; // 1depth가 자식요소로 accordion 메뉴를 포함하고 있는지 상태 체크
-
-      // 스크롤 유무 체크 커스텀 프로퍼티
-      $.fn.hasScrollBar = function () {
-        return (this.prop('scrollHeight') == 0 && this.prop('clientHeight') == 0) || this.prop('scrollHeight') > this.prop('clientHeight');
-      };
-
-      // 1depth 메뉴의 하위 메뉴 initialize
-      $dropdownEl.dropdown({
-        onShow: function () {},
-        onHide: function () {
-          if ($(this).find('.ui.accordion').length !== 0) {
-            return isAccordionState;
-          } else {
-            return true;
-          }
-        },
-      });
-
-      // 2depth 아코디언메뉴 initialize
-      $('.ui.accordion').accordion();
-
-      // 2depth 아코디언메뉴 클릭시 아코디언메뉴 높이값 실시간 체크하여 하단에 닿으면 기준점을 bottom으로 변경
-      $('.ui.accordion').on('click', function () {
-        const $this = $(this);
-        setTimeout(function () {
-          if ($('body').hasScrollBar()) {
-            $this.closest('.ui.dropdown').addClass('upward2');
-          } else {
-            $this.closest('.ui.dropdown').removeClass('upward2');
-          }
-        }, 250);
-      });
-
-      // 1depth 메뉴 클릭시 isAccordionState의 side effect 처리
-      $dropdownEl.on('click', function () {
-        isAccordionState = true;
-        setTimeout(function () {
-          isAccordionState = false;
-        }, 250);
-      });
-
-      // 아코디언메뉴 클릭시 isAccordionState의 side effect 처리
-      $('.gnb .ui.dropdown > .menu').on('mouseleave', function () {
-        isAccordionState = true;
-        if ($(this).parent().is('.active')) {
-          $(this).parent().trigger('click');
-          setTimeout(function () {
-            isAccordionState = false;
-            $('.ui.accordion').accordion('close', 0);
-            $dropdownEl.removeClass('upward2'); //upward2 클래스 제거
-          }, 250);
-        }
-      });
-    </script>
   </body>
 </html>
