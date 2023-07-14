@@ -821,7 +821,7 @@ textarea {
 
 /* GNB */
 .gnb {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   z-index: 10;
@@ -1041,7 +1041,6 @@ textarea {
 @media screen and (max-height: 959px) {
   /* gnb : 높이 값 조정 */
   .gnb {
-    position: fixed;
     height: 100%;
   }
 }

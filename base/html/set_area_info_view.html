@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/base/css/common.css" />
   </head>
   <body>
+    <!-- 구역정보 상세 팝업 -->
     <div id="ex" class="modal">
       <div class="modal-container medium">
         <div class="modal-header">
@@ -66,8 +67,113 @@
         </div>
         <!-- //modal-body -->
         <div class="modal-bottom">
-          <button class="ui primary basic button rounded">수정</button>
-          <button class="ui secondary basic button rounded">목록</button>
+          <!-- 
+            1. 두번째 팝업의 id값을 '수정' a버튼의 href 값에 삽입
+            2. '수정' a버튼에 btn-modal-open 클래스명을 추가
+          -->
+          <a href="#ex2" class="btn-modal-open ui primary basic button rounded">수정</a>
+          <a href="#" rel="modal:close" class="ui secondary basic button rounded">목록</a>
+        </div>
+        <!-- //modal-bottom -->
+      </div>
+      <!-- //modal-container -->
+    </div>
+    <!-- //modal -->
+
+    <!-- 구역정보 수정 팝업 -->
+    <div id="ex2" class="modal">
+      <div class="modal-container medium">
+        <div class="modal-header">
+          <span class="tit">구역 정보</span>
+        </div>
+        <!-- //modal-header -->
+        <div class="modal-body">
+          <div class="data-tbl">
+            <table>
+              <colgroup>
+                <col style="width: 20%" />
+                <col style="width: 30%" />
+                <col style="width: 20%" />
+                <col style="width: 30%" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>행정구역</th>
+                  <td class="pdr-20">
+                    <div class="selectbox-wrap rounded">
+                      <select disabled>
+                        <option value="">서울특별시</option>
+                        <option value="">경기도</option>
+                        <option value="">아이템2</option>
+                        <option value="">아이템3</option>
+                      </select>
+                    </div>
+                  </td>
+                  <th class="pdl-15">시/군/구</th>
+                  <td>
+                    <div class="selectbox-wrap rounded">
+                      <select disabled>
+                        <option value="">종로구</option>
+                        <option value="">--</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>구역 명</th>
+                  <td class="pdr-20">
+                    <div class="ui input rounded">
+                      <input type="text" />
+                    </div>
+                  </td>
+                  <th class="pdl-15">표출 레벨</th>
+                  <td>
+                    <div class="selectbox-wrap rounded">
+                      <select>
+                        <option value="">15</option>
+                        <option value="">16</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>위도</th>
+                  <td class="pdr-20">
+                    <div class="ui input rounded">
+                      <input type="text" />
+                    </div>
+                  </td>
+                  <th class="pdl-15">경도</th>
+                  <td>
+                    <div class="ui input rounded">
+                      <input type="text" />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>제한반경(m)</th>
+                  <td class="pdr-20">
+                    <div class="ui input rounded">
+                      <input type="text" />
+                    </div>
+                  </td>
+                  <th class="pdl-15">기본 구역</th>
+                  <td>
+                    <div class="ui checkbox primary-chkbox txt-none c-bluesky">
+                      <input type="checkbox" />
+                      <label></label>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //data-tbl -->
+        </div>
+        <!-- //modal-body -->
+        <div class="modal-bottom">
+          <a href="#" rel="modal:close" class="ui primary basic button rounded">저장</a>
+          <a href="#" rel="modal:close" class="ui secondary basic button rounded">취소</a>
         </div>
         <!-- //modal-bottom -->
       </div>
@@ -80,7 +186,7 @@
     <script>
       // 퍼블리싱 확인용
       $(function () {
-        $('.btn-modal-open').trigger('click');
+        $('[href="#ex"]').trigger('click');
       });
     </script>
   </body>

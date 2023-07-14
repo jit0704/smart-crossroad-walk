@@ -14,15 +14,6 @@ var cmmnUi = {
     var $dropdownEl = $('.gnb .ui.dropdown');
     var isAccordionState = false; // 1depth가 자식요소로 accordion 메뉴를 포함하고 있는지 상태 체크
 
-    //
-    (function () {
-      if ($winH < 959) {
-        $('.gnb').css('position', 'absolute');
-        $('.gnb').css('height', $(document).height() - 20);
-      }
-      // console.log($doch);
-    })();
-
     // 스크롤 유무 체크 커스텀 프로퍼티
     $.fn.hasScrollBar = function () {
       return (this.prop('scrollHeight') == 0 && this.prop('clientHeight') == 0) || this.prop('scrollHeight') > this.prop('clientHeight');
@@ -46,15 +37,18 @@ var cmmnUi = {
     // 2depth 아코디언메뉴 클릭시 아코디언메뉴 높이값 실시간 체크하여 하단에 닿으면 기준점을 bottom으로 변경
     $('.ui.accordion').on('click', function () {
       var $this = $(this);
-      if ($winH > 959) {
-        setTimeout(function () {
-          if ($('body').hasScrollBar()) {
-            $this.closest('.ui.dropdown').addClass('upward2');
-          } else {
-            $this.closest('.ui.dropdown').removeClass('upward2');
-          }
-        }, 250);
-      }
+      var $winhHalf = $winH / 1.4;
+
+      setTimeout(function () {
+        var $accordionWrap = $this.closest('.menu').outerHeight(true);
+
+        if ($accordionWrap > $winhHalf) {
+          $this.closest('.ui.dropdown').addClass('upward2');
+        } else if ($accordionWrap < $winhHalf) {
+          $this.closest('.ui.dropdown').removeClass('upward2');
+        }
+        console.log($accordionWrap, $winhHalf);
+      }, 400);
     });
 
     // 1depth 메뉴 클릭시 isAccordionState의 side effect 처리
