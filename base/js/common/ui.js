@@ -1,7 +1,13 @@
 // publishing UI javascript
 $(function () {
+  if ($('[include-html]').length !== 0) {
+    includeHTML(); // HTML include (퍼블리싱 확인용)
+  }
+
   // ui 인터렉션 호출
-  cmmnUi.init();
+  setTimeout(function () {
+    cmmnUi.init();
+  }, 10);
 });
 
 var cmmnUi = {
@@ -15,9 +21,9 @@ var cmmnUi = {
     var isAccordionState = false; // 1depth가 자식요소로 accordion 메뉴를 포함하고 있는지 상태 체크
 
     // 스크롤 유무 체크 커스텀 프로퍼티
-    $.fn.hasScrollBar = function () {
-      return (this.prop('scrollHeight') == 0 && this.prop('clientHeight') == 0) || this.prop('scrollHeight') > this.prop('clientHeight');
-    };
+    // $.fn.hasScrollBar = function () {
+    //   return (this.prop('scrollHeight') == 0 && this.prop('clientHeight') == 0) || this.prop('scrollHeight') > this.prop('clientHeight');
+    // };
 
     // 1depth 메뉴의 하위 메뉴 initialize
     $dropdownEl.dropdown({
@@ -47,7 +53,6 @@ var cmmnUi = {
         } else if ($accordionWrap < $winhHalf) {
           $this.closest('.ui.dropdown').removeClass('upward2');
         }
-        console.log($accordionWrap, $winhHalf);
       }, 400);
     });
 

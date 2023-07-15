@@ -186,7 +186,9 @@
     <script>
       // 퍼블리싱 확인용
       $(function () {
-        $('[href="#ex"]').trigger('click');
+        setTimeout(function () {
+          $('[href="#ex"]').trigger('click');
+        }, 20);
       });
     </script>
   </body>
