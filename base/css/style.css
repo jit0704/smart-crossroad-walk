@@ -53,6 +53,17 @@ select {
   cursor: pointer;
 }
 
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  color: #727272;
+  outline: 0;
+  resize: none;
+}
+
 input,
 optgroup,
 select,
@@ -204,6 +215,7 @@ textarea {
   - 버튼
   - 체크박스
   - 셀렉트박스
+  - 레이블 + form 요소
   - 테이블
   - 필터
 -----------------------------------------------------------------*/
@@ -232,10 +244,22 @@ textarea {
   width: 100%;
   font-size: 1.8rem;
 }
+.ui.input input:disabled {
+  border-color: #e8e8e8 !important;
+  background: #f8f8f8;
+  opacity: 1 !important;
+}
+.ui.input.md input {
+  line-height: 3rem;
+  padding: 0;
+  border-radius: 0;
+  border-color: #e0e0e0;
+}
 .ui.input.rounded input {
   padding: 0 1rem;
   line-height: 3.5rem;
   border-radius: 0.5rem;
+  border-color: #e8e8e8;
 }
 .ui.button {
   font-size: 1.8rem;
@@ -334,6 +358,38 @@ textarea {
   color: #1e5f8d;
 }
 
+.label-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 1.2rem;
+}
+.label-input > em {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e5f8d;
+}
+.label-input .input.md {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.label-input .input.md input {
+  width: 12.4rem;
+}
+
 .ui.basic.table {
   line-height: 100%;
 }
@@ -400,6 +456,11 @@ textarea {
 .data-tbl.view table tbody tr:last-child td {
   border-bottom: 0;
 }
+.data-tbl .height-extend {
+  overflow-y: auto;
+  height: 10rem;
+  vertical-align: top;
+}
 
 /* 셀렉트박스 */
 .selectbox-wrap select {
@@ -428,6 +489,7 @@ textarea {
 .selectbox-wrap.rounded select:disabled {
   border-color: #e8e8e8;
   background-color: #f8f8f8;
+  opacity: 1;
 }
 
 /* 페이징 */
@@ -549,7 +611,8 @@ textarea {
   display: inline-flex;
   gap: 0 1.8rem;
 }
-.filter-grouop .label-dropdown {
+.filter-grouop .label-dropdown,
+.filter-grouop .label-input {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
