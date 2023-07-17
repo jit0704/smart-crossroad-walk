@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>도로 관리</title>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <!-- includeHTML.js : 퍼블리싱 확인용 include -->
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" href="/base/css/common.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- GNB -->
+      <nav class="gnb" include-html="/base/html/common/gnb.html"></nav>
+
+      <main class="ly-container">
+        <div class="ly-sub">
+          <div class="ly-setting">
+            <div class="ui breadcrumb">
+              <i class="home icon"></i>
+              <i class="right angle icon divider"></i>
+              <span class="section">교차로</span>
+              <i class="right angle icon divider"></i>
+              <div class="active section">도로관리</div>
+            </div>
+            <!-- //breadcrumb -->
+
+            <section class="filter-grouop">
+              <div class="inner">
+                <div class="ui segment label-dropdown">
+                  <em>구역 명</em>
+                  <div class="selectbox-wrap primary">
+                    <select>
+                      <option value="">전체</option>
+                      <option value="">아이템1</option>
+                      <option value="">아이템2</option>
+                      <option value="">아이템3</option>
+                    </select>
+                  </div>
+                  <!-- //selectbox-wrap -->
+                </div>
+                <!-- //segment -->
+                <div class="ui segment label-dropdown">
+                  <em>지점 명</em>
+                  <div class="selectbox-wrap primary">
+                    <select>
+                      <option value="">전체</option>
+                      <option value="">아이템1</option>
+                      <option value="">아이템2</option>
+                      <option value="">아이템3</option>
+                    </select>
+                  </div>
+                  <!-- //selectbox-wrap -->
+                </div>
+                <!-- //segment -->
+                <button class="ui primary basic button">검색</button>
+              </div>
+              <!-- //inner -->
+            </section>
+            <!-- //filter-grouop -->
+
+            <section class="button-function-group">
+              <div class="left">
+                <div class="ui basic buttons">
+                  <button class="ui secondary basic button rounded">추가</button>
+                  <button class="ui secondary basic button rounded">삭제</button>
+                </div>
+                <!-- //buttons -->
+              </div>
+              <!-- //left -->
+              <div class="right">
+                <button class="ui primary basic button rounded">Excel Down</button>
+              </div>
+            </section>
+            <!-- //button-function-group -->
+
+            <div class="data-tbl-very">
+              <table class="ui very basic table">
+                <colgroup>
+                  <col style="width: 72px" />
+                  <col style="width: 56px" />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="ui checkbox primary-chkbox txt-none c-navy">
+                        <input type="checkbox" />
+                        <label></label>
+                      </div>
+                    </th>
+                    <th>No</th>
+                    <th>구역 명</th>
+                    <th>지점 ID</th>
+                    <th>지점 명</th>
+                    <th>도로 ID</th>
+                    <th>도로 명</th>
+                    <th>방향</th>
+                    <th>방향 명</th>
+                    <th>수정일시</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="ui checkbox primary-chkbox txt-none c-bluesky">
+                        <input type="checkbox" />
+                        <label></label>
+                      </div>
+                    </td>
+                    <td>1</td>
+                    <td>태릉</td>
+                    <td>1001</td>
+                    <td>태릉입구역</td>
+                    <td>100101</td>
+                    <td>동일로</td>
+                    <td>북</td>
+                    <td>서울공릉초등학교 방면</td>
+                    <td>2021-06-07 12:31:33</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ui checkbox primary-chkbox txt-none c-bluesky">
+                        <input type="checkbox" />
+                        <label></label>
+                      </div>
+                    </td>
+                    <td>1</td>
+                    <td>태릉</td>
+                    <td>1001</td>
+                    <td>태릉입구역</td>
+                    <td>100101</td>
+                    <td>동일로</td>
+                    <td>북</td>
+                    <td>서울공릉초등학교 방면</td>
+                    <td>2021-06-07 12:31:33</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //data-tbl-very -->
+
+            <div class="paging-group" include-html="/base/html/common/paging.html"></div>
+            <!-- //paging-group -->
+          </div>
+          <!-- //ly-setting -->
+        </div>
+        <!-- //ly-sub -->
+      </main>
+      <!-- //ly-container -->
+
+      <footer class="ly-copyright c-white" include-html="/base/html/common/footer.html"></footer>
+    </div>
+    <!-- //wrapper -->
+  </body>
+</html>

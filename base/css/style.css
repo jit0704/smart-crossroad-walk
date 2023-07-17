@@ -510,6 +510,7 @@ textarea {
   -ms-flex-line-pack: center;
       align-content: center;
   gap: 0 1rem;
+  margin-top: 2.8rem;
   font-size: 1.8rem;
   font-weight: 300;
 }
@@ -643,10 +644,11 @@ textarea {
   min-width: 8rem;
 }
 
-/* 데이터 테이블 */
+/* 데이터 테이블 목록 */
 .data-tbl-very {
   overflow-y: auto;
   height: 61.6rem;
+  border-bottom: 1px solid #e8e8e8;
 }
 .data-tbl-very thead {
   position: sticky;
