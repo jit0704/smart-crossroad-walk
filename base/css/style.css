@@ -64,6 +64,10 @@ textarea {
   resize: none;
 }
 
+label {
+  cursor: pointer;
+}
+
 input,
 optgroup,
 select,
@@ -215,6 +219,7 @@ textarea {
   - 버튼
   - 체크박스
   - 셀렉트박스
+  - 지도에서 사용하는 UI
   - 레이블 + form 요소
   - 테이블
   - 필터
@@ -492,6 +497,174 @@ textarea {
   opacity: 1;
 }
 
+/* 지도에서 사용하는 UI */
+.map-type {
+  overflow: hidden;
+  position: absolute;
+  top: 1.8rem;
+  right: 1.9rem;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.map-type input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.map-type input:checked + span {
+  color: #fff;
+  background: #0993ce;
+}
+.map-type label span {
+  display: block;
+  padding: 0.5rem 1.25rem;
+  line-height: 100%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #727272;
+  background: #fff;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.ui.dropdown.area-box {
+  all: initial;
+  position: absolute;
+  top: 4.8rem;
+  right: 1.9rem;
+  z-index: 1;
+  padding: 0.8rem 3rem 0.8rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #727272;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25) !important;
+          box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25) !important;
+  cursor: pointer;
+}
+.ui.dropdown.area-box.active::after {
+  top: calc(50% - 0.55rem);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.ui.dropdown.area-box.active:hover {
+  border: 0;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.ui.dropdown.area-box.active .menu {
+  border: 0;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25) !important;
+          box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25) !important;
+}
+.ui.dropdown.area-box.active .menu:hover {
+  border: 0;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25) !important;
+          box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25) !important;
+}
+.ui.dropdown.area-box:hover {
+  border: 0;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.ui.dropdown.area-box::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 0.45rem);
+  right: 0.7rem;
+  width: 1.4rem;
+  height: 0.9rem;
+  background-image: url("/base/images/arr_down_blue.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ui.dropdown.area-box > .text {
+  line-height: 1.9rem;
+}
+.ui.dropdown.area-box .menu {
+  min-width: calc(100% + 0.01rem);
+  width: calc(100% + 0.01rem);
+  margin: 0;
+  border-radius: 0.5rem;
+}
+.ui.dropdown.area-box .menu .item {
+  padding: 0.8rem !important;
+  font-size: inherit;
+}
+.ui.dropdown.area-box .menu .item:hover {
+  background: none;
+  color: #03a0fc;
+}
+.ui.dropdown.area-box .menu .item.selected {
+  background: #fff;
+  color: inherit;
+}
+.ui.dropdown.area-box .menu .item.selected:hover {
+  color: #03a0fc;
+}
+.ui.dropdown.area-box .menu .item.active {
+  font-weight: 700;
+  color: #03a0fc;
+}
+.ui.dropdown.area-box .menu .area-setting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
+  padding: 0.5rem 0;
+  margin: 0.4rem;
+  border-radius: 0.3rem;
+  background: #e8e8e8;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #727272;
+}
+.ui.dropdown.area-box .menu .area-setting::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-image: url("/base/images/icon_sawtooth.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
 /* 페이징 */
 .paging-group {
   display: -webkit-box;
@@ -536,40 +709,38 @@ textarea {
       align-content: center;
   gap: 0 0.4rem;
 }
-.paging-group .btn-prev-angle {
+.paging-group .btn-first {
+  width: 2rem;
+  height: 2rem;
+  background-image: url("/base/images/icon_paging_arr_double.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.paging-group .btn-prev {
+  width: 2rem;
+  height: 2rem;
+  background-image: url("/base/images/icon_paging_arr.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  margin-left: -0.6rem;
   margin-right: 0.6rem;
 }
-.paging-group .btn-prev-angle button:first-child {
-  width: 2rem;
-  height: 2rem;
-  background-image: url("/base/images/icon_paging_arr_double.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: contain;
-}
-.paging-group .btn-prev-angle button:last-child {
+.paging-group .btn-next {
   width: 2rem;
   height: 2rem;
   background-image: url("/base/images/icon_paging_arr.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
-}
-.paging-group .btn-next-angle {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
   margin-left: 0.6rem;
+  margin-right: -0.6rem;
 }
-.paging-group .btn-next-angle button:first-child {
-  width: 2rem;
-  height: 2rem;
-  background-image: url("/base/images/icon_paging_arr.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: contain;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-.paging-group .btn-next-angle button:last-child {
+.paging-group .btn-end {
   width: 2rem;
   height: 2rem;
   background-image: url("/base/images/icon_paging_arr_double.png");
@@ -579,6 +750,9 @@ textarea {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+.paging-group .selectbox-wrap {
+  margin-left: 0.3rem;
 }
 .paging-group .selectbox-wrap select {
   min-width: 5.7rem;
@@ -870,21 +1044,14 @@ textarea {
       flex-wrap: wrap;
 }
 .ly-map {
+  position: relative;
   width: 100%;
-  height: 94rem;
+  height: calc(99.9vh - 20px);
   margin-left: 5.4rem;
-}
-.ly-map.temp-map {
-  width: 100%;
-  height: 94rem;
-  background-image: url("/base/images/temp/map.png");
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: cover;
 }
 .ly-sub {
   width: 100%;
-  height: 94rem;
+  height: calc(99.9vh - 20px);
   margin-left: 5.4rem;
   padding: 0 6rem;
 }
@@ -1129,21 +1296,16 @@ textarea {
 /*---------------------------------------------------------------
   [미디어 쿼리]
 -----------------------------------------------------------------*/
-@media screen and (max-height: 959px) {
+@media screen and (max-height: 899px) {
+  /* 공통 : 레이아웃 높이 값 조정 */
+  .ly-map {
+    height: 88rem;
+  }
+  .ly-sub {
+    height: 88rem;
+  }
   /* gnb : 높이 값 조정 */
   .gnb {
     height: 100%;
-  }
-}
-@media screen and (min-height: 969px) {
-  /* 공통 : 레이아웃 높이 값 조정 */
-  .ly-map {
-    height: calc(99.9vh - 20px);
-  }
-  .ly-map.temp-map {
-    height: calc(99.9vh - 20px);
-  }
-  .ly-sub {
-    height: calc(99.9vh - 20px);
   }
 }
