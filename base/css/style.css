@@ -22,6 +22,20 @@ h5 {
   font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
 em,
 i {
   font-style: normal;
@@ -214,6 +228,7 @@ textarea {
 
 /*---------------------------------------------------------------
   [component]
+  - 아이콘
   - 브레드크럼
   - 인풋박스
   - 버튼
@@ -224,6 +239,23 @@ textarea {
   - 테이블
   - 필터
 -----------------------------------------------------------------*/
+.ico-cw {
+  width: 4.7rem;
+  height: 6rem;
+  background-image: url("/base/images/icon_cw.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-cr {
+  width: 4.2rem;
+  height: 5.5rem;
+  background-image: url("/base/images/icon_cr.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
 .ui.breadcrumb {
   display: block;
   font-size: 1.4rem;
@@ -407,7 +439,7 @@ textarea {
   background: #ebf8ff;
 }
 .ui.basic.table tbody td {
-  padding: 1.4rem;
+  padding: 1.23rem 1.4rem;
   font-size: 1.6rem;
   color: #727272;
   text-align: center;
@@ -663,6 +695,215 @@ textarea {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+}
+
+.los-legend {
+  position: absolute;
+  right: 1.9rem;
+  bottom: 1.9rem;
+  z-index: 1;
+  font-size: 1.2rem;
+  color: #797979;
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.los-legend dt {
+  padding: 0.6rem 0.8rem;
+  font-weight: 500;
+  border-bottom: 1px solid #e8e8e8;
+}
+.los-legend dd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  padding: 0.2rem 0.4rem;
+}
+.los-legend dd ul {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.los-legend dd ul:last-child li {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.los-legend dd ul li {
+  height: 2.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
+}
+.los-legend dd ul li::before {
+  content: "";
+  display: block;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 100%;
+}
+.los-legend dd ul li.lv-a::before {
+  background: #0993ce;
+}
+.los-legend dd ul li.lv-b::before {
+  background: #4fb500;
+}
+.los-legend dd ul li.lv-c::before {
+  background: #ffb800;
+}
+.los-legend dd ul li.lv-d::before {
+  background: #e57003;
+}
+.los-legend dd ul li.lv-e::before {
+  background: #d40000;
+}
+.los-legend dd ul li.lv-f::before {
+  background: #892121;
+}
+.los-legend dd ul li.lv-ff::before {
+  background: #9e007b;
+}
+.los-legend dd ul li.lv-fff::before {
+  background: #37007c;
+}
+
+.los-display {
+  position: absolute;
+  z-index: 1;
+  width: 9.8rem;
+  height: 9.8rem;
+  border-radius: 9.8rem;
+  text-align: center;
+}
+.los-display.lv-a {
+  background: rgba(9, 147, 206, 0.3);
+}
+.los-display.lv-b {
+  background: rgba(79, 181, 0, 0.3);
+}
+.los-display.lv-c {
+  background: rgba(250, 167, 26, 0.3);
+}
+.los-display.lv-d {
+  background: rgba(229, 112, 3, 0.3);
+}
+.los-display.lv-e {
+  background: rgba(212, 0, 0, 0.3);
+}
+.los-display.lv-f {
+  background: rgba(137, 33, 33, 0.3);
+}
+.los-display.lv-ff {
+  background: rgba(158, 0, 123, 0.3);
+}
+.los-display.lv-fff {
+  background: rgba(55, 0, 124, 0.3);
+}
+.los-display .ico-cr {
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  margin-top: 0.6rem;
+}
+.los-display .traffic-display {
+  position: absolute;
+  z-index: 2;
+  border: 1.5px solid #208942;
+  background: #35b558;
+}
+.los-display .traffic-display.c-orange {
+  border-color: #803e00;
+  background: #e57003;
+}
+.los-display .traffic-display.c-red {
+  border-color: #800000;
+  background: #d40000;
+}
+.los-display .traffic-display.top {
+  left: 50%;
+  top: 0;
+  width: 1.3rem;
+  height: 7.5rem;
+  margin-top: -3.55rem;
+  margin-left: -0.65rem;
+  border-radius: 0.3rem 0.3rem 0.8rem 0.8rem;
+  -webkit-transform-origin: center bottom;
+      -ms-transform-origin: center bottom;
+          transform-origin: center bottom;
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+}
+.los-display .traffic-display.bottom {
+  left: 50%;
+  bottom: 0;
+  width: 1.3rem;
+  height: 7.5rem;
+  margin-bottom: -3.35rem;
+  margin-left: -0.65rem;
+  border-radius: 0.8rem 0.8rem 0.3rem 0.3rem;
+  -webkit-transform-origin: center top;
+      -ms-transform-origin: center top;
+          transform-origin: center top;
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+}
+.los-display .traffic-display.left {
+  left: 0;
+  top: 50%;
+  width: 7.5rem;
+  height: 1.3rem;
+  margin-top: -0.65rem;
+  margin-left: -3.55rem;
+  border-radius: 0.3rem 0.8rem 0.8rem 0.3rem;
+  -webkit-transform-origin: center right;
+      -ms-transform-origin: center right;
+          transform-origin: center right;
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+}
+.los-display .traffic-display.right {
+  right: 0;
+  top: 50%;
+  width: 7.5rem;
+  height: 1.3rem;
+  margin-top: -0.65rem;
+  margin-right: -3.35rem;
+  border-radius: 0.8rem 0.3rem 0.3rem 0.8rem;
+  -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
 }
 
 /* 페이징 */
@@ -1048,6 +1289,10 @@ textarea {
   width: 100%;
   height: calc(99.9vh - 20px);
   margin-left: 5.4rem;
+}
+.ly-map .ico-cw {
+  position: absolute;
+  z-index: 1;
 }
 .ly-sub {
   width: 100%;

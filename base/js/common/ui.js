@@ -12,8 +12,14 @@ $(function () {
 
 var cmmnUi = {
   init: function () {
+    cmmnUi.map();
     cmmnUi.gnb();
     cmmnUi.modal();
+  },
+  map: function () {
+    if ($('.ly-map').length !== 0) {
+      $('.area-box').dropdown();
+    }
   },
   gnb: function () {
     var $winH = $(window).height();

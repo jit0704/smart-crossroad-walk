@@ -8,9 +8,14 @@
     <script src="/base/js/lib/jquery-ui.min.js"></script>
     <script src="/base/js/lib/semantic.min.js"></script>
     <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="http://map.ngii.go.kr/emap/js/map/OpenLayers-6.4.3.js"></script>
+    <script src="http://map.ngii.go.kr/nps/common/lib/proj4js/proj4.js"></script>
+    <script src="http://map.ngii.go.kr/openapi/wmts_ngiiMap_v6.4.3.js?apikey=04trYP9_xwLAfALjwZ-B8g"></script>
     <!-- includeHTML.js : 퍼블리싱 확인용 include -->
     <script src="/base/js/common/includeHTML.js"></script>
     <script src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" href="http://map.ngii.go.kr/emap/css/map/OpenLayers-6.4.3.css" />
     <link rel="stylesheet" href="/base/css/common.css" />
   </head>
   <body>
@@ -19,13 +24,89 @@
       <nav class="gnb" include-html="/base/html/common/gnb.html"></nav>
 
       <main class="ly-container">
-        <!-- temp-map 클래스명은 퍼블리싱 작업때문에 넣었습니다. 개발페이지에서는 삭제해주세요. -->
-        <div class="ly-map temp-map"></div>
+        <div id="map1" class="ly-map">
+          <!-- 지도 타입 선택 -->
+          <div class="map-type">
+            <label>
+              <input type="radio" checked name="maptype" />
+              <span>일반지도</span>
+            </label>
+            <label>
+              <input type="radio" name="maptype" />
+              <span>위성지도</span>
+            </label>
+          </div>
+          <!-- //지도 타입 선택 -->
+
+          <!-- 구역명 -->
+          <div class="ui selection dropdown area-box">
+            <input type="hidden" name="" />
+            <div class="default text">서울시 공릉동</div>
+            <div class="menu">
+              <div class="item" data-value="">서울시 공릉동</div>
+              <div class="item" data-value="">서울시 서초구</div>
+              <div class="item" data-value="">서울시 금천구</div>
+              <a href="#" class="area-setting">기존 구역 설정</a>
+            </div>
+          </div>
+          <!-- //구역명 -->
+
+          <!-- 접근로 별 LOS 표준 범례 -->
+          <dl class="los-legend">
+            <dt>접근로 별 LOS 표준 범례</dt>
+            <dd>
+              <ul>
+                <li class="lv-a">A등급</li>
+                <li class="lv-b">B등급</li>
+                <li class="lv-c">C등급</li>
+                <li class="lv-d">D등급</li>
+              </ul>
+              <ul>
+                <li class="lv-e">E등급</li>
+                <li class="lv-f">F등급</li>
+                <li class="lv-ff">FF등급</li>
+                <li class="lv-fff">FFF등급</li>
+              </ul>
+            </dd>
+          </dl>
+          <!-- //접근로 별 LOS 표준 범례 -->
+
+          <!-- 횡단보도 아이콘
+              * style 속성의 left, top값으로 지도 위 좌표값 설정하시면 됩니다.
+              * 지도 좌측 상단 기준으로 left: 0; top: 0; 입니다.
+              * 지도 위에 표시되는 모든 아이콘의 좌표값 설정 방법은 위와 동일합니다.
+          -->
+          <i class="ico-cw" style="left: 300px; top: 282px"><span class="screen-out">횡단보도</span></i>
+
+          <!-- 교차로 아이콘
+              * style 속성의 left, top값으로 지도 위 좌표값 설정하시면 됩니다.
+              * 교차로에 표시되는 색상 막대의 각도는 style 속성의 transform: rotate(0deg) 각도로 설정하시면 됩니다. ex) transform: rotate(20deg)
+              * 교차로에 표시되는 막대의 색상은 기본값이 녹색이고, 주황색은 c-orange 클래스명 추가, 적색은 c-red 클래스명 추가하시면 됩니다.
+              * 교차로 LOS 등급을 나타내는 둥근 원의 색상은 아래의 class명으로 사용해주시면 됩니다.
+              * lv-a, lv-b, lv-c, lv-d, lv-e, lv-f, lv-ff, lv-fff
+          -->
+          <div class="los-display lv-a" style="left: 400px; top: 382px">
+            <i class="ico-cr"><span class="screen-out">교차로</span></i>
+
+            <i class="traffic-display top c-red" style="transform: rotate(0deg)"></i>
+            <i class="traffic-display bottom c-orange" style="transform: rotate(0deg)"></i>
+            <i class="traffic-display left" style="transform: rotate(0deg)"></i>
+            <i class="traffic-display right" style="transform: rotate(0deg)"></i>
+          </div>
+        </div>
+        <!-- //ly-map -->
       </main>
       <!-- //ly-container -->
 
       <footer class="ly-copyright" include-html="/base/html/common/footer.html"></footer>
     </div>
     <!-- //wrapper -->
+
+    <script>
+      // map init
+      window.onload = function () {
+        var map1 = new ngii_wmts.map('map1', { zoom: 6 });
+      };
+    </script>
   </body>
 </html>
