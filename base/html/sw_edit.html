@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>도로관리 수정 팝업</title>
+    <title>SW 연동 관리 수정 팝업</title>
     <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
     <script src="/base/js/lib/jquery-ui.min.js"></script>
     <script src="/base/js/lib/semantic.min.js"></script>
@@ -17,7 +17,7 @@
     <div id="ex" class="modal">
       <div class="modal-container medium">
         <div class="modal-header">
-          <span class="tit">도로 관리</span>
+          <span class="tit">SW 연동 정보</span>
         </div>
         <!-- //modal-header -->
         <div class="modal-body">
@@ -31,99 +31,40 @@
               </colgroup>
               <tbody>
                 <tr>
-                  <th rowspan="2" class="rowspan-style1">구역명</th>
+                  <th>구역 명</th>
                   <td class="pdr-20">
-                    <div class="ui input rounded">
-                      <input type="text" disabled />
-                    </div>
-                  </td>
-                  <th class="pdl-15">지점 명</th>
-                  <td>
-                    <div class="ui input rounded">
-                      <input type="text" disabled />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="3">
-                    <button class="ui secondary basic button rounded extend">Map 설정</button>
-                  </td>
-                </tr>
-                <tr>
-                  <th>지점 ID</th>
-                  <td colspan="3">
-                    <div class="ui input rounded">
-                      <input type="text" disabled />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>지점 주소</th>
-                  <td colspan="3">
-                    <div class="ui input rounded">
-                      <input type="text" disabled />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>도로 ID</th>
-                  <td colspan="3">
-                    <div class="ui input rounded">
-                      <input type="text" disabled />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>도로 명</th>
-                  <td class="pdr-20">
-                    <div class="ui input rounded">
-                      <input type="text" />
-                    </div>
-                  </td>
-                  <th class="pdl-15">방향</th>
-                  <td>
                     <div class="selectbox-wrap rounded">
-                      <select>
-                        <option value="">동</option>
-                        <option value="">서</option>
-                        <option value="">남</option>
-                        <option value="">북</option>
-                        <option value="">북동</option>
-                        <option value="">남서</option>
-                        <option value="">북서</option>
-                        <option value="">남동</option>
+                      <select disabled>
+                        <option value="">선택</option>
+                        <option value="">아이템1</option>
+                        <option value="">아이템2</option>
+                        <option value="">아이템3</option>
                       </select>
                     </div>
                   </td>
-                </tr>
-                <tr>
-                  <th>방향 명</th>
-                  <td class="pdr-20">
-                    <div class="ui input rounded">
-                      <input type="text" />
-                    </div>
-                  </td>
-                  <th class="pdl-15">표출길이</th>
+                  <th class="pdl-15">연동 IP 주소</th>
                   <td>
-                    <div class="selectbox-wrap rounded">
-                      <select>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
-                        <option value="">5</option>
-                      </select>
+                    <div class="ui input rounded">
+                      <input type="text" disabled />
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <th>위도</th>
+                  <th>별칭</th>
+                  <td colspan="3">
+                    <div class="ui input rounded">
+                      <input type="text" />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>포트 1</th>
                   <td class="pdr-20">
                     <div class="ui input rounded">
                       <input type="text" />
                     </div>
                   </td>
-                  <th class="pdl-15">경도</th>
+                  <th class="pdl-15">포트 2</th>
                   <td>
                     <div class="ui input rounded">
                       <input type="text" />
@@ -131,13 +72,13 @@
                   </td>
                 </tr>
                 <tr>
-                  <th>각도</th>
+                  <th>포트 3</th>
                   <td class="pdr-20">
                     <div class="ui input rounded">
                       <input type="text" />
                     </div>
                   </td>
-                  <th class="pdl-15">차로 수</th>
+                  <th class="pdl-15">포트 4</th>
                   <td>
                     <div class="ui input rounded">
                       <input type="text" />

@@ -12,14 +12,70 @@ $(function () {
 
 var cmmnUi = {
   init: function () {
+    cmmnUi.default();
     cmmnUi.map();
     cmmnUi.gnb();
     cmmnUi.modal();
   },
+  default: function () {
+    // 체크박스 리스트 아코디언 메뉴
+    $('.chk-list-container .chk-list-title button').on('click', function () {
+      var $this = $(this).parent('.chk-list-title');
+      var $chkContent = $this.next();
+      if ($chkContent.is(':visible')) {
+        // 만약 열려있다면 닫기
+        $chkContent.slideUp(300);
+        $this.removeClass('active');
+      } else {
+        // 만약 닫혀있다면 열기
+        $('.chk-list-container .chk-list-content').slideUp(300);
+        $('.chk-list-container .chk-list-title').removeClass('active');
+        $chkContent.slideDown(300);
+        $this.addClass('active');
+      }
+    });
+  },
   map: function () {
+    // 지도 우측 상단 현재 구역 드롭다운
     if ($('.ly-map').length !== 0) {
       $('.area-box').dropdown();
     }
+
+    // 교차로 상세 메뉴 유무 체크
+    $(window)
+      .on('resize', function () {
+        if ($('.crossroad-view-container').length !== 0) {
+          $('.wrapper').addClass('is-crossroad-view');
+        }
+      })
+      .resize();
+
+    // 교차로 상세 메뉴 접고/펼치기
+    $('.btn-crossroad-view').on('click', function () {
+      $('.is-crossroad-view').toggleClass('is-fold');
+      $('.gnb').removeClass('is-open');
+    });
+
+    // 카메라 아이콘 클릭시 팝업 노출
+    $('.ico-camera').on('click', function () {
+      var $this = $(this);
+      var $icoW = $this.outerWidth(true);
+      var $icoH = $this.outerHeight(true);
+      var $top = $this.position().top;
+      var $left = $this.position().left;
+      var $target = $this.data('target');
+      var $popup = $('#' + $target);
+      $popup.fadeIn(250).css({
+        top: $top + $icoH + 'px',
+        left: $left + $icoW + 'px',
+        marginTop: '-145px',
+      });
+    });
+
+    $('.camera-popup .btn-popup-close').on('click', function (e) {
+      e.preventDefault();
+      $(this).closest('.camera-popup').fadeOut(150);
+    });
   },
   gnb: function () {
     var $winH = $(window).height();
@@ -30,6 +86,23 @@ var cmmnUi = {
     // $.fn.hasScrollBar = function () {
     //   return (this.prop('scrollHeight') == 0 && this.prop('clientHeight') == 0) || this.prop('scrollHeight') > this.prop('clientHeight');
     // };
+
+    // 교차로 상세 메뉴가 있는 화면에서의 gnb 상태값 적용
+    function hoverState(order) {
+      if ($(this).closest('.wrapper').is('.is-crossroad-view')) {
+        return order;
+      }
+    }
+
+    // gnb hover 정의
+    $(document).on('mouseenter', '.gnb', function () {
+      $('.gnb').addClass('is-open');
+      hoverState($('.is-crossroad-view').addClass('is-hover'));
+    });
+    $(document).on('mouseenter', '.ly-container', function () {
+      $('.gnb').removeClass('is-open');
+      hoverState($('.is-crossroad-view').removeClass('is-hover'));
+    });
 
     // 1depth 메뉴의 하위 메뉴 initialize
     $dropdownEl.dropdown({
@@ -44,10 +117,10 @@ var cmmnUi = {
     });
 
     // 2depth 아코디언메뉴 initialize
-    $('.ui.accordion').accordion();
+    $('.gnb .ui.accordion').accordion();
 
     // 2depth 아코디언메뉴 클릭시 아코디언메뉴 높이값 실시간 체크하여 하단에 닿으면 기준점을 bottom으로 변경
-    $('.ui.accordion').on('click', function () {
+    $('.gnb .ui.accordion').on('click', function () {
       var $this = $(this);
       var $winhHalf = $winH / 1.4;
 

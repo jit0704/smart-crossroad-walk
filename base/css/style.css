@@ -20,6 +20,8 @@ h3,
 h4,
 h5 {
   font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  margin: 0;
+  line-height: 100%;
 }
 
 ul,
@@ -171,6 +173,12 @@ textarea {
 .ui {
   font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif !important;
 }
+.ui.checkbox input:active ~ label, .ui.checkbox input:focus ~ label {
+  color: inherit;
+}
+.ui.checkbox label {
+  cursor: pointer;
+}
 .ui.segment {
   margin: 0;
   padding: 0;
@@ -192,18 +200,23 @@ textarea {
 }
 .ui.menu.vertical .item:hover {
   color: #ffe298;
+  background: transparent;
 }
 .ui.menu.vertical .dropdown.item:hover .dropdown.icon::before {
-  background: url("/base/images/arr_down_yellow.png") no-repeat 50% 50% !important;
+  background: url("/base/images/arr_down_yellow.png") no-repeat 48% 50% !important;
   background-size: 1.3rem 0.7rem !important;
 }
 .ui.menu.vertical .dropdown.item.active:hover {
   color: #ffe298;
+  background: transparent;
 }
 .ui.menu.vertical .dropdown.item.active:hover .dropdown.icon::before {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
+}
+.ui.menu.vertical .dropdown.item.active.item {
+  background: transparent;
 }
 .ui.menu.vertical .dropdown.item:active {
   color: #ffe298;
@@ -225,6 +238,29 @@ textarea {
   transition: transform 0.1s;
   transition: transform 0.1s, -webkit-transform 0.1s;
 }
+.ui.tabular.menu {
+  all: initial;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.ui.tabular.menu .item {
+  all: initial;
+  text-align: center;
+}
+.ui.tabular.menu .item::before {
+  all: initial;
+}
+.ui.tabular.menu .item.active {
+  all: initial;
+  border-radius: 0 !important;
+}
+.ui.tab.segment {
+  all: initial;
+  display: none;
+}
+.ui.tab.segment.active {
+  display: block;
+}
 
 /*---------------------------------------------------------------
   [component]
@@ -232,13 +268,18 @@ textarea {
   - 브레드크럼
   - 인풋박스
   - 버튼
+  - 탭메뉴
   - 체크박스
   - 셀렉트박스
   - 라디오버튼
   - 지도에서 사용하는 UI
   - 레이블 + form 요소
   - 테이블
+  - 페이징
   - 필터
+  - 기능 버튼 그룹
+  - 프로그래스바
+  - 체크박스 리스트 아코디언 메뉴(연계 카메라 등록 팝업)
 -----------------------------------------------------------------*/
 .ico-cw {
   width: 4.7rem;
@@ -252,6 +293,14 @@ textarea {
   width: 4.2rem;
   height: 5.5rem;
   background-image: url("/base/images/icon_cr.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-camera {
+  width: 4rem;
+  height: 4rem;
+  background-image: url("/base/images/icon_camera.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -339,6 +388,19 @@ textarea {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
 }
+.ui.button.basic.secondary.c-gray {
+  padding: 0 2rem;
+  color: #727272 !important;
+  font-size: 1.6rem;
+  font-weight: 400;
+  border-color: #cbcbcb !important;
+}
+.ui.button.basic.secondary.c-gray:hover, .ui.button.basic.secondary.c-gray:focus, .ui.button.basic.secondary.c-gray:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #727272 !important;
+  background: #e8e8e8 !important;
+}
 .ui.button.basic.secondary.rounded {
   border-radius: 6px;
 }
@@ -352,6 +414,18 @@ textarea {
   color: #1e5f8d !important;
   background: #e8e8e8 !important;
 }
+.btn-small {
+  display: inline-block;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 1.2rem;
+  color: #fff;
+}
+.btn-small:hover {
+  color: #fff;
+}
+
 .ui.buttons.basic {
   border: 0;
 }
@@ -500,6 +574,101 @@ textarea {
   vertical-align: top;
 }
 
+.ui.tabular.menu.rounded {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  overflow: hidden;
+  width: auto;
+  margin: 0 2.35rem;
+  border-radius: 0.8rem;
+  border: 1px solid #cbcbcb;
+}
+.ui.tabular.menu.rounded .item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
+  line-height: 3.9rem;
+  color: #727272;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.ui.tabular.menu.rounded .item:not(:first-child) {
+  border-left: 1px solid #cbcbcb;
+}
+.ui.tabular.menu.rounded .item::before {
+  content: "";
+  display: block;
+}
+.ui.tabular.menu.rounded .item[data-tab=first]::before {
+  width: 1.1rem;
+  height: 1.1rem;
+  background-image: url("/base/images/icon_signal_gray.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ui.tabular.menu.rounded .item[data-tab=second]::before {
+  width: 1.6rem;
+  height: 0.8rem;
+  background-image: url("/base/images/icon_video_gray.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ui.tabular.menu.rounded .item[data-tab=third]::before {
+  width: 1.5rem;
+  height: 0.82rem;
+  background-image: url("/base/images/icon_eye_gray.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ui.tabular.menu.rounded .item.active {
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+  background: #03a0fc;
+  cursor: pointer;
+}
+.ui.tabular.menu.rounded .item.active[data-tab=first]::before {
+  background-image: url(/base/images/icon_signal_white.png);
+}
+.ui.tabular.menu.rounded .item.active[data-tab=second]::before {
+  background-image: url(/base/images/icon_video_white.png);
+}
+.ui.tabular.menu.rounded .item.active[data-tab=third]::before {
+  background-image: url(/base/images/icon_eye_white.png);
+}
+
 /* 셀렉트박스 */
 .selectbox-wrap select {
   width: 100%;
@@ -559,6 +728,38 @@ textarea {
   transition: background 0.2s;
 }
 .radio-txt.rounded span {
+  border-radius: 0.5rem;
+}
+
+.radio-txt2 {
+  position: relative;
+  display: inline-block;
+}
+.radio-txt2 input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.radio-txt2 input:checked + span {
+  color: #fff;
+  border-color: #727272;
+  background: #727272;
+}
+.radio-txt2 span {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid #999999;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #999999;
+  text-align: center;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.radio-txt2.rounded span {
   border-radius: 0.5rem;
 }
 
@@ -1092,6 +1293,195 @@ textarea {
   min-width: 8rem;
 }
 
+/* 프로그래스바 */
+.progress-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  gap: 0 0.2rem;
+}
+.progress-bar span {
+  line-height: 2.3rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+.progress-bar .road1 {
+  background: #a6a6a6;
+}
+.progress-bar .road2 {
+  background: #ff9797;
+}
+.progress-bar .road3 {
+  background: #9e90f0;
+}
+.progress-bar .road4 {
+  background: #ffd056;
+}
+.progress-bar-legend div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding-right: 1.5rem;
+}
+.progress-bar-legend div + div {
+  margin-top: 0.7rem;
+}
+.progress-bar-legend div span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.6rem;
+  font-size: 1.4rem;
+  color: #727272;
+}
+.progress-bar-legend div span::before {
+  content: "";
+  display: block;
+  width: 1.18rem;
+  height: 1.18rem;
+  border-radius: 100%;
+}
+.progress-bar-legend div span em {
+  font-weight: 700;
+}
+.progress-bar-legend div .road1::before {
+  background: #a6a6a6;
+}
+.progress-bar-legend div .road2::before {
+  background: #ff9797;
+}
+.progress-bar-legend div .road3::before {
+  background: #9e90f0;
+}
+.progress-bar-legend div .road4::before {
+  background: #ffd056;
+}
+
+/* 체크박스 리스트 아코디언 메뉴(연계 카메라 등록 팝업) */
+.chk-list-container {
+  overflow-y: auto;
+  max-height: 46.2rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+}
+.chk-list-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.8rem;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+}
+.chk-list-title:first-child {
+  border-top: 0;
+}
+.chk-list-title:nth-last-of-type(2) {
+  border: 0;
+}
+.chk-list-title.active button::after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.chk-list-title .ui.primary-chkbox {
+  margin-left: 1.5rem;
+}
+.chk-list-title button {
+  position: relative;
+  padding: 1rem 1.5rem 1rem 0;
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #727272;
+}
+.chk-list-title button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  margin-top: -0.4rem;
+  width: 1.5rem;
+  height: 0.8rem;
+  background-image: url("/base/images/arr_down_gray.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.chk-list-content {
+  display: none;
+}
+.chk-list-content .ui.primary-chkbox {
+  display: block;
+  padding: 1rem 0.6rem 1rem 3rem;
+  background: #f8f8f8;
+}
+.chk-list-content .ui.primary-chkbox + .ui.primary-chkbox {
+  border-top: 1px solid #e8e8e8;
+}
+.chk-list-content .ui.primary-chkbox label {
+  padding-left: 0;
+  font-size: 1.8rem;
+  color: #727272;
+}
+.chk-list-content .ui.primary-chkbox label::before {
+  content: "";
+  position: static;
+  display: inline-block;
+  margin-right: 0.8rem;
+  vertical-align: top;
+}
+
 /* 데이터 테이블 목록 */
 .data-tbl-very {
   overflow-y: auto;
@@ -1291,11 +1681,140 @@ textarea {
 }
 
 /*---------------------------------------------------------------
+  [딤드 없는 팝업]
+-----------------------------------------------------------------*/
+.camera-popup {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  width: 28.1rem;
+  padding: 1rem 1rem 1.5rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+  background: #3d3d3d;
+}
+.camera-popup-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.camera-popup-header .tit {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+}
+.camera-popup-header .bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
+}
+.camera-popup-header .bind .btn-popup-close {
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-image: url("/base/images/btn_close_white_small.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 1rem 1rem;
+}
+.camera-popup-content {
+  padding: 1.1rem 0;
+}
+.camera-popup-bottom .tit {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 600;
+}
+.camera-popup-bottom .bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 1rem;
+}
+.camera-popup-bottom .bind span {
+  font-size: 1.2rem;
+  color: #fff;
+}
+.camera-popup-bottom .bind span em {
+  display: inline-block;
+  margin-left: 0.2rem;
+  font-size: 1.4rem;
+  color: #ffd056;
+  font-weight: 500;
+}
+.camera-popup-bottom .bind span i {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #ffd056;
+}
+
+/*---------------------------------------------------------------
   [공통]
 -----------------------------------------------------------------*/
 /* 레이아웃 */
 .wrapper {
   min-height: 100%;
+}
+.wrapper.is-crossroad-view .ly-map {
+  margin-left: 47.6rem;
+  -webkit-transition: margin-left 0.2s;
+  transition: margin-left 0.2s;
+}
+.wrapper.is-crossroad-view.is-fold .crossroad-view-container {
+  left: -36.8rem;
+}
+.wrapper.is-crossroad-view.is-fold .crossroad-view-container .btn-crossroad-view::before {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.wrapper.is-crossroad-view.is-fold .ly-map {
+  margin-left: 5.4rem;
+}
+.wrapper.is-crossroad-view.is-fold.is-hover .crossroad-view-container {
+  left: -24.3rem;
 }
 
 .ly-container {
@@ -1326,6 +1845,11 @@ textarea {
 .ly-map .ico-cw {
   position: absolute;
   z-index: 1;
+}
+.ly-map .ico-camera {
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
 }
 .ly-sub {
   width: 100%;
@@ -1381,30 +1905,30 @@ textarea {
   height: calc(100% - 2rem);
   background: #1e5f8d;
 }
-.gnb:hover {
+.gnb.is-open {
   overflow: visible;
   width: 18rem;
 }
-.gnb:hover > h1 {
+.gnb.is-open > h1 {
   overflow: auto;
   width: 12.2rem;
   height: auto;
   background: none;
 }
-.gnb:hover > h1 img {
+.gnb.is-open > h1 img {
   display: block;
 }
-.gnb:hover .ui.menu {
+.gnb.is-open .ui.menu {
   width: 100%;
 }
 .gnb > h1 {
   overflow: hidden;
   margin: 3.3rem 0 0 1.3rem;
   width: 2.8rem;
-  height: 2.9rem;
+  height: 3.3rem;
   background-image: url("/base/images/logo.png");
   background-repeat: no-repeat;
-  background-position: 1px 0;
+  background-position: 0 0;
   background-size: cover;
 }
 .gnb > h1 img {
@@ -1552,6 +2076,145 @@ textarea {
   margin-top: auto;
 }
 
+/* 지도 > 교차로 상세 메뉴 */
+/** 통계 **/
+.crossroad-view-container {
+  position: fixed;
+  left: 5.4rem;
+  top: 0;
+  z-index: 8;
+  width: 42.2rem;
+  height: calc(100% - 2rem);
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+  -webkit-transition: left 0.2s;
+  transition: left 0.2s;
+}
+.crossroad-view-container > h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.6rem;
+  padding: 4rem 2.4rem 1.8rem 2.4rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #858585;
+}
+.crossroad-view-container > h2::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 1.4rem;
+  background-image: url("/base/images/icon_dot_double.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.crossroad-view-container .tab.segment > section > .tit {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #6d6d6d;
+}
+.crossroad-view-container .display-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-bottom: 1rem;
+}
+.crossroad-view-container .display-info .left {
+  color: #1e5f8d;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.crossroad-view-container .display-info .left em {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.crossroad-view-container .progress-bar {
+  margin-bottom: 1.4rem;
+}
+.crossroad-view-container .stats-traffic {
+  padding: 3.7rem 4rem 3.1rem;
+  border-bottom: 1px solid #dcdcdc;
+}
+.crossroad-view-container .stats-speed {
+  padding: 2.6rem 4rem;
+  border-bottom: 1px solid #dcdcdc;
+}
+.crossroad-view-container .stats-speed .display-info .left em i {
+  font-size: 2.2rem;
+}
+.crossroad-view-container .stats-speed .chart-container {
+  height: 14.4rem;
+}
+.crossroad-view-container .stats-los {
+  padding: 2.6rem 4rem;
+}
+.crossroad-view-container .stats-los .display-info .left em {
+  font-size: 3.2rem;
+  color: #e57003;
+}
+.crossroad-view-container .stats-los .chart-container {
+  height: 15rem;
+}
+.crossroad-view-container .chart-container .dummy-img {
+  display: block;
+}
+.crossroad-view-container .btn-crossroad-view {
+  position: absolute;
+  top: 50%;
+  right: -2.4rem;
+  width: 2.4rem;
+  height: 6rem;
+  margin-top: -3rem;
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+  background: #fff;
+  border: 1px solid #c9c9c9;
+  -webkit-box-shadow: 4px 2px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.crossroad-view-container .btn-crossroad-view::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -0.3rem;
+  margin-top: -0.95rem;
+  width: 0.6rem;
+  height: 1.9rem;
+  background-image: url("/base/images/arr_left_gray.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
 /* 텍스트 디자인으로 구성된 라디오 버튼 그룹 */
 .unit-group {
   display: -webkit-box;
@@ -1631,5 +2294,13 @@ textarea {
   /* gnb : 높이 값 조정 */
   .gnb {
     height: 100%;
+  }
+  /* 교차로 통계 메뉴 : scroll-y값 추가 */
+  .crossroad-view-container {
+    height: 100%;
+  }
+  .crossroad-view-container .ui.tab.segment {
+    overflow-y: auto;
+    max-height: calc(100% - 118.45px);
   }
 }

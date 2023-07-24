@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>지도</title>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="http://map.ngii.go.kr/emap/js/map/OpenLayers-6.4.3.js"></script>
+    <script src="http://map.ngii.go.kr/nps/common/lib/proj4js/proj4.js"></script>
+    <script src="http://map.ngii.go.kr/openapi/wmts_ngiiMap_v6.4.3.js?apikey=04trYP9_xwLAfALjwZ-B8g"></script>
+    <!-- includeHTML.js : 퍼블리싱 확인용 include -->
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" href="http://map.ngii.go.kr/emap/css/map/OpenLayers-6.4.3.css" />
+    <link rel="stylesheet" href="/base/css/common.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- GNB -->
+      <nav class="gnb" include-html="/base/html/common/gnb.html"></nav>
+
+      <div class="crossroad-view-container">
+        <h2>롯데캐슬 교차로</h2>
+        <div class="ui top attached tabular menu rounded">
+          <a href="#none;" class="item active" data-tab="first">통계</a>
+          <a href="#none;" class="item" data-tab="second">영상</a>
+          <a href="#none;" class="item" data-tab="third">돌발</a>
+        </div>
+        <!-- //menu -->
+        <div class="ui bottom attached tab segment stats-container active" data-tab="first">
+          <section class="stats-traffic">
+            <em class="tit">도로 별 누적교통량</em>
+            <div class="display-info">
+              <div class="left"><em>1,486</em> 대</div>
+              <div class="right">
+                <label class="radio-txt2 rounded">
+                  <input type="radio" name="time1" />
+                  <span>5분</span>
+                </label>
+                <label class="radio-txt2 rounded">
+                  <input type="radio" name="time1" checked />
+                  <span>60분</span>
+                </label>
+              </div>
+            </div>
+            <!-- //display-info -->
+            <article class="stats-content">
+              <!-- 각 도로의 프로그래스바 너비값은 inline style속성의 width값으로 조정. -->
+              <div class="progress-bar">
+                <span class="road1" style="width: 29%">29%</span>
+                <span class="road2" style="width: 25%">25%</span>
+                <span class="road3" style="width: 17%">17%</span>
+                <span class="road4" style="width: 29%">29%</span>
+              </div>
+              <!-- //percent-bar -->
+              <div class="progress-bar-legend">
+                <div>
+                  <span class="road1">도로1 000대 <em>29%</em></span>
+                  <span class="road2">도로2 000대 <em>25%</em></span>
+                </div>
+                <div>
+                  <span class="road3">도로3 000대 <em>17%</em></span>
+                  <span class="road4">도로4 000대 <em>29%</em></span>
+                </div>
+              </div>
+              <!-- //progress-bar-legend -->
+            </article>
+            <!-- //stats-content -->
+          </section>
+          <!-- //stats-traffic -->
+
+          <section class="stats-speed">
+            <em class="tit">평균 속도</em>
+            <div class="display-info">
+              <div class="left">
+                <em>70<i>km/h</i></em>
+              </div>
+              <div class="right">
+                <label class="radio-txt2 rounded">
+                  <input type="radio" name="time2" />
+                  <span>5분</span>
+                </label>
+                <label class="radio-txt2 rounded">
+                  <input type="radio" name="time2" checked />
+                  <span>60분</span>
+                </label>
+              </div>
+            </div>
+            <!-- //display-info -->
+            <article class="stats-content">
+              <div class="chart-container">
+                <img src="https://www.dummyimage.com/342x144/ddd/000.png&text=Chart+Area" alt="퍼블리싱 확인용 더미 이미지" class="dummy-img" />
+              </div>
+            </article>
+            <!-- //stats-content -->
+          </section>
+          <!-- //stats-speed -->
+
+          <section class="stats-los">
+            <em class="tit">LOS 등급</em>
+            <div class="display-info">
+              <div class="left"><em>D</em></div>
+              <div class="right">
+                <label class="radio-txt2 rounded">
+                  <input type="radio" name="time3" />
+                  <span>5분</span>
+                </label>
+                <label class="radio-txt2 rounded">
+                  <input type="radio" name="time3" checked />
+                  <span>60분</span>
+                </label>
+              </div>
+            </div>
+            <!-- //display-info -->
+            <article class="stats-content">
+              <div class="chart-container">
+                <img src="https://www.dummyimage.com/342x150/ddd/000.png&text=Chart+Area" alt="퍼블리싱 확인용 더미 이미지" class="dummy-img" />
+              </div>
+            </article>
+            <!-- //stats-content -->
+          </section>
+          <!-- //stats-speed -->
+        </div>
+        <!-- //통계 컨텐츠 -->
+        <div class="ui bottom attached tab segment" data-tab="second">영상</div>
+        <div class="ui bottom attached tab segment" data-tab="third">돌발</div>
+
+        <button type="button" class="btn-crossroad-view">
+          <span class="screen-out">교차로 상세 열기/닫기 버튼</span>
+        </button>
+      </div>
+      <!-- //crossroad-view-container -->
+
+      <main class="ly-container">
+        <div id="map1" class="ly-map">
+          <!-- 지도 타입 선택 -->
+          <div class="map-type">
+            <label>
+              <input type="radio" checked name="maptype" />
+              <span>일반지도</span>
+            </label>
+            <label>
+              <input type="radio" name="maptype" />
+              <span>위성지도</span>
+            </label>
+          </div>
+          <!-- //지도 타입 선택 -->
+
+          <!-- 카메라 아이콘:
+              - data-target 속성의 값과 카메라 팝업의 id값이 일치해야 팝업이 노출됩니다.
+              - style 속성의 left, top값으로 지도 위에 좌표값 설정.
+          -->
+          <i class="ico-camera" data-target="channel-1" style="left: 784px; top: 620px"><span class="screen-out">카메라 아이콘</span></i>
+
+          <!-- 카메라 팝업 -->
+          <div id="channel-1" class="camera-popup">
+            <header class="camera-popup-header">
+              <em class="tit">채널 1 - 카메라 명</em>
+              <div class="bind">
+                <a href="#" class="btn-small gray">확대</a>
+                <a href="#" class="btn-small gray">번호인식</a>
+                <a href="#" class="btn-popup-close"><span class="screen-out">팝업 닫기</span></a>
+              </div>
+            </header>
+            <div class="camera-popup-content">
+              <video autoplay loop muted width="100%" height="100%">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <!-- //camera-popup-content -->
+            <div class="camera-popup-bottom">
+              <em class="tit">000대로△</em>
+              <div class="bind">
+                <span>우회전<em>4</em><i>대</i></span>
+                <span>직진<em>5</em><i>대</i></span>
+                <span>좌회전<em>3</em><i>대</i></span>
+              </div>
+            </div>
+            <!-- //camera-popup-bottom -->
+          </div>
+          <!-- //카메라 팝업 -->
+        </div>
+        <!-- //ly-map -->
+      </main>
+      <!-- //ly-container -->
+
+      <footer class="ly-copyright" include-html="/base/html/common/footer.html"></footer>
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      // map init
+      window.onload = function () {
+        var map1 = new ngii_wmts.map('map1', { zoom: 6 });
+      };
+
+      $('.crossroad-view-container .menu .item').tab();
+    </script>
+  </body>
+</html>
