@@ -41,6 +41,9 @@ var cmmnUi = {
       $('.area-box').dropdown();
     }
 
+    // 교차로 상세 탭 init
+    $('.crossroad-view-container .menu .item').tab();
+
     // 교차로 상세 메뉴 유무 체크
     $(window)
       .on('resize', function () {
