@@ -106,6 +106,9 @@ var cmmnUi = {
       $('.gnb').removeClass('is-open');
       hoverState($('.is-crossroad-view').removeClass('is-hover'));
     });
+    $(document).on('mouseenter', '.crossroad-view-container .tab.segment', function () {
+      $('.gnb').removeClass('is-open');
+    });
 
     // 1depth 메뉴의 하위 메뉴 initialize
     $dropdownEl.dropdown({

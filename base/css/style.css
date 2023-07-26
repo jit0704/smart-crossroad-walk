@@ -91,6 +91,11 @@ textarea {
   font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
+input[type=date] {
+  border: 0;
+  outline: 0;
+}
+
 /* 웹폰트 */
 @font-face {
   font-family: "Pretendard";
@@ -277,6 +282,7 @@ textarea {
   - 테이블
   - 페이징
   - 필터
+  - 달력
   - 기능 버튼 그룹
   - 프로그래스바
   - 체크박스 리스트 아코디언 메뉴(연계 카메라 등록 팝업)
@@ -389,13 +395,28 @@ textarea {
           box-shadow: none !important;
 }
 .ui.button.basic.secondary.c-gray {
-  padding: 0 2rem;
+  padding: 0.6rem 2rem;
+  line-height: 100%;
   color: #727272 !important;
   font-size: 1.6rem;
   font-weight: 400;
   border-color: #cbcbcb !important;
 }
 .ui.button.basic.secondary.c-gray:hover, .ui.button.basic.secondary.c-gray:focus, .ui.button.basic.secondary.c-gray:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #727272 !important;
+  background: #e8e8e8 !important;
+}
+.ui.button.basic.secondary.c-gray-type2 {
+  padding: 0.4rem 1.2rem;
+  line-height: 100%;
+  color: #727272 !important;
+  font-size: 1.8rem;
+  font-weight: 400;
+  border-color: #727272 !important;
+}
+.ui.button.basic.secondary.c-gray-type2:hover, .ui.button.basic.secondary.c-gray-type2:focus, .ui.button.basic.secondary.c-gray-type2:active {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
   color: #727272 !important;
@@ -503,6 +524,23 @@ textarea {
 }
 
 .ui.basic.table {
+  line-height: 100%;
+}
+.ui.basic.table.is-fncbtn thead th {
+  padding: 1.4rem 0 !important;
+  line-height: 100%;
+}
+.ui.basic.table.is-fncbtn tbody td {
+  padding-top: 0.95rem;
+  padding-bottom: 0.95rem;
+}
+.ui.basic.table.is-chkbox-fncbtn-none thead th {
+  padding: 1.4rem 0 !important;
+  line-height: 100%;
+}
+.ui.basic.table.is-chkbox-fncbtn-none tbody td {
+  padding-top: 1.53rem;
+  padding-bottom: 1.53rem;
   line-height: 100%;
 }
 .ui.basic.table thead th {
@@ -1240,6 +1278,23 @@ textarea {
 }
 
 /* 필터 */
+.filter-grouop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
 .filter-grouop .inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1266,6 +1321,53 @@ textarea {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+}
+.filter-grouop .ui.basic.button {
+  width: auto;
+}
+.filter-grouop .date-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 1.6rem;
+  height: 3rem;
+  padding: 0 0.8rem;
+  border: 1px solid #e0e0e0;
+}
+.filter-grouop .date-group i {
+  font-size: 1.6rem;
+}
+
+/* 달력 */
+.input-date {
+  position: relative;
+  width: 11.7rem;
+  padding-right: 0.5rem;
+  font-size: 1.6rem;
+  color: #727272;
+  background: url(/base/images/icon_calendar.png) no-repeat right center;
+  background-size: 1.8rem 1.8rem;
+}
+.input-date::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  cursor: pointer;
 }
 
 /* 기능 버튼 그룹 */
@@ -1796,11 +1898,6 @@ textarea {
 /* 레이아웃 */
 .wrapper {
   min-height: 100%;
-}
-.wrapper.is-crossroad-view .ly-map {
-  margin-left: 47.6rem;
-  -webkit-transition: margin-left 0.2s;
-  transition: margin-left 0.2s;
 }
 .wrapper.is-crossroad-view.is-fold .crossroad-view-container {
   left: -36.8rem;
