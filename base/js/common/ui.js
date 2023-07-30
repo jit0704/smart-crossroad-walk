@@ -59,6 +59,48 @@ var cmmnUi = {
       $('.gnb').removeClass('is-open');
     });
 
+    // 지점 검색
+    var $searchContainer = $('.search-view-container');
+    function allRemoveActive() {
+      $('.depth1 button', $searchContainer).removeClass('active');
+      $('.depth2 .area', $searchContainer).removeClass('active');
+      $('.btn-custom-wrap .depth2', $searchContainer).hide();
+    }
+    $('.btn-custom', $searchContainer).on('click', function () {
+      $(this).parent().toggleClass('active');
+      if (!$(this).parent().is('.active')) {
+        allRemoveActive();
+      }
+    });
+    $('.depth1 button', $searchContainer).on('click', function () {
+      var $targetPoint = $(this).data('target');
+
+      // console.log($(this).data('all').text());
+      if ($(this).data('all') === '전체') {
+        $(this).closest('.btn-custom-wrap').find('.btn-custom').text($(this).data('all'));
+        setTimeout(function () {
+          allRemoveActive();
+          $('.btn-custom-wrap', $searchContainer).removeClass('active');
+        }, 100);
+      }
+
+      $('.depth1 button', $searchContainer).removeClass('active');
+      $(this).addClass('active');
+
+      $('.depth2 .area', $searchContainer).removeClass('active');
+      var $pointArea = $('#' + $targetPoint);
+      $('.btn-custom-wrap .depth2', $searchContainer).show();
+      $pointArea.addClass('active');
+    });
+    $('.depth2 button', $searchContainer).on('click', function () {
+      var $txt = $(this).text();
+      $(this).closest('.btn-custom-wrap').find('.btn-custom').text($txt);
+      setTimeout(function () {
+        allRemoveActive();
+        $('.btn-custom-wrap', $searchContainer).removeClass('active');
+      }, 100);
+    });
+
     // 카메라 아이콘 클릭시 팝업 노출
     $('.ico-camera').on('click', function () {
       var $this = $(this);
