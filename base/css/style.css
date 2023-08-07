@@ -393,6 +393,34 @@ input[type=date] {
   border-radius: 0.5rem;
   border-color: #e8e8e8;
 }
+.resolution-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 1rem;
+}
+.resolution-info .ui.input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.resolution-info i {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
 .ui.button {
   font-size: 1.8rem;
   -webkit-transition: background 0.3s;
@@ -582,6 +610,10 @@ input[type=date] {
   padding-bottom: 1.53rem;
   line-height: 100%;
 }
+.ui.basic.table.is-chkbox-fncbtn-none2 thead th {
+  padding: 1.4rem 0 !important;
+  line-height: 100%;
+}
 .ui.basic.table thead th {
   padding: 1.2rem 0 !important;
   font-size: 1.8rem;
@@ -599,6 +631,23 @@ input[type=date] {
 }
 .ui.basic.table tbody td:first-child {
   padding-left: 1.4rem !important;
+}
+.ui.basic.table.md {
+  margin-top: 0;
+}
+.ui.basic.table.md.is-chkbox tbody td {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  line-height: 1rem;
+}
+.ui.basic.table.md thead th {
+  padding: 1.2rem 0 !important;
+  line-height: 100%;
+  border-bottom: 0;
+}
+.ui.basic.table.md tbody td {
+  padding: 1.16rem 2.2rem;
+  line-height: 100%;
 }
 .data-tbl tbody th {
   padding-bottom: 1.6rem;
@@ -1434,6 +1483,43 @@ input[type=date] {
   min-width: 8rem;
 }
 
+.button-group-only-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.button-group-only-right .bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
+  margin-left: auto;
+}
+
 /* 프로그래스바 */
 .progress-bar {
   display: -webkit-box;
@@ -1634,6 +1720,10 @@ input[type=date] {
   top: 0;
   z-index: 1;
 }
+.data-tbl-very.md {
+  height: auto;
+  max-height: 20rem;
+}
 
 /*---------------------------------------------------------------
   [모달 팝업]
@@ -1786,11 +1876,29 @@ input[type=date] {
   font-weight: 700;
   color: #1e5f8d;
 }
+.modal-body-sub-tit {
+  display: block;
+  margin: 2.6rem 3rem 1.6rem;
+  padding: 0 1.5rem;
+  line-height: 100%;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e5f8d;
+}
 .modal-body .data-tbl {
   padding: 2.2rem 3rem 0;
 }
 .modal-body .data-tbl.view {
   padding: 2.5rem 3rem 0;
+}
+.modal-body .data-tbl-very {
+  margin: 0 3rem;
+}
+.modal-body .button-group-only-right {
+  margin: 1.8rem 3.3rem 0;
+}
+.modal-body .button-group-only-right .ui.button.basic {
+  width: 8rem;
 }
 .modal-bottom {
   display: -webkit-box;
@@ -2057,6 +2165,15 @@ input[type=date] {
 .gnb.is-open .ui.menu {
   width: 100%;
 }
+.gnb.is-open .aside .current-time {
+  margin: 2.3rem 0 3.6rem 1.5rem;
+  font-size: 1.4rem;
+  text-align: left;
+}
+.gnb.is-open .aside .current-time span {
+  display: inline-block;
+  letter-spacing: 0;
+}
 .gnb > h1 {
   overflow: hidden;
   margin: 3.3rem 0 0 1.3rem;
@@ -2210,6 +2327,77 @@ input[type=date] {
 }
 .gnb .aside {
   margin-top: auto;
+}
+.gnb .aside [class*=btn] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 18rem;
+  font-size: 1.65rem;
+  color: #fff;
+}
+.gnb .aside .btn-bell {
+  margin-bottom: 2.15rem;
+  padding: 0 0 0 1.6rem;
+}
+.gnb .aside .btn-bell::before {
+  content: "";
+  display: block;
+  width: 2.1rem;
+  height: 2.4rem;
+  background-image: url("/base/images/icon_noti.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  margin-right: 1.65rem;
+}
+.gnb .aside .btn-m {
+  padding: 0 0 0 1.45rem;
+}
+.gnb .aside .btn-m::before {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-image: url("/base/images/icon_m.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  margin-right: 1.45rem;
+}
+.gnb .aside .btn-m::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 2.5rem;
+  background-image: url("/base/images/arr_down_white.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 1.3rem 0.7rem;
+  margin-left: auto;
+}
+.gnb .aside .current-time {
+  margin: 2.3rem 0 3.6rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+}
+.gnb .aside .current-time span {
+  display: block;
+  letter-spacing: -0.06rem;
 }
 
 /* 지도 > 교차로 상세 메뉴 */
