@@ -1,0 +1,509 @@
+@charset "UTF-8";
+/*---------------------------------------------------------------
+  [스마트 교차로 CSS]
+-----------------------------------------------------------------*/
+/* 레이아웃 */
+.wrapper.is-crossroad-view.is-fold .crossroad-view-container {
+  left: -36.8rem;
+}
+.wrapper.is-crossroad-view.is-fold .crossroad-view-container .btn-crossroad-view::before {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.wrapper.is-crossroad-view.is-fold .ly-map {
+  margin-left: 5.4rem;
+}
+.wrapper.is-crossroad-view.is-fold.is-hover .crossroad-view-container {
+  left: -24.3rem;
+}
+.wrapper.is-roi-view.is-fold .roi-view-container {
+  left: -36.8rem;
+}
+.wrapper.is-roi-view.is-fold .roi-view-container .btn-roi-view::before {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.wrapper.is-roi-view.is-fold .ly-map {
+  margin-left: 5.4rem;
+}
+.wrapper.is-roi-view.is-fold.is-hover .roi-view-container {
+  left: -24.3rem;
+}
+
+/* 교차로 상세 탭(통계/영상/돌발) 화면 */
+.crossroad-view-container {
+  position: fixed;
+  left: 5.4rem;
+  top: 0;
+  z-index: 8;
+  width: 42.2rem;
+  height: calc(100% - 2rem);
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+  -webkit-transition: left 0.2s;
+  transition: left 0.2s;
+}
+.crossroad-view-container > h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.6rem;
+  padding: 4rem 2.4rem 1.8rem 2.4rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #858585;
+}
+.crossroad-view-container > h2::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 1.4rem;
+  background-image: url("/base/images/icon_dot_double.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.crossroad-view-container .tab.segment > section > .tit {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #6d6d6d;
+}
+.crossroad-view-container .display-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-bottom: 1rem;
+}
+.crossroad-view-container .display-info .left {
+  color: #1e5f8d;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.crossroad-view-container .display-info .left em {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.crossroad-view-container .progress-bar {
+  margin-bottom: 1.4rem;
+}
+.crossroad-view-container .stats-traffic {
+  padding: 3.7rem 4rem 3.1rem;
+  border-bottom: 1px solid #dcdcdc;
+}
+.crossroad-view-container .stats-speed {
+  padding: 2.6rem 4rem;
+  border-bottom: 1px solid #dcdcdc;
+}
+.crossroad-view-container .stats-speed .display-info .left em i {
+  font-size: 2.2rem;
+}
+.crossroad-view-container .stats-speed .chart-container {
+  height: 14.4rem;
+}
+.crossroad-view-container .stats-los {
+  padding: 2.6rem 4rem;
+}
+.crossroad-view-container .stats-los .display-info .left em {
+  font-size: 3.2rem;
+  color: #e57003;
+}
+.crossroad-view-container .stats-los .chart-container {
+  height: 15rem;
+}
+.crossroad-view-container .chart-container .dummy-img {
+  display: block;
+}
+.crossroad-view-container .btn-crossroad-view {
+  position: absolute;
+  top: 50%;
+  right: -2.4rem;
+  width: 2.4rem;
+  height: 6rem;
+  margin-top: -3rem;
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+  background: #fff;
+  border: 1px solid #c9c9c9;
+  -webkit-box-shadow: 4px 2px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.crossroad-view-container .btn-crossroad-view::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -0.3rem;
+  margin-top: -0.95rem;
+  width: 0.6rem;
+  height: 1.9rem;
+  background-image: url("/base/images/arr_left_gray.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+/* ROI설정 탭 화면 */
+.roi-view-container {
+  position: fixed;
+  left: 5.4rem;
+  top: 0;
+  z-index: 8;
+  width: 42.2rem;
+  height: calc(100% - 2rem);
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+  -webkit-transition: left 0.2s;
+  transition: left 0.2s;
+}
+.roi-view-container .ui.tabular.menu.rounded .item::before {
+  display: none;
+}
+.roi-view-container .tab.segment > section h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #6d6d6d;
+}
+.roi-view-container .perceive-section {
+  padding: 4.2rem 3rem 2.8rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+.roi-view-container .perceive-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-bottom: 1.5rem;
+}
+.roi-view-container .perceive-header .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.8rem;
+}
+.roi-view-container .perceive-header .right .txt {
+  color: #1e5f8d;
+  font-size: 1.2rem;
+}
+.roi-view-container .perceive-body table tr + tr th,
+.roi-view-container .perceive-body table tr + tr td {
+  padding-top: 0.4rem;
+}
+.roi-view-container .perceive-body table th {
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #6d6d6d;
+}
+.roi-view-container .perceive-body table td .ui.input {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.roi-view-container .perceive-body table td .ui.input input {
+  border-color: #cbcbcb;
+}
+.roi-view-container .roi-set-section {
+  padding: 3.2rem 3rem 2.8rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+.roi-view-container .roi-set-area-button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 1.4rem;
+}
+.roi-view-container .roi-set-area-button-group button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0;
+  line-height: 3.1rem;
+  border: 1px solid #cbcbcb;
+  background: #f8f8f8;
+  color: #999999;
+  font-size: 1.4rem;
+  font-weight: 500;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.roi-view-container .roi-set-area-button-group button.active {
+  color: #fff;
+  background: #727272;
+  border-color: #727272;
+}
+.roi-view-container .roi-set-area-button-group button:first-child {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.roi-view-container .roi-set-area-button-group button:last-child {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.roi-view-container .roi-set-btn1 {
+  display: block;
+  margin-top: 1rem;
+  line-height: 2.9rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d3e3ee;
+  background: #ebf8ff;
+  font-size: 1.6rem;
+  color: #1e5f8d;
+}
+.roi-view-container .roi-set-btn2 {
+  display: block;
+  margin-top: 0.4rem;
+  line-height: 4rem;
+  border-radius: 0.5rem;
+  background: #1e5f8d;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+}
+.roi-view-container .roi-set-list-section {
+  padding: 3.2rem 3rem 0;
+}
+.roi-view-container .roi-set-list-section .data-tbl-gray table {
+  width: 100%;
+}
+.roi-view-container .roi-set-list-section .data-tbl-gray table td {
+  vertical-align: middle;
+}
+.roi-view-container .roi-set-list-section .data-tbl-gray table td [class*=color] {
+  display: inline-block;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 0.2rem;
+  vertical-align: top;
+}
+.roi-view-container .roi-set-list-section .data-tbl-gray table td .ico-wastebasket {
+  padding: 0;
+  vertical-align: top;
+}
+.roi-view-container .roi-set-list-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-bottom: 1.6rem;
+}
+.roi-view-container .roi-set-list-header .btn-md {
+  width: 4.1rem;
+}
+.roi-view-container .color-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
+  margin-top: 1rem;
+}
+.roi-view-container .color-list button {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 0.2rem;
+}
+.roi-view-container .color-red {
+  background: #d70000;
+}
+.roi-view-container .color-orange {
+  background: #ff8a00;
+}
+.roi-view-container .color-yellow {
+  background: #ffe500;
+}
+.roi-view-container .color-lime {
+  background: #a3ef00;
+}
+.roi-view-container .color-aqua {
+  background: #00efe1;
+}
+.roi-view-container .color-azure {
+  background: #008bef;
+}
+.roi-view-container .color-violet {
+  background: #8f00ff;
+}
+.roi-view-container .color-pink {
+  background: #ff00f5;
+}
+.roi-view-container .color-brown {
+  background: #965b24;
+}
+.roi-view-container .color-green {
+  background: #00883f;
+}
+.roi-view-container .btn-roi-view {
+  position: absolute;
+  top: 50%;
+  right: -2.4rem;
+  width: 2.4rem;
+  height: 6rem;
+  margin-top: -3rem;
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+  background: #fff;
+  border: 1px solid #c9c9c9;
+  -webkit-box-shadow: 4px 2px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.roi-view-container .btn-roi-view::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -0.3rem;
+  margin-top: -0.95rem;
+  width: 0.6rem;
+  height: 1.9rem;
+  background-image: url("/base/images/arr_left_gray.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-view-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 4rem 2.4rem 1.8rem 2.4rem;
+}
+.roi-view-header h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.6rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #858585;
+}
+.roi-view-header h2::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 1.4rem;
+  background-image: url("/base/images/icon_dot_double.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+/* 미디어 쿼리 */
+@media screen and (max-height: 899px) {
+  /* 교차로 통계/ROI 화면 : scroll-y값 추가 */
+  .crossroad-view-container,
+  .roi-view-container {
+    height: 100%;
+  }
+  .crossroad-view-container .ui.tab.segment,
+  .roi-view-container .ui.tab.segment {
+    overflow-y: auto;
+    max-height: calc(100% - 118.45px);
+  }
+}

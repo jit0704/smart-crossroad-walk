@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>지도</title>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <!-- includeHTML.js : 퍼블리싱 확인용 include -->
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" href="/base/css/common.css" />
+    <link rel="stylesheet" href="/base/css/is.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- GNB -->
+      <nav class="gnb" include-html="/base/html/common/gnb.html"></nav>
+
+      <div class="roi-view-container">
+        <div class="roi-view-header">
+          <h2>태릉입구 역</h2>
+          <div class="right">
+            <a href="#" class="btn-md c-navy">상세</a>
+            <a href="#" class="btn-md c-navy">목록</a>
+          </div>
+        </div>
+        <!-- //roi-view-header -->
+        <div class="ui top attached tabular menu rounded">
+          <a href="#none;" class="item active" data-tab="first">객체 ROI</a>
+          <a href="#none;" class="item" data-tab="second">돌발 ROI</a>
+          <a href="#none;" class="item" data-tab="third">교차로 ROI</a>
+        </div>
+        <!-- //menu -->
+        <div class="ui bottom attached tab segment tab-obj-roi active" data-tab="first">
+          <section class="perceive-section">
+            <div class="perceive-header">
+              <h3>인식설정</h3>
+              <div class="right">
+                <div class="selectbox-wrap xs">
+                  <select>
+                    <option value="">채널1</option>
+                    <option value="">채널2</option>
+                    <option value="">채널3</option>
+                  </select>
+                </div>
+                <span class="txt">카메라명</span>
+              </div>
+              <!-- //right -->
+            </div>
+            <!-- //perceive-header -->
+            <div class="perceive-body">
+              <table>
+                <colgroup>
+                  <col style="width: 25%" />
+                  <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>객체 검출 값</th>
+                    <td>
+                      <div class="ui input rounded xs">
+                        <input type="text" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>객체 추적 값</th>
+                    <td>
+                      <div class="ui input rounded xs">
+                        <input type="text" />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //perceive-body -->
+          </section>
+          <!-- //perceive-section -->
+
+          <section class="roi-set-section">
+            <h3>ROI 설정</h3>
+            <div class="roi-set-area-button-group">
+              <button type="button" class="active">객체 표출 영역</button>
+              <button type="button">딥러닝 검출 영역</button>
+            </div>
+            <div class="color-list">
+              <button type="button" class="color-red"><span class="screen-out">빨강색</span></button>
+              <button type="button" class="color-orange"><span class="screen-out">주황색</span></button>
+              <button type="button" class="color-yellow"><span class="screen-out">노랑색</span></button>
+              <button type="button" class="color-lime"><span class="screen-out">라임색</span></button>
+              <button type="button" class="color-aqua"><span class="screen-out">아쿠아색</span></button>
+              <button type="button" class="color-azure"><span class="screen-out">연한파랑색</span></button>
+              <button type="button" class="color-violet"><span class="screen-out">보라색</span></button>
+              <button type="button" class="color-pink"><span class="screen-out">분홍색</span></button>
+              <button type="button" class="color-brown"><span class="screen-out">갈색</span></button>
+              <button type="button" class="color-green"><span class="screen-out">녹색</span></button>
+            </div>
+            <button type="button" class="roi-set-btn1">객체 표출 영역, 빨간색</button>
+            <button type="button" class="roi-set-btn2">ROI 설정 - 설정 완료 (현재 점 개수 :2)</button>
+          </section>
+          <!-- //roi-set-section -->
+
+          <section class="roi-set-list-section">
+            <div class="roi-set-list-header">
+              <h3>ROI 설정 목록</h3>
+              <button type="button" class="btn-md bg-navy">저장</a>
+            </div>
+            <!-- //roi-set-list-header -->
+            <div class="data-tbl-gray">
+              <table>
+                <colgroup>
+                  <col style="width: 33.33%" />
+                  <col style="width: 33.33%" />
+                  <col style="width: 33.33%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>색상</th>
+                    <th>삭제</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>객체표출</td>
+                    <td><i class="color-green"></i></td>
+                    <td>
+                      <button type="button" class="ico-wastebasket"><span class="screen-out">삭제 버튼</span></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>딥러닝 검출</td>
+                    <td><i class="color-brown"></i></td>
+                    <td>
+                      <button type="button" class="ico-wastebasket"><span class="screen-out">삭제 버튼</span></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //data-tbl-gray -->
+          </section>
+          <!-- //roi-set-list-section -->
+        </div>
+        <!-- //객체 ROI 컨텐츠 -->
+        <div class="ui bottom attached tab segment tab-accidental-roi" data-tab="second">돌발 ROI 내용..</div>
+        <div class="ui bottom attached tab segment tab-crossroad-roi" data-tab="third">교차로 ROI 내용..</div>
+
+        <button type="button" class="btn-roi-view">
+          <span class="screen-out">ROI설정 상세 열기/닫기 버튼</span>
+        </button>
+      </div>
+      <!-- //roi-view-container -->
+
+      <main class="ly-container">
+        <!-- temp-map 클래스명 : 퍼블리싱 작업 확인용 -->
+        <div id="map1" class="ly-map temp-map"></div>
+        <!-- //ly-map -->
+      </main>
+      <!-- //ly-container -->
+
+      <footer class="ly-copyright" include-html="/base/html/common/footer.html"></footer>
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      // 퍼블리싱 확인용 : 탭 메뉴
+      $('.roi-view-container .menu .item').tab();
+
+      // 퍼블리싱 확인용 : ROI설정 버튼 클릭시 활성화
+      $('.roi-set-area-button-group button').on('click', function(){
+        $('.roi-set-area-button-group button').removeClass('active');
+        $(this).addClass('active');
+      });
+    </script>
+  </body>
+</html>

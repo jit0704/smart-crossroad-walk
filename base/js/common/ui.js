@@ -18,7 +18,7 @@ var cmmnUi = {
     cmmnUi.modal();
   },
   default: function () {
-    // 체크박스 리스트 아코디언 메뉴
+    /* 체크박스 리스트 아코디언 메뉴 */
     $('.chk-list-container .chk-list-title button').on('click', function () {
       var $this = $(this).parent('.chk-list-title');
       var $chkContent = $this.next();
@@ -34,30 +34,44 @@ var cmmnUi = {
         $this.addClass('active');
       }
     });
+
+    /* 좌측 메뉴에 노출되는 상세 화면(접고/펼치기) 인터랙션 */
+    // 상세 화면 유무 체크
+    $(window)
+      .on('resize', function () {
+        if ($('.crossroad-view-container').length !== 0) {
+          $('.wrapper').addClass('is-crossroad-view');
+        }
+
+        if ($('.roi-view-container').length !== 0) {
+          $('.wrapper').addClass('is-roi-view');
+        }
+
+        if ($('.search-view-container').length !== 0) {
+          $('.wrapper').addClass('is-search-view');
+        }
+      })
+      .resize();
+
+    // 상세 화면 접고/펼치기
+    $('.btn-crossroad-view').on('click', function () {
+      $('.is-crossroad-view').toggleClass('is-fold');
+      $('.gnb').removeClass('is-open');
+    });
+    $('.btn-roi-view').on('click', function () {
+      $('.is-roi-view').toggleClass('is-fold');
+      $('.gnb').removeClass('is-open');
+    });
+    $('.btn-search-view').on('click', function () {
+      $('.is-search-view').toggleClass('is-fold');
+      $('.gnb').removeClass('is-open');
+    });
   },
   map: function () {
     // 지도 우측 상단 현재 구역 드롭다운
     if ($('.ly-map').length !== 0) {
       $('.area-box').dropdown();
     }
-
-    // 교차로 상세 탭 init
-    $('.crossroad-view-container .menu .item').tab();
-
-    // 교차로 상세 메뉴 유무 체크
-    $(window)
-      .on('resize', function () {
-        if ($('.crossroad-view-container').length !== 0) {
-          $('.wrapper').addClass('is-crossroad-view');
-        }
-      })
-      .resize();
-
-    // 교차로 상세 메뉴 접고/펼치기
-    $('.btn-crossroad-view').on('click', function () {
-      $('.is-crossroad-view').toggleClass('is-fold');
-      $('.gnb').removeClass('is-open');
-    });
 
     // 지점 검색
     var $searchContainer = $('.search-view-container');
@@ -75,7 +89,6 @@ var cmmnUi = {
     $('.depth1 button', $searchContainer).on('click', function () {
       var $targetPoint = $(this).data('target');
 
-      // console.log($(this).data('all').text());
       if ($(this).data('all') === '전체') {
         $(this).closest('.btn-custom-wrap').find('.btn-custom').text($(this).data('all'));
         setTimeout(function () {
@@ -132,9 +145,9 @@ var cmmnUi = {
     //   return (this.prop('scrollHeight') == 0 && this.prop('clientHeight') == 0) || this.prop('scrollHeight') > this.prop('clientHeight');
     // };
 
-    // 교차로 상세 메뉴가 있는 화면에서의 gnb 상태값 적용
-    function hoverState(order) {
-      if ($(this).closest('.wrapper').is('.is-crossroad-view')) {
+    // 좌측 메뉴에 노출되는 상세 화면(접고/펼치기)에서의 gnb 상태값 적용
+    function hoverState(order, isClassNameChk) {
+      if ($(this).closest('.wrapper').is(isClassNameChk)) {
         return order;
       }
     }
@@ -142,13 +155,23 @@ var cmmnUi = {
     // gnb hover 정의
     $(document).on('mouseenter', '.gnb', function () {
       $('.gnb').addClass('is-open');
-      hoverState($('.is-crossroad-view').addClass('is-hover'));
+      hoverState($('.is-crossroad-view').addClass('is-hover'), '.is-crossroad-view');
+      hoverState($('.is-roi-view').addClass('is-hover'), '.is-roi-view');
+      hoverState($('.is-search-view').addClass('is-hover'), '.is-search-view');
     });
     $(document).on('mouseenter', '.ly-container', function () {
       $('.gnb').removeClass('is-open');
-      hoverState($('.is-crossroad-view').removeClass('is-hover'));
+      hoverState($('.is-crossroad-view').removeClass('is-hover'), '.is-crossroad-view');
+      hoverState($('.is-roi-view').removeClass('is-hover'), '.is-roi-view');
+      hoverState($('.is-search-view').removeClass('is-hover'), '.is-search-view');
     });
     $(document).on('mouseenter', '.crossroad-view-container .tab.segment', function () {
+      $('.gnb').removeClass('is-open');
+    });
+    $(document).on('mouseenter', '.roi-view-container .tab.segment', function () {
+      $('.gnb').removeClass('is-open');
+    });
+    $(document).on('mouseenter', '.search-view-container > section', function () {
       $('.gnb').removeClass('is-open');
     });
 
