@@ -32,6 +32,104 @@
   left: -24.3rem;
 }
 
+/* 교차로 통계 */
+.stats-container .filter-grouop {
+  margin-bottom: 4.1rem;
+}
+.stats-container > section h2 {
+  margin: 0 0 1.2rem 0.5rem;
+  font-size: 1.8rem;
+  color: #727272;
+  font-weight: 700;
+}
+.stats-container > section .chart-container {
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+}
+.stats-container .divide-none {
+  margin-bottom: 2.1rem;
+}
+.stats-container .divide-none .chart-container {
+  height: 24.6rem;
+  padding: 2rem 1rem;
+}
+.stats-container .divide-4 li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 1rem;
+}
+.stats-container .divide-4 li .chart-wrap {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 19.6rem;
+  padding: 1.4rem 3rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+}
+.stats-container .divide-4 li .chart-wrap h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.9rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.stats-container .divide-4 li .chart-wrap h3::before {
+  content: "";
+  width: 0.9rem;
+  height: 0.9rem;
+}
+.stats-container .divide-4 li:first-child {
+  margin-bottom: 1rem;
+}
+.stats-container .divide-4 li:first-child .chart-wrap:first-child h3::before {
+  background: #5350dd;
+}
+.stats-container .divide-4 li:first-child .chart-wrap:last-child h3::before {
+  background: #50ddd5;
+}
+.stats-container .divide-4 li:last-child {
+  margin-bottom: 1rem;
+}
+.stats-container .divide-4 li:last-child .chart-wrap:first-child h3::before {
+  background: #f67676;
+}
+.stats-container .divide-4 li:last-child .chart-wrap:last-child h3::before {
+  background: #c2c2c2;
+}
+
 /* 교차로 상세 탭(통계/영상/돌발) 화면 */
 .crossroad-view-container {
   position: fixed;

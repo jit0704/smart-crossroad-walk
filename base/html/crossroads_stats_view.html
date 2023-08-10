@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>교차로 상세 통계</title>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <!-- includeHTML.js : 퍼블리싱 확인용 include -->
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" href="/base/css/common.css" />
+    <link rel="stylesheet" href="/base/css/is.css" />
+
+    <style>
+      /* 퍼블리싱 확인용 */
+      .dummy-img {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- GNB -->
+      <nav class="gnb" include-html="/base/html/common/gnb.html"></nav>
+
+      <main class="ly-container">
+        <div class="ly-sub bg-gray">
+          <div class="ly-setting">
+            <div class="ui breadcrumb">
+              <i class="home icon"></i>
+              <i class="right angle icon divider"></i>
+              <span class="section">교차로</span>
+              <i class="right angle icon divider"></i>
+              <span class="section">통계</span>
+              <i class="right angle icon divider"></i>
+              <div class="active section">교차로 상세 통계</div>
+            </div>
+            <!-- //breadcrumb -->
+            <div class="stats-container">
+              <section class="filter-grouop">
+                <div class="inner">
+                  <div class="selectbox-wrap primary label-none">
+                    <select>
+                      <option value="">구역</option>
+                      <option value="">아이템1</option>
+                      <option value="">아이템2</option>
+                      <option value="">아이템3</option>
+                    </select>
+                  </div>
+                  <!-- //selectbox-wrap -->
+                  <div class="selectbox-wrap primary label-none">
+                    <select>
+                      <option value="">지점</option>
+                      <option value="">아이템1</option>
+                      <option value="">아이템2</option>
+                      <option value="">아이템3</option>
+                    </select>
+                  </div>
+                  <!-- //selectbox-wrap -->
+                  <div class="selectbox-wrap primary label-none">
+                    <select>
+                      <option value="">분석 유형</option>
+                      <option value="">아이템1</option>
+                      <option value="">아이템2</option>
+                      <option value="">아이템3</option>
+                    </select>
+                  </div>
+                  <!-- //selectbox-wrap -->
+                  <div class="selectbox-wrap primary label-none">
+                    <select>
+                      <option value="">분석 기간</option>
+                      <option value="">아이템1</option>
+                      <option value="">아이템2</option>
+                      <option value="">아이템3</option>
+                    </select>
+                  </div>
+                  <!-- //selectbox-wrap -->
+
+                  <!-- 달력 날짜 초기화는 맨 아래 스크립트 참고   -->
+                  <div class="date-group">
+                    <input type="date" class="input-date" data-start="date-start" />
+                    <i>~</i>
+                    <input type="date" class="input-date" data-end="date-end" />
+                  </div>
+                  <!-- //date-group -->
+                  <button class="btn-data-search">검색</button>
+                </div>
+                <!-- //inner -->
+              </section>
+              <!-- //filter-grouop -->
+              <section class="divide-none">
+                <h2>범지기마을 도로 별 교통량</h2>
+                <div class="chart-container">
+                  <!-- 차트 크기 1746(px) x 206(px) -->
+                  <img
+                    src="https://www.dummyimage.com/1746x206/f9f9f9/000.png&amp;text=Chart+Area"
+                    alt="퍼블리싱 확인용 더미 이미지"
+                    class="dummy-img"
+                  />
+                </div>
+              </section>
+              <!-- //divide-none -->
+              <section class="divide-4">
+                <h2>범지기마을 차로 별 교통량</h2>
+                <ul>
+                  <li>
+                    <div class="chart-wrap">
+                      <h3>아름동 행정복지센터 방면</h3>
+                      <div class="chart-container">
+                        <!-- 차트 크기 802(px) x 137(px) -->
+                        <img
+                          src="https://www.dummyimage.com/802x137/f9f9f9/000.png&amp;text=Chart+Area"
+                          alt="퍼블리싱 확인용 더미 이미지"
+                          class="dummy-img"
+                        />
+                      </div>
+                    </div>
+                    <!-- //chart-wrap -->
+                    <div class="chart-wrap">
+                      <h3>아름초등학교 방면</h3>
+                      <div class="chart-container">
+                        <!-- 차트 크기 802(px) x 137(px) -->
+                        <img
+                          src="https://www.dummyimage.com/802x137/f9f9f9/000.png&amp;text=Chart+Area"
+                          alt="퍼블리싱 확인용 더미 이미지"
+                          class="dummy-img"
+                        />
+                      </div>
+                    </div>
+                    <!-- //chart-wrap -->
+                  </li>
+                  <li>
+                    <div class="chart-wrap">
+                      <h3>종촌동 방면</h3>
+                      <div class="chart-container">
+                        <!-- 차트 크기 802(px) x 137(px) -->
+                        <img
+                          src="https://www.dummyimage.com/802x137/f9f9f9/000.png&amp;text=Chart+Area"
+                          alt="퍼블리싱 확인용 더미 이미지"
+                          class="dummy-img"
+                        />
+                      </div>
+                    </div>
+                    <!-- //chart-wrap -->
+                    <div class="chart-wrap">
+                      <h3>도담동 방면</h3>
+                      <div class="chart-container">
+                        <!-- 차트 크기 802(px) x 137(px) -->
+                        <img
+                          src="https://www.dummyimage.com/802x137/f9f9f9/000.png&amp;text=Chart+Area"
+                          alt="퍼블리싱 확인용 더미 이미지"
+                          class="dummy-img"
+                        />
+                      </div>
+                    </div>
+                    <!-- //chart-wrap -->
+                  </li>
+                </ul>
+              </section>
+              <!-- //divide-4 -->
+            </div>
+            <!-- //stats-container -->
+          </div>
+          <!-- //ly-setting -->
+        </div>
+        <!-- //ly-sub -->
+      </main>
+      <!-- //ly-container -->
+
+      <footer class="ly-copyright c-white" include-html="/base/html/common/footer.html"></footer>
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      // 달력 날짜 초기화
+      function dateInit() {
+        return new Date().toISOString().substring(0, 10);
+      }
+      $('[data-start="date-start"]').attr('value', dateInit());
+      $('[data-end="date-end"]').attr('value', dateInit());
+    </script>
+  </body>
+</html>
