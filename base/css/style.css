@@ -553,6 +553,15 @@ input[type=date] {
   border-radius: 0.3rem;
   background: #999999;
 }
+.btn-close {
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-image: url("/base/images/btn_close_gray.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
 
 .ui.buttons.basic {
   border: 0;
@@ -2025,6 +2034,104 @@ input[type=date] {
 }
 .modal-bottom .ui.button.basic {
   width: 8rem;
+}
+
+/*---------------------------------------------------------------
+  [커스텀 팝업]
+-----------------------------------------------------------------*/
+/* alert, confirm */
+.custom-popup {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 11;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.1);
+}
+.custom-popup.active {
+  display: block;
+}
+.custom-popup-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 1.8rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+.custom-popup-header .tit {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e5f8d;
+}
+.custom-popup-body {
+  color: #727272;
+}
+.custom-popup-btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
+  padding: 2.2rem 0 2.5rem;
+}
+.custom-popup-btn-group .button.basic.rounded {
+  width: 8rem;
+}
+.custom-popup.alert, .custom-popup.confirm {
+  width: 44.1rem;
+}
+.custom-popup.alert .custom-popup-body, .custom-popup.confirm .custom-popup-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  min-height: 7.3rem;
+  padding: 2.5rem 3rem 0;
+  text-align: center;
+}
+.custom-popup.alert .custom-popup-body p, .custom-popup.confirm .custom-popup-body p {
+  line-height: normal;
+  font-size: 2rem;
 }
 
 /*---------------------------------------------------------------

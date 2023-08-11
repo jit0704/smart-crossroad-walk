@@ -111,6 +111,9 @@
   width: 0.9rem;
   height: 0.9rem;
 }
+.stats-container .divide-4 li .chart-wrap .chart-container {
+  height: 13.7rem;
+}
 .stats-container .divide-4 li:first-child {
   margin-bottom: 1rem;
 }
