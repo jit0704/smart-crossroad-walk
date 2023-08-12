@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>교차로 원시 이력</title>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <!-- includeHTML.js : 퍼블리싱 확인용 include -->
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" href="/base/css/common.css" />
+    <link rel="stylesheet" href="/base/css/is.css" />
+
+    <style>
+      /* 퍼블리싱 확인용 */
+      .dummy-img {
+        display: block;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- GNB -->
+      <nav class="gnb" include-html="/base/html/common/gnb.html"></nav>
+
+      <main class="ly-container">
+        <div class="ly-sub">
+          <div class="ly-setting">
+            <div class="ui breadcrumb">
+              <i class="home icon"></i>
+              <i class="right angle icon divider"></i>
+              <span class="section">교차로</span>
+              <i class="right angle icon divider"></i>
+              <span class="section">통계</span>
+              <i class="right angle icon divider"></i>
+              <div class="active section">교차로 원시 이력</div>
+            </div>
+            <!-- //breadcrumb -->
+            <div class="stats-container primitive">
+              <section class="filter-grouop">
+                <div class="inner">
+                  <div class="selectbox-wrap primary label-none">
+                    <select>
+                      <option value="">구역</option>
+                      <option value="">아이템1</option>
+                      <option value="">아이템2</option>
+                      <option value="">아이템3</option>
+                    </select>
+                  </div>
+                  <!-- //selectbox-wrap -->
+                  <div class="selectbox-wrap primary label-none">
+                    <select>
+                      <option value="">지점</option>
+                      <option value="">아이템1</option>
+                      <option value="">아이템2</option>
+                      <option value="">아이템3</option>
+                    </select>
+                  </div>
+                  <!-- //selectbox-wrap -->
+
+                  <!-- 달력 날짜 초기화는 맨 아래 스크립트 참고   -->
+                  <div class="date-group">
+                    <input type="date" class="input-date" data-start="date-start" />
+                    <i>~</i>
+                    <input type="date" class="input-date" data-end="date-end" />
+                  </div>
+                  <!-- //date-group -->
+                  <button class="btn-data-search">검색</button>
+                </div>
+                <!-- //inner -->
+              </section>
+              <!-- //filter-grouop -->
+
+              <section class="button-function-group">
+                <p class="left">구역 별 교차로 원시 이력 데이터</p>
+                <!-- //left -->
+                <div class="right">
+                  <button class="ui primary basic button rounded">Excel Down</button>
+                </div>
+              </section>
+
+              <div class="data-tbl-very">
+                <table class="ui very basic table is-data-grid">
+                  <thead>
+                    <tr>
+                      <th rowspan="2">No</th>
+                      <th rowspan="2">수집일시</th>
+                      <th rowspan="2">지점</th>
+                      <th rowspan="2">카메라 명</th>
+                      <th rowspan="2">도로<br />방향</th>
+                      <th rowspan="2">차로</th>
+                      <th rowspan="2">평균속도<br />(km/h)</th>
+                      <th rowspan="2">대기행렬(m)</th>
+                      <th rowspan="2">점유율<br />(%)</th>
+                      <th rowspan="2">교통량(대)</th>
+                      <th colspan="5">직진 교통량</th>
+                      <th colspan="5">좌회전 교통량</th>
+                      <th colspan="5">우회전 교통량</th>
+                      <th colspan="5">유턴 교통량</th>
+                    </tr>
+                    <tr>
+                      <th>소형</th>
+                      <th>버스</th>
+                      <th>트럭</th>
+                      <th>트레일러</th>
+                      <th>이륜차</th>
+                      <th>소형</th>
+                      <th>버스</th>
+                      <th>트럭</th>
+                      <th>트레일러</th>
+                      <th>이륜차</th>
+                      <th>소형</th>
+                      <th>버스</th>
+                      <th>트럭</th>
+                      <th>트레일러</th>
+                      <th>이륜차</th>
+                      <th>소형</th>
+                      <th>버스</th>
+                      <th>트럭</th>
+                      <th>트레일러</th>
+                      <th>이륜차</th>
+                    </tr>
+                  </thead>
+                  <tbody include-html="/base/html/common/primitive_table_data.html"></tbody>
+                </table>
+              </div>
+              <!-- //data-tbl-very -->
+
+              <div class="paging-group xs" include-html="/base/html/common/paging2.html"></div>
+              <!-- //paging-group -->
+            </div>
+            <!-- //stats-container -->
+          </div>
+          <!-- //ly-setting -->
+        </div>
+        <!-- //ly-sub -->
+      </main>
+      <!-- //ly-container -->
+
+      <footer class="ly-copyright c-white" include-html="/base/html/common/footer.html"></footer>
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      // 달력 날짜 초기화
+      function dateInit() {
+        return new Date().toISOString().substring(0, 10);
+      }
+      $('[data-start="date-start"]').attr('value', dateInit());
+      $('[data-end="date-end"]').attr('value', dateInit());
+    </script>
+  </body>
+</html>

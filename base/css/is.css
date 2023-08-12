@@ -34,7 +34,18 @@
 
 /* 교차로 통계 */
 .stats-container .filter-grouop {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin-bottom: 4.1rem;
+}
+.stats-container .filter-grouop .date-group + .btn-data-search:not(:last-child) {
+  min-width: 13.1rem;
+}
+.stats-container .filter-grouop .branch-result {
+  margin-left: 1.98rem;
+  font-size: 1.6rem;
+  color: #1e5f8d;
 }
 .stats-container > section h2 {
   margin: 0 0 1.2rem 0.5rem;
@@ -48,12 +59,15 @@
   -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
           box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
 }
-.stats-container .divide-none {
-  margin-bottom: 2.1rem;
-}
 .stats-container .divide-none .chart-container {
   height: 24.6rem;
   padding: 2rem 1rem;
+}
+.stats-container .divide-4 {
+  margin-top: 2.1rem;
+}
+.stats-container .divide-4.title-none {
+  margin-top: 1rem;
 }
 .stats-container .divide-4 li {
   display: -webkit-box;
@@ -131,6 +145,43 @@
 }
 .stats-container .divide-4 li:last-child .chart-wrap:last-child h3::before {
   background: #c2c2c2;
+}
+
+/* 교차로 비교 통계 > 비교 지점 선택 팝업 */
+.comparison-branch tbody .branch-tit {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e5f8d;
+  text-align: center;
+}
+.comparison-branch tbody .name-tit {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #727272;
+  text-align: center;
+}
+
+/* 교차로 원시 이력 */
+.stats-container.primitive .filter-grouop {
+  margin-bottom: 3rem;
+}
+.stats-container.primitive .button-function-group {
+  margin-bottom: 0.8rem;
+}
+.stats-container.primitive .button-function-group .left {
+  margin-bottom: 0;
+  font-size: 1.6rem;
+  color: #1e5f8d;
+}
+.stats-container.primitive .data-tbl-very {
+  height: 69.7rem;
+}
+
+.txt-condition {
+  margin: 0.8rem 0 0 1.4rem;
+  line-height: 100%;
+  font-size: 1.6rem;
+  color: #999999;
 }
 
 /* 교차로 상세 탭(통계/영상/돌발) 화면 */

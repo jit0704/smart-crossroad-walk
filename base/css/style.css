@@ -163,6 +163,14 @@ input[type=date] {
   text-indent: -9999px;
 }
 
+.txt-center {
+  text-align: center !important;
+}
+
+.ml-0 {
+  margin-left: 0 !important;
+}
+
 .pdl-15 {
   padding-left: 1.5rem !important;
 }
@@ -663,6 +671,29 @@ input[type=date] {
   padding: 1.4rem 0 !important;
   line-height: 100%;
 }
+.ui.basic.table.is-data-grid thead tr th {
+  height: 2.34rem;
+  padding: 0 !important;
+  line-height: 100%;
+}
+.ui.basic.table.is-data-grid thead tr:first-child th {
+  font-size: 1.4rem;
+}
+.ui.basic.table.is-data-grid thead tr:last-child th {
+  font-size: 1.2rem;
+}
+.ui.basic.table.is-data-grid tbody td {
+  padding: 0.6rem 1.2rem;
+  line-height: 1.32rem;
+  font-size: 1.2rem;
+  color: #727272;
+}
+.ui.basic.table.is-data-grid tbody td + td {
+  border-top: 1px solid #e8e8e8;
+}
+.ui.basic.table.is-data-grid tbody td.model {
+  color: #1e5f8d;
+}
 .ui.basic.table thead th {
   padding: 1.2rem 0 !important;
   font-size: 1.8rem;
@@ -898,6 +929,7 @@ input[type=date] {
   color: #727272;
   font-weight: 500;
   background-image: url(/base/images/arr_down_gray.png);
+  background-color: #fff;
 }
 .selectbox-wrap.rounded select {
   border-radius: 0.5rem;
@@ -1389,6 +1421,9 @@ input[type=date] {
   line-height: 2rem;
   color: #a7a7a7;
 }
+.paging-group a.active {
+  color: #03a0fc;
+}
 .paging-group [class*=btn] {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1460,6 +1495,34 @@ input[type=date] {
   font-weight: 300;
   color: #a7a7a7;
   background-image: url(/base/images/arr_down_gray.png);
+}
+.paging-group.xs {
+  margin-top: 1.56rem;
+}
+.paging-group.xs a {
+  line-height: 100%;
+  font-size: 1.4rem;
+}
+.paging-group.xs .btn-first {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.paging-group.xs .btn-prev {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.paging-group.xs .btn-next {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.paging-group.xs .btn-end {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.paging-group.xs .selectbox-wrap select {
+  height: 1.8rem;
+  padding: 0 0.5rem;
+  font-size: 1.4rem;
 }
 
 /* 필터 */
@@ -1533,10 +1596,22 @@ input[type=date] {
   width: 13.25rem;
   height: 3.4rem;
   padding: 0 1rem;
-  border: 1px solid #cbcbcb;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
 }
 .filter-grouop .date-group i {
   font-size: 1.6rem;
+}
+.filter-grouop .date-group.type2 {
+  gap: 0 1rem;
+}
+.filter-grouop .date-group.type2 .input-date {
+  width: 14.65rem;
+  height: 3.6rem;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.5rem;
+  background: url(/base/images/icon_calendar.png) no-repeat right 1rem center;
+  background-size: 1.8rem 1.8rem;
 }
 
 /* 달력 */
@@ -1969,6 +2044,9 @@ input[type=date] {
   border-radius: 0.5rem;
   -webkit-box-shadow: 0.4rem 0.4rem 1.2rem 0rem rgba(0, 0, 0, 0.1);
           box-shadow: 0.4rem 0.4rem 1.2rem 0rem rgba(0, 0, 0, 0.1);
+}
+.modal-container.w508 {
+  width: 50.8rem;
 }
 .modal-container.medium {
   width: 79rem;
