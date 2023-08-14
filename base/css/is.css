@@ -429,7 +429,8 @@
       align-content: center;
   margin-top: 1.4rem;
 }
-.roi-view-container .roi-set-area-button-group button {
+.roi-view-container .roi-set-area-button-group button,
+.roi-view-container .roi-set-area-button-group a {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -440,19 +441,34 @@
   color: #999999;
   font-size: 1.4rem;
   font-weight: 500;
+  text-align: center;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-.roi-view-container .roi-set-area-button-group button.active {
+.roi-view-container .roi-set-area-button-group button.active,
+.roi-view-container .roi-set-area-button-group a.active {
   color: #fff;
   background: #727272;
   border-color: #727272;
 }
-.roi-view-container .roi-set-area-button-group button:first-child {
+.roi-view-container .roi-set-area-button-group button:first-child,
+.roi-view-container .roi-set-area-button-group a:first-child {
   border-radius: 0.5rem 0 0 0.5rem;
 }
-.roi-view-container .roi-set-area-button-group button:last-child {
+.roi-view-container .roi-set-area-button-group button:last-child,
+.roi-view-container .roi-set-area-button-group a:last-child {
   border-radius: 0 0.5rem 0.5rem 0;
+}
+.roi-view-container .roi-set-one-btn {
+  margin-top: 0.6rem;
+  line-height: 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  color: #999999;
+  font-weight: 500;
+  border: 1px solid #cbcbcb;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .roi-view-container .roi-set-btn1 {
   display: block;
@@ -538,36 +554,78 @@
   width: 3.25rem;
   height: 3.25rem;
   border-radius: 0.2rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 .roi-view-container .color-red {
   background: #d70000;
 }
+.roi-view-container .color-red:hover {
+  -webkit-box-shadow: 0px 0px 2px 2px #8b0000 inset;
+          box-shadow: 0px 0px 2px 2px #8b0000 inset;
+}
 .roi-view-container .color-orange {
   background: #ff8a00;
+}
+.roi-view-container .color-orange:hover {
+  -webkit-box-shadow: 0px 0px 2px 2px #945000 inset;
+          box-shadow: 0px 0px 2px 2px #945000 inset;
 }
 .roi-view-container .color-yellow {
   background: #ffe500;
 }
+.roi-view-container .color-yellow:hover {
+  -webkit-box-shadow: 0px 0px 2px 2px #b19f00 inset;
+          box-shadow: 0px 0px 2px 2px #b19f00 inset;
+}
 .roi-view-container .color-lime {
   background: #a3ef00;
+}
+.roi-view-container .color-lime:hover {
+  -webkit-box-shadow: 0px 0px 2px 2px #6a9c00 inset;
+          box-shadow: 0px 0px 2px 2px #6a9c00 inset;
 }
 .roi-view-container .color-aqua {
   background: #00efe1;
 }
+.roi-view-container .color-aqua:hover {
+  -webkit-box-shadow: 0px 0px 2px 2px #00a99f inset;
+          box-shadow: 0px 0px 2px 2px #00a99f inset;
+}
 .roi-view-container .color-azure {
   background: #008bef;
+}
+.roi-view-container .color-azure:hover {
+  -webkit-box-shadow: 0px 0px 2px 2px #0063aa inset;
+          box-shadow: 0px 0px 2px 2px #0063aa inset;
 }
 .roi-view-container .color-violet {
   background: #8f00ff;
 }
+.roi-view-container .color-violet:hover {
+  -webkit-box-shadow: 0px 0px 2px 2px #59009e inset;
+          box-shadow: 0px 0px 2px 2px #59009e inset;
+}
 .roi-view-container .color-pink {
   background: #ff00f5;
+}
+.roi-view-container .color-pink:hover {
+  -webkit-box-shadow: 0px 0px 2px 2px #a6009f inset;
+          box-shadow: 0px 0px 2px 2px #a6009f inset;
 }
 .roi-view-container .color-brown {
   background: #965b24;
 }
+.roi-view-container .color-brown:hover {
+  -webkit-box-shadow: 0px 0px 2px 2px #683200 inset;
+          box-shadow: 0px 0px 2px 2px #683200 inset;
+}
 .roi-view-container .color-green {
   background: #00883f;
+}
+.roi-view-container .color-green:hover {
+  -webkit-box-shadow: 0px 0px 2px 2px #00632d inset;
+          box-shadow: 0px 0px 2px 2px #00632d inset;
 }
 .roi-view-container .btn-roi-view {
   position: absolute;
@@ -595,6 +653,116 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+}
+.roi-view-container .traffic-lane-choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.7rem;
+  margin-top: 1rem;
+}
+.roi-view-container .traffic-lane-choice [class*=lane] {
+  width: 4rem;
+  height: 4rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.roi-view-container .traffic-lane-choice .lane-straight {
+  background-image: url(/base//images/roi_direction/straight.png);
+}
+.roi-view-container .traffic-lane-choice .lane-straight.active {
+  background-image: url(/base//images/roi_direction/straight_active.png);
+}
+.roi-view-container .traffic-lane-choice .lane-left-turn {
+  background-image: url(/base//images/roi_direction/left_turn.png);
+}
+.roi-view-container .traffic-lane-choice .lane-left-turn.active {
+  background-image: url(/base//images/roi_direction/left_turn_active.png);
+}
+.roi-view-container .traffic-lane-choice .lane-right-turn {
+  background-image: url(/base//images/roi_direction/right_turn.png);
+}
+.roi-view-container .traffic-lane-choice .lane-right-turn.active {
+  background-image: url(/base//images/roi_direction/right_turn_active.png);
+}
+.roi-view-container .traffic-lane-choice .lane-u-turn {
+  background-image: url(/base//images/roi_direction/u_turn.png);
+}
+.roi-view-container .traffic-lane-choice .lane-u-turn.active {
+  background-image: url(/base//images/roi_direction/u_turn_active.png);
+}
+.roi-view-container .traffic-lane-choice .lane-straight_left {
+  background-image: url(/base//images/roi_direction/straight_left_turn.png);
+}
+.roi-view-container .traffic-lane-choice .lane-straight_left.active {
+  background-image: url(/base//images/roi_direction/straight_left_turn_active.png);
+}
+.roi-view-container .traffic-lane-choice .lane-straight_right {
+  background-image: url(/base//images/roi_direction/straight_right_turn.png);
+}
+.roi-view-container .traffic-lane-choice .lane-straight_right.active {
+  background-image: url(/base//images/roi_direction/straight_right_turn_active.png);
+}
+.roi-view-container .traffic-lane-choice .lane-left-uturn {
+  background-image: url(/base//images/roi_direction/u_left_turn.png);
+}
+.roi-view-container .traffic-lane-choice .lane-left-uturn.active {
+  background-image: url(/base//images/roi_direction/u_left_turn_active.png);
+}
+.roi-view-container .lane-choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 1rem;
+}
+.roi-view-container .lane-choice [class*=lane] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 2.3rem;
+  font-size: 1.2rem;
+  color: #999999;
+  text-align: center;
+  border: 1px solid #cbcbcb;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.roi-view-container .lane-choice [class*=lane]:not(:first-child) {
+  border-left: 0;
+}
+.roi-view-container .lane-choice [class*=lane].active {
+  color: #fff;
+  font-weight: 600;
+  background: #727272;
 }
 .roi-view-header {
   display: -webkit-box;
@@ -644,6 +812,41 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+}
+
+/* 돌발 ROI 탭 */
+.tab-accidental-roi .perceive-body table:first-child {
+  margin: 1rem 0;
+}
+.tab-accidental-roi .perceive-body table:first-child th {
+  text-align: center;
+}
+
+/* 교차로 ROI 탭 */
+[data-tab=road-direction1] table:first-child,
+[data-tab=road-direction2] table:first-child {
+  margin-top: 1.5rem;
+}
+
+/* 속도 ROI 탭 */
+.tab-speed-roi .ibm {
+  height: 2.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 6.02rem;
 }
 
 /* 미디어 쿼리 */

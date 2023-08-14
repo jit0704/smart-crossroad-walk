@@ -398,6 +398,9 @@ input[type=date] {
   background: #f8f8f8;
   opacity: 1 !important;
 }
+.ui.input.center input {
+  text-align: center;
+}
 .ui.input.md input {
   line-height: 3rem;
   padding: 0;
@@ -590,6 +593,21 @@ input[type=date] {
 }
 .ui.primary-chkbox.txt-none label {
   font-size: 0;
+}
+.ui.primary-chkbox.xs {
+  min-width: 1.1rem;
+  min-height: 1.1rem;
+  line-height: 1.1rem;
+}
+.ui.primary-chkbox.xs label {
+  padding-left: 1.8rem;
+  font-size: 1.2rem;
+}
+.ui.primary-chkbox.xs label::before,
+.ui.primary-chkbox.xs label::after,
+.ui.primary-chkbox.xs input[type=checkbox] {
+  width: 1.1rem;
+  height: 1.1rem;
 }
 .label-dropdown {
   display: -webkit-box;
@@ -942,6 +960,11 @@ input[type=date] {
   border-color: #e8e8e8;
   background-color: #f8f8f8;
   opacity: 1;
+}
+.selectbox-wrap.rounded.xs select {
+  padding: 0.6rem 0.8rem;
+  border-color: #e8e8e8;
+  color: #727272;
 }
 .selectbox-wrap.xs select {
   min-width: 6rem;

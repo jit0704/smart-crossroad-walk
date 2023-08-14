@@ -35,6 +35,7 @@
           <a href="#none;" class="item" data-tab="four">속도 ROI</a>
         </div>
         <!-- //menu -->
+        
         <div class="ui bottom attached tab segment tab-obj-roi active" data-tab="first">
           <section class="perceive-section">
             <div class="perceive-header">
@@ -85,6 +86,7 @@
           <section class="roi-set-section">
             <h3>ROI 설정</h3>
             <div class="roi-set-area-button-group">
+              <!-- button에 active 클래스 추가시 활성화 -->
               <button type="button" class="active">객체 표출 영역</button>
               <button type="button">딥러닝 검출 영역</button>
             </div>
@@ -148,9 +150,518 @@
           <!-- //roi-set-list-section -->
         </div>
         <!-- //객체 ROI 컨텐츠 -->
-        <div class="ui bottom attached tab segment tab-accidental-roi" data-tab="second">돌발 ROI 내용..</div>
-        <div class="ui bottom attached tab segment tab-crossroad-roi" data-tab="third">교차로 ROI 내용..</div>
-        <div class="ui bottom attached tab segment tab-speed-roi" data-tab="four">속도 ROI 내용..</div>
+        
+        <div class="ui bottom attached tab segment tab-accidental-roi" data-tab="second">
+          <section class="perceive-section">
+            <div class="perceive-header">
+              <h3>ROI 설정</h3>
+              <div class="right">
+                <span class="txt">세종과학예술영재학교방면</span>
+                <div class="selectbox-wrap xs">
+                  <select>
+                    <option value="">채널1</option>
+                    <option value="">채널2</option>
+                    <option value="">채널3</option>
+                  </select>
+                </div>
+              </div>
+              <!-- //right -->
+            </div>
+            <!-- //perceive-header -->
+
+            <div class="roi-set-area-button-group">
+              <!-- button에 active 클래스 추가시 활성화 -->
+              <button type="button" class="active">보행자 영역</button>
+              <button type="button">정지 영역</button>
+              <button type="button">역주행 영역</button>
+            </div>
+            <!-- //roi-set-area-button-group -->
+            <button type="button" class="roi-set-one-btn">Gradient</button>
+
+            <div class="perceive-body">
+              <table>
+                <colgroup>
+                  <col style="width: 3.8rem;" />
+                  <col />
+                  <col style="width: 3.8rem;" />
+                  <col />
+                  <col style="width: 3.8rem;" />
+                  <col />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>Pitch</th>
+                    <td>
+                      <div class="ui input rounded center xs">
+                        <input type="text" />
+                      </div>
+                    </td>
+                    <th>Yaw</th>
+                    <td>
+                      <div class="ui input rounded center xs">
+                        <input type="text" />
+                      </div>
+                    </td>
+                    <th>거리</th>
+                    <td>
+                      <div class="ui input rounded center xs">
+                        <input type="text" />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table>
+                <colgroup>
+                  <col style="width: 16rem;">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>돌발 검지 기준 시각(Sec)</th>
+                    <td>
+                      <div class="ui input rounded center xs">
+                        <input type="text" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>돌발 검지 기준 시각(Pixel)</th>
+                    <td>
+                      <div class="ui input rounded center xs">
+                        <input type="text" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>돌발 진행 방향</th>
+                    <td>
+                      <div class="ui input rounded center xs">
+                        <input type="text" disabled />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //perceive-body -->
+
+            <div class="color-list">
+              <button type="button" class="color-red"><span class="screen-out">빨강색</span></button>
+              <button type="button" class="color-orange"><span class="screen-out">주황색</span></button>
+              <button type="button" class="color-yellow"><span class="screen-out">노랑색</span></button>
+              <button type="button" class="color-lime"><span class="screen-out">라임색</span></button>
+              <button type="button" class="color-aqua"><span class="screen-out">아쿠아색</span></button>
+              <button type="button" class="color-azure"><span class="screen-out">연한파랑색</span></button>
+              <button type="button" class="color-violet"><span class="screen-out">보라색</span></button>
+              <button type="button" class="color-pink"><span class="screen-out">분홍색</span></button>
+              <button type="button" class="color-brown"><span class="screen-out">갈색</span></button>
+              <button type="button" class="color-green"><span class="screen-out">녹색</span></button>
+            </div>
+            <button type="button" class="roi-set-btn1">정지 영역, 5초, 30 Pixel, 빨간색</button>
+            <button type="button" class="roi-set-btn2">ROI 설정 - 설정 완료 (현재 점 개수 :2)</button>
+          </section>
+          <!-- //perceive-section -->
+
+          <section class="roi-set-list-section">
+            <div class="roi-set-list-header">
+              <h3>ROI 설정 목록</h3>
+              <button type="button" class="btn-md bg-navy">저장</a>
+            </div>
+            <!-- //roi-set-list-header -->
+            <div class="data-tbl-gray">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Pitch</th>
+                    <th>Yaw</th>
+                    <th>거리</th>
+                    <th>시간</th>
+                    <th>Gradi ent</th>
+                    <th>색상</th>
+                    <th>삭제</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>보행자</td>
+                    <td></td>
+                    <td></td>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td><i class="color-yellow"></i></td>
+                    <td>
+                      <button type="button" class="ico-wastebasket"><span class="screen-out">삭제 버튼</span></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>정지</td>
+                    <td></td>
+                    <td></td>
+                    <td>5</td>
+                    <td>30</td>
+                    <td></td>
+                    <td><i class="color-red"></i></td>
+                    <td>
+                      <button type="button" class="ico-wastebasket"><span class="screen-out">삭제 버튼</span></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>보행자</td>
+                    <td></td>
+                    <td></td>
+                    <td>5</td>
+                    <td>30</td>
+                    <td>30</td>
+                    <td><i class="color-orange"></i></td>
+                    <td>
+                      <button type="button" class="ico-wastebasket"><span class="screen-out">삭제 버튼</span></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //data-tbl-gray -->
+          </section>
+          <!-- //roi-set-list-section -->
+        </div>
+        <!-- 돌발 ROI 컨텐츠 -->
+
+        <div class="ui bottom attached tab segment tab-crossroad-roi" data-tab="third">
+          <section class="perceive-section">
+            <div class="perceive-header">
+              <h3>ROI 설정</h3>
+              <div class="right">
+                <span class="txt">세종과학예술영재학교방면</span>
+                <div class="selectbox-wrap xs">
+                  <select>
+                    <option value="">채널1</option>
+                    <option value="">채널2</option>
+                    <option value="">채널3</option>
+                  </select>
+                </div>
+              </div>
+              <!-- //right -->
+            </div>
+            <!-- //perceive-header -->
+            
+            <div class="perceive-body">
+              <div class="roi-set-area-button-group menu">
+                <a href="#none;" class="item active" data-tab="road-direction1">진입(차선) 영역</a>
+                <a href="#none;" class="item" data-tab="road-direction2">진출(방향) 영역</a>
+              </div>
+              <!-- //roi-set-area-button-group -->
+
+              <div class="ui tab segment active" data-tab="road-direction1">
+                <table>
+                  <colgroup>
+                    <col style="width: 8rem;" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>도로방향</th>
+                      <td>
+                        <div class="selectbox-wrap rounded xs">
+                          <select>
+                            <option value="">도로방향</option>
+                            <option value="">아이템1</option>
+                            <option value="">아이템2</option>
+                            <option value="">아이템3</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="traffic-lane-choice">
+                  <button type="button" class="lane-straight active"><span class="screen-out">직진</span></button>
+                  <button type="button" class="lane-left-turn"><span class="screen-out">좌회전</span></button>
+                  <button type="button" class="lane-right-turn"><span class="screen-out">우회전</span></button>
+                  <button type="button" class="lane-u-turn"><span class="screen-out">유턴</span></button>
+                  <button type="button" class="lane-straight_left"><span class="screen-out">직좌</span></button>
+                  <button type="button" class="lane-straight_right"><span class="screen-out">직우</span></button>
+                  <button type="button" class="lane-left-uturn"><span class="screen-out">좌유턴</span></button>
+                </div>
+                <!-- //traffic-lane-choice -->
+                <div class="lane-choice">
+                  <button type="button" class="lane1 active">1차로</button>
+                  <button type="button" class="lane2">2차로</button>
+                  <button type="button" class="lane3">3차로</button>
+                  <button type="button" class="lane4">4차로</button>
+                  <button type="button" class="lane5">5차로</button>
+                  <button type="button" class="lane6">6차로</button>
+                  <button type="button" class="lane7">7차로</button>
+                  <button type="button" class="lane8">8차로</button>
+                </div>
+                <!-- //lane-choice -->
+                <div class="color-list">
+                  <button type="button" class="color-red"><span class="screen-out">빨강색</span></button>
+                  <button type="button" class="color-orange"><span class="screen-out">주황색</span></button>
+                  <button type="button" class="color-yellow"><span class="screen-out">노랑색</span></button>
+                  <button type="button" class="color-lime"><span class="screen-out">라임색</span></button>
+                  <button type="button" class="color-aqua"><span class="screen-out">아쿠아색</span></button>
+                  <button type="button" class="color-azure"><span class="screen-out">연한파랑색</span></button>
+                  <button type="button" class="color-violet"><span class="screen-out">보라색</span></button>
+                  <button type="button" class="color-pink"><span class="screen-out">분홍색</span></button>
+                  <button type="button" class="color-brown"><span class="screen-out">갈색</span></button>
+                  <button type="button" class="color-green"><span class="screen-out">녹색</span></button>
+                </div>
+                <button type="button" class="roi-set-btn1">정지 영역, 5초, 30 Pixel, 빨간색</button>
+                <button type="button" class="roi-set-btn2">ROI 설정 - 설정 완료 (현재 점 개수 :2)</button>
+              </div>
+              <!-- //진입(차선) 영역 -->
+              <div class="ui tab segment" data-tab="road-direction2">
+                <table>
+                  <colgroup>
+                    <col style="width: 8rem;" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>도로방향</th>
+                      <td>
+                        <div class="selectbox-wrap rounded xs">
+                          <select>
+                            <option value="">도로방향</option>
+                            <option value="">아이템1</option>
+                            <option value="">아이템2</option>
+                            <option value="">아이템3</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="traffic-lane-choice">
+                  <button type="button" class="lane-straight active"><span class="screen-out">직진</span></button>
+                  <button type="button" class="lane-left-turn"><span class="screen-out">좌회전</span></button>
+                  <button type="button" class="lane-right-turn"><span class="screen-out">우회전</span></button>
+                  <button type="button" class="lane-u-turn"><span class="screen-out">유턴</span></button>
+                </div>
+                <!-- //traffic-lane-choice -->
+                <div class="lane-choice">
+                  <button type="button" class="lane1 active">1차로</button>
+                  <button type="button" class="lane2">2차로</button>
+                  <button type="button" class="lane3">3차로</button>
+                  <button type="button" class="lane4">4차로</button>
+                  <button type="button" class="lane5">5차로</button>
+                  <button type="button" class="lane6">6차로</button>
+                  <button type="button" class="lane7">7차로</button>
+                  <button type="button" class="lane8">8차로</button>
+                </div>
+                <!-- //lane-choice -->
+                <div class="color-list">
+                  <button type="button" class="color-red"><span class="screen-out">빨강색</span></button>
+                  <button type="button" class="color-orange"><span class="screen-out">주황색</span></button>
+                  <button type="button" class="color-yellow"><span class="screen-out">노랑색</span></button>
+                  <button type="button" class="color-lime"><span class="screen-out">라임색</span></button>
+                  <button type="button" class="color-aqua"><span class="screen-out">아쿠아색</span></button>
+                  <button type="button" class="color-azure"><span class="screen-out">연한파랑색</span></button>
+                  <button type="button" class="color-violet"><span class="screen-out">보라색</span></button>
+                  <button type="button" class="color-pink"><span class="screen-out">분홍색</span></button>
+                  <button type="button" class="color-brown"><span class="screen-out">갈색</span></button>
+                  <button type="button" class="color-green"><span class="screen-out">녹색</span></button>
+                </div>
+                <button type="button" class="roi-set-btn1">정지 영역, 5초, 30 Pixel, 빨간색</button>
+                <button type="button" class="roi-set-btn2">ROI 설정 - 설정 완료 (현재 점 개수 :2)</button>
+              </div>
+              <!-- //진출(방향) 영역 -->
+            </div>
+            <!-- //perceive-body -->
+          </section>
+          <!-- //perceive-section -->
+
+          <section class="roi-set-list-section">
+            <div class="roi-set-list-header">
+              <h3>ROI 설정 목록</h3>
+              <button type="button" class="btn-md bg-navy">저장</a>
+            </div>
+            <!-- //roi-set-list-header -->
+            <div class="data-tbl-gray">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>도로</th>
+                    <th>방향</th>
+                    <th>차로</th>
+                    <th>도로<br />방향</th>
+                    <th>진출<br />방향</th>
+                    <th>색상</th>
+                    <th>삭제</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>진입</td>
+                    <td>도로명</td>
+                    <td>직진</td>
+                    <td>2</td>
+                    <td>서</td>
+                    <td>좌회전</td>
+                    <td><i class="color-blue"></i></td>
+                    <td>
+                      <button type="button" class="ico-wastebasket"><span class="screen-out">삭제 버튼</span></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>진입</td>
+                    <td>도로명</td>
+                    <td>직진</td>
+                    <td>-</td>
+                    <td>남</td>
+                    <td>유턴</td>
+                    <td><i class="color-aqua"></i></td>
+                    <td>
+                      <button type="button" class="ico-wastebasket"><span class="screen-out">삭제 버튼</span></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //data-tbl-gray -->
+          </section>
+          <!-- //roi-set-list-section -->
+        </div>
+        <!-- //교차로 ROI 컨텐츠 -->
+
+        <div class="ui bottom attached tab segment tab-speed-roi" data-tab="four">
+          <section class="perceive-section">
+            <div class="perceive-header">
+              <h3>ROI 설정</h3>
+              <div class="right">
+                <span class="txt">세종과학예술영재학교방면</span>
+                <div class="selectbox-wrap xs">
+                  <select>
+                    <option value="">채널1</option>
+                    <option value="">채널2</option>
+                    <option value="">채널3</option>
+                  </select>
+                </div>
+              </div>
+              <!-- //right -->
+            </div>
+            <!-- //perceive-header -->
+
+            <div class="perceive-body">
+              <table>
+                <colgroup>
+                  <col style="width: 25%">
+                  <col style="width: 75%">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>거리(m)</th>
+                    <td>
+                      <div class="ui input rounded center xs">
+                        <input type="text" value="50" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>IBM 설정 여부</th>
+                    <td>
+                      <div class="ibm txt-center">
+                        <div class="ui checkbox primary-chkbox xs c-bluesky">
+                          <input id="chk1" type="checkbox" />
+                          <label for="chk1">ON</label>
+                        </div>
+                        <div class="ui checkbox primary-chkbox xs c-bluesky">
+                          <input id="chk2" type="checkbox" />
+                          <label for="chk2">OFF</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Pitch</th>
+                    <td>
+                      <div class="ui input rounded center xs">
+                        <input type="text" placeholder="(1~100)" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Yaw</th>
+                    <td>
+                      <div class="ui input rounded center xs">
+                        <input type="text" placeholder="(0~100)" />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="color-list">
+                <button type="button" class="color-red"><span class="screen-out">빨강색</span></button>
+                <button type="button" class="color-orange"><span class="screen-out">주황색</span></button>
+                <button type="button" class="color-yellow"><span class="screen-out">노랑색</span></button>
+                <button type="button" class="color-lime"><span class="screen-out">라임색</span></button>
+                <button type="button" class="color-aqua"><span class="screen-out">아쿠아색</span></button>
+                <button type="button" class="color-azure"><span class="screen-out">연한파랑색</span></button>
+                <button type="button" class="color-violet"><span class="screen-out">보라색</span></button>
+                <button type="button" class="color-pink"><span class="screen-out">분홍색</span></button>
+                <button type="button" class="color-brown"><span class="screen-out">갈색</span></button>
+                <button type="button" class="color-green"><span class="screen-out">녹색</span></button>
+              </div>
+              <button type="button" class="roi-set-btn1">정지 영역, 5초, 30 Pixel, 빨간색</button>
+              <button type="button" class="roi-set-btn2">ROI 설정 - 설정 완료 (현재 점 개수 :2)</button>
+            </div>
+            <!-- //perceive-body -->
+          </section>
+          <!-- //perceive-section -->
+
+          <section class="roi-set-list-section">
+            <div class="roi-set-list-header">
+              <h3>ROI 설정 목록</h3>
+              <button type="button" class="btn-md bg-navy">저장</a>
+            </div>
+            <!-- //roi-set-list-header -->
+            <div class="data-tbl-gray">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>거리</th>
+                    <th>Pitch</th>
+                    <th>Yaw</th>
+                    <th>색상</th>
+                    <th>삭제</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>속도</td>
+                    <td>50</td>
+                    <td>50</td>
+                    <td>30</td>
+                    <td><i class="color-lime"></i></td>
+                    <td>
+                      <button type="button" class="ico-wastebasket"><span class="screen-out">삭제 버튼</span></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>속도</td>
+                    <td>50</td>
+                    <td>50</td>
+                    <td>30</td>
+                    <td><i class="color-lime"></i></td>
+                    <td>
+                      <button type="button" class="ico-wastebasket"><span class="screen-out">삭제 버튼</span></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //data-tbl-gray -->
+          </section>
+          <!-- //roi-set-list-section -->
+        </div>
+        <!-- //속도 ROI 컨텐츠 -->
 
         <button type="button" class="btn-roi-view">
           <span class="screen-out">ROI설정 상세 열기/닫기 버튼</span>
@@ -170,14 +681,27 @@
     <!-- //wrapper -->
 
     <script>
-      // 퍼블리싱 확인용 : 탭 메뉴
+      /* 아래 js는 퍼블리싱 확인용입니다. 참고해서 개발화면에 반영 부탁드립니다. */
+      // 탭 메뉴
       $('.roi-view-container .menu .item').tab();
 
-      // 퍼블리싱 확인용 : ROI설정 버튼 클릭시 활성화
-      $('.roi-set-area-button-group button').on('click', function(){
-        $('.roi-set-area-button-group button').removeClass('active');
-        $(this).addClass('active');
-      });
+      // ROI설정 버튼 클릭시 활성화
+      function clickActive (target) {
+        $(target).on('click', function(){
+          $(target).removeClass('active');
+          $(this).addClass('active');
+        });
+      }
+      clickActive('.tab-obj-roi .roi-set-area-button-group button');
+      clickActive('.tab-accidental-roi .roi-set-area-button-group button');
+
+      // 차로 이미지 버튼 클릭시 활성화
+      clickActive('[data-tab="road-direction1"] .traffic-lane-choice [class*="lane"]');
+      clickActive('[data-tab="road-direction2"] .traffic-lane-choice [class*="lane"]');
+
+      // 차로 버튼 클릭시 활성화
+      clickActive('[data-tab="road-direction1"] .lane-choice [class*="lane"]');
+      clickActive('[data-tab="road-direction2"] .lane-choice [class*="lane"]');
     </script>
   </body>
 </html>
