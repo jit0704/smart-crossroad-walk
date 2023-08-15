@@ -293,6 +293,7 @@ input[type=date] {
   - 달력
   - 기능 버튼 그룹
   - 프로그래스바
+  - 그레이 라인 박스
   - 체크박스 리스트 아코디언 메뉴(연계 카메라 등록 팝업)
 -----------------------------------------------------------------*/
 .ico-cw {
@@ -363,6 +364,23 @@ input[type=date] {
   width: 1.4rem;
   height: 1.4rem;
   background-image: url("/base/images/icon_wastebasket.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-triangle-exclamation {
+  display: inline-block;
+  width: 3em;
+  height: 2.57rem;
+  background-image: url("/base/images/icon_triangle_exclamation.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-triangle-exclamation.c-red {
+  width: 2.5em;
+  height: 2.5rem;
+  background-image: url("/base/images/icon_triangle_exclamation_red.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -1097,6 +1115,7 @@ input[type=date] {
   top: 4.8rem;
   right: 1.9rem;
   z-index: 1;
+  min-width: 15.4rem;
   padding: 0.8rem 3rem 0.8rem 0.8rem;
   border-radius: 0.5rem;
   font-size: 1.6rem;
@@ -1106,6 +1125,8 @@ input[type=date] {
   -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25) !important;
           box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25) !important;
   cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .ui.dropdown.area-box.active::after {
   top: calc(50% - 0.55rem);
@@ -1149,14 +1170,23 @@ input[type=date] {
   line-height: 1.9rem;
 }
 .ui.dropdown.area-box .menu {
-  min-width: calc(100% + 0.01rem);
-  width: calc(100% + 0.01rem);
+  width: auto;
+  min-width: auto;
+  max-height: 30rem !important;
   margin: 0;
   border-radius: 0.5rem;
 }
+.ui.dropdown.area-box .menu.visible {
+  width: 100%;
+}
 .ui.dropdown.area-box .menu .item {
+  max-width: 14.4rem;
   padding: 0.8rem !important;
   font-size: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
 }
 .ui.dropdown.area-box .menu .item:hover {
   background: none;
@@ -1821,6 +1851,115 @@ input[type=date] {
   background: #ffd056;
 }
 
+/* 그레이 라인 박스 */
+.line-box-container > [class*=box]:not(:first-child) {
+  margin-top: 0.6rem;
+}
+.line-box-container .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 1.2rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e8e8e8;
+  font-size: 1.4rem;
+  color: #727272;
+}
+.line-box-container .box.is-label {
+  padding: 0.6rem 1rem;
+}
+.line-box-container .box > span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.line-box-container .box .tit {
+  line-height: 1.7rem;
+  font-weight: 500;
+}
+.line-box-container .box .txt {
+  font-weight: 600;
+}
+.line-box-container .box .txt-normality {
+  color: #1e5f8d;
+  font-weight: 700;
+}
+.line-box-container .box .txt-disorder {
+  color: #c50000;
+  font-weight: 500;
+}
+.line-box-container .box-label {
+  -webkit-box-flex: 0 !important;
+      -ms-flex: 0 1 auto !important;
+          flex: 0 1 auto !important;
+  padding: 0 0.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+  border-radius: 0.3rem;
+}
+.line-box-container .box-label.c-violet {
+  color: #37007c;
+  background: #f1edf6;
+}
+.line-box-container .box-label.c-pink {
+  color: #ca4e4e;
+  background: #ffeaea;
+}
+.line-box-container .box-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.6rem;
+}
+.line-box-container .box-row .box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.line-box-container .state-tbl th {
+  padding-bottom: 0.2rem;
+  font-weight: 400;
+  vertical-align: middle;
+}
+.line-box-container .state-tbl td {
+  padding-bottom: 0.2rem;
+}
+.line-box-container .state-tbl td .radio-txt2 span {
+  width: 5.4rem;
+  padding: 0.3rem 1rem;
+  border-color: #e8e8e8;
+  color: #cbcbcb;
+}
+.line-box-container .state-tbl td .radio-txt2 input:checked + span {
+  color: #727272;
+  border-color: #e8e8e8;
+  background: #e8e8e8;
+}
+
 /* 체크박스 리스트 아코디언 메뉴(연계 카메라 등록 팝업) */
 .chk-list-container {
   overflow-y: auto;
@@ -2238,6 +2377,107 @@ input[type=date] {
 /*---------------------------------------------------------------
   [딤드 없는 팝업]
 -----------------------------------------------------------------*/
+.map-popup {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  padding: 0 1rem 1.3rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.map-popup::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1.9rem;
+  margin-left: -1.1rem;
+  width: 2.2rem;
+  height: 1.9rem;
+  background-image: url("/base/images/icon_inverted_triangle.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.map-popup.mw377 {
+  min-width: 37.7rem;
+}
+.map-popup-header {
+  padding: 1rem 0 1.3rem;
+  font-size: 1.6rem;
+  color: #1e5f8d;
+  font-weight: 600;
+}
+.map-popup-btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
+  margin-top: 1.4rem;
+}
+.map-popup-btn-group .ui.button.basic.primary {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 3rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.map-popup .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+.map-popup .inner > .bind:first-child {
+  position: relative;
+  width: 37.7rem;
+  padding-right: 1rem;
+}
+.map-popup .inner > .bind:first-child::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: -1.3rem;
+  right: 0;
+  width: 0.1rem;
+  background: #e8e8e8;
+}
+.map-popup .inner > .bind:last-child {
+  width: 26.6rem;
+  padding-left: 1rem;
+}
+.map-popup .inner > .bind:last-child .map-popup-btn-group {
+  margin-top: 4.1rem;
+}
+.map-popup .inner .box .state-tbl {
+  table-layout: fixed;
+}
+
 .camera-popup {
   display: none;
   position: absolute;
@@ -2396,14 +2636,17 @@ input[type=date] {
   background: url(/base/images/temp/traffic_img.png) no-repeat 0 0;
   background-size: cover;
 }
-.ly-map .ico-cw {
+.ly-map [class*=ico] {
+  cursor: pointer;
+}
+.ly-map .ico-cw,
+.ly-map .ico-triangle-exclamation {
   position: absolute;
   z-index: 1;
 }
 .ly-map .ico-camera {
   position: absolute;
   z-index: 1;
-  cursor: pointer;
 }
 .ly-sub {
   width: 100%;

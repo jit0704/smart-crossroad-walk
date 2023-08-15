@@ -43,10 +43,15 @@
             <input type="hidden" name="" />
             <div class="default text">서울시 공릉동</div>
             <div class="menu">
-              <div class="item" data-value="">서울시 공릉동</div>
-              <div class="item" data-value="">서울시 서초구</div>
+              <div class="item" data-value="">서울시 공릉동하나</div>
+              <div class="item" data-value="">서울시 서초구두울울</div>
               <div class="item" data-value="">서울시 금천구</div>
-              <a href="#" class="area-setting">기존 구역 설정</a>
+              <div class="item" data-value="">서울시 금천구</div>
+              <div class="item" data-value="">서울시 금천구</div>
+              <div class="item" data-value="">서울시 금천구</div>
+              <div class="item" data-value="">서울시 금천구</div>
+              <div class="item" data-value="">서울시 금천구</div>
+              <a href="#" class="area-setting">기본 구역 설정</a>
             </div>
           </div>
           <!-- //구역명 -->
@@ -76,7 +81,13 @@
               * 지도 좌측 상단 기준으로 left: 0; top: 0; 입니다.
               * 지도 위에 표시되는 모든 아이콘의 좌표값 설정 방법은 위와 동일합니다.
           -->
-          <i class="ico-cw" style="left: 300px; top: 282px"><span class="screen-out">횡단보도</span></i>
+          <!-- 230815 : 횡단보도 아이콘에 js-no-dimed-popup-call 클래스명 추가 및 data-target 속성 추가
+                        data-target 속성의 값과 동일한 id값의 팝업을 호출합니다.
+                        팝업의 id값 변경시 data-target 값과 동일하게 맞춰주세요.
+          -->
+          <i class="ico-cw js-no-dimed-popup-call" data-target="crosswalk-popup" style="left: 300px; top: 282px"
+            ><span class="screen-out">횡단보도</span></i
+          >
 
           <!-- 교차로 아이콘
               * style 속성의 left, top값으로 지도 위 좌표값 설정하시면 됩니다.
@@ -86,13 +97,131 @@
               * lv-a, lv-b, lv-c, lv-d, lv-e, lv-f, lv-ff, lv-fff
           -->
           <div class="los-display lv-a" style="left: 400px; top: 382px">
-            <i class="ico-cr"><span class="screen-out">교차로</span></i>
+            <!-- 230815 : 교차로 아이콘에 js-no-dimed-popup-call 클래스명 추가 및 data-target 속성 추가
+                          data-target 속성의 값과 동일한 id값의 팝업을 호출합니다.
+                          팝업의 id값 변경시 data-target 값과 동일하게 맞춰주세요.
+            -->
+            <i class="ico-cr js-no-dimed-popup-call" data-target="crossing-popup"><span class="screen-out">교차로</span></i>
 
             <i class="traffic-display top c-red" style="transform: rotate(0deg)"></i>
             <i class="traffic-display bottom c-orange" style="transform: rotate(0deg)"></i>
             <i class="traffic-display left" style="transform: rotate(0deg)"></i>
             <i class="traffic-display right" style="transform: rotate(0deg)"></i>
           </div>
+
+          <!-- 230815 : 장애 아이콘 -->
+          <i class="ico-triangle-exclamation" style="left: 453px; top: 378px"><span class="screen-out">장애 발생</span></i>
+
+          <!-- 횡단보도 클릭시 나오는 팝업 -->
+          <div id="crosswalk-popup" class="map-popup">작업예정</div>
+
+          <!-- 230815 : 교차로 클릭시 나오는 팝업 -->
+          <div id="crossing-popup" class="map-popup mw377">
+            <header class="map-popup-header">공릉역 사거리</header>
+            <div class="map-popup-content">
+              <div class="line-box-container">
+                <div class="box-row">
+                  <div class="box is-label">
+                    <em class="tit">LOS 등급</em>
+                    <span class="box-label c-violet">FFF 등급</span>
+                  </div>
+                  <div class="box">
+                    <em class="tit">차량 통행량</em>
+                    <span class="txt">3,100대</span>
+                  </div>
+                </div>
+                <!-- //box-row -->
+                <div class="box">
+                  <em class="tit">카메라 상태</em>
+                  <span class="txt-normality">정상</span>
+                  <!-- <span class="txt-disorder">카메라 이상(192.168.172.130)</span> -->
+                </div>
+                <div class="box-column">
+                  <div class="box">
+                    <em class="tit">함체 상태</em>
+                  </div>
+                  <div class="box">
+                    <table class="state-tbl">
+                      <colgroup>
+                        <col style="width: 15%" />
+                        <col />
+                        <col style="width: 15%" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>팬</th>
+                          <td>
+                            <div class="bind">
+                              <label class="radio-txt2 rounded">
+                                <input type="radio" name="state1" />
+                                <span>ON</span>
+                              </label>
+                              <label class="radio-txt2 rounded">
+                                <input type="radio" name="state1" />
+                                <span>OFF</span>
+                              </label>
+                            </div>
+                          </td>
+                          <th>히터</th>
+                          <td>
+                            <div class="bind">
+                              <label class="radio-txt2 rounded">
+                                <input type="radio" name="state2" />
+                                <span>ON</span>
+                              </label>
+                              <label class="radio-txt2 rounded">
+                                <input type="radio" name="state2" />
+                                <span>OFF</span>
+                              </label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>앞문</th>
+                          <td>
+                            <div class="bind">
+                              <label class="radio-txt2 rounded">
+                                <input type="radio" name="state3" />
+                                <span>열림</span>
+                              </label>
+                              <label class="radio-txt2 rounded">
+                                <input type="radio" name="state3" />
+                                <span>닫힘</span>
+                              </label>
+                            </div>
+                          </td>
+                          <th>뒷문</th>
+                          <td>
+                            <div class="bind">
+                              <label class="radio-txt2 rounded">
+                                <input type="radio" name="state4" />
+                                <span>열림</span>
+                              </label>
+                              <label class="radio-txt2 rounded">
+                                <input type="radio" name="state4" />
+                                <span>닫힘</span>
+                              </label>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- //box-column -->
+              </div>
+              <!-- //line-box-container -->
+            </div>
+            <!-- //map-popup-content -->
+            <div class="map-popup-btn-group">
+              <a href="#" class="ui primary basic button rounded">교차로 상세</a>
+              <a href="#" class="ui primary basic button rounded">지점 관리</a>
+              <a href="#" class="ui primary basic button rounded">도로 관리</a>
+            </div>
+            <!-- //map-popup-btn-group -->
+          </div>
+          <!-- //map-popup -->
         </div>
         <!-- //ly-map -->
       </main>
@@ -107,6 +236,28 @@
       window.onload = function () {
         var map1 = new ngii_wmts.map('map1', { zoom: 6 });
       };
+
+      // 230815 팝업 호출 함수
+      function noDimedPopup() {
+        $('.js-no-dimed-popup-call').on('click', function () {
+          var $this = $(this);
+          var $top = $this.offset().top;
+          var $left = $this.offset().left;
+          var $target = $this.data('target');
+          var $popup = $('#' + $target);
+          var $popupTop = $popup.outerHeight(true);
+          var $popupLeft = $popup.outerWidth(true) / 2;
+          if ($popup.css('display') !== 'block') {
+            $popup
+              .css({
+                top: $top - $popupTop,
+                left: $left - $popupLeft - 35,
+              })
+              .fadeIn(200);
+          }
+        });
+      }
+      noDimedPopup();
     </script>
   </body>
 </html>
