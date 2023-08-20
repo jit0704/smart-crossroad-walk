@@ -278,6 +278,7 @@ input[type=date] {
 /*---------------------------------------------------------------
   [component]
   - 아이콘
+  - 튤팁 팝업
   - 브레드크럼
   - 인풋박스
   - 버튼
@@ -384,6 +385,67 @@ input[type=date] {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+}
+.ico-hand {
+  display: inline-block;
+  width: 2.5em;
+  height: 3.16rem;
+  background-image: url("/base/images/set_icon_palm.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-set-branch {
+  display: inline-block;
+  width: 2.8em;
+  height: 3.69rem;
+  background-image: url("/base/images/set_icon_cr.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-set-cw {
+  display: inline-block;
+  width: 2.8em;
+  height: 3.69rem;
+  background-image: url("/base/images/set_icon_cw.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+.menu-popup {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.menu-popup:hover {
+  cursor: pointer;
+}
+.menu-popup a {
+  display: block;
+  padding: 0.4rem 1rem;
+  line-height: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #727272;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  border: 1px solid #e8e8e8;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.menu-popup a + a {
+  margin-top: 0.2rem;
+}
+.menu-popup a:hover {
+  color: #fff;
+  background: #03a0fc;
 }
 
 .ui.breadcrumb {
@@ -1065,7 +1127,7 @@ input[type=date] {
   position: absolute;
   top: 1.8rem;
   right: 1.9rem;
-  z-index: 1;
+  z-index: 4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1114,7 +1176,7 @@ input[type=date] {
   position: absolute;
   top: 4.8rem;
   right: 1.9rem;
-  z-index: 1;
+  z-index: 4;
   min-width: 15.4rem;
   padding: 0.8rem 3rem 0.8rem 0.8rem;
   border-radius: 0.5rem;
@@ -1372,6 +1434,9 @@ input[type=date] {
   z-index: 3;
   display: inline-block;
   margin-top: 0.6rem;
+}
+.los-display .ico-cr.moving {
+  cursor: move;
 }
 .los-display .traffic-display {
   position: absolute;
@@ -2647,6 +2712,101 @@ input[type=date] {
 .ly-map .ico-camera {
   position: absolute;
   z-index: 1;
+}
+.ly-map .speech-bubble-guide {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  width: 14.7em;
+  height: 5rem;
+  background-image: url("/base/images/speech_bubble.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+.ly-map .ui.breadcrumb {
+  position: absolute;
+  top: 1.7rem;
+  left: 1.7rem;
+  z-index: 4;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.ly-map .ui.breadcrumb .section {
+  color: #999999;
+}
+.ly-map .ui.breadcrumb .section.active {
+  color: #03a0fc;
+  font-weight: 700;
+}
+.ly-map .system-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 4.4rem;
+  height: 16.2rem;
+  position: absolute;
+  top: 50%;
+  right: 1.9rem;
+  z-index: 4;
+  margin-top: -8.1rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.ly-map .system-nav [class*=ico] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  padding: 0;
+  background-position: 50% 50%;
+}
+.ly-map .system-nav [class*=ico] + button {
+  border-top: 1px solid #cbcbcb;
+}
+.ly-map .system-nav .ico-hand {
+  background-size: 2.5rem 3.16rem;
+}
+.ly-map .system-nav .ico-set-branch {
+  background-size: 2.8em 3.69rem;
+}
+.ly-map .system-nav .ico-set-branch.active {
+  background-image: url(/base/images/set_icon_cr_active.png);
+}
+.ly-map .system-nav .ico-set-cw {
+  background-size: 2.8em 3.69rem;
+}
+.ly-map .system-nav .ico-set-cw.active {
+  background-image: url(/base/images/set_icon_cw_active.png);
+}
+.ly-map.ico-hand-active {
+  cursor: url(/base/images/cursor_palm.png) 14 17, auto;
+}
+.ly-map.ico-set-branch-active {
+  cursor: url(/base/images/set_icon_cr_violet.png) 14 30, auto;
+}
+.ly-map.ico-set-branch-active .speech-bubble-guide {
+  display: block;
+}
+.ly-map.ico-set-cw-active {
+  cursor: url(/base/images/set_icon_cw_active2.png) 22 29, auto;
 }
 .ly-sub {
   width: 100%;
