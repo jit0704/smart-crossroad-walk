@@ -28,53 +28,43 @@
               <i class="right angle icon divider"></i>
               <span class="section">시스템 관리</span>
               <i class="right angle icon divider"></i>
-              <div class="active section">장비 상태 조회</div>
+              <!-- 230821 is-active 클래스 추가 -->
+              <div class="is-active section">장비 상태 조회</div>
               <i class="right angle icon divider"></i>
               <div class="active section">이력 조회</div>
             </div>
             <!-- //breadcrumb -->
 
+            <!-- 230821 filter-grouop의 셀렉트 박스 및 검색 버튼 수정 -->
             <section class="filter-grouop">
               <div class="inner">
-                <div class="ui segment label-dropdown">
-                  <em>구역 명</em>
-                  <div class="selectbox-wrap primary">
-                    <select>
-                      <option value="">전체</option>
-                      <option value="">아이템1</option>
-                      <option value="">아이템2</option>
-                      <option value="">아이템3</option>
-                    </select>
-                  </div>
-                  <!-- //selectbox-wrap -->
+                <div class="selectbox-wrap primary label-none">
+                  <select>
+                    <option value="">구역</option>
+                    <option value="">아이템1</option>
+                    <option value="">아이템2</option>
+                    <option value="">아이템3</option>
+                  </select>
                 </div>
-                <!-- //segment -->
-                <div class="ui segment label-dropdown">
-                  <em>지점 명</em>
-                  <div class="selectbox-wrap primary">
-                    <select>
-                      <option value="">전체</option>
-                      <option value="">아이템1</option>
-                      <option value="">아이템2</option>
-                      <option value="">아이템3</option>
-                    </select>
-                  </div>
-                  <!-- //selectbox-wrap -->
+                <!-- //selectbox-wrap -->
+                <div class="selectbox-wrap primary label-none">
+                  <select>
+                    <option value="">지점</option>
+                    <option value="">아이템1</option>
+                    <option value="">아이템2</option>
+                    <option value="">아이템3</option>
+                  </select>
                 </div>
-                <!-- //segment -->
-                <div class="ui segment label-dropdown">
-                  <em>장비 ID</em>
-                  <div class="selectbox-wrap primary">
-                    <select>
-                      <option value="">전체</option>
-                      <option value="">아이템1</option>
-                      <option value="">아이템2</option>
-                      <option value="">아이템3</option>
-                    </select>
-                  </div>
-                  <!-- //selectbox-wrap -->
+                <!-- //selectbox-wrap -->
+                <div class="selectbox-wrap primary label-none">
+                  <select>
+                    <option value="">장비 ID</option>
+                    <option value="">아이템1</option>
+                    <option value="">아이템2</option>
+                    <option value="">아이템3</option>
+                  </select>
                 </div>
-                <!-- //segment -->
+                <!-- //selectbox-wrap -->
 
                 <!-- 달력 날짜 초기화는 맨 아래 스크립트 참고   -->
                 <div class="date-group">
@@ -83,7 +73,7 @@
                   <input type="date" class="input-date" data-end="date-end" />
                 </div>
                 <!-- //date-group -->
-                <button class="ui primary basic button">검색</button>
+                <button type="button" class="btn-data-search">검색</button>
               </div>
               <!-- //inner -->
 
@@ -107,9 +97,9 @@
                 <thead>
                   <tr>
                     <th>No</th>
-                    <th>구역 명</th>
+                    <th>구역</th>
                     <th>지점 ID</th>
-                    <th>지점 명</th>
+                    <th>지점</th>
                     <th>장비 종류</th>
                     <th>장비 ID</th>
                     <th>장비 방향</th>

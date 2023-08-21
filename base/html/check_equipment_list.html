@@ -32,53 +32,37 @@
             </div>
             <!-- //breadcrumb -->
 
+            <!-- 230821 filter-grouop 영역 전체 수정 -->
             <section class="filter-grouop">
               <div class="inner">
-                <div class="ui segment label-dropdown">
-                  <em>구역 명</em>
-                  <div class="selectbox-wrap primary">
-                    <select>
-                      <option value="">전체</option>
-                      <option value="">아이템1</option>
-                      <option value="">아이템2</option>
-                      <option value="">아이템3</option>
-                    </select>
-                  </div>
-                  <!-- //selectbox-wrap -->
+                <div class="selectbox-wrap primary label-none">
+                  <select>
+                    <option value="">구역</option>
+                    <option value="">아이템1</option>
+                    <option value="">아이템2</option>
+                    <option value="">아이템3</option>
+                  </select>
                 </div>
-                <!-- //segment -->
-                <div class="ui segment label-dropdown">
-                  <em>지점 명</em>
-                  <div class="selectbox-wrap primary">
-                    <select>
-                      <option value="">전체</option>
-                      <option value="">아이템1</option>
-                      <option value="">아이템2</option>
-                      <option value="">아이템3</option>
-                    </select>
-                  </div>
-                  <!-- //selectbox-wrap -->
+                <!-- //selectbox-wrap -->
+                <div class="selectbox-wrap primary label-none">
+                  <select>
+                    <option value="">지점</option>
+                    <option value="">아이템1</option>
+                    <option value="">아이템2</option>
+                    <option value="">아이템3</option>
+                  </select>
                 </div>
-                <!-- //segment -->
-                <button class="ui primary basic button">검색</button>
+                <!-- //selectbox-wrap -->
+                <button type="button" class="btn-data-search">검색</button>
               </div>
               <!-- //inner -->
-            </section>
-            <!-- //filter-grouop -->
 
-            <section class="button-function-group">
-              <div class="left">
-                <div class="ui basic buttons">
-                  <button class="ui secondary basic button rounded">이력 조회</button>
-                </div>
-                <!-- //buttons -->
-              </div>
-              <!-- //left -->
-              <div class="right">
+              <div class="ui basic buttons">
+                <button class="ui secondary basic button rounded">이력 조회</button>
                 <button class="ui primary basic button rounded">Excel Down</button>
               </div>
             </section>
-            <!-- //button-function-group -->
+            <!-- //filter-grouop -->
 
             <div class="data-tbl-very">
               <table class="ui very basic table is-fncbtn">
@@ -97,9 +81,9 @@
                 <thead>
                   <tr>
                     <th>No</th>
-                    <th>구역 명</th>
+                    <th>구역</th>
                     <th>지점 ID</th>
-                    <th>지점 명</th>
+                    <th>지점</th>
                     <th>장비 종류</th>
                     <th>장비 ID</th>
                     <th>장비 방향</th>

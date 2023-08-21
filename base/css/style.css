@@ -466,6 +466,10 @@ input[type=date] {
   color: #adadad;
   font-weight: 400;
 }
+.ui.breadcrumb .section.is-active {
+  font-weight: 700;
+  color: #03a0fc;
+}
 .ui.input {
   width: 100%;
 }
@@ -480,6 +484,14 @@ input[type=date] {
 }
 .ui.input.center input {
   text-align: center;
+}
+.ui.input.md.label-none {
+  width: 20rem;
+  height: 3.4rem;
+}
+.ui.input.md.label-none input {
+  padding: 0.6rem 1rem;
+  font-weight: 500;
 }
 .ui.input.md input {
   line-height: 3rem;
@@ -786,6 +798,9 @@ input[type=date] {
   font-size: 1.2rem;
   color: #727272;
 }
+.ui.basic.table.is-data-grid tbody td:last-child {
+  padding-right: 1.2rem !important;
+}
 .ui.basic.table.is-data-grid tbody td + td {
   border-top: 1px solid #e8e8e8;
 }
@@ -810,12 +825,16 @@ input[type=date] {
 .ui.basic.table tbody td:first-child {
   padding-left: 1.4rem !important;
 }
+.ui.basic.table tbody td:last-child {
+  padding-right: 1.4rem !important;
+}
 .ui.basic.table.md {
   margin-top: 0;
 }
 .ui.basic.table.md.is-chkbox tbody td {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  padding-right: 1.4rem;
   line-height: 1rem;
 }
 .ui.basic.table.md thead th {
@@ -847,6 +866,32 @@ input[type=date] {
 .data-tbl tbody td .ui.input > input,
 .data-tbl tbody td .selectbox-wrap select {
   color: #727272;
+}
+.data-tbl tbody td .bind-inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.data-tbl tbody td .bind-inline .selectbox-wrap,
+.data-tbl tbody td .bind-inline .ui.input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.data-tbl tbody td .bind-inline.gap-w15 {
+  gap: 0 1.5rem;
 }
 .data-tbl tbody tr:last-child th,
 .data-tbl tbody tr:last-child td {
@@ -1691,6 +1736,11 @@ input[type=date] {
 .filter-grouop .ui.basic.button {
   width: auto;
 }
+.filter-grouop .btn-data-search {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+}
 .filter-grouop .date-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1730,6 +1780,9 @@ input[type=date] {
   border-radius: 0.5rem;
   background: url(/base/images/icon_calendar.png) no-repeat right 1rem center;
   background-size: 1.8rem 1.8rem;
+}
+.filter-grouop .ui.basic.buttons {
+  gap: 0 0.4rem;
 }
 
 /* 달력 */
@@ -2131,7 +2184,7 @@ input[type=date] {
 }
 .data-tbl-very.md {
   height: auto;
-  max-height: 20rem;
+  max-height: 12.2rem;
 }
 
 /*---------------------------------------------------------------
@@ -2339,6 +2392,13 @@ input[type=date] {
 }
 .modal-bottom .ui.button.basic {
   width: 8rem;
+}
+.modal-bodybot-bind {
+  max-height: 85.7rem;
+  overflow-y: auto;
+}
+.modal-bodybot-bind .data-tbl-very.md {
+  max-height: none;
 }
 
 /*---------------------------------------------------------------
@@ -2697,6 +2757,9 @@ input[type=date] {
   height: calc(99.9vh - 20px);
   margin-left: 5.4rem;
 }
+.ly-map.type2 {
+  margin-left: 47.6rem;
+}
 .ly-map.temp-map {
   background: url(/base/images/temp/traffic_img.png) no-repeat 0 0;
   background-size: cover;
@@ -2918,8 +2981,50 @@ input[type=date] {
   bottom: 2rem;
   left: 18rem;
 }
+.gnb .ui.menu > .dropdown .menu {
+  overflow: hidden;
+  min-width: 19.8rem !important;
+  border-radius: 0.8rem !important;
+  border: 1px solid #5b87a7;
+  background: #0f3f62;
+  -webkit-box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.25) !important;
+          box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.25) !important;
+}
 .gnb .ui.menu > .dropdown .menu > .item {
-  padding: 0 !important;
+  padding: 1.3rem 0.8rem 1.3rem 1.4rem !important;
+  font-size: 1.6rem !important;
+  color: #fff !important;
+}
+.gnb .ui.menu > .dropdown .menu > .item.active {
+  background: #0f3f62 !important;
+  font-weight: 600 !important;
+  color: #ffe298 !important;
+}
+.gnb .ui.menu > .dropdown .menu > .item:hover {
+  background: #0f3f62 !important;
+  font-weight: 600 !important;
+  color: #ffe298 !important;
+}
+.gnb .ui.menu > .dropdown .menu .ui.accordion .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 0;
+  font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
 }
 .gnb .ui.menu > .item {
   display: -webkit-box;

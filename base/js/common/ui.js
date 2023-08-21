@@ -43,9 +43,9 @@ var cmmnUi = {
           $('.wrapper').addClass('is-crossroad-view');
         }
 
-        if ($('.roi-view-container').length !== 0) {
-          $('.wrapper').addClass('is-roi-view');
-        }
+        // if ($('.roi-view-container').length !== 0) {
+        //   $('.wrapper').addClass('is-roi-view');
+        // }
 
         if ($('.search-view-container').length !== 0) {
           $('.wrapper').addClass('is-search-view');
@@ -58,10 +58,10 @@ var cmmnUi = {
       $('.is-crossroad-view').toggleClass('is-fold');
       $('.gnb').removeClass('is-open');
     });
-    $('.btn-roi-view').on('click', function () {
-      $('.is-roi-view').toggleClass('is-fold');
-      $('.gnb').removeClass('is-open');
-    });
+    // $('.btn-roi-view').on('click', function () {
+    //   $('.is-roi-view').toggleClass('is-fold');
+    //   $('.gnb').removeClass('is-open');
+    // });
     $('.btn-search-view').on('click', function () {
       $('.is-search-view').toggleClass('is-fold');
       $('.gnb').removeClass('is-open');

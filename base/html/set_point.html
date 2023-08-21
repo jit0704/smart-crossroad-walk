@@ -32,33 +32,26 @@
 
             <section class="filter-grouop">
               <div class="inner">
-                <div class="ui segment label-dropdown">
-                  <em>행정구역</em>
-                  <div class="selectbox-wrap primary">
-                    <select>
-                      <option value="">전체</option>
-                      <option value="">아이템1</option>
-                      <option value="">아이템2</option>
-                      <option value="">아이템3</option>
-                    </select>
-                  </div>
-                  <!-- //selectbox-wrap -->
+                <!-- 230821 셀렉트박스 및 검색 버튼 수정 -->
+                <div class="selectbox-wrap primary label-none">
+                  <select>
+                    <option value="">구역</option>
+                    <option value="">아이템1</option>
+                    <option value="">아이템2</option>
+                    <option value="">아이템3</option>
+                  </select>
                 </div>
-                <!-- //segment -->
-                <div class="ui segment label-dropdown">
-                  <em>지점 유형</em>
-                  <div class="selectbox-wrap primary">
-                    <select>
-                      <option value="">전체</option>
-                      <option value="">아이템1</option>
-                      <option value="">아이템2</option>
-                      <option value="">아이템3</option>
-                    </select>
-                  </div>
-                  <!-- //selectbox-wrap -->
+                <!-- //selectbox-wrap -->
+                <div class="selectbox-wrap primary label-none">
+                  <select>
+                    <option value="">지점 유형</option>
+                    <option value="">아이템1</option>
+                    <option value="">아이템2</option>
+                    <option value="">아이템3</option>
+                  </select>
                 </div>
-                <!-- //segment -->
-                <button class="ui primary basic button">검색</button>
+                <!-- //selectbox-wrap -->
+                <button type="button" class="btn-data-search">검색</button>
               </div>
               <!-- //inner -->
             </section>
@@ -81,15 +74,16 @@
 
             <div class="data-tbl-very">
               <table class="ui very basic table">
+                <!-- 230821 col 너비 수정 -->
                 <colgroup>
                   <col style="width: 72px" />
                   <col style="width: 56px" />
+                  <col style="width: 200px" />
                   <col />
                   <col />
                   <col />
                   <col />
-                  <col />
-                  <col />
+                  <col style="width: 220px" />
                 </colgroup>
                 <thead>
                   <tr>
@@ -104,7 +98,7 @@
                     <th>지점 유형</th>
                     <th>지점 ID</th>
                     <th>지점 명</th>
-                    <th>지점주소</th>
+                    <th>지점 주소</th>
                     <th>수정일시</th>
                   </tr>
                 </thead>

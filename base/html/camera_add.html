@@ -20,192 +20,229 @@
           <span class="tit">카메라 정보</span>
         </div>
         <!-- //modal-header -->
-        <div class="modal-body">
-          <div class="data-tbl">
-            <table>
-              <colgroup>
-                <col style="width: 20%" />
-                <col style="width: 30%" />
-                <col style="width: 20%" />
-                <col style="width: 30%" />
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th rowspan="2" class="rowspan-style1">구역</th>
-                  <td class="pdr-20">
-                    <div class="selectbox-wrap rounded">
-                      <select>
-                        <option value="">선택</option>
-                        <option value="">아이템1</option>
-                        <option value="">아이템2</option>
-                        <option value="">아이템3</option>
-                      </select>
-                    </div>
-                  </td>
-                  <th class="pdl-15">지점</th>
-                  <td>
-                    <div class="selectbox-wrap rounded">
-                      <select>
-                        <option value="">선택</option>
-                        <option value="">아이템1</option>
-                        <option value="">아이템2</option>
-                        <option value="">아이템3</option>
-                      </select>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="3">
-                    <button class="ui secondary basic button rounded extend">Map 설정</button>
-                  </td>
-                </tr>
-                <tr>
-                  <th>지점 ID</th>
-                  <td colspan="3">
-                    <div class="ui input rounded">
-                      <input type="text" disabled />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>지점 주소</th>
-                  <td colspan="3">
-                    <div class="ui input rounded">
-                      <input type="text" disabled />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>카메라 ID</th>
-                  <td class="pdr-20">
-                    <div class="ui input rounded">
-                      <input type="text" />
-                    </div>
-                  </td>
-                  <th class="pdl-15">카메라 명</th>
-                  <td>
-                    <div class="ui input rounded">
-                      <input type="text" />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>촬영방향</th>
-                  <td class="pdr-20">
-                    <div class="selectbox-wrap rounded">
-                      <select>
-                        <option value="">선택</option>
-                        <option value="">아이템1</option>
-                        <option value="">아이템2</option>
-                      </select>
-                    </div>
-                  </td>
-                  <th class="pdl-15">IP 주소</th>
-                  <td>
-                    <div class="ui input rounded">
-                      <input type="text" />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>채널</th>
-                  <td class="pdr-20">
-                    <div class="selectbox-wrap rounded">
-                      <select>
-                        <option value="">선택</option>
-                        <option value="">아이템1</option>
-                        <option value="">아이템2</option>
-                      </select>
-                    </div>
-                  </td>
-                  <th class="pdl-15">인식거리</th>
-                  <td>
-                    <div class="selectbox-wrap rounded">
-                      <select>
-                        <option value="">선택</option>
-                        <option value="">아이템1</option>
-                        <option value="">아이템2</option>
-                      </select>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>RTSP 주소</th>
-                  <td colspan="3">
-                    <div class="ui input rounded">
-                      <input type="text" />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>해상도</th>
-                  <td class="pdr-20">
-                    <div class="resolution-info">
+        <!-- 230821 modal-bodybot-bind div 추가 -->
+        <div class="modal-bodybot-bind">
+          <div class="modal-body">
+            <div class="data-tbl">
+              <table>
+                <colgroup>
+                  <col style="width: 20%" />
+                  <col style="width: 30%" />
+                  <col style="width: 20%" />
+                  <col style="width: 30%" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th rowspan="2" class="rowspan-style1">구역</th>
+                    <td class="pdr-20">
+                      <div class="selectbox-wrap rounded">
+                        <select>
+                          <option value="">선택</option>
+                          <option value="">아이템1</option>
+                          <option value="">아이템2</option>
+                          <option value="">아이템3</option>
+                        </select>
+                      </div>
+                    </td>
+                    <th class="pdl-15">지점</th>
+                    <td>
+                      <div class="selectbox-wrap rounded">
+                        <select>
+                          <option value="">선택</option>
+                          <option value="">아이템1</option>
+                          <option value="">아이템2</option>
+                          <option value="">아이템3</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">
+                      <button class="ui secondary basic button rounded extend">Map 설정</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>지점 ID</th>
+                    <td colspan="3">
+                      <div class="ui input rounded">
+                        <input type="text" disabled />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>지점 주소</th>
+                    <td colspan="3">
+                      <div class="ui input rounded">
+                        <input type="text" disabled />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>카메라 ID</th>
+                    <td class="pdr-20">
                       <div class="ui input rounded">
                         <input type="text" />
                       </div>
-                      <i>x</i>
+                    </td>
+                    <th class="pdl-15">카메라 명</th>
+                    <td>
                       <div class="ui input rounded">
                         <input type="text" />
                       </div>
-                    </div>
-                  </td>
-                  <th class="pdl-15">각도</th>
-                  <td>
-                    <div class="ui input rounded">
-                      <input type="text" />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>위도</th>
-                  <td class="pdr-20">
-                    <div class="ui input rounded">
-                      <input type="text" />
-                    </div>
-                  </td>
-                  <th class="pdl-15">경도</th>
-                  <td>
-                    <div class="ui input rounded">
-                      <input type="text" />
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <!-- //data-tbl -->
-
-          <div class="button-group-only-right">
-            <div class="bind">
-              <button class="ui primary basic button rounded">저장</button>
-              <button class="ui secondary basic button rounded">취소</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>촬영 방향</th>
+                    <td class="pdr-20">
+                      <div class="selectbox-wrap rounded">
+                        <select>
+                          <option value="">선택</option>
+                          <option value="">아이템1</option>
+                          <option value="">아이템2</option>
+                        </select>
+                      </div>
+                    </td>
+                    <th class="pdl-15">IP 주소</th>
+                    <td>
+                      <div class="ui input rounded">
+                        <input type="text" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>채널</th>
+                    <td class="pdr-20">
+                      <div class="selectbox-wrap rounded">
+                        <select>
+                          <option value="">선택</option>
+                          <option value="">아이템1</option>
+                          <option value="">아이템2</option>
+                        </select>
+                      </div>
+                    </td>
+                    <th class="pdl-15">인식 거리</th>
+                    <td>
+                      <div class="selectbox-wrap rounded">
+                        <select>
+                          <option value="">선택</option>
+                          <option value="">아이템1</option>
+                          <option value="">아이템2</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>RTSP 주소</th>
+                    <td colspan="3">
+                      <div class="ui input rounded">
+                        <input type="text" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>해상도</th>
+                    <td class="pdr-20">
+                      <div class="resolution-info">
+                        <div class="ui input rounded">
+                          <input type="text" />
+                        </div>
+                        <i>x</i>
+                        <div class="ui input rounded">
+                          <input type="text" />
+                        </div>
+                      </div>
+                    </td>
+                    <th class="pdl-15">각도</th>
+                    <td>
+                      <div class="ui input rounded">
+                        <input type="text" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>위도</th>
+                    <td class="pdr-20">
+                      <div class="ui input rounded">
+                        <input type="text" />
+                      </div>
+                    </td>
+                    <th class="pdl-15">경도</th>
+                    <td>
+                      <div class="ui input rounded">
+                        <input type="text" />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-          </div>
-          <!-- //button-group-only-right -->
+            <!-- //data-tbl -->
 
-          <em class="modal-body-sub-tit">연동 도로 정보</em>
-          <div class="data-tbl-very md">
-            <table class="ui very basic table md">
-              <thead>
-                <tr>
-                  <th>선택</th>
-                  <th>도로 ID</th>
-                  <th>도로 명</th>
-                  <th>방향</th>
-                  <th>방향명</th>
-                </tr>
-              </thead>
-            </table>
+            <div class="button-group-only-right">
+              <div class="bind">
+                <button class="ui primary basic button rounded">저장</button>
+                <button class="ui secondary basic button rounded">취소</button>
+              </div>
+            </div>
+            <!-- //button-group-only-right -->
+
+            <em class="modal-body-sub-tit">연동 도로 정보</em>
+            <div class="data-tbl-very md">
+              <table class="ui very basic table md is-chkbox">
+                <colgroup>
+                  <col style="width: 72px" />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>선택</th>
+                    <th>도로 ID</th>
+                    <th>도로 명</th>
+                    <th>방향</th>
+                    <th>방향 명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="ui checkbox primary-chkbox txt-none c-bluesky">
+                        <input type="checkbox" />
+                        <label></label>
+                      </div>
+                    </td>
+                    <td>100101</td>
+                    <td>동일로</td>
+                    <td>북</td>
+                    <td>서울공릉초등학교 방면</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ui checkbox primary-chkbox txt-none c-bluesky">
+                        <input type="checkbox" />
+                        <label></label>
+                      </div>
+                    </td>
+                    <td>100101</td>
+                    <td>동일로</td>
+                    <td>북</td>
+                    <td>서울공릉초등학교 방면</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //data-tbl-very -->
           </div>
-          <!-- //data-tbl-very -->
+          <!-- //modal-body -->
+          <div class="modal-bottom">
+            <button class="ui primary basic button rounded">저장</button>
+            <button class="ui secondary basic button rounded">취소</button>
+          </div>
+          <!-- //modal-bottom -->
         </div>
-        <!-- //modal-body -->
-        <div class="modal-bottom">
-          <button class="ui primary basic button rounded">저장</button>
-          <button class="ui secondary basic button rounded">취소</button>
-        </div>
-        <!-- //modal-bottom -->
+        <!-- //modal-bodybot-bind -->
       </div>
       <!-- //modal-container -->
     </div>
