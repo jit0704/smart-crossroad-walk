@@ -96,6 +96,15 @@ input[type=date] {
   outline: 0;
 }
 
+/* 스크롤바 커스텀 */
+body ::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background: #cbcbcb;
+}
+body ::-webkit-scrollbar-track {
+  background: none;
+}
+
 /* 웹폰트 */
 @font-face {
   font-family: "Pretendard";
@@ -618,6 +627,19 @@ input[type=date] {
   color: #1e5f8d !important;
   background: #e8e8e8 !important;
 }
+.btn-third {
+  padding: 0.8rem 0.6rem;
+  line-height: normal;
+  text-align: center;
+  border: 1px solid #cbcbcb;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #999999;
+}
+.btn-third:hover {
+  color: #727272;
+  background: #cbcbcb;
+}
 .btn-small {
   display: inline-block;
   padding: 0.2rem 0.4rem;
@@ -923,7 +945,7 @@ input[type=date] {
   vertical-align: top;
 }
 .data-tbl-gray {
-  height: 26.4rem;
+  height: 23.1rem;
   overflow-y: auto;
   border-top: 1px solid #cbcbcb;
   border-bottom: 1px solid #cbcbcb;
@@ -935,7 +957,7 @@ input[type=date] {
   top: 0;
 }
 .data-tbl-gray table thead th {
-  padding: 1rem 0;
+  padding: 0.7rem 0;
   font-size: 1.6rem;
   font-weight: 500;
   color: #6d6d6d;
@@ -950,6 +972,18 @@ input[type=date] {
 }
 .data-tbl-gray table tbody tr:last-child td {
   border-bottom: 0;
+}
+.data-tbl-gray.xs {
+  height: 19.8rem;
+}
+.data-tbl-gray.xs table thead th {
+  padding: 0.25rem 0;
+  font-size: 1.2rem;
+}
+.data-tbl-gray.xs table tbody td {
+  padding: 0.73rem 0;
+  line-height: 100%;
+  font-size: 1.2rem;
 }
 
 .ui.tabular.menu.rounded {
@@ -3372,23 +3406,7 @@ input[type=date] {
           transform: rotate(180deg);
 }
 .search-view-header .control-box .bind-choice .btn-custom-wrap.active .depth1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: block;
 }
 .search-view-header .control-box .bind-choice .btn-custom-wrap.active .chk-box {
   display: block;
@@ -3398,13 +3416,18 @@ input[type=date] {
   position: absolute;
   top: 3.6rem;
   left: 0;
+  overflow-y: auto;
   width: 100%;
+  height: 16.5rem;
   background: #fff;
   border: 1px solid #dbdbdb;
   border-top: 0;
 }
+.search-view-header .control-box .bind-choice .btn-custom-wrap .depth1::-webkit-scrollbar {
+  width: 0.4rem;
+}
 .search-view-header .control-box .bind-choice .btn-custom-wrap .depth1 button {
-  width: 50%;
+  display: block;
   padding: 0 1rem;
   line-height: 3.3rem;
   font-size: 1.4rem;
@@ -3445,36 +3468,24 @@ input[type=date] {
   position: absolute;
   top: 3.6rem;
   right: -15rem;
+  overflow-y: auto;
   width: 100%;
-  height: 6.68rem;
+  height: 16.5rem;
   background: #fff;
   border-right: 1px solid #dbdbdb;
   border-bottom: 1px solid #dbdbdb;
+}
+.search-view-header .control-box .bind-choice .btn-custom-wrap .depth2::-webkit-scrollbar {
+  width: 0.4rem;
 }
 .search-view-header .control-box .bind-choice .btn-custom-wrap .depth2 .area {
   display: none;
 }
 .search-view-header .control-box .bind-choice .btn-custom-wrap .depth2 .area.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: block;
 }
 .search-view-header .control-box .bind-choice .btn-custom-wrap .depth2 .area button {
-  width: 50%;
+  display: block;
   padding: 0 1rem;
   line-height: 3.3rem;
   font-size: 1.4rem;
@@ -3495,15 +3506,22 @@ input[type=date] {
   left: 0;
   width: 100%;
   background: #fff;
+  border: 1px solid #cbcbcb;
 }
-.search-view-header .control-box .bind-choice .btn-custom-wrap .chk-box .ui.checkbox {
+.search-view-header .control-box .bind-choice .btn-custom-wrap .chk-box button {
   display: block;
-  padding: 1rem;
-}
-.search-view-header .control-box .bind-choice .btn-custom-wrap .chk-box .ui.checkbox label {
-  padding-left: 3rem;
-  font-size: 1.3rem;
+  padding: 0 1rem;
+  line-height: 3.3rem;
+  font-size: 1.4rem;
   color: #727272;
+  text-align: left;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.search-view-header .control-box .bind-choice .btn-custom-wrap .chk-box button:hover {
+  color: #009fe3;
+  font-weight: 600;
+  background: #ebf8ff;
 }
 .search-view-header .control-box .bind-choice .btn-custom {
   position: relative;

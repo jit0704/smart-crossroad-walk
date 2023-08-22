@@ -23,9 +23,18 @@
         <div class="roi-view-header">
           <h2>태릉입구 역</h2>
           <div class="right">
-            <a href="#" class="btn-md c-navy">상세</a>
-            <a href="#" class="btn-md c-navy">목록</a>
+            <div class="selectbox-wrap xs">
+              <select>
+                <option value="">채널1</option>
+                <option value="">채널2</option>
+                <option value="">채널3</option>
+              </select>
+            </div>
+            <span class="txt">세종과학예술영재학교방면</span>
+            <!-- <a href="#" class="btn-md c-navy">상세</a>
+            <a href="#" class="btn-md c-navy">목록</a> -->
           </div>
+          <!-- //right -->
         </div>
         <!-- //roi-view-header -->
         <div class="ui top attached tabular menu rounded">
@@ -40,7 +49,7 @@
           <section class="perceive-section">
             <div class="perceive-header">
               <h3>인식설정</h3>
-              <div class="right">
+              <!-- <div class="right">
                 <span class="txt">세종과학예술영재학교방면</span>
                 <div class="selectbox-wrap xs">
                   <select>
@@ -49,7 +58,7 @@
                     <option value="">채널3</option>
                   </select>
                 </div>
-              </div>
+              </div> -->
               <!-- //right -->
             </div>
             <!-- //perceive-header -->
@@ -155,7 +164,7 @@
           <section class="perceive-section">
             <div class="perceive-header">
               <h3>ROI 설정</h3>
-              <div class="right">
+              <!-- <div class="right">
                 <span class="txt">세종과학예술영재학교방면</span>
                 <div class="selectbox-wrap xs">
                   <select>
@@ -164,7 +173,7 @@
                     <option value="">채널3</option>
                   </select>
                 </div>
-              </div>
+              </div> -->
               <!-- //right -->
             </div>
             <!-- //perceive-header -->
@@ -176,7 +185,9 @@
               <button type="button">역주행 영역</button>
             </div>
             <!-- //roi-set-area-button-group -->
-            <button type="button" class="roi-set-one-btn">Gradient</button>
+
+            <!-- Gradient 버튼 비활성화: disabled 속성 추가 -->
+            <button type="button" class="roi-set-one-btn" disabled>Gradient</button>
 
             <div class="perceive-body">
               <table>
@@ -219,7 +230,7 @@
                 </colgroup>
                 <tbody>
                   <tr>
-                    <th>돌발 검지 기준 시각(Sec)</th>
+                    <th>돌발 검지 기준 시간(Sec)</th>
                     <td>
                       <div class="ui input rounded center xs">
                         <input type="text" />
@@ -227,7 +238,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <th>돌발 검지 기준 시각(Pixel)</th>
+                    <th>돌발 검지 기준 거리(Pixel)</th>
                     <td>
                       <div class="ui input rounded center xs">
                         <input type="text" />
@@ -270,16 +281,19 @@
               <button type="button" class="btn-md bg-navy">저장</a>
             </div>
             <!-- //roi-set-list-header -->
-            <div class="data-tbl-gray">
+
+            <!-- 230822 xs 클래스 추가 -->
+            <div class="data-tbl-gray xs">
               <table>
                 <thead>
                   <tr>
                     <th>Type</th>
                     <th>Pitch</th>
                     <th>Yaw</th>
-                    <th>거리</th>
+                    <th>거리<br />(m)</th>
                     <th>시간</th>
-                    <th>Gradi ent</th>
+                    <th>거리<br />(Pixel)</th>
+                    <th>Gradi<br />ent</th>
                     <th>색상</th>
                     <th>삭제</th>
                   </tr>
@@ -290,6 +304,7 @@
                     <td></td>
                     <td></td>
                     <td>5</td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td><i class="color-yellow"></i></td>
@@ -304,6 +319,7 @@
                     <td>5</td>
                     <td>30</td>
                     <td></td>
+                    <td></td>
                     <td><i class="color-red"></i></td>
                     <td>
                       <button type="button" class="ico-wastebasket"><span class="screen-out">삭제 버튼</span></button>
@@ -316,6 +332,7 @@
                     <td>5</td>
                     <td>30</td>
                     <td>30</td>
+                    <td></td>
                     <td><i class="color-orange"></i></td>
                     <td>
                       <button type="button" class="ico-wastebasket"><span class="screen-out">삭제 버튼</span></button>
@@ -334,7 +351,7 @@
           <section class="perceive-section">
             <div class="perceive-header">
               <h3>ROI 설정</h3>
-              <div class="right">
+              <!-- <div class="right">
                 <span class="txt">세종과학예술영재학교방면</span>
                 <div class="selectbox-wrap xs">
                   <select>
@@ -343,7 +360,7 @@
                     <option value="">채널3</option>
                   </select>
                 </div>
-              </div>
+              </div> -->
               <!-- //right -->
             </div>
             <!-- //perceive-header -->
@@ -481,7 +498,9 @@
               <button type="button" class="btn-md bg-navy">저장</a>
             </div>
             <!-- //roi-set-list-header -->
-            <div class="data-tbl-gray">
+
+            <!-- 230822 xs 클래스 추가 -->
+            <div class="data-tbl-gray xs">
               <table>
                 <thead>
                   <tr>
@@ -533,7 +552,7 @@
           <section class="perceive-section">
             <div class="perceive-header">
               <h3>ROI 설정</h3>
-              <div class="right">
+              <!-- <div class="right">
                 <span class="txt">세종과학예술영재학교방면</span>
                 <div class="selectbox-wrap xs">
                   <select>
@@ -542,7 +561,7 @@
                     <option value="">채널3</option>
                   </select>
                 </div>
-              </div>
+              </div> -->
               <!-- //right -->
             </div>
             <!-- //perceive-header -->
@@ -621,7 +640,9 @@
               <button type="button" class="btn-md bg-navy">저장</a>
             </div>
             <!-- //roi-set-list-header -->
-            <div class="data-tbl-gray">
+
+            <!-- 230822 xs 클래스 추가 -->
+            <div class="data-tbl-gray xs">
               <table>
                 <thead>
                   <tr>
@@ -662,6 +683,12 @@
           <!-- //roi-set-list-section -->
         </div>
         <!-- //속도 ROI 컨텐츠 -->
+
+        <div class="ui buttons basic">
+          <a href="#" class="btn-third">지점 상세 화면</a>
+          <a href="#" class="btn-third">ROI 목록 화면</a>
+        </div>
+        <!-- //buttons -->
 
         <!-- <button type="button" class="btn-roi-view">
           <span class="screen-out">ROI설정 상세 열기/닫기 버튼</span>

@@ -345,7 +345,7 @@
   color: #6d6d6d;
 }
 .roi-view-container .perceive-section {
-  padding: 4.2rem 3rem 2.8rem;
+  padding: 2.9rem 3rem 2.8rem;
   border-bottom: 1px solid #e8e8e8;
 }
 .roi-view-container .perceive-header {
@@ -470,10 +470,13 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+.roi-view-container .roi-set-one-btn:disabled {
+  background: #e8e8e8;
+}
 .roi-view-container .roi-set-btn1 {
   display: block;
   margin-top: 1rem;
-  line-height: 2.9rem;
+  line-height: 2.6rem;
   border-radius: 0.5rem;
   border: 1px solid #d3e3ee;
   background: #ebf8ff;
@@ -483,7 +486,7 @@
 .roi-view-container .roi-set-btn2 {
   display: block;
   margin-top: 0.4rem;
-  line-height: 4rem;
+  line-height: 3.8rem;
   border-radius: 0.5rem;
   background: #1e5f8d;
   font-size: 1.6rem;
@@ -737,6 +740,18 @@
   font-weight: 600;
   background: #727272;
 }
+.roi-view-container > .ui.buttons.basic {
+  gap: 0 0.4rem;
+  position: absolute;
+  left: 3rem;
+  right: 3rem;
+  bottom: 2rem;
+}
+.roi-view-container > .ui.buttons.basic .btn-third {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
 .roi-view-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -748,9 +763,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-line-pack: center;
       align-content: center;
   padding: 4rem 2.4rem 1.8rem 2.4rem;
@@ -786,6 +801,20 @@
   background-position: 0 0;
   background-size: contain;
 }
+.roi-view-header .right {
+  text-align: right;
+}
+.roi-view-header .right .selectbox-wrap {
+  display: inline-block;
+  width: 6rem;
+}
+.roi-view-header .right .txt {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 1.2rem;
+  color: #5285aa;
+  font-weight: 300;
+}
 
 /* 돌발 ROI 탭 */
 .tab-accidental-roi .perceive-body table:first-child {
@@ -796,6 +825,10 @@
 }
 
 /* 교차로 ROI 탭 */
+.tab-crossroad-roi .roi-set-list-section .data-tbl-gray {
+  height: 23.1rem;
+}
+
 [data-tab=road-direction1] table:first-child,
 [data-tab=road-direction2] table:first-child {
   margin-top: 1.5rem;
@@ -821,17 +854,31 @@
       align-content: center;
   gap: 0 6.02rem;
 }
+.tab-speed-roi .roi-set-list-section .data-tbl-gray {
+  height: 26.4rem;
+}
+.tab-speed-roi .roi-set-list-section .data-tbl-gray table thead th {
+  padding: 0.9rem 0;
+}
 
 /* 미디어 쿼리 */
 @media screen and (max-height: 899px) {
-  /* 교차로 통계/ROI 화면 : scroll-y값 추가 */
-  .crossroad-view-container,
-  .roi-view-container {
+  /* 교차로 통계 : scroll-y값 추가 */
+  .crossroad-view-container {
     height: 100%;
   }
-  .crossroad-view-container .ui.tab.segment,
-  .roi-view-container .ui.tab.segment {
+  .crossroad-view-container .ui.tab.segment {
     overflow-y: auto;
     max-height: calc(100% - 118.45px);
+  }
+  /* ROI 화면 : scroll-y값 추가 */
+  .roi-view-container {
+    overflow-y: auto;
+    height: calc(100% - 20px);
+  }
+  .roi-view-container > .ui.buttons.basic {
+    position: static;
+    width: 100%;
+    padding: 2rem 3rem;
   }
 }

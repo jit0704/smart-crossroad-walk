@@ -38,7 +38,8 @@
             </span>
             <!-- //key-word-input -->
             <div class="bind-choice">
-              <div class="btn-custom-wrap">
+              <!-- 230822 js-custom-wrap-location 클래스명 추가 -->
+              <div class="btn-custom-wrap js-custom-wrap-location">
                 <button type="button" class="btn-custom" data-name="location">지역</button>
                 <div class="depth1">
                   <button type="button" data-all="전체">전체</button>
@@ -46,6 +47,8 @@
                   <button type="button" data-target="seoul">서울</button>
                   <button type="button" data-target="gyeonggi">경기</button>
                   <button type="button" data-target="gangwon">강원</button>
+                  <button type="button" data-target="">인천</button>
+                  <button type="button" data-target="">경남</button>
                 </div>
                 <!-- //depth1 -->
                 <div class="depth2">
@@ -54,6 +57,9 @@
                     <button type="button">강남구</button>
                     <button type="button">서초구</button>
                     <button type="button">동작구</button>
+                    <button type="button">강서구</button>
+                    <button type="button">구로구</button>
+                    <button type="button">송파구</button>
                   </span>
                   <span id="gyeonggi" class="area">
                     <button type="button">경기전체</button>
@@ -65,17 +71,14 @@
                 <!-- //depth2 -->
               </div>
               <!-- //btn-custom-wrap -->
-              <div class="btn-custom-wrap">
+              <!-- 230822 js-custom-wrap-system 클래스명 추가 -->
+              <div class="btn-custom-wrap js-custom-wrap-system">
                 <button type="button" class="btn-custom" data-name="system">시스템</button>
+                <!-- 230822 메뉴 수정 -->
                 <div class="chk-box">
-                  <div class="ui checkbox primary-chkbox xs c-bluesky">
-                    <input id="chk1" type="checkbox" />
-                    <label for="chk1">스마트 교차로</label>
-                  </div>
-                  <div class="ui checkbox primary-chkbox xs c-bluesky">
-                    <input id="chk2" type="checkbox" />
-                    <label for="chk2">스마트 횡단보도</label>
-                  </div>
+                  <button type="button">전체 선택</button>
+                  <button type="button">스마트 교차로</button>
+                  <button type="button">스마트 횡단보도</button>
                 </div>
                 <!-- //chk-box -->
               </div>

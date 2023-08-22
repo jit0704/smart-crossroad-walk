@@ -82,8 +82,16 @@ var cmmnUi = {
     }
     $('.btn-custom', $searchContainer).on('click', function () {
       $(this).parent().toggleClass('active');
+
       if (!$(this).parent().is('.active')) {
         allRemoveActive();
+      }
+      if ($(this).parent('.js-custom-wrap-system').is('.active')) {
+        allRemoveActive();
+        $('.js-custom-wrap-location', $searchContainer).removeClass('active');
+      }
+      if ($(this).parent('.js-custom-wrap-location').is('.active')) {
+        $('.js-custom-wrap-system', $searchContainer).removeClass('active');
       }
     });
     $('.depth1 button', $searchContainer).on('click', function () {
@@ -112,6 +120,10 @@ var cmmnUi = {
         allRemoveActive();
         $('.btn-custom-wrap', $searchContainer).removeClass('active');
       }, 100);
+    });
+    $('.js-custom-wrap-system .chk-box button', $searchContainer).on('click', function () {
+      var $txt = $(this).text();
+      $(this).closest('.js-custom-wrap-system').removeClass('active').children('.btn-custom').text($txt);
     });
 
     // 카메라 아이콘 클릭시 팝업 노출
