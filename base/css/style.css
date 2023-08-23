@@ -2113,14 +2113,26 @@ body ::-webkit-scrollbar-track {
 }
 
 /* 체크박스 리스트 아코디언 메뉴(연계 카메라 등록 팝업) */
-.chk-list-container {
+.accordion-chk-list > li + li {
+  border-top: 1px solid #e8e8e8;
+}
+.accordion-chk-list > li > .accordion-chk-list-title .ui.primary-chkbox {
+  margin-left: 1.5rem;
+}
+.accordion-chk-list > li div.checked {
+  background: #f8f8f8;
+}
+.accordion-chk-list-container {
   overflow-y: auto;
-  max-height: 46.2rem;
+  max-height: 50.4rem;
   border-radius: 0.5rem;
   border: 1px solid #e8e8e8;
   background: #fff;
 }
-.chk-list-title {
+.accordion-chk-list-container::-webkit-scrollbar {
+  width: 0.6rem;
+}
+.accordion-chk-list-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2137,32 +2149,27 @@ body ::-webkit-scrollbar-track {
   -ms-flex-line-pack: center;
       align-content: center;
   gap: 0 0.8rem;
-  border-top: 1px solid #e8e8e8;
+  border-bottom: 0;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.accordion-chk-list-title.active {
   border-bottom: 1px solid #e8e8e8;
 }
-.chk-list-title:first-child {
-  border-top: 0;
-}
-.chk-list-title:nth-last-of-type(2) {
-  border: 0;
-}
-.chk-list-title.active button::after {
+.accordion-chk-list-title.active button::after {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.chk-list-title .ui.primary-chkbox {
-  margin-left: 1.5rem;
-}
-.chk-list-title button {
+.accordion-chk-list-title button {
   position: relative;
-  padding: 1rem 1.5rem 1rem 0;
+  padding: 1.05rem 1.5rem 1.05rem 0;
   text-align: left;
   font-size: 1.8rem;
   font-weight: 500;
   color: #727272;
 }
-.chk-list-title button::after {
+.accordion-chk-list-title button::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -2175,28 +2182,45 @@ body ::-webkit-scrollbar-track {
   background-position: 50% 50%;
   background-size: contain;
 }
-.chk-list-content {
+.accordion-chk-list-content {
   display: none;
 }
-.chk-list-content .ui.primary-chkbox {
-  display: block;
-  padding: 1rem 0.6rem 1rem 3rem;
-  background: #f8f8f8;
+.accordion-chk-list-content .accordion-chk-list-title .ui.primary-chkbox input {
+  top: 1rem;
+  left: auto;
+  right: -0.2rem;
 }
-.chk-list-content .ui.primary-chkbox + .ui.primary-chkbox {
+.accordion-chk-list-content .accordion-chk-list-title button::after {
+  right: 4rem;
+}
+.accordion-chk-list-content .ui.primary-chkbox {
+  display: block;
+  padding: 1rem 0 1rem 4rem;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.accordion-chk-list-content .ui.primary-chkbox + .ui.primary-chkbox {
   border-top: 1px solid #e8e8e8;
 }
-.chk-list-content .ui.primary-chkbox label {
+.accordion-chk-list-content .ui.primary-chkbox label {
   padding-left: 0;
   font-size: 1.8rem;
   color: #727272;
 }
-.chk-list-content .ui.primary-chkbox label::before {
+.accordion-chk-list-content .ui.primary-chkbox label::before {
   content: "";
   position: static;
   display: inline-block;
-  margin-right: 0.8rem;
   vertical-align: top;
+}
+.accordion-chk-list-content + .accordion-chk-list-content {
+  border-top: 1px solid #e8e8e8;
+}
+.accordion-chk-list-content .accordion-chk-list-content .ui.primary-chkbox {
+  padding-left: 6.9rem;
+}
+.accordion-chk-list-content .accordion-chk-list-content .ui.primary-chkbox label::before {
+  margin-right: 0.8rem;
 }
 
 /* 데이터 테이블 목록 */
@@ -2897,13 +2921,13 @@ body ::-webkit-scrollbar-track {
   cursor: url(/base/images/cursor_palm.png) 14 17, auto;
 }
 .ly-map.ico-set-branch-active {
-  cursor: url(/base/images/set_icon_cr_violet.png) 14 30, auto;
+  cursor: url(/base/images/set_icon_cr_violet.png) 23.5 59, auto;
 }
 .ly-map.ico-set-branch-active .speech-bubble-guide {
   display: block;
 }
 .ly-map.ico-set-cw-active {
-  cursor: url(/base/images/set_icon_cw_active2.png) 22 29, auto;
+  cursor: url(/base/images/set_icon_cw_active2.png) 23.5 59, auto;
 }
 .ly-sub {
   width: 100%;

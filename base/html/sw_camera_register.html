@@ -25,24 +25,11 @@
             <table>
               <colgroup>
                 <col style="width: 20%" />
-                <col style="width: 30%" />
-                <col style="width: 20%" />
-                <col style="width: 30%" />
+                <col style="width: 80%" />
               </colgroup>
               <tbody>
                 <tr>
-                  <th>구역 명</th>
-                  <td class="pdr-20">
-                    <div class="selectbox-wrap rounded">
-                      <select disabled>
-                        <option value="">선택</option>
-                        <option value="">아이템1</option>
-                        <option value="">아이템2</option>
-                        <option value="">아이템3</option>
-                      </select>
-                    </div>
-                  </td>
-                  <th class="pdl-15">연동 IP 주소</th>
+                  <th>연동 IP 주소</th>
                   <td>
                     <div class="ui input rounded">
                       <input type="text" disabled />
@@ -50,53 +37,140 @@
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="4">
-                    <div class="chk-list-container">
-                      <div class="chk-list-title">
-                        <div class="ui checkbox primary-chkbox sm txt-none c-bluesky">
-                          <input type="checkbox" />
-                          <label></label>
-                        </div>
-                        <!-- //checkbox -->
-                        <button type="button">지점 1</button>
-                      </div>
-                      <!-- //chk-list-title -->
-                      <div class="chk-list-content">
-                        <div class="ui checkbox primary-chkbox sm c-bluesky">
-                          <input id="camera1-1" type="checkbox" />
-                          <label for="camera1-1">카메라 명</label>
-                        </div>
-                        <!-- //checkbox -->
-                        <div class="ui checkbox primary-chkbox sm c-bluesky">
-                          <input id="camera1-2" type="checkbox" />
-                          <label for="camera1-2">카메라 명</label>
-                        </div>
-                        <!-- //checkbox -->
-                      </div>
-                      <!-- //chk-list-content -->
+                  <td colspan="2">
+                    <div class="accordion-chk-list-container">
+                      <ul class="accordion-chk-list">
+                        <li>
+                          <div class="accordion-chk-list-title">
+                            <div class="ui checkbox primary-chkbox sm txt-none c-bluesky">
+                              <input type="checkbox" />
+                              <label></label>
+                            </div>
+                            <!-- //checkbox -->
+                            <button type="button">구역</button>
+                          </div>
+                          <!-- //accordion-chk-list-title -->
 
-                      <div class="chk-list-title">
-                        <div class="ui checkbox primary-chkbox sm txt-none c-bluesky">
-                          <input type="checkbox" />
-                          <label></label>
-                        </div>
-                        <!-- //checkbox -->
-                        <button type="button">지점 2</button>
-                      </div>
-                      <!-- //chk-list-title -->
-                      <div class="chk-list-content">
-                        <div class="ui checkbox primary-chkbox sm c-bluesky">
-                          <input id="camera2-1" type="checkbox" />
-                          <label for="camera2-1">카메라 명</label>
-                        </div>
-                        <!-- //checkbox -->
-                        <div class="ui checkbox primary-chkbox sm c-bluesky">
-                          <input id="camera2-2" type="checkbox" />
-                          <label for="camera2-2">카메라 명</label>
-                        </div>
-                        <!-- //checkbox -->
-                      </div>
-                      <!-- //chk-list-content -->
+                          <!-- 지점1 -->
+                          <div class="accordion-chk-list-content">
+                            <div class="accordion-chk-list-title">
+                              <div class="ui checkbox primary-chkbox sm txt-none c-bluesky">
+                                <input type="checkbox" />
+                                <label></label>
+                              </div>
+                              <!-- //checkbox -->
+                              <button type="button">지점 1</button>
+                            </div>
+                            <!-- //accordion-chk-list-title -->
+                            <div class="accordion-chk-list-content">
+                              <div class="ui checkbox primary-chkbox sm c-bluesky">
+                                <input id="branch1-1-1" type="checkbox" />
+                                <label for="branch1-1-1">카메라 명</label>
+                              </div>
+                              <!-- //checkbox -->
+                              <div class="ui checkbox primary-chkbox sm c-bluesky">
+                                <input id="branch1-1-2" type="checkbox" />
+                                <label for="branch1-1-2">카메라 명</label>
+                              </div>
+                              <!-- //checkbox -->
+                            </div>
+                            <!-- //accordion-chk-list-content -->
+                          </div>
+                          <!-- //accordion-chk-list-content -->
+
+                          <!-- 지점2 -->
+                          <div class="accordion-chk-list-content">
+                            <div class="accordion-chk-list-title">
+                              <div class="ui checkbox primary-chkbox sm txt-none c-bluesky">
+                                <input type="checkbox" />
+                                <label></label>
+                              </div>
+                              <!-- //checkbox -->
+                              <button type="button">지점 2</button>
+                            </div>
+                            <!-- //accordion-chk-list-title -->
+                            <div class="accordion-chk-list-content">
+                              <div class="ui checkbox primary-chkbox sm c-bluesky">
+                                <input id="branch1-2-1" type="checkbox" />
+                                <label for="branch1-2-1">카메라 명</label>
+                              </div>
+                              <!-- //checkbox -->
+                              <div class="ui checkbox primary-chkbox sm c-bluesky">
+                                <input id="branch1-2-2" type="checkbox" />
+                                <label for="branch1-2-2">카메라 명</label>
+                              </div>
+                              <!-- //checkbox -->
+                            </div>
+                            <!-- //accordion-chk-list-content -->
+                          </div>
+                          <!-- //accordion-chk-list-content -->
+                        </li>
+                        <li>
+                          <div class="accordion-chk-list-title">
+                            <div class="ui checkbox primary-chkbox sm txt-none c-bluesky">
+                              <input type="checkbox" />
+                              <label></label>
+                            </div>
+                            <!-- //checkbox -->
+                            <button type="button">구역2</button>
+                          </div>
+                          <!-- //accordion-chk-list-title -->
+
+                          <!-- 지점1 -->
+                          <div class="accordion-chk-list-content">
+                            <div class="accordion-chk-list-title">
+                              <div class="ui checkbox primary-chkbox sm txt-none c-bluesky">
+                                <input type="checkbox" />
+                                <label></label>
+                              </div>
+                              <!-- //checkbox -->
+                              <button type="button">지점 1</button>
+                            </div>
+                            <!-- //accordion-chk-list-title -->
+                            <div class="accordion-chk-list-content">
+                              <div class="ui checkbox primary-chkbox sm c-bluesky">
+                                <input id="branch2-1-1" type="checkbox" />
+                                <label for="branch2-1-1">카메라 명</label>
+                              </div>
+                              <!-- //checkbox -->
+                              <div class="ui checkbox primary-chkbox sm c-bluesky">
+                                <input id="branch2-1-2" type="checkbox" />
+                                <label for="branch2-1-2">카메라 명</label>
+                              </div>
+                              <!-- //checkbox -->
+                            </div>
+                            <!-- //accordion-chk-list-content -->
+                          </div>
+                          <!-- //accordion-chk-list-content -->
+
+                          <!-- 지점2 -->
+                          <div class="accordion-chk-list-content">
+                            <div class="accordion-chk-list-title">
+                              <div class="ui checkbox primary-chkbox sm txt-none c-bluesky">
+                                <input type="checkbox" />
+                                <label></label>
+                              </div>
+                              <!-- //checkbox -->
+                              <button type="button">지점 2</button>
+                            </div>
+                            <!-- //accordion-chk-list-title -->
+                            <div class="accordion-chk-list-content">
+                              <div class="ui checkbox primary-chkbox sm c-bluesky">
+                                <input id="branch2-2-1" type="checkbox" />
+                                <label for="branch2-2-1">카메라 명</label>
+                              </div>
+                              <!-- //checkbox -->
+                              <div class="ui checkbox primary-chkbox sm c-bluesky">
+                                <input id="branch2-2-2" type="checkbox" />
+                                <label for="branch2-2-2">카메라 명</label>
+                              </div>
+                              <!-- //checkbox -->
+                            </div>
+                            <!-- //accordion-chk-list-content -->
+                          </div>
+                          <!-- //accordion-chk-list-content -->
+                        </li>
+                      </ul>
                     </div>
                   </td>
                 </tr>
@@ -119,11 +193,43 @@
     <a href="#ex" type="button" class="btn-modal-open screen-out"> 퍼블리싱 확인용 버튼 </a>
 
     <script>
-      // 퍼블리싱 확인용
       $(function () {
+        // 퍼블리싱 확인용
         setTimeout(function () {
           $('.btn-modal-open').trigger('click');
         }, 20);
+
+        /* 체크박스 리스트 아코디언 메뉴 */
+        $('.accordion-chk-list-title > button').on('click', function () {
+          var $this = $(this).parent('.accordion-chk-list-title');
+          var $chkContent = $this.nextAll();
+          if ($chkContent.is(':visible')) {
+            // 만약 열려있다면 닫기
+            $chkContent.slideUp(300);
+            $this.removeClass('active');
+          } else {
+            // 만약 닫혀있다면 열기
+            $chkContent.slideDown(300);
+            $this.addClass('active');
+          }
+        });
+
+        // 체크박스 change 이벤트
+        $('.accordion-chk-list input').on('change', function () {
+          var $thisAccordionTitle = $(this).closest('.accordion-chk-list-title');
+
+          if ($thisAccordionTitle && $(this).is(':checked')) {
+            $thisAccordionTitle.addClass('checked');
+          } else {
+            $thisAccordionTitle.removeClass('checked');
+          }
+
+          if (!$(this).parent().parent().is('.accordion-chk-list-title') && $(this).is(':checked')) {
+            $(this).parent().addClass('checked');
+          } else {
+            $(this).parent().removeClass('checked');
+          }
+        });
       });
     </script>
   </body>

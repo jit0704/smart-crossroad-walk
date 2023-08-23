@@ -18,23 +18,6 @@ var cmmnUi = {
     cmmnUi.modal();
   },
   default: function () {
-    /* 체크박스 리스트 아코디언 메뉴 */
-    $('.chk-list-container .chk-list-title button').on('click', function () {
-      var $this = $(this).parent('.chk-list-title');
-      var $chkContent = $this.next();
-      if ($chkContent.is(':visible')) {
-        // 만약 열려있다면 닫기
-        $chkContent.slideUp(300);
-        $this.removeClass('active');
-      } else {
-        // 만약 닫혀있다면 열기
-        $('.chk-list-container .chk-list-content').slideUp(300);
-        $('.chk-list-container .chk-list-title').removeClass('active');
-        $chkContent.slideDown(300);
-        $this.addClass('active');
-      }
-    });
-
     /* 좌측 메뉴에 노출되는 상세 화면(접고/펼치기) 인터랙션 */
     // 상세 화면 유무 체크
     $(window)
@@ -72,59 +55,6 @@ var cmmnUi = {
     if ($('.ly-map').length !== 0) {
       $('.area-box').dropdown();
     }
-
-    // 지점 검색
-    var $searchContainer = $('.search-view-container');
-    function allRemoveActive() {
-      $('.depth1 button', $searchContainer).removeClass('active');
-      $('.depth2 .area', $searchContainer).removeClass('active');
-      $('.btn-custom-wrap .depth2', $searchContainer).hide();
-    }
-    $('.btn-custom', $searchContainer).on('click', function () {
-      $(this).parent().toggleClass('active');
-
-      if (!$(this).parent().is('.active')) {
-        allRemoveActive();
-      }
-      if ($(this).parent('.js-custom-wrap-system').is('.active')) {
-        allRemoveActive();
-        $('.js-custom-wrap-location', $searchContainer).removeClass('active');
-      }
-      if ($(this).parent('.js-custom-wrap-location').is('.active')) {
-        $('.js-custom-wrap-system', $searchContainer).removeClass('active');
-      }
-    });
-    $('.depth1 button', $searchContainer).on('click', function () {
-      var $targetPoint = $(this).data('target');
-
-      if ($(this).data('all') === '전체') {
-        $(this).closest('.btn-custom-wrap').find('.btn-custom').text($(this).data('all'));
-        setTimeout(function () {
-          allRemoveActive();
-          $('.btn-custom-wrap', $searchContainer).removeClass('active');
-        }, 100);
-      }
-
-      $('.depth1 button', $searchContainer).removeClass('active');
-      $(this).addClass('active');
-
-      $('.depth2 .area', $searchContainer).removeClass('active');
-      var $pointArea = $('#' + $targetPoint);
-      $('.btn-custom-wrap .depth2', $searchContainer).show();
-      $pointArea.addClass('active');
-    });
-    $('.depth2 button', $searchContainer).on('click', function () {
-      var $txt = $(this).text();
-      $(this).closest('.btn-custom-wrap').find('.btn-custom').text($txt);
-      setTimeout(function () {
-        allRemoveActive();
-        $('.btn-custom-wrap', $searchContainer).removeClass('active');
-      }, 100);
-    });
-    $('.js-custom-wrap-system .chk-box button', $searchContainer).on('click', function () {
-      var $txt = $(this).text();
-      $(this).closest('.js-custom-wrap-system').removeClass('active').children('.btn-custom').text($txt);
-    });
 
     // 카메라 아이콘 클릭시 팝업 노출
     $('.ico-camera').on('click', function () {
