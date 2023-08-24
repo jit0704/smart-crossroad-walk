@@ -69,6 +69,13 @@
 .stats-container .divide-4.title-none {
   margin-top: 1rem;
 }
+.stats-container .divide-4.title-none > ul {
+  height: 44.3rem;
+}
+.stats-container .divide-4 ul {
+  overflow-y: auto;
+  height: 40.2rem;
+}
 .stats-container .divide-4 li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -85,12 +92,12 @@
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  gap: 0 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
 }
 .stats-container .divide-4 li .chart-wrap {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 86.3rem;
   height: 19.6rem;
   padding: 1.4rem 3rem;
   border-radius: 0.5rem;
@@ -125,26 +132,23 @@
   width: 0.9rem;
   height: 0.9rem;
 }
+.stats-container .divide-4 li .chart-wrap:nth-child(1) h3::before {
+  background: #5350dd;
+}
+.stats-container .divide-4 li .chart-wrap:nth-child(2) h3::before {
+  background: #50ddd5;
+}
+.stats-container .divide-4 li .chart-wrap:nth-child(3) h3::before {
+  background: #f67676;
+}
+.stats-container .divide-4 li .chart-wrap:nth-child(4) h3::before {
+  background: #c2c2c2;
+}
 .stats-container .divide-4 li .chart-wrap .chart-container {
   height: 13.7rem;
 }
 .stats-container .divide-4 li:first-child {
   margin-bottom: 1rem;
-}
-.stats-container .divide-4 li:first-child .chart-wrap:first-child h3::before {
-  background: #5350dd;
-}
-.stats-container .divide-4 li:first-child .chart-wrap:last-child h3::before {
-  background: #50ddd5;
-}
-.stats-container .divide-4 li:last-child {
-  margin-bottom: 1rem;
-}
-.stats-container .divide-4 li:last-child .chart-wrap:first-child h3::before {
-  background: #f67676;
-}
-.stats-container .divide-4 li:last-child .chart-wrap:last-child h3::before {
-  background: #c2c2c2;
 }
 
 /* 교차로 비교 통계 > 비교 지점 선택 팝업 */
@@ -531,7 +535,28 @@
       align-content: center;
   margin-bottom: 1.6rem;
 }
-.roi-view-container .roi-set-list-header .btn-md {
+.roi-view-container .roi-set-list-header .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.2rem;
+}
+.roi-view-container .roi-set-list-header .right .btn-md:first-child {
+  width: 5.2rem;
+}
+.roi-view-container .roi-set-list-header .right .btn-md:last-child {
   width: 4.1rem;
 }
 .roi-view-container .color-list {
@@ -880,5 +905,10 @@
     position: static;
     width: 100%;
     padding: 2rem 3rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .stats-container .divide-4 li .chart-wrap {
+    width: 49.7%;
   }
 }
