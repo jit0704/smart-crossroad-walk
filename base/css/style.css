@@ -225,7 +225,7 @@ body ::-webkit-scrollbar-track {
   background: transparent;
 }
 .ui.menu.vertical .dropdown.item:hover .dropdown.icon::before {
-  background: url("/base/images/arr_down_yellow.png") no-repeat 48% 50% !important;
+  background: url("/base/images/arr_down_yellow.png") no-repeat 50% 50% !important;
   background-size: 1.3rem 0.7rem !important;
 }
 .ui.menu.vertical .dropdown.item.active:hover {
@@ -397,7 +397,7 @@ body ::-webkit-scrollbar-track {
 }
 .ico-hand {
   display: inline-block;
-  width: 2.5em;
+  width: 2.5rem;
   height: 3.16rem;
   background-image: url("/base/images/set_icon_palm.png");
   background-repeat: no-repeat;
@@ -406,7 +406,7 @@ body ::-webkit-scrollbar-track {
 }
 .ico-set-branch {
   display: inline-block;
-  width: 2.8em;
+  width: 2.8rem;
   height: 3.69rem;
   background-image: url("/base/images/set_icon_cr.png");
   background-repeat: no-repeat;
@@ -415,9 +415,27 @@ body ::-webkit-scrollbar-track {
 }
 .ico-set-cw {
   display: inline-block;
-  width: 2.8em;
+  width: 2.8rem;
   height: 3.69rem;
   background-image: url("/base/images/set_icon_cw.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-up-boxgray {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-image: url("/base/images/arr_up_boxgray.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-picture {
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-image: url("/base/images/icon_picture.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -659,6 +677,19 @@ body ::-webkit-scrollbar-track {
   font-weight: 500;
   border-radius: 0.5rem;
   border: 1px solid #2f6993;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.btn-md2 {
+  display: inline-block;
+  padding: 0 0.6rem;
+  line-height: 2.1rem;
+  color: #1e5f8d;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  border: 1px solid #1e5f8d;
   background: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -952,6 +983,9 @@ body ::-webkit-scrollbar-track {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+.data-tbl-gray::-webkit-scrollbar {
+  width: 0.4rem;
+}
 .data-tbl-gray table thead {
   position: sticky;
   top: 0;
@@ -1198,6 +1232,68 @@ body ::-webkit-scrollbar-track {
 }
 .radio-txt2.rounded span {
   border-radius: 0.5rem;
+}
+
+.custom-radio-rectangle-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.custom-radio-rectangle-two label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+.custom-radio-rectangle-two label input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.custom-radio-rectangle-two label input:checked + .txt {
+  color: #fff;
+  border-color: #5285aa;
+  background: #5285aa;
+}
+.custom-radio-rectangle-two label input:disabled + .txt {
+  color: #999999;
+  border-color: #cbcbcb;
+  background: #e8e8e8;
+}
+.custom-radio-rectangle-two label .txt {
+  display: block;
+  line-height: 2.7rem;
+  border: 1px solid #cbcbcb;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #727272;
+  font-weight: 500;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.custom-radio-rectangle-two label:first-child .txt {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-right: 0;
+}
+.custom-radio-rectangle-two label:last-child .txt {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 /* 지도에서 사용하는 UI */
@@ -3049,7 +3145,8 @@ body ::-webkit-scrollbar-track {
           box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.25) !important;
 }
 .gnb .ui.menu > .dropdown .menu > .item {
-  padding: 1.3rem 0.8rem 1.3rem 1.4rem !important;
+  padding: 0 0.8rem 0 1.4rem !important;
+  line-height: 4.5rem;
   font-size: 1.6rem !important;
   color: #fff !important;
 }
@@ -3083,6 +3180,45 @@ body ::-webkit-scrollbar-track {
   font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
   color: #fff;
+}
+.gnb .ui.menu > .dropdown .menu .ui.accordion .title:hover {
+  color: #ffe298;
+}
+.gnb .ui.menu > .dropdown .menu .ui.accordion .title:hover .dropdown.icon::before {
+  background-image: url(/base/images/arr_down_yellow.png) !important;
+}
+.gnb .ui.menu > .dropdown .menu .ui.accordion .title.active {
+  color: #ffe298;
+}
+.gnb .ui.menu > .dropdown .menu .ui.accordion .title.active .dropdown.icon::before {
+  background-image: url(/base/images/arr_down_yellow.png) !important;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.gnb .ui.menu > .dropdown .menu .ui.accordion .title .dropdown.icon::before {
+  content: "";
+  display: block;
+  width: 1.3rem;
+  height: 0.7rem;
+  margin-top: 0.3rem;
+  background: url("/base/images/arr_down_white.png") no-repeat 0 !important;
+  background-size: contain !important;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.gnb .ui.menu > .dropdown .menu .ui.accordion > .content {
+  padding: 0;
+}
+.gnb .ui.menu > .dropdown .menu .ui.accordion > .content .item {
+  padding: 0 0.6rem 0 0.6rem;
+  line-height: 4.5rem;
+  font-size: 1.6rem;
+  color: #fff;
+}
+.gnb .ui.menu > .dropdown .menu .ui.accordion > .content .item:hover {
+  color: #ffe298;
 }
 .gnb .ui.menu > .item {
   display: -webkit-box;
