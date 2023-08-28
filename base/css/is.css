@@ -419,6 +419,8 @@
 }
 .crossroad-view-container .video-container,
 .crossroad-view-container .accidents-container {
+  overflow-y: auto !important;
+  height: calc(100vh - 200px) !important;
   padding-top: 4.3rem !important;
 }
 .crossroad-view-container .cr-camera-info {
@@ -475,12 +477,13 @@
   padding: 3.2rem 3rem 0;
 }
 .crossroad-view-container .accidents-list .data-tbl-gray.xs {
-  height: 26.4rem;
+  height: 36.3rem;
 }
 .crossroad-view-container .accidents-list .data-tbl-gray.xs table thead th {
   padding: 0.95rem 0;
 }
 .crossroad-view-container .accidents-list .data-tbl-gray.xs table tbody td {
+  padding: 0.69rem 0;
   vertical-align: middle;
 }
 .crossroad-view-container .accidents-list .data-tbl-gray.xs table tbody td .ico-picture {
@@ -488,7 +491,7 @@
 }
 .crossroad-view-container .accidents-list .ui.secondary.basic {
   width: calc(100% - 3rem);
-  margin-top: 11.2rem;
+  margin-top: 3.5rem;
   line-height: 2.9rem;
   font-size: 1.6rem;
 }
@@ -1027,7 +1030,7 @@
 }
 
 /* 속도 ROI 탭 */
-.tab-speed-roi .ibm {
+.tab-speed-roi .ipm {
   height: 2.4rem;
   display: -webkit-box;
   display: -ms-flexbox;

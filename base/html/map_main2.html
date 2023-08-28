@@ -61,80 +61,158 @@
                       <span class="txt-normality">정상</span>
                       <!-- <span class="txt-disorder">카메라 이상(192.168.172.130)</span> -->
                     </div>
-                    <div class="box-column">
-                      <div class="box">
-                        <em class="tit">함체 상태</em>
+                    <!-- 230829 box-column-bind Div 추가 -->
+                    <div class="box-column-bind">
+                      <div class="box-column">
+                        <div class="box">
+                          <em class="tit">함체 상태 (192.168.172.131)</em>
+                        </div>
+                        <div class="box">
+                          <table class="state-tbl">
+                            <colgroup>
+                              <col style="width: 15%" />
+                              <col />
+                              <col style="width: 15%" />
+                              <col />
+                            </colgroup>
+                            <tbody>
+                              <tr>
+                                <th>팬</th>
+                                <td>
+                                  <div class="bind">
+                                    <label class="radio-txt2 rounded">
+                                      <input type="radio" name="state1" />
+                                      <span>ON</span>
+                                    </label>
+                                    <label class="radio-txt2 rounded">
+                                      <input type="radio" name="state1" />
+                                      <span>OFF</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <th>히터</th>
+                                <td>
+                                  <div class="bind">
+                                    <label class="radio-txt2 rounded">
+                                      <input type="radio" name="state2" />
+                                      <span>ON</span>
+                                    </label>
+                                    <label class="radio-txt2 rounded">
+                                      <input type="radio" name="state2" />
+                                      <span>OFF</span>
+                                    </label>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>앞문</th>
+                                <td>
+                                  <div class="bind">
+                                    <label class="radio-txt2 rounded">
+                                      <input type="radio" name="state3" />
+                                      <span>열림</span>
+                                    </label>
+                                    <label class="radio-txt2 rounded">
+                                      <input type="radio" name="state3" />
+                                      <span>닫힘</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <th>뒷문</th>
+                                <td>
+                                  <div class="bind">
+                                    <label class="radio-txt2 rounded">
+                                      <input type="radio" name="state4" />
+                                      <span>열림</span>
+                                    </label>
+                                    <label class="radio-txt2 rounded">
+                                      <input type="radio" name="state4" />
+                                      <span>닫힘</span>
+                                    </label>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
-                      <div class="box">
-                        <table class="state-tbl">
-                          <colgroup>
-                            <col style="width: 15%" />
-                            <col />
-                            <col style="width: 15%" />
-                            <col />
-                          </colgroup>
-                          <tbody>
-                            <tr>
-                              <th>팬</th>
-                              <td>
-                                <div class="bind">
-                                  <label class="radio-txt2 rounded">
-                                    <input type="radio" name="state1" />
-                                    <span>ON</span>
-                                  </label>
-                                  <label class="radio-txt2 rounded">
-                                    <input type="radio" name="state1" />
-                                    <span>OFF</span>
-                                  </label>
-                                </div>
-                              </td>
-                              <th>히터</th>
-                              <td>
-                                <div class="bind">
-                                  <label class="radio-txt2 rounded">
-                                    <input type="radio" name="state2" />
-                                    <span>ON</span>
-                                  </label>
-                                  <label class="radio-txt2 rounded">
-                                    <input type="radio" name="state2" />
-                                    <span>OFF</span>
-                                  </label>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th>앞문</th>
-                              <td>
-                                <div class="bind">
-                                  <label class="radio-txt2 rounded">
-                                    <input type="radio" name="state3" />
-                                    <span>열림</span>
-                                  </label>
-                                  <label class="radio-txt2 rounded">
-                                    <input type="radio" name="state3" />
-                                    <span>닫힘</span>
-                                  </label>
-                                </div>
-                              </td>
-                              <th>뒷문</th>
-                              <td>
-                                <div class="bind">
-                                  <label class="radio-txt2 rounded">
-                                    <input type="radio" name="state4" />
-                                    <span>열림</span>
-                                  </label>
-                                  <label class="radio-txt2 rounded">
-                                    <input type="radio" name="state4" />
-                                    <span>닫힘</span>
-                                  </label>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                      <!-- //box-column -->
+                      <div class="box-column">
+                        <div class="box">
+                          <em class="tit">함체 상태 (192.168.172.131)</em>
+                        </div>
+                        <div class="box">
+                          <table class="state-tbl">
+                            <colgroup>
+                              <col style="width: 15%" />
+                              <col />
+                              <col style="width: 15%" />
+                              <col />
+                            </colgroup>
+                            <tbody>
+                              <tr>
+                                <th>팬</th>
+                                <td>
+                                  <div class="bind">
+                                    <label class="radio-txt2 rounded">
+                                      <input type="radio" name="state1-2" />
+                                      <span>ON</span>
+                                    </label>
+                                    <label class="radio-txt2 rounded">
+                                      <input type="radio" name="state1-2" />
+                                      <span>OFF</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <th>히터</th>
+                                <td>
+                                  <div class="bind">
+                                    <label class="radio-txt2 rounded">
+                                      <input type="radio" name="state2-2" />
+                                      <span>ON</span>
+                                    </label>
+                                    <label class="radio-txt2 rounded">
+                                      <input type="radio" name="state2-2" />
+                                      <span>OFF</span>
+                                    </label>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>앞문</th>
+                                <td>
+                                  <div class="bind">
+                                    <label class="radio-txt2 rounded">
+                                      <input type="radio" name="state3-2" />
+                                      <span>열림</span>
+                                    </label>
+                                    <label class="radio-txt2 rounded">
+                                      <input type="radio" name="state3-2" />
+                                      <span>닫힘</span>
+                                    </label>
+                                  </div>
+                                </td>
+                                <th>뒷문</th>
+                                <td>
+                                  <div class="bind">
+                                    <label class="radio-txt2 rounded">
+                                      <input type="radio" name="state4-2" />
+                                      <span>열림</span>
+                                    </label>
+                                    <label class="radio-txt2 rounded">
+                                      <input type="radio" name="state4-2" />
+                                      <span>닫힘</span>
+                                    </label>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
+                      <!-- //box-column -->
                     </div>
-                    <!-- //box-column -->
+                    <!-- //box-column-bind -->
                   </div>
                   <!-- //line-box-container -->
                 </div>
