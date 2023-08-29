@@ -32,6 +32,294 @@
   left: -24.3rem;
 }
 
+/* 교차로 통계 메인 */
+.main-stats-container .filter-grouop {
+  margin-bottom: 4.4rem;
+}
+.main-stats-container .summary-info-wrap > .tit {
+  display: block;
+  margin-bottom: 1.1rem;
+  font-size: 2rem;
+  color: #1e5f8d;
+  font-weight: 500;
+}
+.main-stats-container .summary-info-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  gap: 0 1rem;
+  height: 22.5rem;
+}
+.main-stats-container .summary-info-display > .tit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.6rem;
+  width: 15rem;
+  line-height: 100%;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  background: #5285aa;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+}
+.main-stats-container .summary-info-display > .tit::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 1.4rem;
+  background-image: url("/base/images/icon_dot_double_white.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.main-stats-container .summary-info-item-wrap {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+}
+.main-stats-container .summary-info-item-wrap > li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  padding: 2.5rem;
+}
+.main-stats-container .summary-info-item-wrap > li:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 2.5rem;
+  bottom: 2.5rem;
+  left: 0;
+  width: 0.1rem;
+  background: #e8e8e8;
+}
+.main-stats-container .summary-info-item-wrap > li > .tit {
+  display: block;
+  padding: 0.6rem 1rem;
+  line-height: 100%;
+  border-radius: 0.5rem;
+  background: #f0fafd;
+  font-size: 1.8rem;
+  color: #1e5f8d;
+  font-weight: 600;
+  letter-spacing: -0.06rem;
+}
+.main-stats-container .summary-info-item-wrap > li .clearly {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  gap: 0 0.5rem;
+  height: calc(100% - 0.5rem);
+  font-size: 2.6rem;
+  color: #727272;
+  font-weight: 500;
+}
+.main-stats-container .summary-info-item-wrap > li .clearly em {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.main-stats-container .summary-info-item-wrap > li .tbl-bind {
+  padding: 1.84rem 1rem 0 1rem;
+}
+.main-stats-container .summary-info-item-wrap > li .tbl-bind table {
+  height: 12.7rem;
+}
+.main-stats-container .summary-info-item-wrap > li .tbl-bind table th {
+  font-size: 1.6rem;
+  color: #727272;
+  font-weight: 400;
+}
+.main-stats-container .summary-info-item-wrap > li .tbl-bind table td {
+  font-size: 1.6rem;
+  color: #727272;
+}
+.main-stats-container .summary-info-item-wrap > li .tbl-bind table td em {
+  font-weight: 700;
+}
+.main-stats-container .summary-info-item-wrap > li:last-child .tbl-bind table {
+  width: 11.5rem;
+  height: 9rem;
+}
+.main-stats-container .summary-info-chart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  gap: 0 1rem;
+  margin-top: 1rem;
+}
+.main-stats-container .summary-info-chart > section {
+  height: 46.2rem;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.main-stats-container .summary-info-chart .road-sort {
+  margin: 4.7rem 0.5rem 0 0;
+}
+.main-stats-container .summary-info-chart .road-sort button {
+  display: block;
+  width: 11.5rem;
+  font-size: 1.6rem;
+  color: #727272;
+  border-radius: 0.5rem;
+  border: 1px solid #cbcbcb;
+  letter-spacing: -0.048rem;
+}
+.main-stats-container .summary-info-chart .road-sort button:not(:first-child) {
+  margin-top: 0.4rem;
+}
+.main-stats-container .summary-info-chart .road-sort button.active {
+  background: #e8e8e8;
+}
+.main-stats-container .summary-info-chart .tit-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.main-stats-container .summary-info-chart .tit-header em {
+  font-size: 1.8rem;
+  color: #727272;
+  font-weight: 500;
+}
+.main-stats-container .summary-info-chart .tit-header .selectbox-wrap.xs select {
+  width: auto;
+  min-width: 11.4rem;
+  padding: 0.33rem 2rem 0.33rem 0.5rem;
+  font-size: 1.6rem;
+}
+.main-stats-container .summary-info-chart .chart1 {
+  position: relative;
+  width: 124.5rem;
+}
+.main-stats-container .summary-info-chart .chart1 .chart-container {
+  margin-top: 5rem;
+}
+.main-stats-container .summary-info-chart .chart1 aside {
+  position: absolute;
+  top: 2.55rem;
+  right: 3rem;
+}
+.main-stats-container .summary-info-chart .chart1 aside .selectbox-wrap.xs {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.main-stats-container .summary-info-chart .chart1 aside .selectbox-wrap.xs select {
+  width: auto;
+  min-width: 11.4rem;
+  padding: 0.33rem 2rem 0.33rem 0.5rem;
+  font-size: 1.6rem;
+}
+.main-stats-container .summary-info-chart .chart2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.main-stats-container .summary-info-chart .chart2 .chart-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: calc(100% - 2.8rem);
+}
+
 /* 교차로 통계 */
 .stats-container .filter-grouop {
   -webkit-box-pack: start;
