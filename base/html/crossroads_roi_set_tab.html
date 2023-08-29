@@ -400,7 +400,8 @@
                     </tr>
                   </tbody>
                 </table>
-                <div class="traffic-lane-choice">
+                <!-- 230829 active 클래스 추가 -->
+                <div class="traffic-lane-choice active">
                   <button type="button" class="lane-straight active"><span class="screen-out">직진</span></button>
                   <button type="button" class="lane-left-turn"><span class="screen-out">좌회전</span></button>
                   <button type="button" class="lane-right-turn"><span class="screen-out">우회전</span></button>
@@ -459,7 +460,8 @@
                     </tr>
                   </tbody>
                 </table>
-                <div class="traffic-lane-choice">
+                <!-- 230829 active 클래스 추가 -->
+                <div class="traffic-lane-choice active">
                   <button type="button" class="lane-straight active"><span class="screen-out">직진</span></button>
                   <button type="button" class="lane-left-turn"><span class="screen-out">좌회전</span></button>
                   <button type="button" class="lane-right-turn"><span class="screen-out">우회전</span></button>
@@ -502,8 +504,8 @@
             <div class="roi-set-list-header">
               <h3>ROI 설정 목록</h3>
               <span class="right">
-                <button type="button" class="btn-md bg-navy">동기화</a>
-                <button type="button" class="btn-md bg-navy">저장</a>
+                <button type="button" class="btn-md bg-navy">동기화</button>
+                <button type="button" class="btn-md bg-navy">저장</button>
               </span>
             </div>
             <!-- //roi-set-list-header -->
@@ -511,6 +513,16 @@
             <!-- 230822 xs 클래스 추가 -->
             <div class="data-tbl-gray xs">
               <table>
+                <colgroup>
+                  <col style="width: 12.5%" />
+                  <col style="width: 12.5%" />
+                  <col style="width: 12.5%" />
+                  <col style="width: 12.5%" />
+                  <col style="width: 12.5%" />
+                  <col style="width: 12.5%" />
+                  <col style="width: 12.5%" />
+                  <col style="width: 12.5%" />
+                </colgroup>
                 <thead>
                   <tr>
                     <th>Type</th>
@@ -526,19 +538,24 @@
                 <tbody>
                   <tr>
                     <td>진입</td>
-                    <td>도로명</td>
+                    <td>
+                      <!-- 230829 writing-reduce Div 추가 -->
+                      <span class="writing-reduce">도로명 도로명 도로명</span>
+                    </td>
                     <td>직진</td>
                     <td>2</td>
                     <td>서</td>
                     <td>좌회전</td>
-                    <td><i class="color-blue"></i></td>
+                    <td><i class="color-azure"></i></td>
                     <td>
                       <button type="button" class="ico-wastebasket"><span class="screen-out">삭제 버튼</span></button>
                     </td>
                   </tr>
                   <tr>
                     <td>진입</td>
-                    <td>도로명</td>
+                    <td>
+                      <span class="writing-reduce">도로명 도로명 도로명</span>
+                    </td>
                     <td>직진</td>
                     <td>-</td>
                     <td>남</td>
