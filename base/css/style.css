@@ -422,6 +422,24 @@ body ::-webkit-scrollbar-track {
   background-position: 0 0;
   background-size: contain;
 }
+.ico-set-camera {
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.8rem;
+  background-image: url("/base/images/set_icon_camera.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-map-above-camera {
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  background-image: url("/base/images/icon_camera2.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
 .ico-up-boxgray {
   display: inline-block;
   width: 2rem;
@@ -2488,6 +2506,22 @@ body ::-webkit-scrollbar-track {
   -ms-flex-line-pack: center;
       align-content: center;
 }
+.blocker.no-dimed {
+  top: 50%;
+  bottom: auto;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  padding: 1.5rem;
+  background: transparent;
+}
+.blocker.no-dimed.ui-draggable-handle {
+  cursor: move;
+}
 
 .modal a.close-modal {
   top: 1.6rem;
@@ -2975,9 +3009,20 @@ body ::-webkit-scrollbar-track {
   display: none;
   position: fixed;
   z-index: 2;
-  width: 14.7em;
+  width: 14.7rem;
   height: 5rem;
   background-image: url("/base/images/speech_bubble.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+.ly-map .speech-bubble-guide2 {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  width: 13.1rem;
+  height: 5rem;
+  background-image: url("/base/images/speech_bubble2.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
@@ -3054,6 +3099,12 @@ body ::-webkit-scrollbar-track {
 .ly-map .system-nav .ico-set-cw.active {
   background-image: url(/base/images/set_icon_cw_active.png);
 }
+.ly-map .system-nav .ico-set-camera {
+  background-size: 2.8em 2.8rem;
+}
+.ly-map .system-nav .ico-set-camera.active {
+  background-image: url(/base/images/set_icon_camera_active.png);
+}
 .ly-map.ico-hand-active {
   cursor: url(/base/images/cursor_palm.png) 14 17, auto;
 }
@@ -3065,6 +3116,43 @@ body ::-webkit-scrollbar-track {
 }
 .ly-map.ico-set-cw-active {
   cursor: url(/base/images/set_icon_cw_active2.png) 23.5 59, auto;
+}
+.ly-map.ico-set-camera-active {
+  cursor: url(/base/images/icon_camera_opacity.png) 14 17, auto;
+}
+.ly-map.ico-set-camera-active .speech-bubble-guide2 {
+  display: block;
+}
+.ly-map.camera-map .system-nav {
+  height: 10rem;
+  margin-top: -5rem;
+}
+.ly-map.camera-map .ico-map-above-camera {
+  position: absolute;
+  z-index: 1;
+}
+.ly-map.camera-map .ico-map-above-camera.moving {
+  cursor: move;
+}
+.ly-map.camera-map .ico-map-above-camera.left {
+  -webkit-transform: scaleX(-1) rotate(60deg);
+      -ms-transform: scaleX(-1) rotate(60deg);
+          transform: scaleX(-1) rotate(60deg);
+}
+.ly-map.camera-map .ico-map-above-camera.top {
+  -webkit-transform: rotate(-105deg);
+      -ms-transform: rotate(-105deg);
+          transform: rotate(-105deg);
+}
+.ly-map.camera-map .ico-map-above-camera.right {
+  -webkit-transform: rotate(-20deg);
+      -ms-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+.ly-map.camera-map .ico-map-above-camera.bottom {
+  -webkit-transform: rotate(80deg);
+      -ms-transform: rotate(80deg);
+          transform: rotate(80deg);
 }
 .ly-sub {
   width: 100%;

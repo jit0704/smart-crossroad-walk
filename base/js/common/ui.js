@@ -170,13 +170,37 @@ var cmmnUi = {
     });
   },
   modal: function () {
-    $('.btn-modal-open').on('click', function () {
+    // 딤드 팝업
+    $(document).on('click', '.btn-modal-open', function () {
       $(this).modal({
         closeExisting: false,
         clickClose: false,
         fadeDuration: 100,
       });
       return false;
+    });
+
+    // 딤드 없는 팝업
+    $(document).on('click', '.no-dimed-btn-modal-open', function () {
+      $(this).modal({
+        closeExisting: false,
+        clickClose: false,
+        fadeDuration: 100,
+        blockerClass: 'no-dimed',
+      });
+      return false;
+    });
+
+    // 딤드 없는 팝업 드래그 이벤트 기능
+    $(document).on($.modal.OPEN, function (e, modal) {
+      if (modal.$blocker.is('.no-dimed')) {
+        modal.$blocker.draggable({
+          containment: '.ly-map',
+          start: function () {
+            $(this).css('transform', 'none');
+          },
+        });
+      }
     });
   },
 };
