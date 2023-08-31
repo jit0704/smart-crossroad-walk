@@ -997,10 +997,9 @@ body ::-webkit-scrollbar-track {
   border-bottom: 1px solid #cbcbcb;
 }
 .data-tbl.view2 table tbody th {
-  padding: 0;
+  padding: 0 1.9rem;
   font-size: 1.6rem;
   font-weight: 600;
-  text-align: center;
   background: #f8f8f8;
   border-bottom: 1px solid #cbcbcb;
 }
