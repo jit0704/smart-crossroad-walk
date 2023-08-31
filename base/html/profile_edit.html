@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>프로필 수정</title>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <!-- includeHTML.js : 퍼블리싱 확인용 include -->
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" href="/base/css/common.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- GNB -->
+      <nav class="gnb" include-html="/base/html/common/gnb.html"></nav>
+
+      <main class="ly-container">
+        <div class="ly-sub">
+          <div class="profile-wrap">
+            <h2>My Profile</h2>
+            <section>
+              <h3>관리자 정보</h3>
+              <div class="data-tbl view2">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>관리자 ID</th>
+                      <td class="txt">user</td>
+                    </tr>
+                    <tr>
+                      <th>관리자 명</th>
+                      <td>
+                        <div class="ui input rounded md">
+                          <input type="text" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>E-mail</th>
+                      <td>
+                        <div class="ui input rounded md">
+                          <input type="text" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>전화번호</th>
+                      <td>
+                        <div class="ui input rounded md">
+                          <input type="text" />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //data-tbl -->
+              <div class="profile-bottom">
+                <a href="#" class="btn-modal-open ui primary basic button rounded">저장</a>
+              </div>
+              <!-- //profile-bottom -->
+            </section>
+
+            <section>
+              <h3>비밀번호 변경</h3>
+              <div class="data-tbl view2">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>현재 비밀번호</th>
+                      <td>
+                        <div class="ui input rounded md">
+                          <input type="password" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>비밀번호</th>
+                      <td>
+                        <div class="ui input rounded md">
+                          <input type="password" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>비밀번호 확인</th>
+                      <td>
+                        <div class="ui input rounded md">
+                          <input type="password" />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //data-tbl -->
+              <div class="profile-bottom">
+                <a href="#" class="btn-modal-open ui primary basic button rounded">저장</a>
+              </div>
+              <!-- //profile-bottom -->
+            </section>
+          </div>
+          <!-- //profile-wrap -->
+        </div>
+        <!-- //ly-sub -->
+      </main>
+      <!-- //ly-container -->
+
+      <footer class="ly-copyright" include-html="/base/html/common/footer.html"></footer>
+    </div>
+    <!-- //wrapper -->
+  </body>
+</html>

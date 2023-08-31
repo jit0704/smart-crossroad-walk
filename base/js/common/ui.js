@@ -49,6 +49,20 @@ var cmmnUi = {
       $('.is-search-view').toggleClass('is-fold');
       $('.gnb').removeClass('is-open');
     });
+
+    // 좌측 메뉴 프로필 보기
+    $('.gnb .aside .btn-m').on('click', function () {
+      $(this).addClass('active');
+      $('.pop-user-info').fadeIn(250);
+    });
+    $(document).on('mouseenter', '.ly-map, .ly-sub', function () {
+      cmmnUi.profilePopInit();
+    });
+  },
+  // 좌측 하단 계정설정 팝업 숨기기
+  profilePopInit: function () {
+    $('.gnb .aside .btn-m').removeClass('active');
+    $('.pop-user-info').hide();
   },
   map: function () {
     // 지도 우측 상단 현재 구역 드롭다운
@@ -109,12 +123,15 @@ var cmmnUi = {
     });
     $(document).on('mouseenter', '.crossroad-view-container .tab.segment', function () {
       $('.gnb').removeClass('is-open');
+      cmmnUi.profilePopInit();
     });
     $(document).on('mouseenter', '.roi-view-container .tab.segment', function () {
       $('.gnb').removeClass('is-open');
+      cmmnUi.profilePopInit();
     });
     $(document).on('mouseenter', '.search-view-container > section', function () {
       $('.gnb').removeClass('is-open');
+      cmmnUi.profilePopInit();
     });
 
     // 1depth 메뉴의 하위 메뉴 initialize
