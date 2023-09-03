@@ -258,6 +258,153 @@
             <!-- //inner -->
           </div>
           <!-- //map-popup -->
+
+          <!-- 230902 : 돌발/장애 탭 팝업 -->
+          <div class="sudden-disorder-popup">
+            <div class="ui top attached tabular menu rounded">
+              <a href="#none;" class="item active" data-tab="first">돌발</a>
+              <a href="#none;" class="item" data-tab="second">장애</a>
+            </div>
+            <!-- //menu -->
+
+            <!-- 돌발 탭 컨텐츠 -->
+            <div class="sudden-disorder-tab-wrap">
+              <div class="ui bottom attached tab segment tab-sudden active" data-tab="first">
+                <ul class="tab-sudden-list">
+                  <li>
+                    <p class="txt">
+                      <span>12:30:08</span>
+                      <em>태릉 - 공릉역사거리</em>
+                      <i class="txt-badge c-peach">역주행</i>
+                    </p>
+                    <span class="btn-bind">
+                      <button type="button" class="ico-picture"><span class="screen-out">돌발 스틸컷 사진 보기</span></button>
+                      <button type="button" class="ico-view"><span class="screen-out">실시간 돌발 조회 화면으로 이동하기</span></button>
+                    </span>
+                  </li>
+                  <li>
+                    <p class="txt">
+                      <span>12:30:08</span>
+                      <em>태릉 - 공릉역사거리</em>
+                      <i class="txt-badge c-bisque">정지</i>
+                    </p>
+                    <span class="btn-bind">
+                      <button type="button" class="ico-picture"><span class="screen-out">돌발 스틸컷 사진 보기</span></button>
+                      <button type="button" class="ico-view"><span class="screen-out">실시간 돌발 조회 화면으로 이동하기</span></button>
+                    </span>
+                  </li>
+                  <li>
+                    <p class="txt">
+                      <span>12:30:08</span>
+                      <em>태릉 - 공릉역사거리</em>
+                      <i class="txt-badge c-purple">보행자</i>
+                    </p>
+                    <span class="btn-bind">
+                      <button type="button" class="ico-picture"><span class="screen-out">돌발 스틸컷 사진 보기</span></button>
+                      <button type="button" class="ico-view"><span class="screen-out">실시간 돌발 조회 화면으로 이동하기</span></button>
+                    </span>
+                  </li>
+                  <li class="more">
+                    <button type="button">...</button>
+                  </li>
+                </ul>
+                <!-- //tab-sudden-list -->
+                <div class="sudden-disorder-check">
+                  <span class="noti-control">
+                    <em>알림 ON</em>
+                    <label class="slider-switch">
+                      <input type="checkbox" />
+                      <i class="slider"></i>
+                    </label>
+                  </span>
+                  <!-- //noti-control -->
+                  <p class="right">
+                    <span>확인되지 않은 돌발 : 3건</span>
+                    <a href="#" class="ui secondary basic button c-gray-type3 rounded">이력페이지 이동</a>
+                  </p>
+                </div>
+                <!-- //sudden-disorder-check -->
+              </div>
+              <!-- //tab-sudden -->
+
+              <!-- 장애 탭 컨텐츠 -->
+              <div class="ui bottom attached tab segment tab-disorder" data-tab="second">
+                <ul class="tab-sudden-list">
+                  <li>
+                    <p class="txt">
+                      <span>12:30:08</span>
+                      <em>태릉 - 공릉역사거리</em>
+                      <i class="txt-badge c-peach">보행자주의안내 VMS 1</i>
+                    </p>
+                    <span class="btn-bind">
+                      <button type="button" class="ui secondary basic button c-gray-type3 rounded">확인</button>
+                    </span>
+                  </li>
+                  <!-- 확인 버튼 클릭시 read클래스 추가 -->
+                  <li class="read">
+                    <p class="txt">
+                      <span>12:30:08</span>
+                      <em>태릉 - 공릉역사거리</em>
+                      <i class="txt-badge c-peach">장비명 및 내용</i>
+                    </p>
+                    <span class="btn-bind">
+                      <button type="button" class="ui secondary basic button c-gray-type3 rounded">확인</button>
+                    </span>
+                  </li>
+                  <li>
+                    <p class="txt">
+                      <span>12:30:08</span>
+                      <em>태릉 - 공릉역사거리</em>
+                      <i class="txt-badge c-peach">보행자주의안내 VMS 1 내용이 들어갑니다</i>
+                    </p>
+                    <span class="btn-bind">
+                      <button type="button" class="ui secondary basic button c-gray-type3 rounded">확인</button>
+                    </span>
+                  </li>
+                  <li class="more">
+                    <button type="button">...</button>
+                  </li>
+                </ul>
+                <!-- //tab-sudden-list -->
+                <div class="sudden-disorder-check">
+                  <p class="right">
+                    <span>확인되지 않은 돌발 : 3건</span>
+                    <a href="#" class="ui secondary basic button c-gray-type3 rounded">이력페이지 이동</a>
+                  </p>
+                </div>
+                <!-- //sudden-disorder-check -->
+              </div>
+              <!-- //tab-disorder -->
+            </div>
+            <!-- //sudden-disorder-tab-wrap -->
+          </div>
+          <!-- //sudden-disorder-popup -->
+
+          <!-- 230902 : 돌발 스냅샷 팝업 -->
+          <div class="sudden-snapshot-popup">
+            <div class="sudden-snapshot-header">
+              <em>돌발 발생</em>
+              <div class="right">
+                <div class="selectbox-wrap xs">
+                  <select>
+                    <option value="">선택</option>
+                    <option value="">정검지</option>
+                    <option value="">타 정검지</option>
+                    <option value="">오검지</option>
+                  </select>
+                </div>
+                <!-- //selectbox-wrap -->
+                <button type="button" class="ui secondary basic button rounded c-gray-type3">확인</button>
+                <button type="button" class="btn-popup-close"><span class="screen-out">팝업 닫기</span></button>
+              </div>
+              <!-- //right -->
+            </div>
+            <!-- //sudden-snapshot-header -->
+            <div class="sudden-snapshot-body">
+              <img src="/base/images/temp/snapshot.png" alt="테스트 이미지" />
+            </div>
+          </div>
+          <!-- //sudden-snapshot-popup -->
         </div>
         <!-- //ly-map -->
       </main>
@@ -294,6 +441,18 @@
         });
       }
       noDimedPopup();
+
+      /* 230902 : 아래 js는 퍼블리싱 확인용입니다. 참고해서 개발화면에 반영 부탁드립니다. */
+      // 탭 메뉴
+      $('.sudden-disorder-popup .menu .item').tab();
+
+      // 스냅샷 드래그 이벤트 기능
+      $('.sudden-snapshot-popup').draggable({
+        containment: '.ly-map',
+        start: function () {
+          $(this).css('transform', 'none');
+        },
+      });
     </script>
   </body>
 </html>

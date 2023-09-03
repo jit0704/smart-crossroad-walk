@@ -287,6 +287,7 @@ body ::-webkit-scrollbar-track {
 /*---------------------------------------------------------------
   [component]
   - 아이콘
+  - 뱃지
   - 튤팁 팝업
   - 브레드크럼
   - 인풋박스
@@ -457,6 +458,45 @@ body ::-webkit-scrollbar-track {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+}
+.ico-play {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-image: url("/base/images/icon_play.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-view {
+  display: inline-block;
+  width: 1.7rem;
+  height: 1.7rem;
+  background-image: url("/base/images/icon_view.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+.txt-badge {
+  padding: 0.5rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.txt-badge.c-peach {
+  color: #ca4e4e;
+  background: #ffeaea;
+}
+.txt-badge.c-bisque {
+  color: #e76100;
+  background: #ffecdb;
+}
+.txt-badge.c-purple {
+  color: #786b9b;
+  background: #edeaf9;
 }
 
 .menu-popup {
@@ -654,6 +694,20 @@ body ::-webkit-scrollbar-track {
   color: #727272 !important;
   background: #e8e8e8 !important;
 }
+.ui.button.basic.secondary.c-gray-type3 {
+  padding: 0 0.6rem;
+  line-height: 2.2rem;
+  color: #999999 !important;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-color: #cbcbcb !important;
+}
+.ui.button.basic.secondary.c-gray-type3:hover, .ui.button.basic.secondary.c-gray-type3:focus, .ui.button.basic.secondary.c-gray-type3:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #999999 !important;
+  background: #fff !important;
+}
 .ui.button.basic.secondary.rounded {
   border-radius: 6px;
 }
@@ -832,6 +886,49 @@ body ::-webkit-scrollbar-track {
   width: 12.4rem;
 }
 
+.ui .slider-switch {
+  position: relative;
+  display: inline-block;
+  width: 2.7rem;
+  height: 1.4rem;
+}
+.ui .slider-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.ui .slider-switch input:checked + .slider {
+  background: #1e5f8d;
+}
+.ui .slider-switch input:checked + .slider::before {
+  -webkit-transform: translateX(1.2rem);
+      -ms-transform: translateX(1.2rem);
+          transform: translateX(1.2rem);
+}
+.ui .slider-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 1.4rem;
+  background: #cbcbcb;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.ui .slider-switch .slider::before {
+  position: absolute;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  left: 0.2rem;
+  bottom: 0.2rem;
+  border-radius: 100%;
+  background-color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
 .ui.basic.table {
   line-height: 100%;
 }
@@ -1943,7 +2040,7 @@ body ::-webkit-scrollbar-track {
 .filter-grouop .date-group input {
   width: 13.25rem;
   height: 3.4rem;
-  padding: 0 1rem;
+  padding: 0 0.8rem;
   border: 1px solid #e8e8e8;
   background-color: #fff;
 }
@@ -2004,7 +2101,7 @@ body ::-webkit-scrollbar-track {
       align-content: center;
 }
 .button-function-group .ui.buttons {
-  gap: 0 4px;
+  gap: 0 0.4rem;
 }
 .button-function-group .ui.secondary.button {
   min-width: 8rem;
@@ -2544,9 +2641,6 @@ body ::-webkit-scrollbar-track {
   padding: 1.5rem;
   background: transparent;
 }
-.blocker.no-dimed.ui-draggable-handle {
-  cursor: move;
-}
 
 .modal a.close-modal {
   top: 1.6rem;
@@ -2561,8 +2655,14 @@ body ::-webkit-scrollbar-track {
   -webkit-box-shadow: 0.4rem 0.4rem 1.2rem 0rem rgba(0, 0, 0, 0.1);
           box-shadow: 0.4rem 0.4rem 1.2rem 0rem rgba(0, 0, 0, 0.1);
 }
+.modal-container.w466 {
+  width: 46.6rem;
+}
 .modal-container.w508 {
   width: 50.8rem;
+}
+.modal-container.w510 {
+  width: 51rem;
 }
 .modal-container.medium {
   width: 79rem;
@@ -2738,6 +2838,10 @@ body ::-webkit-scrollbar-track {
 /*---------------------------------------------------------------
   [딤드 없는 팝업]
 -----------------------------------------------------------------*/
+.ui-draggable-handle {
+  cursor: move;
+}
+
 .map-popup {
   display: none;
   position: absolute;
@@ -2962,6 +3066,378 @@ body ::-webkit-scrollbar-track {
   display: inline-block;
   font-size: 1.2rem;
   color: #ffd056;
+}
+
+/* 돌발/장애 탭 팝업 */
+.sudden-disorder-popup {
+  position: fixed;
+  left: 5.45rem;
+  bottom: 2rem;
+  z-index: 15;
+  width: 37.7rem;
+  padding: 1rem 1rem 0;
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.sudden-disorder-popup .ui.tabular.menu.rounded {
+  gap: 0 0.4rem;
+  margin: 0 0 1.2rem 0;
+  border-radius: 0;
+  border: 0;
+}
+.sudden-disorder-popup .ui.tabular.menu.rounded::after {
+  display: none;
+}
+.sudden-disorder-popup .ui.tabular.menu.rounded .item {
+  line-height: 3.5rem;
+  color: #999999;
+  font-weight: 500;
+  background: #f8f8f8;
+  border-radius: 0.5rem !important;
+  border: 0;
+}
+.sudden-disorder-popup .ui.tabular.menu.rounded .item.active {
+  color: #fff;
+  font-weight: 700;
+  background: #ca4e4e;
+}
+.sudden-disorder-popup .ui.tabular.menu.rounded .item::before {
+  display: none;
+}
+.sudden-disorder-popup .tab-sudden-list {
+  overflow-y: auto;
+  min-height: 14.8rem;
+  max-height: 25rem;
+}
+.sudden-disorder-popup .tab-sudden-list::-webkit-scrollbar {
+  width: 0.4rem;
+}
+.sudden-disorder-popup .tab-sudden-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 1.15rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e8e8e8;
+}
+.sudden-disorder-popup .tab-sudden-list li + li {
+  margin-top: 0.4rem;
+}
+.sudden-disorder-popup .tab-sudden-list li > .txt {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.6rem;
+  margin: 0;
+  padding-right: 0.4rem;
+  line-height: 100%;
+  font-size: 1.2rem;
+}
+.sudden-disorder-popup .tab-sudden-list li > .txt span {
+  color: #999999;
+}
+.sudden-disorder-popup .tab-sudden-list li > .txt em {
+  color: #3d3d3d;
+}
+.sudden-disorder-popup .tab-sudden-list li .btn-bind {
+  font-size: 0;
+}
+.sudden-disorder-popup .tab-sudden-list li .btn-bind button {
+  padding: 0;
+}
+.sudden-disorder-popup .tab-sudden-list li .btn-bind button:nth-child(2) {
+  margin-left: 1rem;
+}
+.sudden-disorder-popup .tab-sudden-list li.more {
+  padding: 0;
+}
+.sudden-disorder-popup .tab-sudden-list li.more button {
+  height: 4.3rem;
+}
+.sudden-disorder-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 1.2rem 0 1rem;
+}
+.sudden-disorder-check .noti-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
+}
+.sudden-disorder-check .noti-control em {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #727272;
+  font-weight: 500;
+}
+.sudden-disorder-check .right span {
+  display: inline-block;
+  margin-right: 0.3rem;
+  font-size: 1.2rem;
+  color: #727272;
+}
+
+.tab-disorder .ui.button.basic.secondary.c-gray-type3 {
+  line-height: 1.75rem;
+}
+.tab-disorder .tab-sudden-list li:not(.read):hover {
+  border-color: #ebebeb;
+  background: #ebebeb;
+}
+.tab-disorder .tab-sudden-list li:not(.read):hover .ui.button.basic.secondary.c-gray-type3 {
+  background: #ebebeb !important;
+}
+.tab-disorder .tab-sudden-list li.read {
+  border-color: #f8f8f8;
+  background: #f8f8f8;
+}
+.tab-disorder .tab-sudden-list li.read .txt span,
+.tab-disorder .tab-sudden-list li.read .txt em {
+  color: #cbcbcb;
+}
+.tab-disorder .tab-sudden-list li.read .txt .txt-badge.c-peach {
+  background: #f8f8f8;
+  border: 1px solid #cbcbcb;
+  color: #cbcbcb;
+}
+.tab-disorder .tab-sudden-list li.read .ui.button.basic.secondary.c-gray-type3 {
+  background: #f8f8f8 !important;
+  border: 1px solid #cbcbcb !important;
+  color: #cbcbcb !important;
+}
+.tab-disorder .tab-sudden-list li.read .ui.button.basic.secondary.c-gray-type3:hover {
+  background: #f8f8f8 !important;
+}
+.tab-disorder .tab-sudden-list li .txt-badge {
+  max-width: 14.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+.tab-disorder .sudden-disorder-check {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* 돌발 스냅샷 팝업 */
+.sudden-snapshot-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 14;
+  overflow: hidden;
+  width: 28.1rem;
+  height: 21.7rem;
+  padding: 1rem 1rem 1.5rem;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 0.5rem;
+  background: #c50000;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.sudden-snapshot-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-bottom: 1.1rem;
+}
+.sudden-snapshot-header em {
+  line-height: 100%;
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 800;
+}
+.sudden-snapshot-header .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
+}
+.sudden-snapshot-header .right .selectbox-wrap.xs select {
+  min-width: 7.5rem;
+  border-color: #fff;
+  color: #fff;
+  background-image: url(/base/images/arr_down_white.png);
+}
+.sudden-snapshot-header .right .selectbox-wrap.xs select option {
+  color: #3d3d3d;
+}
+.sudden-snapshot-header .right .ui.button.basic.secondary.rounded.c-gray-type3 {
+  padding: 0 0.4rem;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+.sudden-snapshot-header .right .ui.button.basic.secondary.rounded.c-gray-type3:hover, .sudden-snapshot-header .right .ui.button.basic.secondary.rounded.c-gray-type3:focus, .sudden-snapshot-header .right .ui.button.basic.secondary.rounded.c-gray-type3:active {
+  background: none !important;
+}
+.sudden-snapshot-header .right .btn-popup-close {
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-image: url("/base/images/btn_close_white_small.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 1rem 1rem;
+}
+
+/*---------------------------------------------------------------
+  [notify lib popup]
+-----------------------------------------------------------------*/
+#notify {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  z-index: 99;
+}
+#notify.top-left {
+  left: 20px;
+  right: auto;
+}
+#notify.bottom-right {
+  bottom: 20px;
+  left: auto;
+  right: 20px;
+  top: auto;
+}
+#notify.bottom-left {
+  bottom: 0;
+  left: 5.4rem;
+  right: auto;
+  top: auto;
+}
+#notify > .notify-item {
+  display: none;
+  position: relative;
+  margin-top: -0.1rem;
+  padding: 1.4rem 1.7rem;
+  border: 1px solid #c50000;
+  background: #f8f8f8;
+  cursor: pointer;
+}
+#notify > .notify-item:last-child {
+  margin-bottom: 2rem;
+}
+#notify > .notify-item.notify-image {
+  padding-left: 69px;
+}
+#notify .notify-bug {
+  display: inline-block;
+  width: 2.2rem;
+  height: 2rem;
+  background-image: url("/base/images/icon_triangle_exclamation2.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+#notify img {
+  border-radius: 2px;
+  height: 48px;
+  left: 12px;
+  position: absolute;
+  top: 12px;
+  width: 48px;
+}
+#notify p {
+  display: inline-block;
+  margin-left: 1rem;
+  line-height: 2rem;
+  vertical-align: top;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #c50000;
+}
+#notify p em {
+  font-weight: 600;
+}
+#notify strong {
+  color: #fefefe;
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #000;
 }
 
 /*---------------------------------------------------------------

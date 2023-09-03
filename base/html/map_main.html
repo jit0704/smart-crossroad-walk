@@ -14,6 +14,7 @@
     <script src="http://map.ngii.go.kr/openapi/wmts_ngiiMap_v6.4.3.js?apikey=04trYP9_xwLAfALjwZ-B8g"></script>
     <!-- includeHTML.js : 퍼블리싱 확인용 include -->
     <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/lib/jquery.notify.js"></script>
     <script src="/base/js/common/ui.js"></script>
     <link rel="stylesheet" href="http://map.ngii.go.kr/emap/css/map/OpenLayers-6.4.3.css" />
     <link rel="stylesheet" href="/base/css/common.css" />
@@ -258,6 +259,35 @@
         });
       }
       noDimedPopup();
+
+      // notify popup 퍼블리싱 확인용
+      // $(document).on('click', '.btn-bell', function () {
+      //   var locationOutbreak = '태릉입구역 사거리';
+      //   $.notify({
+      //     body: `${locationOutbreak}, ${$('<em>역주행 발생</em>').prop('outerHTML')}`, // 내용
+      //     position: 'bottom-left', // 위치 설정
+      //     icon: 'notify-bug', // 아이콘 이미지
+      //     forever: true,
+      //   });
+      // });
+
+      /* - notify popup 개발시 참고
+         - setInterval함수는 실제 돌발 발생시의 상황을 비슷하게 구성하여 확인해보려고 테스트로 작성함. */
+      setInterval(() => {
+        var locationOutbreak = '태릉입구역 사거리';
+        $.notify({
+          body: `${locationOutbreak}, ${$('<em>역주행 발생</em>').prop('outerHTML')}`, // 팝업 내용
+          position: 'bottom-left', // 팝업 위치 설정
+          icon: 'notify-bug', // 팝업 아이콘 이미지
+          closeClick: false, // 팝업 클릭시 숨기지 않기
+          timeout: 5000, // 팝업 5초 유지
+          max: 10, // 팝업 최대 10개까지 노출
+          click: function (e) {
+            // 팝업 클릭시 실행되는 callback 함수
+            alert('상세페이지로 이동');
+          },
+        });
+      }, 1500);
     </script>
   </body>
 </html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>RTU 설정 추가 팝업</title>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <!-- includeHTML.js : 퍼블리싱 확인용 include -->
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" href="/base/css/common.css" />
+  </head>
+  <body>
+    <div id="ex" class="modal">
+      <div class="modal-container medium">
+        <div class="modal-header">
+          <span class="tit">RTU 설정</span>
+        </div>
+        <!-- //modal-header -->
+        <div class="modal-body">
+          <div class="data-tbl">
+            <table>
+              <colgroup>
+                <col style="width: 20%" />
+                <col style="width: 30%" />
+                <col style="width: 20%" />
+                <col style="width: 30%" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>구역</th>
+                  <td class="pdr-20">
+                    <div class="selectbox-wrap rounded">
+                      <select>
+                        <option value="">내용</option>
+                        <option value="">내용</option>
+                        <option value="">내용</option>
+                        <option value="">내용</option>
+                      </select>
+                    </div>
+                  </td>
+                  <th class="pdl-15">지점</th>
+                  <td>
+                    <div class="selectbox-wrap rounded">
+                      <select>
+                        <option value="">내용</option>
+                        <option value="">내용</option>
+                        <option value="">내용</option>
+                        <option value="">내용</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>지점 ID</th>
+                  <td colspan="3">
+                    <div class="ui input rounded">
+                      <input type="text" disabled />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>지점 주소</th>
+                  <td colspan="3">
+                    <div class="ui input rounded">
+                      <input type="text" disabled />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>IP</th>
+                  <td colspan="3">
+                    <div class="ui input rounded">
+                      <input type="text" />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Port</th>
+                  <td class="pdr-20">
+                    <div class="ui input rounded">
+                      <input type="text" />
+                    </div>
+                  </td>
+                  <th class="pdl-15">Server Port</th>
+                  <td>
+                    <div class="ui input rounded">
+                      <input type="text" />
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th>전원1(장비)</th>
+                  <td class="pdr-20">
+                    <div class="selectbox-wrap rounded">
+                      <select>
+                        <option value="">내용</option>
+                        <option value="">내용</option>
+                        <option value="">내용</option>
+                        <option value="">내용</option>
+                      </select>
+                    </div>
+                  </td>
+                  <th class="pdl-15">전원1(별칭)</th>
+                  <td>
+                    <div class="ui input rounded">
+                      <input type="text" />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>전원2(장비)</th>
+                  <td class="pdr-20">
+                    <div class="selectbox-wrap rounded">
+                      <select>
+                        <option value="">내용</option>
+                        <option value="">내용</option>
+                        <option value="">내용</option>
+                        <option value="">내용</option>
+                      </select>
+                    </div>
+                  </td>
+                  <th class="pdl-15">전원2(별칭)</th>
+                  <td>
+                    <div class="ui input rounded">
+                      <input type="text" />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>전원3(장비)</th>
+                  <td class="pdr-20">
+                    <div class="selectbox-wrap rounded">
+                      <select>
+                        <option value="">내용</option>
+                        <option value="">내용</option>
+                        <option value="">내용</option>
+                        <option value="">내용</option>
+                      </select>
+                    </div>
+                  </td>
+                  <th class="pdl-15">전원3(별칭)</th>
+                  <td>
+                    <div class="ui input rounded">
+                      <input type="text" />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>전원4(장비)</th>
+                  <td class="pdr-20">
+                    <div class="selectbox-wrap rounded">
+                      <select>
+                        <option value="">내용</option>
+                        <option value="">내용</option>
+                        <option value="">내용</option>
+                        <option value="">내용</option>
+                      </select>
+                    </div>
+                  </td>
+                  <th class="pdl-15">전원4(별칭)</th>
+                  <td>
+                    <div class="ui input rounded">
+                      <input type="text" />
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //data-tbl -->
+        </div>
+        <!-- //modal-body -->
+        <div class="modal-bottom">
+          <button class="ui primary basic button rounded">저장</button>
+          <button class="ui secondary basic button rounded">취소</button>
+        </div>
+        <!-- //modal-bottom -->
+      </div>
+      <!-- //modal-container -->
+    </div>
+    <!-- //modal -->
+
+    <a href="#ex" type="button" class="btn-modal-open screen-out"> 퍼블리싱 확인용 버튼 </a>
+
+    <script>
+      // 퍼블리싱 확인용
+      $(function () {
+        setTimeout(function () {
+          $('.btn-modal-open').trigger('click');
+        }, 20);
+      });
+    </script>
+  </body>
+</html>
