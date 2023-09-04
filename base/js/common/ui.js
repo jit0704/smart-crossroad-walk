@@ -69,27 +69,6 @@ var cmmnUi = {
     if ($('.ly-map').length !== 0) {
       $('.area-box').dropdown();
     }
-
-    // 카메라 아이콘 클릭시 팝업 노출
-    $('.ico-camera').on('click', function () {
-      var $this = $(this);
-      var $icoW = $this.outerWidth(true);
-      var $icoH = $this.outerHeight(true);
-      var $top = $this.position().top;
-      var $left = $this.position().left;
-      var $target = $this.data('target');
-      var $popup = $('#' + $target);
-      $popup.fadeIn(250).css({
-        top: $top + $icoH + 'px',
-        left: $left + $icoW + 'px',
-        marginTop: '-145px',
-      });
-    });
-
-    $('.camera-popup .btn-popup-close').on('click', function (e) {
-      e.preventDefault();
-      $(this).closest('.camera-popup').fadeOut(150);
-    });
   },
   gnb: function () {
     var $winH = $(window).height();

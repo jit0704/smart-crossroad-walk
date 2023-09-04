@@ -542,11 +542,24 @@
           </div>
           <!-- //지도 타입 선택 -->
 
+          <!-- LOS 아이콘 -->
+          <i class="ico-los-a" style="top: 10px; left: 500px"><span class="screen-out">A등급</span></i>
+          <i class="ico-los-b" style="top: 10px; left: 560px"><span class="screen-out">B등급</span></i>
+          <i class="ico-los-c" style="top: 10px; left: 620px"><span class="screen-out">C등급</span></i>
+          <i class="ico-los-d" style="top: 10px; left: 680px"><span class="screen-out">D등급</span></i>
+          <i class="ico-los-e" style="top: 10px; left: 740px"><span class="screen-out">E등급</span></i>
+          <i class="ico-los-f" style="top: 10px; left: 800px"><span class="screen-out">F등급</span></i>
+          <i class="ico-los-ff" style="top: 10px; left: 860px"><span class="screen-out">FF등급</span></i>
+          <i class="ico-los-fff" style="top: 10px; left: 920px"><span class="screen-out">FFF등급</span></i>
+
           <!-- 카메라 아이콘:
               - data-target 속성의 값과 카메라 팝업의 id값이 일치해야 팝업이 노출됩니다.
               - style 속성의 left, top값으로 지도 위에 좌표값 설정.
           -->
-          <i class="ico-camera" data-target="channel-1" style="left: 784px; top: 620px"><span class="screen-out">카메라 아이콘</span></i>
+          <i class="ico-camera" data-target="channel-1" style="left: 784px; top: 620px"><span class="screen-out">좌측 카메라 아이콘</span></i>
+          <i class="ico-camera" data-target="channel-2" style="left: 1000px; top: 520px"><span class="screen-out">우측 카메라 아이콘</span></i>
+          <i class="ico-camera" data-target="channel-3" style="left: 850px; top: 420px"><span class="screen-out">상단 카메라 아이콘</span></i>
+          <i class="ico-camera" data-target="channel-4" style="left: 950px; top: 720px"><span class="screen-out">하단 카메라 아이콘</span></i>
 
           <!-- 카메라 팝업 -->
           <div id="channel-1" class="camera-popup">
@@ -565,14 +578,232 @@
             </div>
             <!-- //camera-popup-content -->
             <div class="camera-popup-bottom">
-              <em class="tit">000대로△</em>
-              <div class="bind">
-                <span>우회전<em>4</em><i>대</i></span>
-                <span>직진<em>5</em><i>대</i></span>
-                <span>좌회전<em>3</em><i>대</i></span>
+              <div class="bot-info1">
+                <span class="tit"><em>000대로</em> 북동 방향</span>
+                <div class="right">
+                  <span>12:00:00 부터</span>
+                  <button type="button" class="ico-refresh"><span class="screen-out">새로 고침</span></button>
+                </div>
               </div>
+              <!-- //bot-info1 -->
+              <div class="bot-info2">
+                <div class="left">
+                  <span>우회전<em>86</em><i>대</i></span>
+                  <span>직진<em>189</em><i>대</i></span>
+                  <span>좌회전<em>28</em><i>대</i></span>
+                </div>
+                <!-- //left -->
+                <button type="button" class="btn-model">차종별</button>
+              </div>
+              <!-- //bot-info2 -->
             </div>
             <!-- //camera-popup-bottom -->
+
+            <section class="model-traffic">
+              <em class="tit">차종별 교통량</em>
+              <ul class="model-traffic-data">
+                <li>
+                  <em>&nbsp;</em>
+                  <em>1차로</em>
+                  <em>2차로</em>
+                  <em>3차로</em>
+                  <em>4차로</em>
+                </li>
+                <li>
+                  <em>소형</em>
+                  <span>102</span>
+                  <span>0</span>
+                  <span>31</span>
+                  <span>17</span>
+                </li>
+                <li>
+                  <em>트럭</em>
+                  <span>12</span>
+                  <span>43</span>
+                  <span>0</span>
+                  <span>17</span>
+                </li>
+                <li>
+                  <em>버스</em>
+                  <span>5</span>
+                  <span>43</span>
+                  <span>31</span>
+                  <span>17</span>
+                </li>
+                <li>
+                  <em>이륜차</em>
+                  <span>5</span>
+                  <span>43</span>
+                  <span>0</span>
+                  <span>17</span>
+                </li>
+              </ul>
+            </section>
+            <!-- //model-traffic -->
+          </div>
+          <!-- //카메라 팝업 -->
+
+          <!-- 카메라 팝업 -->
+          <div id="channel-2" class="camera-popup">
+            <header class="camera-popup-header">
+              <em class="tit">채널 2 - 카메라 명</em>
+              <div class="bind">
+                <a href="#" class="btn-small gray">확대</a>
+                <a href="#" class="btn-small gray">번호인식</a>
+                <a href="#" class="btn-popup-close"><span class="screen-out">팝업 닫기</span></a>
+              </div>
+            </header>
+            <div class="camera-popup-content">
+              <video autoplay loop muted width="100%" height="100%">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <!-- //camera-popup-content -->
+            <div class="camera-popup-bottom">
+              <div class="bot-info1">
+                <span class="tit"><em>000대로</em> 북동 방향</span>
+                <div class="right">
+                  <span>12:00:00 부터</span>
+                  <button type="button" class="ico-refresh"><span class="screen-out">새로 고침</span></button>
+                </div>
+              </div>
+              <!-- //bot-info1 -->
+              <div class="bot-info2">
+                <div class="left">
+                  <span>우회전<em>86</em><i>대</i></span>
+                  <span>직진<em>189</em><i>대</i></span>
+                  <span>좌회전<em>28</em><i>대</i></span>
+                </div>
+                <!-- //left -->
+                <button type="button" class="btn-model">차종별</button>
+              </div>
+              <!-- //bot-info2 -->
+            </div>
+            <!-- //camera-popup-bottom -->
+
+            <section class="model-traffic">
+              <em class="tit">차종별 교통량</em>
+              <ul class="model-traffic-data">
+                <li>
+                  <em>&nbsp;</em>
+                  <em>1차로</em>
+                  <em>2차로</em>
+                  <em>3차로</em>
+                  <em>4차로</em>
+                </li>
+                <li>
+                  <em>소형</em>
+                  <span>102</span>
+                  <span>0</span>
+                  <span>31</span>
+                  <span>17</span>
+                </li>
+                <li>
+                  <em>트럭</em>
+                  <span>12</span>
+                  <span>43</span>
+                  <span>0</span>
+                  <span>17</span>
+                </li>
+                <li>
+                  <em>버스</em>
+                  <span>5</span>
+                  <span>43</span>
+                  <span>31</span>
+                  <span>17</span>
+                </li>
+                <li>
+                  <em>이륜차</em>
+                  <span>5</span>
+                  <span>43</span>
+                  <span>0</span>
+                  <span>17</span>
+                </li>
+              </ul>
+            </section>
+            <!-- //model-traffic -->
+          </div>
+          <!-- //카메라 팝업 -->
+
+          <!-- 카메라 팝업 -->
+          <div id="channel-3" class="camera-popup">
+            <header class="camera-popup-header">
+              <em class="tit">채널 3 - 카메라 명</em>
+              <div class="bind">
+                <a href="#" class="btn-small gray">확대</a>
+                <a href="#" class="btn-small gray">번호인식</a>
+                <a href="#" class="btn-popup-close"><span class="screen-out">팝업 닫기</span></a>
+              </div>
+            </header>
+            <div class="camera-popup-content">
+              <video autoplay loop muted width="100%" height="100%">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <!-- //camera-popup-content -->
+            <div class="camera-popup-bottom">
+              <div class="bot-info1">
+                <span class="tit"><em>000대로</em> 북동 방향</span>
+                <div class="right">
+                  <span>12:00:00 부터</span>
+                  <button type="button" class="ico-refresh"><span class="screen-out">새로 고침</span></button>
+                </div>
+              </div>
+              <!-- //bot-info1 -->
+              <div class="bot-info2">
+                <div class="left">
+                  <span>우회전<em>86</em><i>대</i></span>
+                  <span>직진<em>189</em><i>대</i></span>
+                  <span>좌회전<em>28</em><i>대</i></span>
+                </div>
+                <!-- //left -->
+                <button type="button" class="btn-model">차종별</button>
+              </div>
+              <!-- //bot-info2 -->
+            </div>
+            <!-- //camera-popup-bottom -->
+
+            <section class="model-traffic">
+              <em class="tit">차종별 교통량</em>
+              <ul class="model-traffic-data">
+                <li>
+                  <em>&nbsp;</em>
+                  <em>1차로</em>
+                  <em>2차로</em>
+                  <em>3차로</em>
+                  <em>4차로</em>
+                </li>
+                <li>
+                  <em>소형</em>
+                  <span>102</span>
+                  <span>0</span>
+                  <span>31</span>
+                  <span>17</span>
+                </li>
+                <li>
+                  <em>트럭</em>
+                  <span>12</span>
+                  <span>43</span>
+                  <span>0</span>
+                  <span>17</span>
+                </li>
+                <li>
+                  <em>버스</em>
+                  <span>5</span>
+                  <span>43</span>
+                  <span>31</span>
+                  <span>17</span>
+                </li>
+                <li>
+                  <em>이륜차</em>
+                  <span>5</span>
+                  <span>43</span>
+                  <span>0</span>
+                  <span>17</span>
+                </li>
+              </ul>
+            </section>
+            <!-- //model-traffic -->
           </div>
           <!-- //카메라 팝업 -->
         </div>
@@ -593,7 +824,7 @@
       // 탭 퍼블리싱 확인용
       $('.crossroad-view-container .menu .item').tab();
 
-      // 230826추가: 타이틀 버튼 클릭 이벤트
+      // 통계 탭 > 타이틀(평균 속도 / LOS 등급)버튼 클릭 이벤트
       $('.stats-tit-option-bind .ico-up-boxgray').on('click', function () {
         var $optionList = $(this).parent().find('.option-list');
         if ($optionList.css('display') === 'none') {
@@ -609,6 +840,67 @@
           $(el).addClass('active');
           $(el).parent().hide();
         });
+      });
+
+      // 카메라 아이콘 클릭시 팝업 노출
+      $('.ico-camera').on('click', function () {
+        var $this = $(this);
+        var $icoW = $this.outerWidth(true);
+        var $icoH = $this.outerHeight(true);
+        var $top = $this.position().top;
+        var $left = $this.position().left;
+        var $target = $this.data('target');
+        var $popup = $('#' + $target);
+
+        // 마지막으로 움직인 위치값으로 팝업 좌표값 재설정.
+        // 최초 페이지 랜더링 후 data-camera-popup-pos속성 값이 없기 때문에 아래 else 구문이 실행되고,
+        // 팝업이 움직이면 811라인의 스크립트가 실행되면서 data-camera-popup-pos 속성값이 생기고 카메라 아이콘 data-camera-popup-pos 속성에 팝업 좌표값이 저장이 됩니다.
+        // 팝업을 닫고 다시 팝업을 호출하면 아래 if문의 true 구문이 실행되면서 마지막으로 닫았던 좌표값으로 팝업 위치를 설정합니다.
+        if ($(this).attr('data-camera-popup-pos')) {
+          $popup.fadeIn(250).attr('style', $(this).attr('data-camera-popup-pos'));
+        } else {
+          $popup.fadeIn(250).css({
+            top: $top + $icoH + 'px',
+            left: $left + $icoW + 'px',
+            marginTop: '-145px',
+          });
+        }
+      });
+
+      // 카메라 팝업 닫기
+      $('.camera-popup .btn-popup-close').on('click', function (e) {
+        e.preventDefault();
+        var $thisCameraPopup = $(this).closest('.camera-popup');
+        $thisCameraPopup.fadeOut(150);
+      });
+
+      // 차종별 토글 버튼
+      $('.btn-model').on('click', function () {
+        var $this = $(this);
+        var $modelTraffic = $this.closest('.camera-popup').find('.model-traffic');
+        $this.toggleClass('active');
+        if ($this.is('.active')) {
+          $modelTraffic.fadeIn(200);
+        } else {
+          $modelTraffic.fadeOut(200);
+        }
+      });
+
+      // 카메라 팝업 드래그 이벤트 기능
+      $('.camera-popup').draggable({
+        containment: '.ly-map',
+        stop: function () {
+          // 카메라 아이콘의 data-camera-popup-pos 속성을 생성 후 팝업의 좌표값 저장
+          var $cameraPopupStyle = $(this).attr('style');
+          var $dataTarget = $(this).attr('id');
+          $(`[data-target = ${$dataTarget}]`).attr('data-camera-popup-pos', $cameraPopupStyle);
+        },
+      });
+
+      // 현재 활성화된 카메라 팝업 체크
+      $('.camera-popup').on('mousedown', function () {
+        $('.camera-popup').removeClass('current-active');
+        $(this).addClass('current-active');
       });
     </script>
   </body>
