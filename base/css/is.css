@@ -481,6 +481,395 @@
   color: #999999;
 }
 
+/* 실시간 돌발 조회 */
+.real-time-outbreak-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+.real-time-outbreak-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  width: 39.8rem;
+  height: calc(99.9vh - 20px);
+  margin-left: 5.4rem;
+  border-right: 1px solid #e8e8e8;
+}
+.real-time-outbreak-list > .tit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.6rem;
+  width: 100%;
+  padding: 4rem 3rem 1.6rem;
+  line-height: 2.4rem;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 2rem;
+  color: #858585;
+  font-weight: 600;
+}
+.real-time-outbreak-list > .tit::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 1.4rem;
+  background-image: url("/base/images/icon_dot_double.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.real-time-outbreak-list .paging-group {
+  width: 100%;
+  margin: 2.4rem 0;
+}
+.real-time-outbreak-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow-y: auto;
+  width: 100%;
+  border-bottom: 1px solid #e8e8e8;
+}
+.real-time-outbreak-item::-webkit-scrollbar {
+  width: 0.4rem;
+}
+.real-time-outbreak-item .btn-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 1.35rem 3.8rem 1.35rem 3rem;
+  border-bottom: 1px solid #e8e8e8;
+  text-align: left;
+}
+.real-time-outbreak-item .data-list li + li {
+  margin-top: 0.3rem;
+}
+.real-time-outbreak-item .data-list em {
+  display: inline-block;
+  margin-right: 0.6rem;
+  font-size: 1.4rem;
+  color: #03a0fc;
+  font-weight: 600;
+}
+.real-time-outbreak-item .data-list span {
+  font-size: 1.4rem;
+  color: #727272;
+}
+.real-time-outbreak-item .outbreak-type {
+  width: 7rem;
+  line-height: 6rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.real-time-outbreak-item .outbreak-type.reverse-run {
+  color: #ca4e4e;
+  background: #ffeaea;
+}
+.real-time-outbreak-item .outbreak-type.stop {
+  color: #e76100;
+  background: #ffecdb;
+}
+.real-time-outbreak-item .outbreak-type.walker {
+  color: #786b9b;
+  background: #edeaf9;
+}
+.real-time-outbreak-view {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  padding: 4.7rem 4rem 0;
+  background: #f8f8f8;
+}
+.real-time-outbreak-view-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 0 1rem 2.5rem;
+  border-bottom: 1px solid #cbcbcb;
+}
+.real-time-outbreak-view-header .tit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.6rem;
+  line-height: 100%;
+  font-size: 2rem;
+  color: #858585;
+  font-weight: 600;
+}
+.real-time-outbreak-view-header .tit::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 1.4rem;
+  background-image: url("/base/images/icon_dot_double.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.real-time-outbreak-view-header .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.real-time-outbreak-view-header .right > span {
+  min-width: 16rem;
+  font-size: 1.8rem;
+  color: #727272;
+}
+.real-time-outbreak-view-header .right .selectbox-wrap.rounded {
+  min-width: 12.5rem;
+  margin: 0 0.4rem 0 1.4rem;
+}
+.real-time-outbreak-view-header .right .selectbox-wrap.rounded select {
+  padding: 0.5rem 0.7rem;
+  line-height: 100%;
+  color: #727272;
+  font-weight: 500;
+}
+.real-time-outbreak-view-header .right .btn-gray-bg {
+  width: 6.2rem;
+}
+.real-time-outbreak-view .outbreak-info > .tit {
+  display: block;
+  padding: 2.6rem 0 0 1rem;
+  line-height: 100%;
+  font-size: 2.2rem;
+  color: #1e5f8d;
+  font-weight: 700;
+}
+.real-time-outbreak-view .outbreak-info-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+}
+.real-time-outbreak-view .outbreak-info-list li > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  gap: 0.6rem 0;
+  position: relative;
+  padding: 2.45rem 2rem;
+  line-height: normal;
+}
+.real-time-outbreak-view .outbreak-info-list li > div .tit {
+  font-size: 1.8rem;
+  color: #999999;
+  font-weight: 500;
+}
+.real-time-outbreak-view .outbreak-info-list li > div .txt {
+  font-size: 2rem;
+  color: #5285aa;
+  font-weight: 600;
+}
+.real-time-outbreak-view .outbreak-info-list li > div::after {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  bottom: 2rem;
+  right: 0;
+  width: 0.1rem;
+  background: #e8e8e8;
+}
+.real-time-outbreak-view .outbreak-info-list li > div:last-child::after {
+  display: none;
+}
+.real-time-outbreak-view .outbreak-video-picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  gap: 0 1.5rem;
+  margin-top: 3.75rem;
+}
+.real-time-outbreak-view .outbreak-video-picture [class*=header] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 0 1rem 1rem;
+}
+.real-time-outbreak-view .outbreak-video-picture [class*=header] .tit {
+  font-size: 2.2rem;
+  color: #1e5f8d;
+  font-weight: 700;
+}
+.real-time-outbreak-view .outbreak-video-picture [class*=header] .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
+}
+.real-time-outbreak-view .outbreak-video-picture [class*=header] .right .btn-md.bg-navy {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+.real-time-outbreak-view .outbreak-video-picture .unexpected-scene {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.real-time-outbreak-view .outbreak-video-picture .scene-cctv {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 /* 돌발 발생 이력 */
 .outbreak-record .filter-grouop {
   margin-bottom: 3rem;

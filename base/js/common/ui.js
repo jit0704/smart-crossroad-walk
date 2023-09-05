@@ -55,7 +55,7 @@ var cmmnUi = {
       $(this).addClass('active');
       $('.pop-user-info').fadeIn(250);
     });
-    $(document).on('mouseenter', '.ly-map, .ly-sub', function () {
+    $(document).on('mouseenter', '.ly-map, .ly-sub, .real-time-outbreak-container', function () {
       cmmnUi.profilePopInit();
     });
   },

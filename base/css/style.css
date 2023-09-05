@@ -856,7 +856,7 @@ body ::-webkit-scrollbar-track {
   border: 0;
   color: #fff;
 }
-.btn-data-search {
+.btn-gray-bg, .btn-data-search {
   min-width: 6.2rem;
   line-height: 2.8rem;
   text-align: center;
