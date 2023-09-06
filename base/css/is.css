@@ -1228,6 +1228,73 @@
   font-size: 1.6rem;
 }
 
+/* 교차로 상세 > 영상 탭의 분할 화면 */
+.split-screen {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+.split-screen-info {
+  position: absolute;
+  left: 2.26rem;
+  top: 2.38rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 1.3rem;
+}
+.split-screen-info em {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 600;
+}
+.split-screen .split-video {
+  border-radius: 0.5rem;
+  border: 2px solid #999999;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.split-screen-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 42.2rem;
+  right: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 /* ROI설정 탭 화면 */
 .roi-view-container {
   position: fixed;

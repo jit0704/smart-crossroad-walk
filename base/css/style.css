@@ -486,6 +486,15 @@ body ::-webkit-scrollbar-track {
   background-position: 0 0;
   background-size: contain;
 }
+.ico-rec {
+  display: inline-block;
+  width: 7rem;
+  height: 3.1rem;
+  background-image: url("/base/images/icon_rec.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
 .ico-los-a {
   display: inline-block;
   width: 4.6rem;
@@ -2723,6 +2732,38 @@ body ::-webkit-scrollbar-track {
   background: transparent;
 }
 
+.modal.expend {
+  width: 129rem;
+  height: 75rem;
+}
+.modal.expend a.close-modal {
+  top: 1.3rem;
+  right: 1.3rem;
+  background-image: url(/base/images/btn_close_white_small.png);
+}
+.modal.expend .modal-container {
+  padding: 0 1rem 1rem;
+  background: #3d3d3d;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.modal.expend .modal-header {
+  padding: 1rem;
+  border-bottom: 0;
+}
+.modal.expend .modal-header .tit {
+  line-height: normal;
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 600;
+}
+.modal.expend .modal-body {
+  height: 70rem;
+}
+.modal.expend .modal-body .expend-video {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
 .modal a.close-modal {
   top: 1.6rem;
   right: 1.8rem;
