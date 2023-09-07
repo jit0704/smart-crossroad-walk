@@ -481,6 +481,378 @@
   color: #999999;
 }
 
+/* 교차로 유출입 교통량 */
+.crossroads-flow-container .filter-grouop {
+  margin-bottom: 3.2rem;
+}
+.crossroads-flow-container .filter-grouop .ui.primary-chkbox {
+  min-width: 1.8rem;
+  min-height: 1.8rem;
+  line-height: 1.8rem;
+}
+.crossroads-flow-container .filter-grouop .ui.primary-chkbox label {
+  padding-left: 3rem;
+  line-height: 2.2rem;
+  font-size: 1.8rem;
+  color: #727272;
+}
+.crossroads-flow-view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  gap: 0 1.2rem;
+}
+.crossroads-flow-board {
+  position: relative;
+  width: 110.1rem;
+  height: 74.1rem;
+  border-radius: 1rem;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+}
+.crossroads-flow-board > .tit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.6rem;
+  position: absolute;
+  top: 2.5rem;
+  left: 2.43rem;
+  line-height: normal;
+  font-size: 2rem;
+  color: #999999;
+  font-weight: 600;
+}
+.crossroads-flow-board > .tit::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 1.4rem;
+  background-image: url("/base/images/icon_dot_double.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.crossroads-flow-board .flow-stats-wrap {
+  width: 63.7rem;
+  height: 64.9rem;
+  margin: 4.6rem auto 0;
+}
+.crossroads-flow-board .flow-stats-detail {
+  width: 19.7rem;
+  height: 22.6rem;
+  border: 1px solid #999999;
+  border-top: 0;
+}
+.crossroads-flow-board .flow-stats-detail.reverse {
+  border-bottom: 0;
+}
+.crossroads-flow-board .flow-stats-detail.reverse .arrow .flow-turn.left::before {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.crossroads-flow-board .flow-stats-detail.reverse .arrow .flow-turn.right::before {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.crossroads-flow-board .flow-stats-detail.reverse .road-name {
+  padding: 1.7rem 0 0;
+  border-top: 1px solid #999999;
+}
+.crossroads-flow-board .flow-stats-detail .road-name {
+  display: block;
+  padding-bottom: 1.7rem;
+  text-align: center;
+}
+.crossroads-flow-board .flow-stats-detail .road-name em {
+  display: inline-block;
+  padding: 0 0.4rem;
+  line-height: 2.1rem;
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 500;
+  background: #999999;
+}
+.crossroads-flow-board .flow-stats-detail .arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  height: 6.5rem;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+}
+.crossroads-flow-board .flow-stats-detail .arrow button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 6.5rem;
+  padding: 0;
+}
+.crossroads-flow-board .flow-stats-detail .arrow button:not(:first-child) {
+  border-left: 1px solid #999999;
+}
+.crossroads-flow-board .flow-stats-detail .arrow button.flow-straight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.crossroads-flow-board .flow-stats-detail .arrow button.flow-straight::before {
+  content: "";
+  width: 2rem;
+  height: 4.3rem;
+  background-image: url("/base/images/arr_big_straight-down.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.crossroads-flow-board .flow-stats-detail .arrow button.flow-straight.up::before {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.crossroads-flow-board .flow-stats-detail .arrow button.flow-turn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.crossroads-flow-board .flow-stats-detail .arrow button.flow-turn.left::before {
+  content: "";
+  width: 3.1rem;
+  height: 4rem;
+  background-image: url("/base/images/arr_big_left-turn.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.crossroads-flow-board .flow-stats-detail .arrow button.flow-turn.right::before {
+  content: "";
+  width: 3.1rem;
+  height: 4rem;
+  background-image: url("/base/images/arr_big_right-turn.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.crossroads-flow-board .flow-stats-detail .num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+.crossroads-flow-board .flow-stats-detail .num em {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 2.9rem;
+  padding: 0 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #999999;
+}
+.crossroads-flow-board .flow-stats-detail .num em:not(:first-child) {
+  border-left: 1px solid #999999;
+}
+.crossroads-flow-board .flow-stats-top .flow-stats-detail {
+  margin: 0 auto;
+}
+.crossroads-flow-board .flow-stats-mid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 19.7rem;
+}
+.crossroads-flow-board .flow-stats-mid .flow-stats-detail {
+  margin-top: -0.2rem;
+  border-width: 0.5px;
+}
+.crossroads-flow-board .flow-stats-mid .flow-stats-detail:first-child {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  margin-left: 0.95rem;
+}
+.crossroads-flow-board .flow-stats-mid .flow-stats-detail:last-child {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin-right: 0.95rem;
+}
+.crossroads-flow-board .flow-stats-bot .flow-stats-detail {
+  margin: -0.1rem auto 0;
+}
+.crossroads-flow-traffic {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  gap: 1.3rem 0;
+}
+.crossroads-flow-traffic .flow-traffic {
+  width: 100%;
+  height: 36.4rem;
+  padding: 2.2rem 2.5rem 3rem;
+  border-radius: 1rem;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+}
+.crossroads-flow-traffic .flow-traffic > .tit {
+  display: block;
+  margin-bottom: 1.7rem;
+  line-height: normal;
+  font-size: 2.2rem;
+  color: #1e5f8d;
+  font-weight: 700;
+}
+.crossroads-flow-traffic .flow-traffic-data li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  gap: 0 1.5rem;
+  text-align: center;
+}
+.crossroads-flow-traffic .flow-traffic-data li:first-child {
+  border-radius: 0.5rem;
+  background: #1e5f8d;
+}
+.crossroads-flow-traffic .flow-traffic-data li:not(:first-child) {
+  margin-top: 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e8e8e8;
+}
+.crossroads-flow-traffic .flow-traffic-data li em {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1rem 0;
+  line-height: normal;
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 600;
+}
+.crossroads-flow-traffic .flow-traffic-data li span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1.4rem 0;
+  line-height: normal;
+  font-size: 1.6rem;
+  color: #727272;
+  font-weight: 500;
+}
+
 /* 실시간 돌발 조회 */
 .real-time-outbreak-container {
   width: 100%;
