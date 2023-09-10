@@ -572,6 +572,21 @@
 .crossroads-flow-board .flow-stats-detail.reverse {
   border-bottom: 0;
 }
+.crossroads-flow-board .flow-stats-detail.reverse .arrow .flow-straight.strt::before {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.crossroads-flow-board .flow-stats-detail.reverse .arrow .flow-straight.in::before {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.crossroads-flow-board .flow-stats-detail.reverse .arrow .flow-straight.out::before {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 .crossroads-flow-board .flow-stats-detail.reverse .arrow .flow-turn.left::before {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
@@ -656,7 +671,7 @@
   background-position: 0 0;
   background-size: contain;
 }
-.crossroads-flow-board .flow-stats-detail .arrow button.flow-straight.up::before {
+.crossroads-flow-board .flow-stats-detail .arrow button.flow-straight.in::before {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);

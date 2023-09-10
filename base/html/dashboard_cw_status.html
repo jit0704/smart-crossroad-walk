@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Dashboard 횡단보도 현황</title>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <!-- includeHTML.js : 퍼블리싱 확인용 include -->
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" href="/base/css/common.css" />
+    <link rel="stylesheet" href="/base/css/is.css" />
+
+    <style>
+      /* 퍼블리싱 확인용 */
+      .dummy-img {
+        display: block;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- GNB -->
+      <nav class="gnb" include-html="/base/html/common/gnb.html"></nav>
+
+      <main class="ly-container">
+        <div class="ly-sub bg-gray">
+          <div class="dashboard-status cw">
+            <section class="dashboard-status-filter">
+              <span class="left">
+                <a href="#" class="btn-md2">현황</a>
+                <a href="#" class="btn-md2">교차로</a>
+                <a href="#" class="btn-md2 active">횡단보도</a>
+              </span>
+              <div class="right">
+                <div class="selectbox-wrap primary label-none">
+                  <select>
+                    <option value="">구역</option>
+                    <option value="">아이템1</option>
+                    <option value="">아이템2</option>
+                    <option value="">아이템3</option>
+                  </select>
+                </div>
+                <!-- //selectbox-wrap -->
+                <div class="selectbox-wrap primary label-none">
+                  <select>
+                    <option value="">지점</option>
+                    <option value="">아이템1</option>
+                    <option value="">아이템2</option>
+                    <option value="">아이템3</option>
+                  </select>
+                </div>
+                <!-- //selectbox-wrap -->
+              </div>
+            </section>
+            <!-- //dashboard-status-filter -->
+
+            <section class="dashboard-status-body">
+              <div class="dashboard-status-head">
+                <em>태릉입구역</em>
+                <span class="radio-txt3-wrap">
+                  <label class="radio-txt3">
+                    <input type="radio" name="week" checked />
+                    <em>전일</em>
+                  </label>
+                  <label class="radio-txt3">
+                    <input type="radio" name="week" />
+                    <em>전주</em>
+                  </label>
+                </span>
+              </div>
+              <!-- //dashboard-status-head -->
+
+              <article class="dashboard-status-content1">
+                <div class="item">
+                  <div class="left">
+                    <span class="tit"><em>A방면 횡단자 수</em> (-1일)</span>
+                    <em>10,000명</em>
+                    <div class="info-bind">
+                      <em class="info1">+ 10%</em>
+                      <em class="info2">-8일 : 8,000명</em>
+                    </div>
+                  </div>
+                  <div class="state-chart">
+                    <!-- 차트 사이즈 : 125(px) X 95(px) -->
+                    <img
+                      src="https://www.dummyimage.com/125x95/ddd/000.png&amp;text=Chart+Area"
+                      alt="퍼블리싱 확인용 더미 이미지"
+                      class="dummy-img"
+                    />
+                  </div>
+                </div>
+                <!-- //item -->
+                <div class="item">
+                  <div class="left">
+                    <span class="tit"><em>B방면 횡단자 수</em> (-1일)</span>
+                    <em>10,000명</em>
+                    <div class="info-bind">
+                      <em class="info1">+ 20%</em>
+                      <em class="info2">-8일 : 8,000명</em>
+                    </div>
+                  </div>
+                  <div class="state-chart">
+                    <!-- 차트 사이즈 : 125(px) X 95(px) -->
+                    <img
+                      src="https://www.dummyimage.com/125x95/ddd/000.png&amp;text=Chart+Area"
+                      alt="퍼블리싱 확인용 더미 이미지"
+                      class="dummy-img"
+                    />
+                  </div>
+                </div>
+                <!-- //item -->
+                <div class="item">
+                  <div class="left">
+                    <span class="tit"><em>무단횡단자 수</em> (-1일)</span>
+                    <em>10,000명</em>
+                    <div class="info-bind">
+                      <em class="info1">+ 10%</em>
+                      <em class="info2">-8일 : 9,000명</em>
+                    </div>
+                  </div>
+                  <div class="state-chart">
+                    <!-- 차트 사이즈 : 125(px) X 95(px) -->
+                    <img
+                      src="https://www.dummyimage.com/125x95/ddd/000.png&amp;text=Chart+Area"
+                      alt="퍼블리싱 확인용 더미 이미지"
+                      class="dummy-img"
+                    />
+                  </div>
+                </div>
+                <!-- //item -->
+                <div class="item">
+                  <div class="left">
+                    <span class="tit"><em>통과 차량 수</em> (-1일)</span>
+                    <em>100대</em>
+                    <div class="info-bind">
+                      <em class="info1">+ 10%</em>
+                      <em class="info2">-8일 : 90대</em>
+                    </div>
+                  </div>
+                  <div class="state-chart">
+                    <!-- 차트 사이즈 : 125(px) X 95(px) -->
+                    <img
+                      src="https://www.dummyimage.com/125x95/ddd/000.png&amp;text=Chart+Area"
+                      alt="퍼블리싱 확인용 더미 이미지"
+                      class="dummy-img"
+                    />
+                  </div>
+                </div>
+                <!-- //item -->
+                <div class="item">
+                  <div class="left">
+                    <span class="tit"><em>정지선 위반 차량 수</em> (-1일)</span>
+                    <em>100대</em>
+                    <div class="info-bind">
+                      <em class="info1">- 10%</em>
+                      <em class="info2">-8일 : 110대</em>
+                    </div>
+                  </div>
+                  <div class="state-chart">
+                    <!-- 차트 사이즈 : 125(px) X 95(px) -->
+                    <img
+                      src="https://www.dummyimage.com/125x95/ddd/000.png&amp;text=Chart+Area"
+                      alt="퍼블리싱 확인용 더미 이미지"
+                      class="dummy-img"
+                    />
+                  </div>
+                </div>
+                <!-- //item -->
+              </article>
+              <!-- //dashboard-status-content1 -->
+
+              <article class="dashboard-status-content2">
+                <div class="status-content2-1">
+                  <div class="status-content-hedaer">
+                    <em>실시간 보행 정보</em>
+                    <div class="right">
+                      <span class="radio-txt3-wrap">
+                        <label class="radio-txt3">
+                          <input type="radio" name="traffic" checked />
+                          <em>교통량</em>
+                        </label>
+                        <label class="radio-txt3">
+                          <input type="radio" name="traffic" />
+                          <em>속도</em>
+                        </label>
+                      </span>
+                      <!-- //radio-txt3-wrap -->
+                      <span class="radio-txt3-wrap">
+                        <label class="radio-txt3">
+                          <input type="radio" name="week2" checked />
+                          <em>전일</em>
+                        </label>
+                        <label class="radio-txt3">
+                          <input type="radio" name="week2" />
+                          <em>전주</em>
+                        </label>
+                      </span>
+                      <!-- //radio-txt3-wrap -->
+                    </div>
+                    <!-- //right -->
+                  </div>
+                  <!-- //status-content-hedaer -->
+                  <div class="status-chart">
+                    <span class="status-chart-date">2023. 08. 01 11:00~12:00</span>
+                    <div class="status-chart-bind">
+                      <!-- 차트 사이즈 : 828(px) X 195(px) -->
+                      <img
+                        src="https://www.dummyimage.com/828x195/ddd/000.png&amp;text=Chart+Area"
+                        alt="퍼블리싱 확인용 더미 이미지"
+                        class="dummy-img"
+                      />
+                    </div>
+                    <!-- //status-chart-bind -->
+                  </div>
+                  <!-- //status-chart -->
+                </div>
+                <!-- //status-content2-1 -->
+                <div class="status-content2-2">
+                  <div class="status-content-hedaer">
+                    <em>실시간 통행 정보</em>
+                    <div class="right">
+                      <span class="radio-txt3-wrap">
+                        <label class="radio-txt3">
+                          <input type="radio" name="traffic2" checked />
+                          <em>교통량</em>
+                        </label>
+                        <label class="radio-txt3">
+                          <input type="radio" name="traffic2" />
+                          <em>속도</em>
+                        </label>
+                      </span>
+                      <!-- //radio-txt3-wrap -->
+                      <span class="radio-txt3-wrap">
+                        <label class="radio-txt3">
+                          <input type="radio" name="week3" checked />
+                          <em>전일</em>
+                        </label>
+                        <label class="radio-txt3">
+                          <input type="radio" name="week3" />
+                          <em>전주</em>
+                        </label>
+                      </span>
+                      <!-- //radio-txt3-wrap -->
+                    </div>
+                    <!-- //right -->
+                  </div>
+                  <!-- //status-content-hedaer -->
+                  <div class="status-chart">
+                    <span class="status-chart-date">2023. 08. 01 11:00~12:00</span>
+                    <div class="status-chart-bind">
+                      <!-- 차트 사이즈 : 828(px) X 195(px) -->
+                      <img
+                        src="https://www.dummyimage.com/828x195/ddd/000.png&amp;text=Chart+Area"
+                        alt="퍼블리싱 확인용 더미 이미지"
+                        class="dummy-img"
+                      />
+                    </div>
+                    <!-- //status-chart-bind -->
+                  </div>
+                  <!-- //status-chart -->
+                </div>
+                <!-- //status-content2-2 -->
+              </article>
+              <!-- //dashboard-status-content2 -->
+
+              <article class="dashboard-status-content3">
+                <div class="status-content-hedaer2">
+                  <em>실시간 집계정보</em>
+                  <div class="bind">
+                    <label class="radio-txt2 rounded">
+                      <input type="radio" name="cw" checked />
+                      <span>횡단자</span>
+                    </label>
+                    <label class="radio-txt2 rounded">
+                      <input type="radio" name="cw" />
+                      <span>대기자</span>
+                    </label>
+                    <label class="radio-txt2 rounded">
+                      <input type="radio" name="cw" />
+                      <span>무단횡단자</span>
+                    </label>
+                    <label class="radio-txt2 rounded">
+                      <input type="radio" name="cw" />
+                      <span>통과 차량</span>
+                    </label>
+                    <label class="radio-txt2 rounded">
+                      <input type="radio" name="cw" />
+                      <span>정지선 위반 차량</span>
+                    </label>
+                  </div>
+                  <!-- //bind -->
+                </div>
+                <!-- //status-content-hedaer2 -->
+                <div class="status-chart">
+                  <span class="status-chart-date">2023. 08. 01 11:00~12:00</span>
+                  <div class="status-chart-bind">
+                    <!-- 차트 사이즈 : 100% X 195(px) -->
+                    <img
+                      src="https://www.dummyimage.com/1686x195/ddd/000.png&amp;text=Chart+Area"
+                      alt="퍼블리싱 확인용 더미 이미지"
+                      class="dummy-img"
+                    />
+                  </div>
+                  <!-- //status-chart-bind -->
+                </div>
+                <!-- //status-chart -->
+              </article>
+              <!-- //dashboard-status-content3 -->
+            </section>
+            <!-- //dashboard-status-body -->
+          </div>
+          <!-- //dashboard-status -->
+        </div>
+        <!-- //ly-sub -->
+      </main>
+      <!-- //ly-container -->
+
+      <footer class="ly-copyright c-white" include-html="/base/html/common/footer.html"></footer>
+    </div>
+    <!-- //wrapper -->
+  </body>
+</html>
