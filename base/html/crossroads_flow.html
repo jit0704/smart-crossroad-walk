@@ -91,27 +91,36 @@
                 <div class="crossroads-flow-board">
                   <em class="tit">태릉입구역</em>
                   <div class="flow-stats-wrap">
+                    <!-- 230913수정 : 
+                      <화살표 아이콘 색상 변경시 class명 참고>
+                        - 직선(위/아래) 화살표(블루) : active-blue
+                        - 직선(위/아래) 화살표(짙은회색) : active-darkgray
+                        - 좌/우회전                     : active
+                      <숫자 카운트 활성화 class명 참고>
+                        - active (짙은회색)
+                        - active-blue (블루)
+                    -->
                     <div class="flow-stats-top">
                       <div class="flow-stats-detail">
                         <span class="road-name"><em>도로명1</em></span>
                         <span class="arrow">
-                          <button type="button" class="flow-straight out"><b class="screen-out">유출</b></button>
-                          <button type="button" class="flow-straight in"><b class="screen-out">유입</b></button>
+                          <button type="button" class="flow-straight out active-blue"><b class="screen-out">유출</b></button>
+                          <button type="button" class="flow-straight in active-darkgray"><b class="screen-out">유입</b></button>
                         </span>
                         <!-- //arrow -->
                         <span class="num">
-                          <em>86,589</em>
+                          <em class="active-blue">86,589</em>
                           <em>102,174</em>
                         </span>
                         <!-- //num -->
                         <span class="arrow">
-                          <button type="button" class="flow-turn right"><b class="screen-out">우회전</b></button>
-                          <button type="button" class="flow-straight strt"><b class="screen-out">진입방향</b></button>
-                          <button type="button" class="flow-turn left"><b class="screen-out">좌회전</b></button>
+                          <button type="button" class="flow-turn right active"><b class="screen-out">우회전</b></button>
+                          <button type="button" class="flow-straight strt active-darkgray"><b class="screen-out">진입방향</b></button>
+                          <button type="button" class="flow-turn left active"><b class="screen-out">좌회전</b></button>
                         </span>
                         <!-- //arrow -->
                         <span class="num">
-                          <em>86,589</em>
+                          <em class="active">86,589</em>
                           <em>102,174</em>
                           <em>102,174</em>
                         </span>
@@ -226,7 +235,8 @@
                         <span>72,621</span>
                         <span>102,174</span>
                       </li>
-                      <li>
+                      <!-- 230913수정 active 클래스 추가시 column 활성화  -->
+                      <li class="active">
                         <span>도로명 2</span>
                         <span>7,528</span>
                         <span>22,025</span>

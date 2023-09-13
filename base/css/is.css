@@ -348,8 +348,6 @@
 .stats-container > section .chart-container {
   border-radius: 0.5rem;
   background: #fff;
-  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
-          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
 }
 .stats-container .divide-none .chart-container {
   height: 24.6rem;
@@ -670,6 +668,14 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.crossroads-flow-board .flow-stats-detail .arrow button.flow-straight.active-blue::before {
+  background-image: url(/base/images/arr_big_straight-down_blue.png);
+}
+.crossroads-flow-board .flow-stats-detail .arrow button.flow-straight.active-darkgray::before {
+  background-image: url(/base/images/arr_big_straight-down_darkgray.png);
 }
 .crossroads-flow-board .flow-stats-detail .arrow button.flow-straight.in::before {
   -webkit-transform: rotate(180deg);
@@ -701,6 +707,11 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.crossroads-flow-board .flow-stats-detail .arrow button.flow-turn.left.active::before {
+  background-image: url(/base/images/arr_big_left-turn_darkgray.png);
 }
 .crossroads-flow-board .flow-stats-detail .arrow button.flow-turn.right::before {
   content: "";
@@ -710,6 +721,11 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.crossroads-flow-board .flow-stats-detail .arrow button.flow-turn.right.active::before {
+  background-image: url(/base/images/arr_big_right-turn_darkgray.png);
 }
 .crossroads-flow-board .flow-stats-detail .num {
   display: -webkit-box;
@@ -740,6 +756,14 @@
 }
 .crossroads-flow-board .flow-stats-detail .num em:not(:first-child) {
   border-left: 1px solid #999999;
+}
+.crossroads-flow-board .flow-stats-detail .num em.active {
+  color: #727272;
+  font-weight: 700;
+}
+.crossroads-flow-board .flow-stats-detail .num em.active-blue {
+  color: #1e5f8d;
+  font-weight: 700;
 }
 .crossroads-flow-board .flow-stats-top .flow-stats-detail {
   margin: 0 auto;
@@ -846,6 +870,9 @@
   margin-top: 0.8rem;
   border-radius: 0.5rem;
   border: 1px solid #e8e8e8;
+}
+.crossroads-flow-traffic .flow-traffic-data li.active:not(:first-child) {
+  background: #f8f8f8;
 }
 .crossroads-flow-traffic .flow-traffic-data li em {
   -webkit-box-flex: 1;
@@ -1429,6 +1456,7 @@
 .crossroad-view-container .stats-tit-option .option-list {
   display: none;
   position: absolute;
+  z-index: 5;
   top: 2.6rem;
   right: 0.2rem;
   min-width: 10rem;
@@ -1538,8 +1566,6 @@
 }
 .crossroad-view-container .video-container,
 .crossroad-view-container .accidents-container {
-  overflow-y: auto !important;
-  height: calc(100vh - 200px) !important;
   padding-top: 4.3rem !important;
 }
 .crossroad-view-container .cr-camera-info {
@@ -1553,7 +1579,7 @@
 }
 .crossroad-view-container .cr-camera-view,
 .crossroad-view-container .license-plate-recognition {
-  padding: 3.2rem 3rem 3.5rem;
+  padding: 3.2rem 3rem 3.4rem;
 }
 .crossroad-view-container .cr-camera-view .tbl-custom-radio-container th,
 .crossroad-view-container .license-plate-recognition .tbl-custom-radio-container th {
@@ -2252,6 +2278,15 @@
   padding: 0.9rem 0;
 }
 
+/*---------------------------------------------------------------
+  [미디어 쿼리]
+-----------------------------------------------------------------*/
+@media screen and (max-height: 955px) {
+  /* 교차로 상세 > 돌발 탭 컨텐츠 */
+  .crossroad-view-container .accidents-list .data-tbl-gray.xs {
+    height: 33rem;
+  }
+}
 /* 미디어 쿼리 */
 @media screen and (max-height: 899px) {
   /* 교차로 통계 : scroll-y값 추가 */

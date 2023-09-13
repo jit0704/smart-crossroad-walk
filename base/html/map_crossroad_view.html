@@ -46,20 +46,46 @@
             <article class="stats-content">
               <!-- 각 도로의 프로그래스바 너비값은 inline style속성의 width값으로 조정. -->
               <div class="progress-bar">
+                <!-- 230913수정 : 데이터 없는 경우 -->
+                <!-- <span class="no-data" style="width: 100%">100%</span> -->
                 <span class="road1" style="width: 29%">29%</span>
                 <span class="road2" style="width: 25%">25%</span>
                 <span class="road3" style="width: 17%">17%</span>
-                <span class="road4" style="width: 29%">29%</span>
+                <span class="road4" style="width: 17%">17%</span>
+                <span class="road5" style="width: 15%">15%</span>
+                <span class="road6" style="width: 15%">15%</span>
               </div>
               <!-- //percent-bar -->
               <div class="progress-bar-legend">
                 <div>
-                  <span class="road1">도로1 000대 <em>29%</em></span>
-                  <span class="road2">도로2 000대 <em>25%</em></span>
+                  <span class="road1">
+                    <em class="txt">가산디지털1로</em>
+                    <em class="num">1,000대</em>
+                  </span>
+                  <span class="road2">
+                    <em class="txt">가산디지털1로가산디라</em>
+                    <em class="num">1,000대</em>
+                  </span>
                 </div>
                 <div>
-                  <span class="road3">도로3 000대 <em>17%</em></span>
-                  <span class="road4">도로4 000대 <em>29%</em></span>
+                  <span class="road3">
+                    <em class="txt">화랑로</em>
+                    <em class="num">1,000대</em>
+                  </span>
+                  <span class="road4">
+                    <em class="txt">가산디지털1로</em>
+                    <em class="num">1,000대</em>
+                  </span>
+                </div>
+                <div>
+                  <span class="road5">
+                    <em class="txt">봉화산로</em>
+                    <em class="num">1,000대</em>
+                  </span>
+                  <span class="road6">
+                    <em class="txt">가산디지털1로</em>
+                    <em class="num">1,000대</em>
+                  </span>
                 </div>
               </div>
               <!-- //progress-bar-legend -->
@@ -201,89 +227,16 @@
           <section class="cr-camera-view">
             <em class="tit">카메라 View</em>
 
-            <table class="tbl-custom-radio-container">
-              <colgroup>
-                <col style="width: 8rem" />
-                <col />
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th>전체</th>
-                  <td>
-                    <div class="custom-radio-rectangle-two">
-                      <label>
-                        <input type="radio" name="ch-all" />
-                        <span class="txt">분할 화면</span>
-                      </label>
-                      <label>
-                        <input type="radio" name="ch-all" />
-                        <span class="txt">지도 화면</span>
-                      </label>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>채널 1</th>
-                  <td>
-                    <div class="custom-radio-rectangle-two">
-                      <label>
-                        <input type="radio" name="ch-1" disabled />
-                        <span class="txt">보기</span>
-                      </label>
-                      <label>
-                        <input type="radio" name="ch-1" disabled />
-                        <span class="txt">숨기기</span>
-                      </label>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>채널 2</th>
-                  <td>
-                    <div class="custom-radio-rectangle-two">
-                      <label>
-                        <input type="radio" name="ch-2" />
-                        <span class="txt">보기</span>
-                      </label>
-                      <label>
-                        <input type="radio" name="ch-2" />
-                        <span class="txt">숨기기</span>
-                      </label>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>채널 3</th>
-                  <td>
-                    <div class="custom-radio-rectangle-two">
-                      <label>
-                        <input type="radio" name="ch-3" />
-                        <span class="txt">보기</span>
-                      </label>
-                      <label>
-                        <input type="radio" name="ch-3" />
-                        <span class="txt">숨기기</span>
-                      </label>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>채널 4</th>
-                  <td>
-                    <div class="custom-radio-rectangle-two">
-                      <label>
-                        <input type="radio" name="ch-4" />
-                        <span class="txt">보기</span>
-                      </label>
-                      <label>
-                        <input type="radio" name="ch-4" />
-                        <span class="txt">숨기기</span>
-                      </label>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="custom-radio-rectangle-two lg">
+              <label>
+                <input type="radio" name="ch-all" />
+                <span class="txt">분할 화면</span>
+              </label>
+              <label>
+                <input type="radio" name="ch-all" />
+                <span class="txt">지도 화면</span>
+              </label>
+            </div>
           </section>
           <!-- //cr-camera-view -->
 
@@ -331,11 +284,11 @@
                   <td>
                     <div class="custom-radio-rectangle-two">
                       <label>
-                        <input type="radio" name="ch2-3" />
+                        <input type="radio" name="ch2-3" disabled />
                         <span class="txt">보기</span>
                       </label>
                       <label>
-                        <input type="radio" name="ch2-3" />
+                        <input type="radio" name="ch2-3" disabled />
                         <span class="txt">숨기기</span>
                       </label>
                     </div>
@@ -366,9 +319,9 @@
           <section class="accidents-stats">
             <div class="tit-header">
               <em class="tit">돌발 통계</em>
-              <span class="right">
+              <!-- <span class="right">
                 <span class="time-analysis">분석시간 : 2023.05.01</span>
-              </span>
+              </span> -->
             </div>
             <!-- //tit-header -->
             <article class="accidents-stats-content">
@@ -552,6 +505,15 @@
           <i class="ico-los-ff" style="top: 10px; left: 860px"><span class="screen-out">FF등급</span></i>
           <i class="ico-los-fff" style="top: 10px; left: 920px"><span class="screen-out">FFF등급</span></i>
 
+          <!-- 차량신호 아이콘 -->
+          <i class="ico-vehicle-signal red" style="top: 100px; left: 500px"><span class="screen-out">빨간불</span></i>
+          <i class="ico-vehicle-signal red-yellow" style="top: 150px; left: 500px"><span class="screen-out">빨간불/노란불</span></i>
+          <i class="ico-vehicle-signal red-turnleft" style="top: 200px; left: 500px"><span class="screen-out">빨간불/좌회전</span></i>
+          <i class="ico-vehicle-signal yellow" style="top: 100px; left: 600px"><span class="screen-out">노란불</span></i>
+          <i class="ico-vehicle-signal turnleft" style="top: 100px; left: 700px"><span class="screen-out">좌회전</span></i>
+          <i class="ico-vehicle-signal turnleft-green" style="top: 150px; left: 700px"><span class="screen-out">좌회전/초록불</span></i>
+          <i class="ico-vehicle-signal green" style="top: 100px; left: 800px"><span class="screen-out">초록불</span></i>
+
           <!-- 카메라 아이콘:
               - data-target 속성의 값과 카메라 팝업의 id값이 일치해야 팝업이 노출됩니다.
               - style 속성의 left, top값으로 지도 위에 좌표값 설정.
@@ -580,7 +542,15 @@
             <!-- //camera-popup-content -->
             <div class="camera-popup-bottom">
               <div class="bot-info1">
-                <span class="tit"><em>000대로</em> 북동 방향</span>
+                <!-- <span class="tit"><em>000대로</em> 북동 방향</span> -->
+                <!-- 230913수정 : 도로 2개 이상일 경우 노출 -->
+                <div class="selectbox-wrap xs">
+                  <select>
+                    <option value="">000대로 남동 대로</option>
+                    <option value="">000대로 남동 대로</option>
+                    <option value="">000대로 남동 대로</option>
+                  </select>
+                </div>
                 <div class="right">
                   <span>12:00:00 부터</span>
                   <button type="button" class="ico-refresh"><span class="screen-out">새로 고침</span></button>

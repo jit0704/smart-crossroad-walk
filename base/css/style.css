@@ -567,6 +567,65 @@ body ::-webkit-scrollbar-track {
   background-position: 0 0;
   background-size: contain;
 }
+.ico-vehicle-signal {
+  display: inline-block;
+}
+.ico-vehicle-signal.red {
+  width: 9.9rem;
+  height: 3rem;
+  background-image: url("/base/images//vehicle-signal/signal_red.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-vehicle-signal.red-yellow {
+  width: 9.9rem;
+  height: 3rem;
+  background-image: url("/base/images//vehicle-signal/signal_red_yellow.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-vehicle-signal.red-turnleft {
+  width: 9.9rem;
+  height: 3rem;
+  background-image: url("/base/images//vehicle-signal/signal_red_turnleft.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-vehicle-signal.yellow {
+  width: 9.9rem;
+  height: 3rem;
+  background-image: url("/base/images//vehicle-signal/signal_yellow.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-vehicle-signal.turnleft {
+  width: 9.9rem;
+  height: 3rem;
+  background-image: url("/base/images//vehicle-signal/signal_turnleft.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-vehicle-signal.turnleft-green {
+  width: 9.9rem;
+  height: 3rem;
+  background-image: url("/base/images//vehicle-signal/signal_turnleft_green.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-vehicle-signal.green {
+  width: 9.9rem;
+  height: 3rem;
+  background-image: url("/base/images//vehicle-signal/signal_green.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
 
 .txt-badge {
   padding: 0.5rem 0.6rem;
@@ -1537,6 +1596,9 @@ body ::-webkit-scrollbar-track {
   -ms-flex-line-pack: center;
       align-content: center;
 }
+.custom-radio-rectangle-two.lg label .txt {
+  line-height: 3.3rem;
+}
 .custom-radio-rectangle-two label {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -2309,6 +2371,10 @@ body ::-webkit-scrollbar-track {
   color: #fff;
   text-align: center;
 }
+.progress-bar .no-data {
+  color: #999999;
+  background: #e8e8e8;
+}
 .progress-bar .road1 {
   background: #a6a6a6;
 }
@@ -2320,6 +2386,12 @@ body ::-webkit-scrollbar-track {
 }
 .progress-bar .road4 {
   background: #ffd056;
+}
+.progress-bar .road5 {
+  background: #36ebca;
+}
+.progress-bar .road6 {
+  background: #3673eb;
 }
 .progress-bar-legend div {
   display: -webkit-box;
@@ -2337,12 +2409,15 @@ body ::-webkit-scrollbar-track {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding-right: 1.5rem;
+  gap: 0 1.21rem;
 }
 .progress-bar-legend div + div {
-  margin-top: 0.7rem;
+  margin-top: 0.6rem;
 }
 .progress-bar-legend div span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2358,8 +2433,8 @@ body ::-webkit-scrollbar-track {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  gap: 0 0.6rem;
-  font-size: 1.4rem;
+  gap: 0 0.4rem;
+  font-size: 1.2rem;
   color: #727272;
 }
 .progress-bar-legend div span::before {
@@ -2369,8 +2444,17 @@ body ::-webkit-scrollbar-track {
   height: 1.18rem;
   border-radius: 100%;
 }
-.progress-bar-legend div span em {
-  font-weight: 700;
+.progress-bar-legend div span .txt {
+  width: 10.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+.progress-bar-legend div span .num {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 .progress-bar-legend div .road1::before {
   background: #a6a6a6;
@@ -2383,6 +2467,12 @@ body ::-webkit-scrollbar-track {
 }
 .progress-bar-legend div .road4::before {
   background: #ffd056;
+}
+.progress-bar-legend div .road5::before {
+  background: #36ebca;
+}
+.progress-bar-legend div .road6::before {
+  background: #3673eb;
 }
 
 /* 그레이 라인 박스 */
@@ -3308,6 +3398,17 @@ body ::-webkit-scrollbar-track {
 .camera-popup-bottom .bot-info1 .tit em {
   font-weight: 600;
 }
+.camera-popup-bottom .bot-info1 .selectbox-wrap.xs select {
+  min-width: 13rem;
+  padding: 0.2rem 2.5rem 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+  border-color: #fff;
+  color: #fff;
+  background-image: url(/base/images/arr_down_white.png);
+}
+.camera-popup-bottom .bot-info1 .selectbox-wrap.xs select option {
+  color: #3d3d3d;
+}
 .camera-popup-bottom .bot-info1 .right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4089,6 +4190,10 @@ body ::-webkit-scrollbar-track {
           transform: rotate(80deg);
 }
 .ly-map [class*=ico-los] {
+  position: absolute;
+  z-index: 1;
+}
+.ly-map .ico-vehicle-signal {
   position: absolute;
   z-index: 1;
 }
