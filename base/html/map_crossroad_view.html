@@ -855,7 +855,7 @@
           $popup.fadeIn(250).css({
             top: $top + $icoH + 'px',
             left: $left + $icoW + 'px',
-            marginTop: '-145px',
+            transform: 'translateY(-145px)', // 230914 수정
           });
         }
       });
@@ -867,22 +867,54 @@
         $thisCameraPopup.fadeOut(150);
       });
 
-      // 차종별 토글 버튼
+      // 230914 수정 : 차종별 토글 버튼
       $('.btn-model').on('click', function () {
         var $this = $(this);
-        var $modelTraffic = $this.closest('.camera-popup').find('.model-traffic');
+        var $parent = $this.closest('.camera-popup');
+        var $modelTraffic = $parent.find('.model-traffic');
+        var $modelTrafficH = $modelTraffic.height();
         $this.toggleClass('active');
         if ($this.is('.active')) {
           $modelTraffic.fadeIn(200);
+          $parent.find('.ui-resizable-e').css('height', `calc(100% + ${$modelTrafficH}px)`);
+          $parent.find('.ui-resizable-s').css('bottom', -$modelTrafficH);
+          $parent.find('.ui-resizable-se').css('bottom', -$modelTrafficH);
         } else {
           $modelTraffic.fadeOut(200);
+          $parent.find('.ui-resizable-e').css('height', '100%');
+          $parent.find('.ui-resizable-s').css('bottom', '-5px');
+          $parent.find('.ui-resizable-se').css('bottom', '1px');
         }
       });
 
-      // 카메라 팝업 드래그 이벤트 기능
+      // 230914 추가 : 리사이징 이벤트 기능
+      $('.camera-popup').resizable({
+        maxWidth: 800,
+        maxHeight: 772,
+        minWidth: 300,
+        minHeight: 272,
+        aspectRatio: 8 / 7,
+      });
+
+      // 230914 수정 : 카메라 팝업 드래그 이벤트 기능
       $('.camera-popup').draggable({
         containment: '.ly-map',
+        scroll: false,
+        drag: function () {
+          var $this = $(this);
+          $this.css('transform', 'translateY(0)'); // 드래그시 최초 css로 설정한 transform 속성값을 0으로 변경
+          $('body').addClass('ov-hide'); // 리사이징 때문에 생긴 side effect 부분 보완
+        },
         stop: function () {
+          var $draggable = $(this); // 현재 팝업 요소
+          var offset = $draggable.offset(); // 팝업의 현재 오프셋 위치
+          var viewportWidth = $(window).width(); // 뷰포트 너비
+          var elementWidth = $draggable.width(); // 요소의 너비
+          // 팝업이 뷰포트 오른쪽 가장자리에 있는지 확인
+          if (!(offset.left + elementWidth >= viewportWidth - 23)) {
+            $('body').removeClass('ov-hide');
+          }
+
           // 카메라 아이콘의 data-camera-popup-pos 속성을 생성 후 팝업의 좌표값 저장
           var $cameraPopupStyle = $(this).attr('style');
           var $dataTarget = $(this).attr('id');

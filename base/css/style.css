@@ -172,6 +172,10 @@ body ::-webkit-scrollbar-track {
   text-indent: -9999px;
 }
 
+.ov-hide {
+  overflow: hidden;
+}
+
 .txt-center {
   text-align: center !important;
 }
@@ -3513,6 +3517,9 @@ body ::-webkit-scrollbar-track {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+.camera-popup .ui-resizable-handle.ui-resizable-se {
+  cursor: se-resize;
 }
 
 .model-traffic {
