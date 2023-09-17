@@ -69,6 +69,18 @@
                     <input type="date" class="input-date" data-end="date-end" />
                   </div>
                   <!-- //date-group -->
+
+                  <div class="ui checkbox primary-chkbox md c-bluesky">
+                    <input id="chk1" type="checkbox" />
+                    <label for="chk1">주말 제외</label>
+                  </div>
+                  <!-- //checkbox -->
+                  <div class="ui checkbox primary-chkbox md c-bluesky">
+                    <input id="chk2" type="checkbox" />
+                    <label for="chk2">공휴일 제외</label>
+                  </div>
+                  <!-- //checkbox -->
+
                   <button class="btn-data-search">검색</button>
                 </div>
                 <!-- //inner -->
@@ -88,7 +100,8 @@
                       <em class="tit">평균 속도</em>
                       <p class="clearly"><em>25.23</em> km/h</p>
                     </li>
-                    <li>
+                    <!-- 230916 수정 : li에 클래스명 추가 및 테이블 수정 -->
+                    <li class="traffic-direction">
                       <em class="tit">방향 별 교통량</em>
                       <div class="tbl-bind">
                         <table>
@@ -98,20 +111,20 @@
                           </colgroup>
                           <tbody>
                             <tr>
-                              <th>도로명1(동)</th>
-                              <td><em>555</em> 대</td>
+                              <th><span>도로명도로명도로명도</span></th>
+                              <td><span>(북동)</span><em>20,555</em> 대</td>
                             </tr>
                             <tr>
-                              <th>도로명2(서)</th>
-                              <td><em>555</em> 대</td>
+                              <th><span>가산디지털1로</span></th>
+                              <td><span>(동)</span><em>1,555</em> 대</td>
                             </tr>
                             <tr>
-                              <th>도로명3(남)</th>
-                              <td><em>10,000</em> 대</td>
+                              <th><span>화랑로</span></th>
+                              <td><span>(남)</span><em>65</em> 대</td>
                             </tr>
                             <tr>
-                              <th>도로명4(북)</th>
-                              <td><em>4</em> 대</td>
+                              <th><span>도로명도로명</span></th>
+                              <td><span>(북)</span><em>20,555</em> 대</td>
                             </tr>
                           </tbody>
                         </table>
