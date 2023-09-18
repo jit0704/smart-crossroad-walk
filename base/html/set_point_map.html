@@ -69,7 +69,8 @@
 
           <!-- 시스템 네비게이션 -->
           <div class="system-nav">
-            <button type="button" class="ico-hand"><span class="screen-out">손모양 아이콘</span></button>
+            <!-- 230918 손모양 버튼 삭제 -->
+            <!-- <button type="button" class="ico-hand"><span class="screen-out">손모양 아이콘</span></button> -->
             <button type="button" class="ico-set-branch"><span class="screen-out">지점 아이콘</span></button>
             <button type="button" class="ico-set-cw"><span class="screen-out">횡단보도 아이콘</span></button>
           </div>
@@ -157,7 +158,7 @@
           $this.toggleClass('active');
           $('.system-nav button').not(this).removeClass('active');
 
-          systemNavState($this, '.ico-hand.active', 'ico-hand-active');
+          // systemNavState($this, '.ico-hand.active', 'ico-hand-active'); 230918 삭제
           systemNavState($this, '.ico-set-branch.active', 'ico-set-branch-active');
           systemNavState($this, '.ico-set-cw.active', 'ico-set-cw-active');
           // 지점 추가 메뉴 팝업 숨김
@@ -170,8 +171,8 @@
           var x = e.clientX - $(this).offset().left;
           var y = e.clientY - $(this).offset().top;
           $speechBubble.css({
-            left: x - 10,
-            top: y - 85,
+            left: x - 20,
+            top: y - 115,
           });
         });
 

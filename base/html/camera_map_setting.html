@@ -53,7 +53,8 @@
 
           <!-- 시스템 네비게이션 -->
           <div class="system-nav">
-            <button type="button" class="ico-hand"><span class="screen-out">손모양 아이콘</span></button>
+            <!-- 230918 손모양 버튼 삭제 -->
+            <!-- <button type="button" class="ico-hand"><span class="screen-out">손모양 아이콘</span></button> -->
             <button type="button" class="ico-set-camera"><span class="screen-out">지점 아이콘</span></button>
           </div>
 
@@ -84,19 +85,20 @@
           </div>
           <!-- //menu-popup -->
 
-          <i class="ico-map-above-camera left js-no-dimed-popup-call" data-target="crosswalk-popup" style="left: 717px; top: 555px">
+          <!-- 230918 카메라 아이콘의 left, top, right, bottom 클래스 삭제 -->
+          <i class="ico-map-above-camera js-no-dimed-popup-call" data-target="crosswalk-popup" style="left: 717px; top: 555px">
             <span class="screen-out">좌측 카메라</span>
           </i>
 
-          <i class="ico-map-above-camera top js-no-dimed-popup-call" data-target="crosswalk-popup" style="left: 818px; top: 440px">
+          <i class="ico-map-above-camera js-no-dimed-popup-call" data-target="crosswalk-popup" style="left: 818px; top: 440px">
             <span class="screen-out">상단 카메라</span>
           </i>
 
-          <i class="ico-map-above-camera right js-no-dimed-popup-call" data-target="crosswalk-popup" style="left: 954px; top: 543px">
+          <i class="ico-map-above-camera js-no-dimed-popup-call" data-target="crosswalk-popup" style="left: 954px; top: 543px">
             <span class="screen-out">우측 카메라</span>
           </i>
 
-          <i class="ico-map-above-camera bottom js-no-dimed-popup-call" data-target="crosswalk-popup" style="left: 820px; top: 700px">
+          <i class="ico-map-above-camera js-no-dimed-popup-call" data-target="crosswalk-popup" style="left: 820px; top: 700px">
             <span class="screen-out">하단 카메라</span>
           </i>
         </div>
@@ -132,7 +134,7 @@
           $this.toggleClass('active');
           $('.system-nav button').not(this).removeClass('active');
 
-          systemNavState($this, '.ico-hand.active', 'ico-hand-active');
+          // systemNavState($this, '.ico-hand.active', 'ico-hand-active'); 230918 삭제
           systemNavState($this, '.ico-set-camera.active', 'ico-set-camera-active');
           // 지점 추가 메뉴 팝업 숨김
           $('.js-add-branch').fadeOut(200);

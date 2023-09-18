@@ -354,8 +354,8 @@ body ::-webkit-scrollbar-track {
 }
 .ico-camera {
   display: inline-block;
-  width: 4rem;
-  height: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
   background-image: url("/base/images/icon_camera.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -443,9 +443,9 @@ body ::-webkit-scrollbar-track {
 }
 .ico-map-above-camera {
   display: inline-block;
-  width: 4rem;
-  height: 4rem;
-  background-image: url("/base/images/icon_camera2.png");
+  width: 3.5rem;
+  height: 3.5rem;
+  background-image: url("/base/images/icon_camera.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -4131,7 +4131,7 @@ body ::-webkit-scrollbar-track {
   -ms-flex-line-pack: center;
       align-content: center;
   width: 4.4rem;
-  height: 16.2rem;
+  height: 10.6rem;
   position: absolute;
   top: 50%;
   right: 1.9rem;
@@ -4193,7 +4193,8 @@ body ::-webkit-scrollbar-track {
   display: block;
 }
 .ly-map.camera-map .system-nav {
-  height: 10rem;
+  width: 3.9rem;
+  height: 5rem;
   margin-top: -5rem;
 }
 .ly-map.camera-map .ico-map-above-camera {
@@ -4202,26 +4203,6 @@ body ::-webkit-scrollbar-track {
 }
 .ly-map.camera-map .ico-map-above-camera.moving {
   cursor: move;
-}
-.ly-map.camera-map .ico-map-above-camera.left {
-  -webkit-transform: scaleX(-1) rotate(60deg);
-      -ms-transform: scaleX(-1) rotate(60deg);
-          transform: scaleX(-1) rotate(60deg);
-}
-.ly-map.camera-map .ico-map-above-camera.top {
-  -webkit-transform: rotate(-105deg);
-      -ms-transform: rotate(-105deg);
-          transform: rotate(-105deg);
-}
-.ly-map.camera-map .ico-map-above-camera.right {
-  -webkit-transform: rotate(-20deg);
-      -ms-transform: rotate(-20deg);
-          transform: rotate(-20deg);
-}
-.ly-map.camera-map .ico-map-above-camera.bottom {
-  -webkit-transform: rotate(80deg);
-      -ms-transform: rotate(80deg);
-          transform: rotate(80deg);
 }
 .ly-map [class*=ico-los] {
   position: absolute;
@@ -4578,16 +4559,38 @@ body ::-webkit-scrollbar-track {
   margin-bottom: 2.15rem;
   padding: 0 0 0 1.6rem;
 }
-.gnb .aside .btn-bell.active::after {
+.gnb .aside .btn-bell::after {
   content: "";
   position: absolute;
   top: 0;
   left: 2.7rem;
+}
+.gnb .aside .btn-bell.outbreak-active::after {
   content: "";
   display: block;
   width: 1.6rem;
   height: 1.6rem;
   background-image: url("/base/images/icon_triangle_exclamation_red2.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.gnb .aside .btn-bell.hindrance-active::after {
+  content: "";
+  display: block;
+  width: 1.7rem;
+  height: 1.5rem;
+  background-image: url("/base/images/icon_triangle_exclamation3.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.gnb .aside .btn-bell.outbreak-hindrance::after {
+  content: "";
+  display: block;
+  width: 2.3rem;
+  height: 1.4rem;
+  background-image: url("/base/images/icon_triangle_exclamation4.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -4603,25 +4606,29 @@ body ::-webkit-scrollbar-track {
   background-size: contain;
   margin-right: 1.65rem;
 }
+.gnb .aside .btn-bell:hover {
+  color: #ffe298;
+}
+.gnb .aside .btn-bell:hover::before {
+  background-image: url(/base/images/icon_noti_yellow.png);
+}
 .gnb .aside .btn-m {
   padding: 0 0 0 1.45rem;
 }
-.gnb .aside .btn-m::before {
-  content: "";
-  display: block;
+.gnb .aside .btn-m i {
   width: 2.5rem;
   height: 2.5rem;
-  background-image: url("/base/images/icon_m.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: contain;
+  line-height: 2.5rem;
   margin-right: 1.45rem;
+  font-size: 1.6rem;
+  border-radius: 100%;
+  border: 1px solid #fff;
 }
 .gnb .aside .btn-m.active, .gnb .aside .btn-m:hover {
   color: #ffe298;
 }
-.gnb .aside .btn-m.active::before, .gnb .aside .btn-m:hover::before {
-  background-image: url(/base/images/icon_m_yellow.png);
+.gnb .aside .btn-m.active i, .gnb .aside .btn-m:hover i {
+  border-color: #ffe298;
 }
 .gnb .aside .current-time {
   margin: 2.3rem 0 3.6rem;
@@ -4671,15 +4678,16 @@ body ::-webkit-scrollbar-track {
   gap: 0 1.45rem;
   border-bottom: 1px solid #5b87a7;
 }
-.gnb .aside .pop-user-info .tit::before {
-  content: "";
+.gnb .aside .pop-user-info .tit i {
   width: 2.5rem;
   height: 2.5rem;
-  background-image: url("/base/images/icon_m_bg_yellow.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: contain;
+  line-height: 2.5rem;
   margin-left: 1.45rem;
+  font-size: 1.6rem;
+  color: #0f3f62;
+  text-align: center;
+  border-radius: 100%;
+  background: #ffe298;
 }
 .gnb .aside .pop-user-info .user-edit {
   gap: 0 1.9rem;
@@ -4886,8 +4894,10 @@ body ::-webkit-scrollbar-track {
   font-size: 1.4rem;
   color: #7c7c7c;
   text-align: left;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
-.search-view-header .control-box .bind-choice .btn-custom-wrap .depth1 button.active {
+.search-view-header .control-box .bind-choice .btn-custom-wrap .depth1 button:hover, .search-view-header .control-box .bind-choice .btn-custom-wrap .depth1 button.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4907,7 +4917,7 @@ body ::-webkit-scrollbar-track {
   font-weight: 600;
   background: #ebf8ff;
 }
-.search-view-header .control-box .bind-choice .btn-custom-wrap .depth1 button.active::after {
+.search-view-header .control-box .bind-choice .btn-custom-wrap .depth1 button:hover::after, .search-view-header .control-box .bind-choice .btn-custom-wrap .depth1 button.active::after {
   content: "";
   width: 0.6rem;
   height: 1.2rem;

@@ -148,15 +148,27 @@
 </div>
 <!-- //menu -->
 <aside class="aside">
-  <!-- active 클래스 추가시 red아이콘 표시 -->
-  <button type="button" class="btn-bell active">알림</button>
-  <button type="button" class="btn-m">계정설정</button>
+  <!-- 230918 아이콘 수정
+              돌발 : outbreak-active 클래스 추가
+              장애 : hindrance-active 클래스 추가
+              돌발/장애 : outbreak-hindrance 클래스 추가
+  -->
+  <button type="button" class="btn-bell outbreak-active">알림</button>
+  <!-- 230918 계정설정 버튼 수정 -->
+  <button type="button" class="btn-m">
+    <i>M</i>
+    <span>계정설정</span>
+  </button>
   <div class="current-time">
     <span>23. 05. 01</span>
     <span>11:09:22</span>
   </div>
+  <!-- 230918 계정설정 팝업 수정 -->
   <div class="pop-user-info">
-    <em class="tit">Manager</em>
+    <em class="tit">
+      <i>M</i>
+      <span>Manager</span>
+    </em>
     <a href="#" class="user-edit">프로필 수정</a>
     <a href="#" class="user-logout">로그아웃</a>
   </div>

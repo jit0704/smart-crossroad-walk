@@ -254,12 +254,14 @@
           box-sizing: border-box;
 }
 .main-stats-container .summary-info-chart .road-sort {
-  margin: 4.7rem 0.5rem 0 0;
+  margin: 4.7rem 0.9rem 0 0;
 }
 .main-stats-container .summary-info-chart .road-sort button {
   display: block;
-  width: 11.5rem;
-  font-size: 1.6rem;
+  width: 10.5rem;
+  padding: 0;
+  line-height: 2.3rem;
+  font-size: 1.4rem;
   color: #727272;
   border-radius: 0.5rem;
   border: 1px solid #cbcbcb;
