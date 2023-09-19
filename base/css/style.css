@@ -1059,26 +1059,41 @@ body ::-webkit-scrollbar-track {
   width: 12.4rem;
 }
 
-.ui .slider-switch {
+.slider-switch {
   position: relative;
   display: inline-block;
   width: 2.7rem;
   height: 1.4rem;
 }
-.ui .slider-switch input {
+.slider-switch.lg {
+  width: 4.2rem;
+  height: 2.23rem;
+}
+.slider-switch.lg input:checked + .slider::before {
+  -webkit-transform: translateX(1.8rem);
+      -ms-transform: translateX(1.8rem);
+          transform: translateX(1.8rem);
+}
+.slider-switch.lg .slider::before {
+  width: 1.6rem;
+  height: 1.6rem;
+  left: 0.4rem;
+  bottom: 0.3rem;
+}
+.slider-switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-.ui .slider-switch input:checked + .slider {
+.slider-switch input:checked + .slider {
   background: #1e5f8d;
 }
-.ui .slider-switch input:checked + .slider::before {
+.slider-switch input:checked + .slider::before {
   -webkit-transform: translateX(1.2rem);
       -ms-transform: translateX(1.2rem);
           transform: translateX(1.2rem);
 }
-.ui .slider-switch .slider {
+.slider-switch .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -1090,7 +1105,7 @@ body ::-webkit-scrollbar-track {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.ui .slider-switch .slider::before {
+.slider-switch .slider::before {
   position: absolute;
   content: "";
   width: 1rem;
@@ -1102,6 +1117,7 @@ body ::-webkit-scrollbar-track {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 .ui.basic.table {
   line-height: 100%;
 }
@@ -2902,6 +2918,49 @@ body ::-webkit-scrollbar-track {
   background: transparent;
 }
 
+.modal-noti-wrap .noti-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 1.5rem;
+  margin: 2.98rem 0 3.58rem 3rem;
+}
+.modal-noti-wrap .noti-control > em {
+  font-size: 2rem;
+  color: #727272;
+  font-weight: 700;
+}
+.modal-noti-wrap .modal-body-sub-tit {
+  margin: 0 3rem;
+  padding: 0;
+}
+.modal-noti-wrap div.data-tbl {
+  margin: 2rem 3rem 0;
+  padding: 0 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e8e8e8;
+}
+.modal-noti-wrap div.data-tbl table th {
+  height: 4.1rem;
+  padding: 0;
+}
+.modal-noti-wrap div.data-tbl table td {
+  height: 4.1rem;
+  padding: 0;
+  text-align: right;
+}
 .modal.expend {
   width: 129rem;
   height: 75rem;
@@ -2949,6 +3008,9 @@ body ::-webkit-scrollbar-track {
   border-radius: 0.5rem;
   -webkit-box-shadow: 0.4rem 0.4rem 1.2rem 0rem rgba(0, 0, 0, 0.1);
           box-shadow: 0.4rem 0.4rem 1.2rem 0rem rgba(0, 0, 0, 0.1);
+}
+.modal-container.w427 {
+  width: 42.7rem;
 }
 .modal-container.w466 {
   width: 46.6rem;
@@ -3849,7 +3911,7 @@ body ::-webkit-scrollbar-track {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 14;
+  z-index: 10;
   overflow: hidden;
   width: 28.1rem;
   height: 21.7rem;
@@ -3929,6 +3991,53 @@ body ::-webkit-scrollbar-track {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 1rem 1rem;
+}
+
+/* 각도조정 팝업 */
+.angle-adjust-popup {
+  position: absolute;
+  z-index: 1;
+  width: 19.6rem;
+  padding: 2rem 2rem 2.2rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.angle-adjust-popup .btn-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.angle-adjust-popup > dl {
+  line-height: normal;
+  text-align: center;
+}
+.angle-adjust-popup > dl dt {
+  font-size: 1.6rem;
+  color: #1e5f8d;
+  font-weight: 700;
+}
+.angle-adjust-popup > dl dd {
+  padding: 1rem 0 1.5rem;
+}
+.angle-adjust-popup > dl dd p {
+  margin-bottom: 0.4rem;
+  font-size: 1.4rem;
+  color: #727272;
+  letter-spacing: -0.028rem;
+}
+.angle-adjust-popup > dl dd span {
+  display: block;
+  font-size: 1.2rem;
+  color: #999999;
+}
+.angle-adjust-container {
+  width: 12.5rem;
+  height: 12.5rem;
+  margin: 0 auto;
 }
 
 /*---------------------------------------------------------------
@@ -6077,6 +6186,9 @@ body ::-webkit-scrollbar-track {
       align-content: center;
   gap: 0 1rem;
   margin-bottom: 0.7rem;
+}
+.dashboard-status-content1.size4 .item .state-chart {
+  width: 16rem;
 }
 .dashboard-status-content1 .item {
   -webkit-box-flex: 1;
