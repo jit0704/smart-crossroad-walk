@@ -1146,6 +1146,7 @@ body ::-webkit-scrollbar-track {
   height: 2.34rem;
   padding: 0 !important;
   line-height: 100%;
+  border-bottom: 0;
 }
 .ui.basic.table.is-data-grid thead tr:first-child th {
   font-size: 1.4rem;
@@ -1158,6 +1159,9 @@ body ::-webkit-scrollbar-track {
   line-height: 1.32rem;
   font-size: 1.2rem;
   color: #727272;
+}
+.ui.basic.table.is-data-grid tbody td:first-child {
+  border-top: 1px solid #e8e8e8;
 }
 .ui.basic.table.is-data-grid tbody td:last-child {
   padding-right: 1.2rem !important;
