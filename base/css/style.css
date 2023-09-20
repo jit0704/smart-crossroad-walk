@@ -1166,7 +1166,7 @@ body ::-webkit-scrollbar-track {
   border-top: 1px solid #e8e8e8;
 }
 .ui.basic.table.is-data-grid tbody td.model {
-  color: #1e5f8d;
+  color: #0c69ad;
 }
 .ui.basic.table thead th {
   padding: 1.2rem 0 !important;
@@ -4124,20 +4124,6 @@ body ::-webkit-scrollbar-track {
 .wrapper {
   min-height: 100%;
 }
-.wrapper.is-search-view.is-fold .search-view-container {
-  left: -29.6rem;
-}
-.wrapper.is-search-view.is-fold .search-view-container .btn-search-view::before {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-.wrapper.is-search-view.is-fold .ly-map {
-  margin-left: 5.4rem;
-}
-.wrapper.is-search-view.is-fold.is-hover .search-view-container {
-  left: -17.1rem;
-}
 
 .ly-container {
   display: -webkit-box;
@@ -4664,7 +4650,9 @@ body ::-webkit-scrollbar-track {
   color: #fff;
 }
 .gnb .aside .btn-bell {
-  position: relative;
+  position: absolute;
+  left: 0;
+  bottom: 11.4rem;
   margin-bottom: 2.15rem;
   padding: 0 0 0 1.6rem;
 }
@@ -4722,6 +4710,9 @@ body ::-webkit-scrollbar-track {
   background-image: url(/base/images/icon_noti_yellow.png);
 }
 .gnb .aside .btn-m {
+  position: absolute;
+  left: 0;
+  bottom: 8.8rem;
   padding: 0 0 0 1.45rem;
 }
 .gnb .aside .btn-m i {
@@ -4849,10 +4840,11 @@ body ::-webkit-scrollbar-track {
   width: 35rem;
   height: calc(100% - 2rem);
   background: #fff;
-  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
-  -webkit-transition: left 0.2s;
-  transition: left 0.2s;
+  -webkit-box-shadow: 2px -4px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px -4px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.search-view-container.is-gnb-open {
+  left: 18rem;
 }
 .search-view-container.is-result .search-view-header {
   padding-bottom: 0;
