@@ -817,6 +817,13 @@
       // 탭 퍼블리싱 확인용
       $('.crossroad-view-container .menu .item').tab();
 
+      // 230921 추가 : 상세화면 데이터 영역 x축으로 늘리는 기능
+      $('.crossroad-view-container').resizable({
+        handles: 'e',
+        minWidth: 422,
+        maxWidth: 572,
+      });
+
       // 통계 탭 > 타이틀(평균 속도 / LOS 등급)버튼 클릭 이벤트
       $('.stats-tit-option-bind .ico-up-boxgray').on('click', function () {
         var $optionList = $(this).parent().find('.option-list');

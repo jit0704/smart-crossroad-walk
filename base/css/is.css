@@ -15,7 +15,8 @@
   margin-left: 5.4rem;
 }
 .wrapper.is-crossroad-view.is-fold.is-hover .crossroad-view-container {
-  left: -24.3rem;
+  left: -24.3rem !important;
+  width: 42.2rem !important;
 }
 .wrapper.is-roi-view.is-fold .roi-view-container {
   left: -36.8rem;
@@ -1570,6 +1571,12 @@
 .crossroad-view-container .progress-bar {
   margin-bottom: 1.4rem;
 }
+.crossroad-view-container .chart-container img,
+.crossroad-view-container .chart-container figure {
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
 .crossroad-view-container .chart-container .dummy-img {
   display: block;
 }
@@ -1662,6 +1669,9 @@
 .crossroad-view-container .accidents-stats-content {
   position: relative;
 }
+.crossroad-view-container .accidents-stats-content .chart-container {
+  height: 18rem;
+}
 .crossroad-view-container .accidents-stats-content .cumulative-num {
   position: absolute;
   left: 0;
@@ -1708,27 +1718,12 @@
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
+  height: 50%;
 }
 .split-screen-info {
   position: absolute;
   left: 2.26rem;
   top: 2.38rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  gap: 0 1.3rem;
 }
 .split-screen-info em {
   font-size: 2rem;
@@ -1742,6 +1737,24 @@
           box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
   -o-object-fit: fill;
      object-fit: fill;
+}
+.split-screen .init-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  border: 2px solid #999999;
+  background: url(/base/images/icon_play_lg.png) no-repeat 50% 50% #3d3d3d;
+  background-size: 6.2rem 6.2rem;
+}
+.split-screen .no-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  border: 2px solid #999999;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="100%" y2="100%" stroke="%23525252" stroke-width="3" /></svg>');
+  background-color: #3d3d3d;
 }
 .split-screen-container {
   position: absolute;
@@ -1772,6 +1785,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1 1 33.33%;
           flex: 1 1 33.33%;
+  height: 33.33%;
 }
 
 /* ROI설정 탭 화면 */

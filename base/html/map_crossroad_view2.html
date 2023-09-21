@@ -26,9 +26,9 @@
 
       <div class="crossroad-view-container">
         <h2>롯데캐슬 교차로</h2>
-        <button type="button" class="btn-crossroad-view" disabled>
+        <!-- <button type="button" class="btn-crossroad-view" disabled>
           <span class="screen-out">교차로 상세 열기/닫기 버튼</span>
-        </button>
+        </button> -->
       </div>
       <!-- //crossroad-view-container -->
 
@@ -38,8 +38,7 @@
           <section class="split-screen-container">
             <div class="split-screen">
               <span class="split-screen-info">
-                <i class="ico-rec"><span class="screen-out">REC</span></i>
-                <em>559x346</em>
+                <em>천안동남카메라4</em>
               </span>
               <video autoplay loop muted width="100%" height="100%" class="split-video">
                 <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
@@ -48,8 +47,7 @@
             <!-- //split-screen -->
             <div class="split-screen">
               <span class="split-screen-info">
-                <i class="ico-rec"><span class="screen-out">REC</span></i>
-                <em>559x346</em>
+                <em>천안동남카메라5</em>
               </span>
               <video autoplay loop muted width="100%" height="100%" class="split-video">
                 <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
@@ -57,23 +55,11 @@
             </div>
             <!-- //split-screen -->
             <div class="split-screen">
-              <span class="split-screen-info">
-                <i class="ico-rec"><span class="screen-out">REC</span></i>
-                <em>559x346</em>
-              </span>
-              <video autoplay loop muted width="100%" height="100%" class="split-video">
-                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
-              </video>
+              <i class="init-video"><span class="screen-out">기본화면</span></i>
             </div>
             <!-- //split-screen -->
             <div class="split-screen">
-              <span class="split-screen-info">
-                <i class="ico-rec"><span class="screen-out">REC</span></i>
-                <em>559x346</em>
-              </span>
-              <video autoplay loop muted width="100%" height="100%" class="split-video">
-                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
-              </video>
+              <i class="init-video"><span class="screen-out">기본화면</span></i>
             </div>
             <!-- //split-screen -->
           </section>
@@ -95,6 +81,9 @@
 
       // 탭 퍼블리싱 확인용
       $('.crossroad-view-container .menu .item').tab();
+
+      // 230921 추가 : 상세화면 데이터 영역 x축으로 늘리는 기능 비활성화
+      $('.crossroad-view-container').resizable('destroy');
     </script>
   </body>
 </html>

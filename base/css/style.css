@@ -2496,16 +2496,18 @@ body ::-webkit-scrollbar-track {
   border-radius: 100%;
 }
 .progress-bar-legend div span .txt {
-  width: 10.2rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: normal;
 }
 .progress-bar-legend div span .num {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 .progress-bar-legend div .road1::before {
   background: #a6a6a6;
@@ -2766,7 +2768,7 @@ body ::-webkit-scrollbar-track {
 .data-tbl-very {
   overflow-y: auto;
   height: 61.6rem;
-  border-bottom: 1px solid #e8e8e8;
+  border: 1px solid #e8e8e8;
 }
 .data-tbl-very thead {
   position: sticky;
@@ -2778,6 +2780,8 @@ body ::-webkit-scrollbar-track {
 }
 .data-tbl-very tbody td {
   cursor: pointer;
+  border-top: 0 !important;
+  border-bottom: 1px solid #e8e8e8;
 }
 .data-tbl-very.md {
   height: auto;
@@ -5868,9 +5872,11 @@ body ::-webkit-scrollbar-track {
 }
 .dashboard-main .dashboard-current-center .cr-data-container .crw-chart-bind {
   width: 93.9rem;
+  height: 24.5rem;
 }
 .dashboard-main .dashboard-current-center .cw-data-container .crw-chart-bind {
   width: 95.4rem;
+  height: 25.3rem;
 }
 .dashboard-main .dashboard-current-right {
   width: 31rem;
@@ -6271,6 +6277,7 @@ body ::-webkit-scrollbar-track {
 }
 .dashboard-status-content1 .item .state-chart {
   width: 12.5rem;
+  height: 9.5rem;
   border-left: 1px solid #e8e8e8;
   border-bottom: 1px solid #e8e8e8;
 }
@@ -6304,6 +6311,7 @@ body ::-webkit-scrollbar-track {
 }
 .dashboard-status-content2 .status-chart-bind {
   width: 82.8rem;
+  height: 19.5rem;
 }
 .dashboard-status-content3 {
   border-radius: 1rem;
@@ -6313,6 +6321,7 @@ body ::-webkit-scrollbar-track {
 }
 .dashboard-status-content3 .status-chart-bind {
   width: 100%;
+  height: 19.5rem;
 }
 .dashboard-status .status-content-hedaer {
   display: -webkit-box;

@@ -56,7 +56,19 @@ var cmmnUi = {
 
     // 상세 화면 접고/펼치기
     $('.btn-crossroad-view').on('click', function () {
-      $('.is-crossroad-view').toggleClass('is-fold');
+      var $parent = $(this).parent('.crossroad-view-container');
+      var $forefather = $(this).closest('.is-crossroad-view');
+      var $parentWidth = $parent.width() - 54;
+      // $('.is-crossroad-view').toggleClass('is-fold');
+      if ($forefather.hasClass('is-fold')) {
+        // 'is-fold' 클래스가 존재하는 경우
+        $forefather.removeClass('is-fold');
+        $parent.css('left', '54px');
+      } else {
+        // 'is-fold' 클래스가 존재하지 않는 경우
+        $forefather.addClass('is-fold');
+        $parent.css('left', -$parentWidth);
+      }
       $('.gnb').removeClass('is-open');
     });
     // $('.btn-roi-view').on('click', function () {
