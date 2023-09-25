@@ -144,10 +144,11 @@ var cmmnUi = {
       $('.gnb').removeClass('is-open');
       cmmnUi.profilePopInit();
     });
-    // $(document).on('mouseenter', '.search-view-container > section', function () {
-    //   $('.gnb').removeClass('is-open');
-    //   cmmnUi.profilePopInit();
-    // });
+    $(document).on('mouseenter', '.search-view-container > section', function () {
+      $('.gnb').removeClass('is-open');
+      $(this).parent('.search-view-container').removeClass('is-gnb-open');
+      cmmnUi.profilePopInit();
+    });
 
     // 1depth 메뉴의 하위 메뉴 initialize
     $dropdownEl.dropdown({

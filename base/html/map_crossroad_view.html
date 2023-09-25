@@ -851,6 +851,7 @@
         var $left = $this.position().left;
         var $target = $this.data('target');
         var $popup = $('#' + $target);
+        $this.addClass('active'); // 230925: 카메라 아이콘 활성화
 
         // 마지막으로 움직인 위치값으로 팝업 좌표값 재설정.
         // 최초 페이지 랜더링 후 data-camera-popup-pos속성 값이 없기 때문에 아래 else 구문이 실행되고,
@@ -871,6 +872,8 @@
       $('.camera-popup .btn-popup-close').on('click', function (e) {
         e.preventDefault();
         var $thisCameraPopup = $(this).closest('.camera-popup');
+        var $thisCameraPopupId = $thisCameraPopup.attr('id'); // 230925: 카메라 아이콘의 ID값 가져오기
+        $(`[data-target=${$thisCameraPopupId}]`).removeClass('active'); // 230925: 카메라 아이콘의 현재 data-target값 참조하여 카메라 아이콘 비활성화
         $thisCameraPopup.fadeOut(150);
       });
 
