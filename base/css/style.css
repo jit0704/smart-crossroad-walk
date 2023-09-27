@@ -343,6 +343,9 @@ body ::-webkit-scrollbar-track {
   background-position: 0 0;
   background-size: contain;
 }
+.ico-cr.active {
+  background-image: url(/base/images/icon_cr_active.png);
+}
 .ico-cr2 {
   display: inline-block;
   width: 2.1rem;
@@ -414,10 +417,10 @@ body ::-webkit-scrollbar-track {
   background-position: 0 0;
   background-size: contain;
 }
-.ico-set-branch {
+.ico-set-cr {
   display: inline-block;
-  width: 2.8rem;
-  height: 3.69rem;
+  width: 1.5rem;
+  height: 2rem;
   background-image: url("/base/images/set_icon_cr.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -425,8 +428,8 @@ body ::-webkit-scrollbar-track {
 }
 .ico-set-cw {
   display: inline-block;
-  width: 2.8rem;
-  height: 3.69rem;
+  width: 1.5rem;
+  height: 2rem;
   background-image: url("/base/images/set_icon_cw.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -434,8 +437,8 @@ body ::-webkit-scrollbar-track {
 }
 .ico-set-camera {
   display: inline-block;
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 2rem;
+  height: 2rem;
   background-image: url("/base/images/set_icon_camera.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1436,9 +1439,9 @@ body ::-webkit-scrollbar-track {
   background-size: contain;
 }
 .ui.tabular.menu.rounded .item[data-tab=third]::before {
-  width: 1.5rem;
-  height: 0.82rem;
-  background-image: url("/base/images/icon_eye_gray.png");
+  width: 1.4rem;
+  height: 1.4rem;
+  background-image: url("/base/images/icon_triangle_exclamation_gray.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -1457,7 +1460,7 @@ body ::-webkit-scrollbar-track {
   background-image: url(/base/images/icon_video_white.png);
 }
 .ui.tabular.menu.rounded .item.active[data-tab=third]::before {
-  background-image: url(/base/images/icon_eye_white.png);
+  background-image: url(/base/images/icon_triangle_exclamation_blue.png);
 }
 
 /* 셀렉트박스 */
@@ -4290,8 +4293,7 @@ body ::-webkit-scrollbar-track {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  width: 4.4rem;
-  height: 10.6rem;
+  width: 4.5rem;
   position: absolute;
   top: 50%;
   right: 1.9rem;
@@ -4299,48 +4301,56 @@ body ::-webkit-scrollbar-track {
   margin-top: -8.1rem;
   border-radius: 0.5rem;
   background: #fff;
-  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25);
 }
-.ly-map .system-nav [class*=ico] {
+.ly-map .system-nav > .ico-set-item {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   width: 100%;
-  padding: 0;
-  background-position: 50% 50%;
+  padding: 0.6rem 0;
+  text-align: center;
 }
-.ly-map .system-nav [class*=ico] + button {
-  border-top: 1px solid #cbcbcb;
+.ly-map .system-nav > .ico-set-item:not(:last-child) {
+  border-bottom: 1px solid #cbcbcb;
 }
-.ly-map .system-nav .ico-hand {
-  background-size: 2.5rem 3.16rem;
+.ly-map .system-nav > .ico-set-item em {
+  display: block;
+  margin-top: 0.2rem;
+  line-height: normal;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #727272;
 }
-.ly-map .system-nav .ico-set-branch {
-  background-size: 2.8em 3.69rem;
+.ly-map .system-nav > .ico-set-item .ico-set-cr {
+  background-size: 1.5em 2rem;
 }
-.ly-map .system-nav .ico-set-branch.active {
+.ly-map .system-nav > .ico-set-item .ico-set-cw {
+  background-size: 1.5em 2rem;
+}
+.ly-map .system-nav > .ico-set-item .ico-set-camera {
+  background-size: 2em 2rem;
+}
+.ly-map .system-nav > .ico-set-item.active .ico-set-cr {
   background-image: url(/base/images/set_icon_cr_active.png);
 }
-.ly-map .system-nav .ico-set-cw {
-  background-size: 2.8em 3.69rem;
-}
-.ly-map .system-nav .ico-set-cw.active {
+.ly-map .system-nav > .ico-set-item.active .ico-set-cw {
   background-image: url(/base/images/set_icon_cw_active.png);
 }
-.ly-map .system-nav .ico-set-camera {
-  background-size: 2.8em 2.8rem;
-}
-.ly-map .system-nav .ico-set-camera.active {
+.ly-map .system-nav > .ico-set-item.active .ico-set-camera {
   background-image: url(/base/images/set_icon_camera_active.png);
+}
+.ly-map .system-nav > .ico-set-item.active em {
+  color: #03a0fc;
 }
 .ly-map.ico-hand-active {
   cursor: url(/base/images/cursor_palm.png) 14 17, auto;
 }
-.ly-map.ico-set-branch-active {
+.ly-map.ico-set-cr-active {
   cursor: url(/base/images/set_icon_cr_violet.png) 23.5 59, auto;
 }
-.ly-map.ico-set-branch-active .speech-bubble-guide {
+.ly-map.ico-set-cr-active .speech-bubble-guide {
   display: block;
 }
 .ly-map.ico-set-cw-active {
@@ -5225,10 +5235,19 @@ body ::-webkit-scrollbar-track {
           flex: 1;
   position: relative;
 }
+.search-view-header .control-box .bind-choice .btn-custom-wrap.active .btn-custom {
+  color: #727272;
+}
 .search-view-header .control-box .bind-choice .btn-custom-wrap.active .btn-custom::after {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+.search-view-header .control-box .bind-choice .btn-custom-wrap.active .btn-custom[data-name=location]::before {
+  background-image: url(/base/images/icon_point_gray_active.png);
+}
+.search-view-header .control-box .bind-choice .btn-custom-wrap.active .btn-custom[data-name=system]::before {
+  background-image: url(/base/images/icon_system_active.png);
 }
 .search-view-header .control-box .bind-choice .btn-custom-wrap.active .depth1 {
   display: block;

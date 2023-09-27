@@ -55,7 +55,11 @@
           <div class="system-nav">
             <!-- 230918 손모양 버튼 삭제 -->
             <!-- <button type="button" class="ico-hand"><span class="screen-out">손모양 아이콘</span></button> -->
-            <button type="button" class="ico-set-camera"><span class="screen-out">지점 아이콘</span></button>
+            <!-- 230927 ico-set-item div 추가 및 수정 -->
+            <div class="ico-set-item camera">
+              <button type="button" class="ico-set-camera"><span class="screen-out">카메라 아이콘</span></button>
+              <em>카메라</em>
+            </div>
           </div>
 
           <i class="speech-bubble-guide2"><span class="screen-out">카메라를 추가하고 싶은 곳에 마커를 놓아주세요</span></i>
@@ -129,13 +133,14 @@
         }
 
         // 우축 중간 시스템 네비게이션 클릭 이벤트
-        $('.system-nav [class*="ico"]').on('click', function () {
+        // 230927 클릭이벤트 수정
+        $('.system-nav .ico-set-item').on('click', function () {
           var $this = $(this);
           $this.toggleClass('active');
-          $('.system-nav button').not(this).removeClass('active');
+          $('.system-nav .ico-set-item').not(this).removeClass('active');
 
           // systemNavState($this, '.ico-hand.active', 'ico-hand-active'); 230918 삭제
-          systemNavState($this, '.ico-set-camera.active', 'ico-set-camera-active');
+          systemNavState($this, '.camera.active', 'ico-set-camera-active');
           // 지점 추가 메뉴 팝업 숨김
           $('.js-add-branch').fadeOut(200);
         });
