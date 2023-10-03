@@ -495,6 +495,45 @@
           </div>
           <!-- //지도 타입 선택 -->
 
+          <!-- 230928 추가 -->
+          <div class="map-state-legend-container">
+            <ul class="map-state-toggle">
+              <li>
+                <label class="slider-switch">
+                  <input type="checkbox" />
+                  <i class="slider"></i>
+                </label>
+                <span>실시간 교통량</span>
+              </li>
+              <li>
+                <label class="slider-switch">
+                  <input type="checkbox" />
+                  <i class="slider"></i>
+                </label>
+                <span>접근로 별 LOS 등급</span>
+              </li>
+            </ul>
+            <!-- //map-state-toggle -->
+            <dl class="los-legend type2">
+              <dt>접근로 별 LOS 표준 범례</dt>
+              <dd>
+                <ul>
+                  <li class="lv-a">A등급</li>
+                  <li class="lv-b">B등급</li>
+                  <li class="lv-c">C등급</li>
+                  <li class="lv-d">D등급</li>
+                </ul>
+                <ul>
+                  <li class="lv-e">E등급</li>
+                  <li class="lv-f">F등급</li>
+                  <li class="lv-ff">FF등급</li>
+                  <li class="lv-fff">FFF등급</li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+          <!-- //map-state-legend-container -->
+
           <!-- LOS 아이콘 -->
           <i class="ico-los-a" style="top: 10px; left: 500px"><span class="screen-out">A등급</span></i>
           <i class="ico-los-b" style="top: 10px; left: 560px"><span class="screen-out">B등급</span></i>
@@ -513,6 +552,7 @@
           <i class="ico-vehicle-signal turnleft" style="top: 100px; left: 700px"><span class="screen-out">좌회전</span></i>
           <i class="ico-vehicle-signal turnleft-green" style="top: 150px; left: 700px"><span class="screen-out">좌회전/초록불</span></i>
           <i class="ico-vehicle-signal green" style="top: 100px; left: 800px"><span class="screen-out">초록불</span></i>
+          <i class="ico-vehicle-signal none" style="top: 100px; left: 900px"><span class="screen-out">없음</span></i>
 
           <!-- 카메라 아이콘:
               - data-target 속성의 값과 카메라 팝업의 id값이 일치해야 팝업이 노출됩니다.

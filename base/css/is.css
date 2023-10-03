@@ -134,7 +134,7 @@
       -ms-flex: 1;
           flex: 1;
   position: relative;
-  padding: 2.5rem;
+  padding: 2.5rem 2rem;
 }
 .main-stats-container .summary-info-item-wrap > li:not(:first-child)::before {
   content: "";
@@ -173,7 +173,7 @@
   -ms-flex-line-pack: stretch;
       align-content: stretch;
   gap: 0 0.5rem;
-  height: calc(100% - 0.5rem);
+  height: calc(100% - 3.5rem);
   font-size: 2.6rem;
   color: #727272;
   font-weight: 500;
@@ -203,23 +203,26 @@
 }
 .main-stats-container .summary-info-item-wrap > li:nth-child(4) {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 22rem;
-          flex: 0 0 22rem;
+      -ms-flex: 0 0 21.5rem;
+          flex: 0 0 21.5rem;
+}
+.main-stats-container .summary-info-item-wrap > li:nth-child(4) .tbl-bind td {
+  letter-spacing: -0.048rem;
 }
 .main-stats-container .summary-info-item-wrap > li:last-child {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  width: 23.2rem;
+  width: 22.2rem;
 }
 .main-stats-container .summary-info-item-wrap > li:last-child .tbl-bind table {
-  width: 11.5rem;
+  width: 16rem;
   height: 9rem;
 }
 .main-stats-container .summary-info-item-wrap > li.traffic-direction {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 32.5rem;
-          flex: 0 0 32.5rem;
+      -ms-flex: 0 0 33.2rem;
+          flex: 0 0 33.2rem;
 }
 .main-stats-container .summary-info-item-wrap > li.traffic-direction th span {
   display: block;
@@ -362,8 +365,8 @@
   height: calc(100% - 2.8rem);
 }
 .main-stats-container .summary-info-chart .chart2 .chart-container .chart-inner {
-  width: 32rem;
-  height: 32rem;
+  width: 31rem;
+  height: 31rem;
 }
 
 /* 교차로 통계 */
@@ -513,9 +516,6 @@
   margin-bottom: 0;
   font-size: 1.6rem;
   color: #1e5f8d;
-}
-.stats-container.primitive .data-tbl-very {
-  height: 64.7rem;
 }
 
 .txt-condition {
@@ -1811,6 +1811,26 @@
       -ms-flex: 1 1 33.33%;
           flex: 1 1 33.33%;
   height: 33.33%;
+}
+.split-screen.expend-video {
+  display: none;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  width: calc(100% - 42.2rem);
+  height: auto;
+}
+.split-screen.expend-video .split-video {
+  border: 0;
+  border-radius: 0;
+}
+.split-screen.expend-video.active {
+  display: block;
 }
 
 /* ROI설정 탭 화면 */

@@ -73,26 +73,17 @@
           </section>
           <!-- //split-screen-container -->
 
-          <!-- 230925 추가 : 영상 확대 팝업 -->
-          <div class="custom-modal-wrap">
-            <div class="modal expend">
-              <div class="modal-container">
-                <div class="modal-header">
-                  <span class="tit">영상 제목</span>
-                </div>
-                <!-- //modal-header -->
-                <div class="modal-body">
-                  <video autoplay loop muted width="100%" height="100%" class="expend-video">
-                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
-                  </video>
-                </div>
-                <!-- //modal-body -->
-              </div>
-              <!-- //modal-container -->
-            </div>
-            <!-- //modal -->
+          <!-- 230928 추가 : 영상 확대 full팝업 -->
+          <div class="split-screen expend-video">
+            <span class="split-screen-info">
+              <i>채널${num}</i>
+              <em>${카메라명}</em>
+            </span>
+            <video autoplay loop muted width="100%" height="100%" poster="/base/images/cannot_connection.png" class="split-video">
+              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+            </video>
           </div>
-          <!-- //custom-modal-wrap -->
+          <!-- //split-screen -->
         </div>
         <!-- //ly-map -->
       </main>
@@ -119,12 +110,12 @@
       });
       $('.crossroad-view-container').resizable('destroy');
 
-      // 230925 추가 : 영상 확대 팝업 클릭 이벤트
+      // 230928 추가 : 영상 확대 팝업 클릭 이벤트
       $(document).on('dblclick', '.split-video', function () {
-        $('.custom-modal-wrap').addClass('active');
+        $('.split-screen.expend-video').addClass('active');
       });
-      $(document).on('dblclick', '.expend-video', function () {
-        $('.custom-modal-wrap').removeClass('active');
+      $(document).on('dblclick', '.split-screen.expend-video', function () {
+        $('.split-screen.expend-video').removeClass('active');
       });
     </script>
   </body>

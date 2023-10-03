@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>지도 - 카메라/레이더/신호정보/LOS 관리 Map 설정</title>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="http://map.ngii.go.kr/emap/js/map/OpenLayers-6.4.3.js"></script>
+    <script src="http://map.ngii.go.kr/nps/common/lib/proj4js/proj4.js"></script>
+    <script src="http://map.ngii.go.kr/openapi/wmts_ngiiMap_v6.4.3.js?apikey=04trYP9_xwLAfALjwZ-B8g"></script>
+    <!-- includeHTML.js : 퍼블리싱 확인용 include -->
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/ui.js"></script>
+    <!-- 230928 map-setting.js 추가(카메라/레이더/신호정보/LOS 관리 설정 관련 ui스크립트는 별도로 js파일로 분리하였습니다. 참고 바랍니다.) -->
+    <script src="/base/js/common/map-setting.js"></script>
+    <link rel="stylesheet" href="http://map.ngii.go.kr/emap/css/map/OpenLayers-6.4.3.css" />
+    <link rel="stylesheet" href="/base/css/common.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- GNB -->
+      <nav class="gnb" include-html="/base/html/common/gnb.html"></nav>
+
+      <main class="ly-container">
+        <!-- 230928 클래스명 변경   -->
+        <div id="map1" class="ly-map map-setting">
+          <!-- 화면 위치 -->
+          <div class="ui breadcrumb">
+            <i class="home icon"></i>
+            <i class="right angle icon divider"></i>
+            <span class="section">교차로</span>
+            <i class="right angle icon divider"></i>
+            <div class="section">시스템 관리</div>
+            <i class="right angle icon divider"></i>
+            <div class="active section">카메라/레이더/신호 정보/LOS 관리</div>
+            <i class="right angle icon divider"></i>
+            <div class="section">지점 Map 설정</div>
+          </div>
+
+          <!-- 지도 타입 선택 -->
+          <div class="map-type">
+            <label>
+              <input type="radio" checked name="maptype" />
+              <span>일반지도</span>
+            </label>
+            <label>
+              <input type="radio" name="maptype" />
+              <span>위성지도</span>
+            </label>
+          </div>
+          <!-- //지도 타입 선택 -->
+
+          <!-- 시스템 네비게이션 -->
+          <div class="system-nav">
+            <!-- 230918 손모양 버튼 삭제 -->
+            <!-- <button type="button" class="ico-hand"><span class="screen-out">손모양 아이콘</span></button> -->
+            <!-- 230928 ico-set-item div 추가 및 수정 -->
+            <div class="ico-set-item camera">
+              <button type="button" class="ico-set-camera"><span class="screen-out">카메라 아이콘</span></button>
+              <em>카메라</em>
+            </div>
+            <div class="ico-set-item radar">
+              <button type="button" class="ico-set-radar"><span class="screen-out">레이더 아이콘</span></button>
+              <em>레이더</em>
+            </div>
+            <div class="ico-set-item signal-light">
+              <button type="button" class="ico-set-signal-light"><span class="screen-out">신호등 아이콘</span></button>
+              <em>신호등</em>
+            </div>
+            <div class="ico-set-item los">
+              <button type="button" class="ico-set-los"><span class="screen-out">LOS 아이콘</span></button>
+              <em>LOS</em>
+            </div>
+          </div>
+
+          <!-- 230928 말풍선 아이콘 추가 -->
+          <i class="speech-bubble-guide2"><span class="screen-out">카메라를 추가하고 싶은 곳에 마커를 놓아주세요</span></i>
+          <i class="speech-bubble-guide3"><span class="screen-out">레이더를 추가하고 싶은 곳에 마커를 놓아주세요</span></i>
+          <i class="speech-bubble-guide4"><span class="screen-out">신호등을 추가하고 싶은 곳에 마커를 놓아주세요</span></i>
+          <i class="speech-bubble-guide5"><span class="screen-out">LOS를 추가하고 싶은 곳에 마커를 놓아주세요</span></i>
+
+          <!-- 카메라/레이더/신호등/LOS 추가시 노출되는 메뉴 팝업 -->
+          <div class="menu-popup js-add-branch">
+            <a href="#">${메뉴명} 정보 설정</a>
+            <a href="#">십자선 보기</a>
+            <a href="#" class="js-calcel">취소</a>
+          </div>
+          <!-- //menu-popup -->
+
+          <!-- 기 등록된 카메라 아이콘 클릭시 노출되는 메뉴 팝업 -->
+          <div class="menu-popup js-existing-branch">
+            <a href="#" class="js-move-position">${메뉴명} 위치 이동</a>
+            <a href="#">${메뉴명} 정보 조회</a>
+            <a href="#">${메뉴명} ROI 설정 </a>
+            <a href="#">십자선 보기</a>
+            <a href="#">${메뉴명} 삭제</a>
+          </div>
+          <!-- //menu-popup -->
+
+          <!-- 카메라 위치 이동 후 노출되는 메뉴 팝업 -->
+          <div class="menu-popup js-move-end">
+            <a href="#" class="js-complete">위치 이동 완료</a>
+            <a href="#" class="js-calcel">위치 이동 취소</a>
+          </div>
+          <!-- //menu-popup -->
+
+          <!-- 230918 카메라 아이콘의 left, top, right, bottom 클래스 삭제 -->
+          <!-- 230928 data-target 속성 삭제 및 js-no-dimed-popup-call 클래스 삭제  -->
+          <i class="ico-map-above-camera" style="left: 717px; top: 555px">
+            <span class="screen-out">좌측 카메라</span>
+          </i>
+
+          <i class="ico-map-above-camera" style="left: 818px; top: 440px">
+            <span class="screen-out">상단 카메라</span>
+          </i>
+
+          <i class="ico-map-above-camera" style="left: 954px; top: 543px">
+            <span class="screen-out">우측 카메라</span>
+          </i>
+
+          <i class="ico-map-above-camera" style="left: 820px; top: 700px">
+            <span class="screen-out">하단 카메라</span>
+          </i>
+
+          <!-- 230928 레이더 아이콘 추가 -->
+          <i class="ico-map-above-radar" style="left: 1000px; top: 300px">
+            <span class="screen-out">레이더</span>
+          </i>
+          <i class="ico-map-above-radar" style="left: 1100px; top: 300px">
+            <span class="screen-out">레이더</span>
+          </i>
+
+          <!-- 230928 신호등 아이콘 추가(나머지 신호등 아이콘들은 map_crossroad_view.html 참고) -->
+          <i class="ico-vehicle-signal red" style="top: 220px; left: 500px">
+            <span class="screen-out">빨간불</span>
+          </i>
+          <i class="ico-vehicle-signal red-yellow" style="top: 300px; left: 500px">
+            <span class="screen-out">빨간불/노란불</span>
+          </i>
+
+          <!-- 230928 LOS 아이콘 추가 -->
+          <i class="ico-map-above-los" style="left: 1100px; top: 500px">
+            <span class="screen-out">LOS</span>
+          </i>
+          <i class="ico-map-above-los" style="left: 1200px; top: 500px">
+            <span class="screen-out">LOS</span>
+          </i>
+        </div>
+        <!-- //ly-map -->
+      </main>
+      <!-- //ly-container -->
+
+      <footer class="ly-copyright" include-html="/base/html/common/footer.html"></footer>
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      // map init
+      window.onload = function () {
+        var map1 = new ngii_wmts.map('map1', { zoom: 6 });
+      };
+    </script>
+  </body>
+</html>

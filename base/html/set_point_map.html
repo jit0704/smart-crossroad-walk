@@ -175,7 +175,8 @@
 
         // 마우스 커서가 교차로 아이콘으로 바뀌었을때 커서 위에 안내 말풍선 노출
         var $speechBubble = $('.speech-bubble-guide');
-        $(document).on('mousemove', '.ly-map.ico-set-branch-active', function (e) {
+        // 230927 ico-set-cr-active로 클래스명 수정
+        $(document).on('mousemove', '.ly-map.ico-set-cr-active', function (e) {
           var x = e.clientX - $(this).offset().left;
           var y = e.clientY - $(this).offset().top;
           $speechBubble.css({
@@ -185,7 +186,7 @@
         });
 
         // 특정 요소에 마우스가 올라갔을때 말풍선 숨김
-        var targetParent = '.ly-map.ico-set-branch-active';
+        var targetParent = '.ly-map.ico-set-cr-active'; // 230927 수정
         var targetTag = `${targetParent} .ui.dropdown.area-box, ${targetParent} .map-type, ${targetParent} .system-nav, ${targetParent} .menu-popup`;
         $(document).on('mouseenter', targetTag, function () {
           $speechBubble.hide();
@@ -196,7 +197,8 @@
 
         // 마우스 커서가 교차로 아이콘으로 바뀌었을때 지도 위 클릭 이벤트: 메뉴 팝업 생성
         // (국토지리정보원 API 호출시 지도 최상단 부모 클래스명이 ol-viewport로 나옵니다. 개발환경에서도 동일하게 나오는지 확인이 필요하고, 만약 클래스명이 다르면 ol-viewport클래스명 수정이 필요합니다. 참고 바랍니다.)
-        $(document).on('click', '.ico-set-branch-active .ol-viewport', function (e) {
+        // 230927 ico-set-cr-active로 클래스명 수정
+        $(document).on('click', '.ico-set-cr-active .ol-viewport', function (e) {
           var x = e.clientX + 20;
           var y = e.clientY + 20;
           $('.js-add-branch').fadeIn(200).css({

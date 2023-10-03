@@ -444,11 +444,56 @@ body ::-webkit-scrollbar-track {
   background-position: 0 0;
   background-size: contain;
 }
+.ico-set-radar {
+  display: inline-block;
+  width: 2.2rem;
+  height: 1.3rem;
+  background-image: url("/base/images/set_icon_radar.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-set-signal-light {
+  display: inline-block;
+  width: 2.9rem;
+  height: 1.3rem;
+  background-image: url("/base/images/set_icon_signallight.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-set-los {
+  display: inline-block;
+  width: 1.5rem;
+  height: 2rem;
+  background-image: url("/base/images/set_icon_los.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
 .ico-map-above-camera {
   display: inline-block;
   width: 3.5rem;
   height: 3.5rem;
   background-image: url("/base/images/icon_camera.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-map-above-radar {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  background-image: url("/base/images/icon_radar.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-map-above-los {
+  display: inline-block;
+  width: 4.6rem;
+  height: 6.4rem;
+  background-image: url("/base/images/icon_los.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -634,6 +679,14 @@ body ::-webkit-scrollbar-track {
   width: 9.9rem;
   height: 3rem;
   background-image: url("/base/images//vehicle-signal/signal_green.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-vehicle-signal.none {
+  width: 9.9rem;
+  height: 3rem;
+  background-image: url("/base/images//vehicle-signal/signal_none.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -1883,6 +1936,72 @@ body ::-webkit-scrollbar-track {
   background-size: contain;
 }
 
+.map-state-legend-container {
+  position: absolute;
+  top: 5rem;
+  right: 1.9rem;
+  z-index: 4;
+}
+.map-state-legend-container .los-legend {
+  position: static;
+  margin-top: 0.75rem;
+}
+
+.map-state-toggle {
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.map-state-toggle li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
+  padding: 0.6rem 1rem;
+}
+.map-state-toggle li + li {
+  border-top: 1px solid #e8e8e8;
+}
+.map-state-toggle li .slider-switch {
+  width: 2.1rem;
+  height: 1.1rem;
+}
+.map-state-toggle li .slider-switch input:checked + .slider {
+  background: #e97272;
+}
+.map-state-toggle li .slider-switch input:checked + .slider::before {
+  -webkit-transform: translateX(1rem);
+      -ms-transform: translateX(1rem);
+          transform: translateX(1rem);
+}
+.map-state-toggle li .slider-switch .slider {
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4) inset;
+          box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4) inset;
+}
+.map-state-toggle li .slider-switch .slider::before {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+.map-state-toggle li > span {
+  line-height: normal;
+  font-size: 1.2rem;
+  color: #797979;
+  font-weight: 500;
+}
+
 .los-legend {
   position: absolute;
   right: 1.9rem;
@@ -1894,6 +2013,36 @@ body ::-webkit-scrollbar-track {
   background: #fff;
   -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.los-legend.type2 dd ul li::before {
+  width: 1.6rem;
+  height: 2.1rem;
+  border-radius: 0;
+  background-size: contain !important;
+}
+.los-legend.type2 dd ul li.lv-a::before {
+  background: url(/base/images/los/icon_los_a.png) no-repeat 0 0;
+}
+.los-legend.type2 dd ul li.lv-b::before {
+  background: url(/base/images/los/icon_los_b.png) no-repeat 0 0;
+}
+.los-legend.type2 dd ul li.lv-c::before {
+  background: url(/base/images/los/icon_los_c.png) no-repeat 0 0;
+}
+.los-legend.type2 dd ul li.lv-d::before {
+  background: url(/base/images/los/icon_los_d.png) no-repeat 0 0;
+}
+.los-legend.type2 dd ul li.lv-e::before {
+  background: url(/base/images/los/icon_los_e.png) no-repeat 0 0;
+}
+.los-legend.type2 dd ul li.lv-f::before {
+  background: url(/base/images/los/icon_los_f.png) no-repeat 0 0;
+}
+.los-legend.type2 dd ul li.lv-ff::before {
+  background: url(/base/images/los/icon_los_ff.png) no-repeat 0 0;
+}
+.los-legend.type2 dd ul li.lv-fff::before {
+  background: url(/base/images/los/icon_los_fff.png) no-repeat 0 0;
 }
 .los-legend dt {
   padding: 0.6rem 0.8rem;
@@ -2016,6 +2165,7 @@ body ::-webkit-scrollbar-track {
   z-index: 3;
   display: inline-block;
   margin-top: 0.6rem;
+  cursor: pointer;
 }
 .los-display .ico-cr.moving {
   cursor: move;
@@ -3189,45 +3339,6 @@ body ::-webkit-scrollbar-track {
 }
 
 /*---------------------------------------------------------------
-  [모달 팝업 커스텀2]
------------------------------------------------------------------*/
-.custom-modal-wrap {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  z-index: 10;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.5);
-}
-.custom-modal-wrap.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-.custom-modal-wrap .modal {
-  display: block;
-}
-
-/*---------------------------------------------------------------
   [커스텀 팝업]
 -----------------------------------------------------------------*/
 /* alert, confirm */
@@ -4220,7 +4331,7 @@ body ::-webkit-scrollbar-track {
   background: url(/base/images/temp/traffic_img.png) no-repeat 0 0;
   background-size: cover;
 }
-.ly-map [class*=ico] {
+.ly-map > [class*=ico] {
   cursor: pointer;
 }
 .ly-map .ico-cw,
@@ -4255,6 +4366,39 @@ body ::-webkit-scrollbar-track {
   width: 13.1rem;
   height: 5rem;
   background-image: url("/base/images/speech_bubble2.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+.ly-map .speech-bubble-guide3 {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  width: 13.1rem;
+  height: 5rem;
+  background-image: url("/base/images/speech_bubble3.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+.ly-map .speech-bubble-guide4 {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  width: 13.1rem;
+  height: 5rem;
+  background-image: url("/base/images/speech_bubble4.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+.ly-map .speech-bubble-guide5 {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  width: 13.1rem;
+  height: 5rem;
+  background-image: url("/base/images/speech_bubble5.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
@@ -4311,9 +4455,13 @@ body ::-webkit-scrollbar-track {
   width: 100%;
   padding: 0.6rem 0;
   text-align: center;
+  cursor: pointer;
 }
 .ly-map .system-nav > .ico-set-item:not(:last-child) {
   border-bottom: 1px solid #cbcbcb;
+}
+.ly-map .system-nav > .ico-set-item button {
+  outline: 0;
 }
 .ly-map .system-nav > .ico-set-item em {
   display: block;
@@ -4341,16 +4489,24 @@ body ::-webkit-scrollbar-track {
 .ly-map .system-nav > .ico-set-item.active .ico-set-camera {
   background-image: url(/base/images/set_icon_camera_active.png);
 }
+.ly-map .system-nav > .ico-set-item.active .ico-set-radar {
+  background-image: url(/base/images/set_icon_radar_active.png);
+}
+.ly-map .system-nav > .ico-set-item.active .ico-set-signal-light {
+  background-image: url(/base/images/set_icon_signallight_active.png);
+}
+.ly-map .system-nav > .ico-set-item.active .ico-set-los {
+  background-image: url(/base/images/set_icon_los_active.png);
+}
 .ly-map .system-nav > .ico-set-item.active em {
   color: #03a0fc;
-}
-.ly-map.ico-hand-active {
-  cursor: url(/base/images/cursor_palm.png) 14 17, auto;
 }
 .ly-map.ico-set-cr-active {
   cursor: url(/base/images/set_icon_cr_violet.png) 23.5 59, auto;
 }
 .ly-map.ico-set-cr-active .speech-bubble-guide {
+  top: -100px;
+  left: -100px;
   display: block;
 }
 .ly-map.ico-set-cw-active {
@@ -4360,18 +4516,48 @@ body ::-webkit-scrollbar-track {
   cursor: url(/base/images/icon_camera_opacity.png) 14 17, auto;
 }
 .ly-map.ico-set-camera-active .speech-bubble-guide2 {
+  top: -100px;
+  left: -100px;
   display: block;
 }
-.ly-map.camera-map .system-nav {
-  width: 3.9rem;
-  height: 5rem;
-  margin-top: -5rem;
+.ly-map.ico-set-radar-active {
+  cursor: url(/base/images/icon_radar_opacity.png) 14 17, auto;
 }
-.ly-map.camera-map .ico-map-above-camera {
+.ly-map.ico-set-radar-active .speech-bubble-guide3 {
+  top: -100px;
+  left: -100px;
+  display: block;
+}
+.ly-map.ico-set-signal-light-active {
+  cursor: url(/base/images/icon_signal_light_opacity.png) 40 17, auto;
+}
+.ly-map.ico-set-signal-light-active .speech-bubble-guide4 {
+  top: -100px;
+  left: -100px;
+  display: block;
+}
+.ly-map.ico-set-los-active {
+  cursor: url(/base/images/icon_los_opacity.png) 21 17, auto;
+}
+.ly-map.ico-set-los-active .speech-bubble-guide5 {
+  top: -100px;
+  left: -100px;
+  display: block;
+}
+.ly-map.map-setting .system-nav {
+  width: 3.9rem;
+}
+.ly-map.map-setting .ico-map-above-camera,
+.ly-map.map-setting .ico-map-above-radar,
+.ly-map.map-setting .ico-vehicle-signal,
+.ly-map.map-setting .ico-map-above-los {
   position: absolute;
   z-index: 1;
 }
-.ly-map.camera-map .ico-map-above-camera.moving {
+.ly-map.map-setting .ico-map-above-camera.moving,
+.ly-map.map-setting .ico-map-above-radar.moving,
+.ly-map.map-setting .ico-vehicle-signal.moving,
+.ly-map.map-setting .ico-map-above-los.moving {
   cursor: move;
 }
 .ly-map [class*=ico-los] {
@@ -4393,6 +4579,9 @@ body ::-webkit-scrollbar-track {
 }
 .ly-sub.bg-gray {
   background: #f8f8f8;
+}
+.ly-setting.type2 > .data-tbl-very {
+  height: 66.3rem;
 }
 .ly-setting .ui.breadcrumb {
   padding: 3.6rem 0 3.7rem;
@@ -4433,7 +4622,7 @@ body ::-webkit-scrollbar-track {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  height: calc(99.9vh - 2rem);
+  height: 100vh;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(4.86%, rgba(8, 54, 76, 0.2)), to(#08364c)), url("/base/images/login_bg.png");
   background-image: linear-gradient(180deg, rgba(8, 54, 76, 0.2) 4.86%, #08364c 100%), url("/base/images/login_bg.png");
   background-repeat: no-repeat;
