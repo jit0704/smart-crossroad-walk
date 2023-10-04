@@ -628,64 +628,64 @@ body ::-webkit-scrollbar-track {
   display: inline-block;
 }
 .ico-vehicle-signal.red {
-  width: 9.9rem;
-  height: 3rem;
+  width: 8.3rem;
+  height: 3.2rem;
   background-image: url("/base/images//vehicle-signal/signal_red.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
 }
 .ico-vehicle-signal.red-yellow {
-  width: 9.9rem;
-  height: 3rem;
+  width: 8.3rem;
+  height: 3.2rem;
   background-image: url("/base/images//vehicle-signal/signal_red_yellow.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
 }
 .ico-vehicle-signal.red-turnleft {
-  width: 9.9rem;
-  height: 3rem;
+  width: 8.3rem;
+  height: 3.2rem;
   background-image: url("/base/images//vehicle-signal/signal_red_turnleft.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
 }
 .ico-vehicle-signal.yellow {
-  width: 9.9rem;
-  height: 3rem;
+  width: 8.3rem;
+  height: 3.2rem;
   background-image: url("/base/images//vehicle-signal/signal_yellow.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
 }
 .ico-vehicle-signal.turnleft {
-  width: 9.9rem;
-  height: 3rem;
+  width: 8.3rem;
+  height: 3.2rem;
   background-image: url("/base/images//vehicle-signal/signal_turnleft.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
 }
 .ico-vehicle-signal.turnleft-green {
-  width: 9.9rem;
-  height: 3rem;
+  width: 8.3rem;
+  height: 3.2rem;
   background-image: url("/base/images//vehicle-signal/signal_turnleft_green.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
 }
 .ico-vehicle-signal.green {
-  width: 9.9rem;
-  height: 3rem;
+  width: 8.3rem;
+  height: 3.2rem;
   background-image: url("/base/images//vehicle-signal/signal_green.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
 }
 .ico-vehicle-signal.none {
-  width: 9.9rem;
-  height: 3rem;
+  width: 8.3rem;
+  height: 3.2rem;
   background-image: url("/base/images//vehicle-signal/signal_none.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1199,10 +1199,6 @@ body ::-webkit-scrollbar-track {
   padding-bottom: 1.53rem;
   line-height: 100%;
 }
-.ui.basic.table.is-chkbox-fncbtn-none2 thead th {
-  padding: 1.4rem 0 !important;
-  line-height: 100%;
-}
 .ui.basic.table.is-data-grid thead tr th {
   height: 2.34rem;
   padding: 0 !important;
@@ -1537,7 +1533,7 @@ body ::-webkit-scrollbar-track {
   min-width: 14rem;
   height: 3.4rem;
   padding: 0 2.5rem 0 1rem;
-  border-color: #cbcbcb;
+  border-color: #e0e0e0;
   color: #727272;
   font-weight: 500;
   background-image: url(/base/images/arr_down_gray.png);
@@ -4591,6 +4587,9 @@ body ::-webkit-scrollbar-track {
 }
 .ly-setting .button-function-group {
   margin-bottom: 1.3rem;
+}
+.ly-setting .data-tbl-very .ui.very.basic.table thead th {
+  height: 4.7rem;
 }
 .ly-copyright {
   width: 100%;
