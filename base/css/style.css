@@ -765,8 +765,12 @@ body ::-webkit-scrollbar-track {
   font-weight: 400;
 }
 .ui.breadcrumb .section.active {
+  color: #adadad;
+  font-weight: 400;
+}
+.ui.breadcrumb .section.active:hover {
   color: #03a0fc;
-  font-weight: 700;
+  cursor: pointer;
 }
 .ui.input {
   width: 100%;
@@ -4414,8 +4418,11 @@ body ::-webkit-scrollbar-track {
   color: #999999;
 }
 .ly-map .ui.breadcrumb .section.active {
+  color: #999999;
+}
+.ly-map .ui.breadcrumb .section.active:hover {
   color: #03a0fc;
-  font-weight: 700;
+  cursor: pointer;
 }
 .ly-map .system-nav {
   display: -webkit-box;
