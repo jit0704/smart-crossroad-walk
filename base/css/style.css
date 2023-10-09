@@ -319,7 +319,7 @@ body ::-webkit-scrollbar-track {
 .ico-cw {
   display: inline-block;
   width: 4.7rem;
-  height: 6rem;
+  height: 5.7rem;
   background-image: url("/base/images/icon_cw.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -336,14 +336,15 @@ body ::-webkit-scrollbar-track {
 }
 .ico-cr {
   display: inline-block;
-  width: 4.2rem;
-  height: 5.5rem;
+  width: 4.4rem;
+  height: 5.7rem;
   background-image: url("/base/images/icon_cr.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
 }
 .ico-cr.active {
+  width: 4.7rem;
   background-image: url(/base/images/icon_cr_active.png);
 }
 .ico-cr2 {
@@ -1464,6 +1465,8 @@ body ::-webkit-scrollbar-track {
       align-content: center;
   gap: 0 0.4rem;
   line-height: 3.9rem;
+  font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
   color: #727272;
   -webkit-transition: background 0.2s;
   transition: background 0.2s;
@@ -3870,6 +3873,124 @@ body ::-webkit-scrollbar-track {
           flex: 1;
   color: #e8e8e8;
   font-weight: 300;
+}
+
+/* 차량 번호 인식 팝업 */
+.car-num-recog-popup {
+  display: none;
+  position: absolute;
+  z-index: 4;
+  width: 64.2rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+  background: #3d3d3d;
+}
+.car-num-recog-popup.active {
+  display: block;
+}
+.car-num-recog-popup-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 1rem;
+  border-bottom: 1px solid #4f4f4f;
+}
+.car-num-recog-popup-header .tit {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
+}
+.car-num-recog-popup-header .btn-popup-close {
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-image: url("/base/images/btn_close_white_small.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 1rem 1rem;
+}
+.car-num-recog-popup-content {
+  padding: 0.5rem 1.5rem 1.5rem;
+}
+.car-num-recog-popup-tab-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-bottom: 1rem;
+}
+.car-num-recog-popup-tab-group a {
+  padding: 0.5rem;
+  line-height: normal;
+  font-size: 1.2rem;
+  color: #999999;
+  font-weight: 500;
+  border-bottom: 1px solid #727272;
+}
+.car-num-recog-popup-tab-group a.active {
+  color: #03a0fc;
+  border-color: #03a0fc;
+}
+.car-num-recog-popup .car-num-recog-list {
+  display: none;
+}
+.car-num-recog-popup .car-num-recog-list.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
+}
+.car-num-recog-popup .car-num-recog-list li {
+  width: 15rem;
+  background: #727272;
+}
+.car-num-recog-popup .car-num-recog-list .car-num-tbl {
+  padding: 0.7rem 0.8rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.car-num-recog-popup .car-num-recog-list .car-num-tbl th {
+  font-weight: 700;
+}
+.car-num-recog-popup .car-num-recog-list .car-num-tbl td {
+  text-align: right;
+  font-weight: 400;
 }
 
 /* 돌발/장애 탭 팝업 */

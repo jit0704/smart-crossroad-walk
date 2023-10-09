@@ -1340,6 +1340,15 @@
   width: 0.1rem;
   background: #e8e8e8;
 }
+.real-time-outbreak-view .outbreak-info-list li > div:nth-child(3) {
+  padding: 0 2rem;
+}
+.real-time-outbreak-view .outbreak-info-list li > div:nth-child(3)::after {
+  top: 50%;
+  bottom: auto;
+  height: 6rem;
+  margin-top: -3rem;
+}
 .real-time-outbreak-view .outbreak-info-list li > div:last-child::after {
   display: none;
 }
@@ -2386,7 +2395,7 @@
           align-items: flex-start;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding: 4rem 2.4rem 1.8rem 2.4rem;
+  padding: 2.6rem 2.4rem 1.8rem 2.4rem;
 }
 .roi-view-header h2 {
   display: -webkit-box;
@@ -2511,6 +2520,12 @@
   }
 }
 @media screen and (min-width: 2000px) {
+  .stats-container .divide-2 li .chart-wrap {
+    width: 49.7%;
+  }
+  .stats-container .divide-2 li .chart-wrap .chart-container {
+    width: 100%;
+  }
   .stats-container .divide-4 li .chart-wrap {
     width: 49.7%;
   }

@@ -57,7 +57,7 @@ var mapSetting = {
       var x = e.clientX - $(this).offset().left;
       var y = e.clientY - $(this).offset().top;
       $speechBubbleCam.css({
-        left: x - 10,
+        left: x - 3, // 231008 수정
         top: y - 75,
       });
     });
@@ -168,7 +168,7 @@ var mapSetting = {
       var x = e.clientX - $(this).offset().left;
       var y = e.clientY - $(this).offset().top;
       $speechBubbleRadar.css({
-        left: x - 10,
+        left: x - 3, // 231008 수정
         top: y - 75,
       });
     });
