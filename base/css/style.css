@@ -1192,8 +1192,16 @@ body ::-webkit-scrollbar-track {
   line-height: 100%;
 }
 .ui.basic.table.is-fncbtn tbody td {
-  padding-top: 0.95rem;
-  padding-bottom: 0.95rem;
+  padding-top: 0.785rem;
+  padding-bottom: 0.785rem;
+}
+.ui.basic.table.is-fncbtn2 thead th {
+  padding: 1.4rem 0 !important;
+  line-height: 100%;
+}
+.ui.basic.table.is-fncbtn2 tbody td {
+  padding-top: 0.735rem;
+  padding-bottom: 0.735rem;
 }
 .ui.basic.table.is-chkbox-fncbtn-none thead th {
   padding: 1.4rem 0 !important;
@@ -1243,7 +1251,7 @@ body ::-webkit-scrollbar-track {
   background: #ebf8ff;
 }
 .ui.basic.table tbody td {
-  padding: 1.23rem 1.4rem;
+  padding: 1.215rem 1.4rem;
   font-size: 1.6rem;
   color: #727272;
   text-align: center;
@@ -1369,6 +1377,7 @@ body ::-webkit-scrollbar-track {
   overflow-y: auto;
   height: 10rem;
   vertical-align: top;
+  word-break: break-word;
 }
 .data-tbl-gray {
   height: 23.1rem;
@@ -4466,8 +4475,6 @@ body ::-webkit-scrollbar-track {
 }
 .ly-map .ico-camera.active {
   background-image: url("/base/images/icon_camera_active.png");
-  background-position: -1px 0;
-  background-size: 3.6rem 3.6rem;
 }
 .ly-map .speech-bubble-guide {
   display: none;
