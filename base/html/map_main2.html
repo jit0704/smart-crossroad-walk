@@ -542,6 +542,7 @@
 
       // 스냅샷 드래그 이벤트 기능
       $('.sudden-snapshot-popup').draggable({
+        handle: '.sudden-snapshot-header', // 231012: 핸들 옵션 추가
         containment: '.ly-map',
         start: function () {
           $(this).css('transform', 'none');

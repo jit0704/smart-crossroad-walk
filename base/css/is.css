@@ -1745,8 +1745,8 @@
 .crossroad-view-container .cr-camera-view .tbl-custom-radio-container th,
 .crossroad-view-container .license-plate-recognition .tbl-custom-radio-container th {
   font-size: 1.4rem;
-  color: #1e5f8d;
-  font-weight: 500;
+  color: #727272;
+  font-weight: 400;
   text-align: left;
   vertical-align: middle;
 }
@@ -1760,9 +1760,132 @@
   padding: 0 3rem 4rem;
 }
 .crossroad-view-container .accidents-stats-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+.crossroad-view-container .accidents-stats-content .chart-view {
   position: relative;
+  width: 36rem;
+}
+.crossroad-view-container .accidents-stats-content .txt-view {
+  display: none;
+  width: 21rem;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-header {
+  margin: -0.8rem 0 1.7rem;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-header .tit {
+  display: block;
+  margin-bottom: 0.5rem;
+  line-height: normal;
+  font-size: 1.8rem;
+  color: #727272;
+  font-weight: 500;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-header .num-tit {
+  display: block;
+  line-height: 3.7rem;
+  font-size: 2.4rem;
+  color: #1e5f8d;
+  font-weight: 700;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-header .num-tit em {
+  display: inline-block;
+  margin-right: 1rem;
+  vertical-align: top;
+  font-family: "GmarketSans";
+  font-weight: 700;
+  font-size: 2.8rem;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data .data-stop::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background-image: url("/base/images/icon_cases1.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data .data-cw::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background-image: url("/base/images/icon_cases2.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data .data-reverse::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background-image: url("/base/images/icon_cases3.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data th,
+.crossroad-view-container .accidents-stats-content .txt-view-data td {
+  padding: 0.6rem 0;
+  border-bottom: 0.5rem solid #fff;
+  background: #f8f8f8;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data th {
+  padding-left: 1rem;
+  text-align: left;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data th em {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.7rem;
+  line-height: 1.8rem;
+  font-size: 1.4rem;
+  color: #727272;
+  font-weight: 600;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data td {
+  line-height: 1.8rem;
+  color: #727272;
+  font-size: 1.4rem;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data td em {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-family: "GmarketSans";
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data td:last-child em {
+  margin-right: 0;
 }
 .crossroad-view-container .accidents-stats-content .chart-container {
+  width: 100%;
   height: 18rem;
 }
 .crossroad-view-container .accidents-stats-content .cumulative-num {

@@ -228,6 +228,7 @@ var cmmnUi = {
     $(document).on($.modal.OPEN, function (e, modal) {
       if (modal.$blocker.is('.no-dimed')) {
         modal.$blocker.draggable({
+          handle: '.modal-header',
           containment: '.ly-map',
           start: function () {
             $(this).css('transform', 'none');

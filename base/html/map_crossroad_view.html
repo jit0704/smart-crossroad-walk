@@ -225,9 +225,78 @@
           <!-- //cr-camera-info -->
 
           <section class="cr-camera-view">
-            <em class="tit">카메라 View</em>
+            <em class="tit">영상 레이아웃</em>
 
-            <div class="custom-radio-rectangle-two lg">
+            <table class="tbl-custom-radio-container">
+              <colgroup>
+                <col style="width: 90px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>분할 화면</th>
+                  <td>
+                    <div class="custom-radio-rectangle-two">
+                      <label>
+                        <input type="radio" name="display1" />
+                        <span class="txt">보기</span>
+                      </label>
+                      <label>
+                        <input type="radio" name="display1" />
+                        <span class="txt">숨기기</span>
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>영상 명칭</th>
+                  <td>
+                    <div class="custom-radio-rectangle-two">
+                      <label>
+                        <input type="radio" name="display2" />
+                        <span class="txt">보기</span>
+                      </label>
+                      <label>
+                        <input type="radio" name="display2" />
+                        <span class="txt">숨기기</span>
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>영상 ROI</th>
+                  <td>
+                    <div class="custom-radio-rectangle-two">
+                      <label>
+                        <input type="radio" name="display3" disabled />
+                        <span class="txt">보기</span>
+                      </label>
+                      <label>
+                        <input type="radio" name="display3" disabled />
+                        <span class="txt">숨기기</span>
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>객체 Boxing</th>
+                  <td>
+                    <div class="custom-radio-rectangle-two">
+                      <label>
+                        <input type="radio" name="display4" />
+                        <span class="txt">보기</span>
+                      </label>
+                      <label>
+                        <input type="radio" name="display4" />
+                        <span class="txt">숨기기</span>
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- <div class="custom-radio-rectangle-two lg">
               <label>
                 <input type="radio" name="ch-all" />
                 <span class="txt">분할 화면</span>
@@ -236,7 +305,7 @@
                 <input type="radio" name="ch-all" />
                 <span class="txt">지도 화면</span>
               </label>
-            </div>
+            </div> -->
           </section>
           <!-- //cr-camera-view -->
 
@@ -245,7 +314,7 @@
 
             <table class="tbl-custom-radio-container">
               <colgroup>
-                <col style="width: 8rem" />
+                <col style="width: 90px" />
                 <col />
               </colgroup>
               <tbody>
@@ -325,13 +394,52 @@
             </div>
             <!-- //tit-header -->
             <article class="accidents-stats-content">
-              <div class="chart-container">
-                <img src="https://www.dummyimage.com/360x180/ddd/000.png&amp;text=Chart+Area" alt="퍼블리싱 확인용 더미 이미지" class="dummy-img" />
+              <!-- 231012 수정 -->
+              <div class="chart-view">
+                <div class="chart-container">
+                  <img src="https://www.dummyimage.com/360x180/ddd/000.png&amp;text=Chart+Area" alt="퍼블리싱 확인용 더미 이미지" class="dummy-img" />
+                </div>
+                <dl class="cumulative-num">
+                  <dt>돌발 유형 별 누적 건수</dt>
+                  <dd>(2023.00.00 ~ 2023.00.00)</dd>
+                </dl>
               </div>
-              <dl class="cumulative-num">
-                <dt>돌발 유형 별 누적 건수</dt>
-                <dd>(2023.00.00 ~ 2023.00.00)</dd>
-              </dl>
+              <!-- //chart-view -->
+              <div class="txt-view">
+                <div class="txt-view-header">
+                  <span class="tit">총 돌발 건수</span>
+                  <span class="num-tit"><em>9,999</em>건</span>
+                </div>
+                <!-- //txt-view-header -->
+                <div class="txt-view-data">
+                  <table>
+                    <colgroup>
+                      <col style="width: 100px" />
+                      <col />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th><em class="data-stop">정지</em></th>
+                        <td><em>999</em>건</td>
+                        <td><em>21</em>%</td>
+                      </tr>
+                      <tr>
+                        <th><em class="data-cw">보행자</em></th>
+                        <td><em>999</em>건</td>
+                        <td><em>69</em>%</td>
+                      </tr>
+                      <tr>
+                        <th><em class="data-reverse">역주행</em></th>
+                        <td><em>999</em>건</td>
+                        <td><em>10</em>%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //txt-view-data -->
+              </div>
+              <!-- //txt-view -->
             </article>
           </section>
           <!-- //accidents-stats -->
@@ -1121,10 +1229,20 @@
       $('.crossroad-view-container .menu .item').tab();
 
       // 230921 추가 : 상세화면 데이터 영역 x축으로 늘리는 기능
+      // 231012 수정
       $('.crossroad-view-container').resizable({
         handles: 'e',
         minWidth: 422,
-        maxWidth: 572,
+        maxWidth: 672,
+        resize: function (e, ui) {
+          var currentWidth = ui.size.width;
+          var $txtView = $('.accidents-stats-content .txt-view');
+          if (currentWidth >= 640) {
+            $txtView.show();
+          } else {
+            $txtView.hide();
+          }
+        },
       });
 
       // 통계 탭 > 타이틀(평균 속도 / LOS 등급)버튼 클릭 이벤트
@@ -1211,6 +1329,7 @@
 
       // 230914 수정 : 카메라 팝업 드래그 이벤트 기능
       $('.camera-popup').draggable({
+        handle: '.camera-popup-header', // 231012: 핸들 옵션 추가
         containment: '.ly-map',
         scroll: false,
         drag: function () {
@@ -1239,6 +1358,13 @@
       $('.camera-popup').on('mousedown', function () {
         $('.camera-popup').removeClass('current-active');
         $(this).addClass('current-active');
+      });
+
+      // 231012: 차량 번호 인식 팝업 드래그 이벤트 기능
+      $('.car-num-recog-popup').draggable({
+        handle: '.car-num-recog-popup-header',
+        containment: '.ly-map',
+        scroll: false,
       });
     </script>
   </body>

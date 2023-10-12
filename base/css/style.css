@@ -97,8 +97,8 @@ input[type=date] {
 }
 
 video {
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* 스크롤바 커스텀 */
@@ -110,7 +110,7 @@ body ::-webkit-scrollbar-track {
   background: none;
 }
 
-/* 웹폰트 */
+/* 웹폰트 Pretendard */
 @font-face {
   font-family: "Pretendard";
   font-weight: 900;
@@ -164,6 +164,28 @@ body ::-webkit-scrollbar-track {
   font-weight: 100;
   font-display: swap;
   src: local("Pretendard Thin"), url("/base/font/Pretendard-Thin.woff2") format("woff2");
+}
+/* 웹폰트 GmarketSans */
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("/base/font/GmarketSansLight.woff2") format("woff2");
+}
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("/base/font/GmarketSansMedium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("/base/font/GmarketSansBold.woff2") format("woff2");
 }
 /*---------------------------------------------------------------
   [help class]
@@ -3889,7 +3911,6 @@ body ::-webkit-scrollbar-track {
   display: none;
   position: absolute;
   z-index: 4;
-  width: 64.2rem;
   border-radius: 0.5rem;
   -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
