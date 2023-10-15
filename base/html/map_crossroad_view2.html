@@ -47,7 +47,7 @@
           </div>
           <!-- //지도 타입 선택 -->
 
-          <div class="map-state-legend-container">
+          <!-- <div class="map-state-legend-container">
             <ul class="map-state-toggle">
               <li>
                 <label class="slider-switch">
@@ -64,7 +64,6 @@
                 <span>접근로 별 LOS 등급</span>
               </li>
             </ul>
-            <!-- //map-state-toggle -->
             <dl class="los-legend type2">
               <dt>접근로 별 LOS 표준 범례</dt>
               <dd>
@@ -82,8 +81,34 @@
                 </ul>
               </dd>
             </dl>
-          </div>
+          </div> -->
           <!-- //map-state-legend-container -->
+
+          <button type="button" class="btn-los-legend">LOS 범례</button>
+          <div class="los-legend-container">
+            <header>
+              <em>접근로 별 LOS 표준 범례</em>
+              <button type="button" class="btn-close">
+                <span class="screen-out">범례 팝업 닫기</span>
+              </button>
+            </header>
+            <div class="los-legend-content">
+              <ul>
+                <li class="lv-a">A등급</li>
+                <li class="lv-b">B등급</li>
+                <li class="lv-c">C등급</li>
+                <li class="lv-d">D등급</li>
+              </ul>
+              <ul>
+                <li class="lv-e">E등급</li>
+                <li class="lv-f">F등급</li>
+                <li class="lv-ff">FF등급</li>
+                <li class="lv-fff">FFF등급</li>
+              </ul>
+            </div>
+            <!-- //los-legend-content -->
+          </div>
+          <!-- //los-legend-container -->
 
           <!-- 영상 분할 화면 -->
           <section class="split-screen-container">

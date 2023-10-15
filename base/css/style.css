@@ -97,8 +97,8 @@ input[type=date] {
 }
 
 video {
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 /* 스크롤바 커스텀 */
@@ -1209,29 +1209,21 @@ body ::-webkit-scrollbar-track {
 .ui.basic.table {
   line-height: 100%;
 }
-.ui.basic.table.is-fncbtn thead th {
-  padding: 1.4rem 0 !important;
-  line-height: 100%;
-}
 .ui.basic.table.is-fncbtn tbody td {
-  padding-top: 0.785rem;
-  padding-bottom: 0.785rem;
-}
-.ui.basic.table.is-fncbtn2 thead th {
-  padding: 1.4rem 0 !important;
-  line-height: 100%;
+  padding-top: 0.812rem;
+  padding-bottom: 0.812rem;
 }
 .ui.basic.table.is-fncbtn2 tbody td {
-  padding-top: 0.735rem;
-  padding-bottom: 0.735rem;
+  padding-top: 0.76rem;
+  padding-bottom: 0.77rem;
 }
 .ui.basic.table.is-chkbox-fncbtn-none thead th {
   padding: 1.4rem 0 !important;
   line-height: 100%;
 }
 .ui.basic.table.is-chkbox-fncbtn-none tbody td {
-  padding-top: 1.53rem;
-  padding-bottom: 1.53rem;
+  padding-top: 1.51rem;
+  padding-bottom: 1.51rem;
   line-height: 100%;
 }
 .ui.basic.table.is-data-grid thead tr th {
@@ -1266,6 +1258,7 @@ body ::-webkit-scrollbar-track {
 }
 .ui.basic.table thead th {
   padding: 1.2rem 0 !important;
+  line-height: normal;
   font-size: 1.8rem;
   font-weight: 600;
   color: #1e5f8d;
@@ -1274,6 +1267,7 @@ body ::-webkit-scrollbar-track {
 }
 .ui.basic.table tbody td {
   padding: 1.215rem 1.4rem;
+  line-height: normal;
   font-size: 1.6rem;
   color: #727272;
   text-align: center;
@@ -2036,54 +2030,88 @@ body ::-webkit-scrollbar-track {
   font-weight: 500;
 }
 
-.los-legend {
+.btn-los-legend {
   position: absolute;
-  right: 1.9rem;
-  bottom: 1.9rem;
+  right: 2rem;
+  bottom: 2rem;
   z-index: 1;
-  font-size: 1.2rem;
-  color: #797979;
+  width: 7.6rem;
+  line-height: 3.3rem;
   border-radius: 0.5rem;
   background: #fff;
-  -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #727272;
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.15);
 }
-.los-legend.type2 dd ul li::before {
-  width: 1.6rem;
-  height: 2.1rem;
-  border-radius: 0;
-  background-size: contain !important;
+
+.los-legend-container {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 2;
+  width: 30.1rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.15);
 }
-.los-legend.type2 dd ul li.lv-a::before {
-  background: url(/base/images/los/icon_los_a.png) no-repeat 0 0;
-}
-.los-legend.type2 dd ul li.lv-b::before {
-  background: url(/base/images/los/icon_los_b.png) no-repeat 0 0;
-}
-.los-legend.type2 dd ul li.lv-c::before {
-  background: url(/base/images/los/icon_los_c.png) no-repeat 0 0;
-}
-.los-legend.type2 dd ul li.lv-d::before {
-  background: url(/base/images/los/icon_los_d.png) no-repeat 0 0;
-}
-.los-legend.type2 dd ul li.lv-e::before {
-  background: url(/base/images/los/icon_los_e.png) no-repeat 0 0;
-}
-.los-legend.type2 dd ul li.lv-f::before {
-  background: url(/base/images/los/icon_los_f.png) no-repeat 0 0;
-}
-.los-legend.type2 dd ul li.lv-ff::before {
-  background: url(/base/images/los/icon_los_ff.png) no-repeat 0 0;
-}
-.los-legend.type2 dd ul li.lv-fff::before {
-  background: url(/base/images/los/icon_los_fff.png) no-repeat 0 0;
-}
-.los-legend dt {
-  padding: 0.6rem 0.8rem;
-  font-weight: 500;
+.los-legend-container header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 0.65rem 0.5rem 0.65rem 1rem;
   border-bottom: 1px solid #e8e8e8;
 }
-.los-legend dd {
+.los-legend-container header em {
+  line-height: normal;
+  font-size: 1.4rem;
+  color: #727272;
+  font-weight: 500;
+}
+.los-legend-container header .btn-close {
+  width: 2rem;
+  height: 2rem;
+  background-position: 50% 50%;
+  background-size: 1rem 1rem;
+}
+.los-legend-content {
+  padding: 1.32rem 1.78rem 1.32rem 1.58rem;
+}
+.los-legend-content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.los-legend-content ul:first-child {
+  margin-bottom: 1.13rem;
+}
+.los-legend-content ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2094,24 +2122,152 @@ body ::-webkit-scrollbar-track {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
-  padding: 0.2rem 0.4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
+  width: 6.4rem;
+  font-size: 1.2rem;
+  color: #797979;
 }
-.los-legend dd ul {
+.los-legend-content ul li::before {
+  content: "";
+  display: block;
+  width: 1.6rem;
+  height: 2.1rem;
+  border-radius: 0;
+  background-size: contain !important;
+}
+.los-legend-content ul li.lv-a::before {
+  background: url(/base/images/los/icon_los_a.png) no-repeat 0 0;
+}
+.los-legend-content ul li.lv-b::before {
+  background: url(/base/images/los/icon_los_b.png) no-repeat 0 0;
+}
+.los-legend-content ul li.lv-c::before {
+  background: url(/base/images/los/icon_los_c.png) no-repeat 0 0;
+}
+.los-legend-content ul li.lv-d::before {
+  background: url(/base/images/los/icon_los_d.png) no-repeat 0 0;
+}
+.los-legend-content ul li.lv-e::before {
+  background: url(/base/images/los/icon_los_e.png) no-repeat 0 0;
+}
+.los-legend-content ul li.lv-f::before {
+  background: url(/base/images/los/icon_los_f.png) no-repeat 0 0;
+}
+.los-legend-content ul li.lv-ff::before {
+  background: url(/base/images/los/icon_los_ff.png) no-repeat 0 0;
+}
+.los-legend-content ul li.lv-fff::before {
+  background: url(/base/images/los/icon_los_fff.png) no-repeat 0 0;
+}
+.los-legend-container.tab .tab-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.2rem;
+}
+.los-legend-container.tab .tab-header a {
+  min-width: 6.2rem;
+  line-height: 2.4rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  background: #f8f8f8;
+  font-size: 1.2rem;
+  color: #999999;
+  font-weight: 500;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.los-legend-container.tab .tab-header a.active {
+  color: #fff;
+  font-weight: 700;
+  background: #03a0fc;
+}
+.los-legend-container.tab .los-legend-content {
+  padding: 1rem 1.5rem;
+}
+.los-legend-container.tab .traffic-report {
+  display: none;
+}
+.los-legend-container.tab .traffic-report .txt {
+  display: block;
+  margin-bottom: 1.05rem;
+  line-height: 1.6rem;
+  font-size: 1.2rem;
+  color: #999999;
+}
+.los-legend-container.tab .traffic-report .state {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-bottom: 2.05rem;
+}
+.los-legend-container.tab .traffic-report .state span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 2.5rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 600;
+}
+.los-legend-container.tab .traffic-report .state span:nth-child(1) {
+  background: #4fb500;
+}
+.los-legend-container.tab .traffic-report .state span:nth-child(2) {
+  background: #f3be00;
+}
+.los-legend-container.tab .traffic-report .state span:nth-child(3) {
+  background: #b90000;
+}
+.los-legend-container.tab .traffic-report > p {
+  line-height: 1.6rem;
+  font-size: 1.2rem;
+  color: #999999;
+}
+.los-legend-container.tab .los-info {
+  display: none;
+  padding: 1.35rem 0.7rem;
+}
+.los-legend-container.tab .los-info ul {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
-.los-legend dd ul:last-child li {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+.los-legend-container.tab .los-info ul:first-child {
+  margin-bottom: 0.5rem;
 }
-.los-legend dd ul li {
+.los-legend-container.tab .los-info ul li {
+  width: 6.4rem;
   height: 2.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2120,9 +2276,9 @@ body ::-webkit-scrollbar-track {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2130,35 +2286,35 @@ body ::-webkit-scrollbar-track {
       align-content: center;
   gap: 0 0.4rem;
 }
-.los-legend dd ul li::before {
+.los-legend-container.tab .los-info ul li::before {
   content: "";
   display: block;
   width: 1.4rem;
   height: 1.4rem;
   border-radius: 100%;
 }
-.los-legend dd ul li.lv-a::before {
+.los-legend-container.tab .los-info ul li.lv-a::before {
   background: #0993ce;
 }
-.los-legend dd ul li.lv-b::before {
+.los-legend-container.tab .los-info ul li.lv-b::before {
   background: #4fb500;
 }
-.los-legend dd ul li.lv-c::before {
+.los-legend-container.tab .los-info ul li.lv-c::before {
   background: #ffb800;
 }
-.los-legend dd ul li.lv-d::before {
+.los-legend-container.tab .los-info ul li.lv-d::before {
   background: #e57003;
 }
-.los-legend dd ul li.lv-e::before {
+.los-legend-container.tab .los-info ul li.lv-e::before {
   background: #d40000;
 }
-.los-legend dd ul li.lv-f::before {
+.los-legend-container.tab .los-info ul li.lv-f::before {
   background: #892121;
 }
-.los-legend dd ul li.lv-ff::before {
+.los-legend-container.tab .los-info ul li.lv-ff::before {
   background: #9e007b;
 }
-.los-legend dd ul li.lv-fff::before {
+.los-legend-container.tab .los-info ul li.lv-fff::before {
   background: #37007c;
 }
 
@@ -3910,7 +4066,7 @@ body ::-webkit-scrollbar-track {
 .car-num-recog-popup {
   display: none;
   position: absolute;
-  z-index: 4;
+  z-index: 7;
   border-radius: 0.5rem;
   -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);

@@ -604,7 +604,7 @@
           <!-- //지도 타입 선택 -->
 
           <!-- 230928 추가 -->
-          <div class="map-state-legend-container">
+          <!-- <div class="map-state-legend-container">
             <ul class="map-state-toggle">
               <li>
                 <label class="slider-switch">
@@ -621,7 +621,6 @@
                 <span>접근로 별 LOS 등급</span>
               </li>
             </ul>
-            <!-- //map-state-toggle -->
             <dl class="los-legend type2">
               <dt>접근로 별 LOS 표준 범례</dt>
               <dd>
@@ -639,8 +638,34 @@
                 </ul>
               </dd>
             </dl>
-          </div>
+          </div> -->
           <!-- //map-state-legend-container -->
+
+          <button type="button" class="btn-los-legend">LOS 범례</button>
+          <div class="los-legend-container">
+            <header>
+              <em>접근로 별 LOS 표준 범례</em>
+              <button type="button" class="btn-close">
+                <span class="screen-out">범례 팝업 닫기</span>
+              </button>
+            </header>
+            <div class="los-legend-content">
+              <ul>
+                <li class="lv-a">A등급</li>
+                <li class="lv-b">B등급</li>
+                <li class="lv-c">C등급</li>
+                <li class="lv-d">D등급</li>
+              </ul>
+              <ul>
+                <li class="lv-e">E등급</li>
+                <li class="lv-f">F등급</li>
+                <li class="lv-ff">FF등급</li>
+                <li class="lv-fff">FFF등급</li>
+              </ul>
+            </div>
+            <!-- //los-legend-content -->
+          </div>
+          <!-- //los-legend-container -->
 
           <!-- LOS 아이콘 -->
           <i class="ico-los-a" style="top: 10px; left: 500px"><span class="screen-out">A등급</span></i>
@@ -1213,6 +1238,14 @@
       window.onload = function () {
         var map1 = new ngii_wmts.map('map1', { zoom: 6 });
       };
+
+      // LOS범례 클릭 이벤트
+      $('.btn-los-legend').on('click', function () {
+        $('.los-legend-container').show();
+      });
+      $('.los-legend-container .btn-close').on('click', function () {
+        $('.los-legend-container').hide();
+      });
 
       // 231008 차량 번호 인식 팝업 탭 메뉴
       $(document).on('click', '.car-num-recog-popup-tab-group a', function (e) {

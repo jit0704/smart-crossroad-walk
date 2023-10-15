@@ -19,22 +19,22 @@ var cmmnUi = {
   },
   default: function () {
     // Ctrl 키와 + 또는 - 키를 동시에 눌렀을 때 확대/축소를 막음.
-    document.addEventListener('keydown', function (event) {
-      if ((event.ctrlKey || event.metaKey) && (event.key === '+' || event.key === '-')) {
-        event.preventDefault();
-      }
-    });
+    // document.addEventListener('keydown', function (event) {
+    //   if ((event.ctrlKey || event.metaKey) && (event.key === '+' || event.key === '-')) {
+    //     event.preventDefault();
+    //   }
+    // });
 
     // Ctrl 키와 마우스 휠 동작을 포함하여 페이지 확대/축소 비활성화.
-    document.addEventListener(
-      'wheel',
-      function (event) {
-        if (event.ctrlKey) {
-          event.preventDefault();
-        }
-      },
-      { passive: false },
-    );
+    // document.addEventListener(
+    //   'wheel',
+    //   function (event) {
+    //     if (event.ctrlKey) {
+    //       event.preventDefault();
+    //     }
+    //   },
+    //   { passive: false },
+    // );
 
     /* 좌측 메뉴에 노출되는 상세 화면(접고/펼치기) 인터랙션 */
     // 상세 화면 유무 체크

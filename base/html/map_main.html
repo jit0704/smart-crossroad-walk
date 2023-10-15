@@ -62,7 +62,50 @@
           <!-- //구역명 -->
 
           <!-- 접근로 별 LOS 표준 범례 -->
-          <dl class="los-legend">
+          <button type="button" class="btn-los-legend">범례</button>
+          <div class="los-legend-container tab">
+            <header>
+              <span class="tab-header">
+                <a href="#tab1">교통정보</a>
+                <a href="#tab2">LOS</a>
+              </span>
+              <button type="button" class="btn-close">
+                <span class="screen-out">범례 팝업 닫기</span>
+              </button>
+            </header>
+            <div class="los-legend-content">
+              <div id="tab1" class="traffic-report">
+                <span class="txt">기준 시간 : 2023. 10. 06 15:15</span>
+                <div class="state">
+                  <span>원활</span>
+                  <span>서행</span>
+                  <span>정체</span>
+                </div>
+                <!-- //state -->
+                <p>* 실제 교통상황과 일부 다를 수 있습니다.</p>
+              </div>
+              <!-- //traffic-report -->
+              <div id="tab2" class="los-info">
+                <ul>
+                  <li class="lv-a">A등급</li>
+                  <li class="lv-b">B등급</li>
+                  <li class="lv-c">C등급</li>
+                  <li class="lv-d">D등급</li>
+                </ul>
+                <ul>
+                  <li class="lv-e">E등급</li>
+                  <li class="lv-f">F등급</li>
+                  <li class="lv-ff">FF등급</li>
+                  <li class="lv-fff">FFF등급</li>
+                </ul>
+              </div>
+              <!-- //los-info -->
+            </div>
+            <!-- //los-legend-content -->
+          </div>
+          <!-- //los-legend-container -->
+
+          <!-- <dl class="los-legend">
             <dt>접근로 별 LOS 표준 범례</dt>
             <dd>
               <ul>
@@ -78,7 +121,7 @@
                 <li class="lv-fff">FFF등급</li>
               </ul>
             </dd>
-          </dl>
+          </dl> -->
           <!-- //접근로 별 LOS 표준 범례 -->
 
           <!-- 횡단보도 아이콘
@@ -241,6 +284,24 @@
       window.onload = function () {
         var map1 = new ngii_wmts.map('map1', { zoom: 6 });
       };
+
+      // 범례 클릭 이벤트
+      $('.btn-los-legend').on('click', function () {
+        $('.los-legend-container').show(0, function () {
+          $('.tab-header a:first-child', '.los-legend-container.tab').trigger('click');
+        });
+      });
+      $('.los-legend-container .btn-close').on('click', function () {
+        $('.los-legend-container').hide();
+      });
+      $('.tab-header a', '.los-legend-container.tab').on('click', function (e) {
+        e.preventDefault();
+        var $hash = $(this).attr('href');
+        $('.los-legend-container.tab .tab-header a').removeClass('active');
+        $('.los-legend-container.tab .los-legend-content > div').hide();
+        $(this).addClass('active');
+        $($hash).show();
+      });
 
       // 230815 팝업 호출 함수
       function noDimedPopup() {

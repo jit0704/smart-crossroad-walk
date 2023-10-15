@@ -1979,10 +1979,6 @@
   -o-object-fit: fill;
      object-fit: fill;
 }
-.split-screen .split-video[poster] {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 .split-screen .no-video {
   display: block;
   width: 100%;
@@ -2238,6 +2234,11 @@
 .roi-view-container .roi-set-list-section .data-tbl-gray table td .ico-wastebasket {
   padding: 0;
   vertical-align: top;
+}
+.roi-view-container .roi-set-list-section .data-tbl-gray table td .btn-small {
+  font-size: 1.1rem;
+  color: #727272;
+  border: 1px solid #cbcbcb;
 }
 .roi-view-container .roi-set-list-header {
   display: -webkit-box;
@@ -2497,6 +2498,15 @@
   right: 3rem;
   bottom: 2rem;
 }
+.roi-view-container > .ui.buttons.basic::before {
+  content: "";
+  position: absolute;
+  top: -2rem;
+  left: -3rem;
+  right: -3rem;
+  height: 0.1rem;
+  background: #e8e8e8;
+}
 .roi-view-container > .ui.buttons.basic .btn-third {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -2572,6 +2582,9 @@
 }
 .tab-accidental-roi .perceive-body table:first-child th {
   text-align: center;
+}
+.tab-accidental-roi .roi-set-list-section .data-tbl-gray.xs {
+  height: 23.1rem;
 }
 
 /* 교차로 ROI 탭 */
