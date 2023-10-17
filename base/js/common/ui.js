@@ -95,9 +95,55 @@ var cmmnUi = {
     $('.pop-user-info').hide();
   },
   map: function () {
-    // 지도 우측 상단 현재 구역 드롭다운
+    // 231016 수정
     if ($('.ly-map').length !== 0) {
+      // 지도 우측 상단 현재 구역 드롭다운
       $('.area-box').dropdown();
+
+      // 지도 우측 상단 아이콘바 영역 버튼 토글
+      var $mapIconBarwrap = $('.map-iconbar-container');
+      $('.btn-display', $mapIconBarwrap).on('click', function () {
+        var $parent = $(this).parent();
+        if ($parent.hasClass('open')) {
+          $parent.removeClass('open');
+        } else {
+          $mapIconBarwrap.removeClass('open');
+          $parent.addClass('open');
+        }
+      });
+      $('.map-icon-list button', $mapIconBarwrap).on('click', function () {
+        var $this = $(this);
+        $this.parent().find('button').removeClass('active');
+        $this.addClass('active');
+        $this.closest('.map-iconbar-container').removeClass('open');
+
+        if ($this.hasClass('ic1')) {
+          classNameReplace($this, 'ic1');
+        } else if ($this.hasClass('ic2')) {
+          classNameReplace($this, 'ic2');
+        } else if ($this.hasClass('ic3')) {
+          classNameReplace($this, 'ic3');
+        } else if ($this.hasClass('ic4')) {
+          classNameReplace($this, 'ic4');
+        } else if ($this.hasClass('ic5')) {
+          classNameReplace($this, 'ic5');
+        }
+      });
+      // 아이콘들에 대한 표출 여부를 정할 수 있게 해주는 버튼의 아이콘 클래스명을 교체해주는 helper함수
+      function classNameReplace(_this, className) {
+        var $targetbtn = $('.btn-display', '.map-iconbar-container.map-selection');
+        _this.closest('.map-iconbar-container').children('.btn-display').removeClass().addClass(`btn-display ${className}`);
+        // 아이콘 하단에 텍스트가 있는 경우 분기 처리
+        if (_this.closest('.map-iconbar-container').hasClass('map-selection')) {
+          if ($targetbtn.hasClass('ic1')) {
+            $targetbtn.find('em').text('일반지도');
+          } else if ($targetbtn.hasClass('ic2')) {
+            $targetbtn.find('em').text('야간지도');
+          } else if ($targetbtn.hasClass('ic3')) {
+            $targetbtn.find('em').text('위성지도');
+          }
+        }
+      }
     }
   },
   gnb: function () {

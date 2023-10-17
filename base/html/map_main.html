@@ -27,7 +27,7 @@
       <main class="ly-container">
         <div id="map1" class="ly-map">
           <!-- 지도 타입 선택 -->
-          <div class="map-type">
+          <!-- <div class="map-type">
             <label>
               <input type="radio" checked name="maptype" />
               <span>일반지도</span>
@@ -36,11 +36,11 @@
               <input type="radio" name="maptype" />
               <span>위성지도</span>
             </label>
-          </div>
+          </div> -->
           <!-- //지도 타입 선택 -->
 
           <!-- 구역명 -->
-          <div class="ui selection dropdown area-box">
+          <div class="ui selection dropdown area-box pos-right3">
             <input type="hidden" name="" />
             <div class="default text">서울시 공릉동</div>
             <div class="menu">
@@ -60,6 +60,49 @@
             </div>
           </div>
           <!-- //구역명 -->
+
+          <!-- 우측 상단 아이콘바 -->
+          <div class="map-iconbar-container map-selection pos-right2">
+            <button type="button" class="btn-display">
+              <span><em>일반지도</em></span>
+            </button>
+            <div class="map-icon-list">
+              <button type="button" class="ic1">
+                <span><em>일반지도</em></span>
+              </button>
+              <button type="button" class="ic2">
+                <span><em>야간지도</em></span>
+              </button>
+              <button type="button" class="ic3">
+                <span><em>위성지도</em></span>
+              </button>
+            </div>
+            <!-- //map-icon-list -->
+          </div>
+          <!-- //map-iconbar-container -->
+
+          <div class="map-iconbar-container pos-right1">
+            <button type="button" class="btn-display">
+              <span><em class="screen-out">현재 적용된 아이콘</em></span>
+            </button>
+            <div class="map-icon-list">
+              <button type="button" class="ic1">
+                <span><em>LOS</em></span>
+              </button>
+              <button type="button" class="ic2">
+                <span><em>도로</em></span>
+              </button>
+              <button type="button" class="ic3">
+                <span><em>교차로</em></span>
+              </button>
+              <button type="button" class="ic4">
+                <span><em>횡단보도</em></span>
+              </button>
+            </div>
+            <!-- //map-icon-list -->
+          </div>
+          <!-- //map-iconbar-container -->
+          <!-- //우측 상단 아이콘바 -->
 
           <!-- 접근로 별 LOS 표준 범례 -->
           <button type="button" class="btn-los-legend">범례</button>
