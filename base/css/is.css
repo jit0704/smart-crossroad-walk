@@ -1725,8 +1725,7 @@
 .crossroad-view-container .stats-los .chart-container {
   height: 15rem;
 }
-.crossroad-view-container .video-container,
-.crossroad-view-container .accidents-container {
+.crossroad-view-container .video-container {
   padding-top: 4.3rem !important;
 }
 .crossroad-view-container .cr-camera-info {
@@ -1756,8 +1755,14 @@
 .crossroad-view-container .license-plate-recognition .tbl-custom-radio-container td {
   padding-bottom: 0.4rem;
 }
+.crossroad-view-container .accidents-container {
+  padding-top: 3.8rem !important;
+}
 .crossroad-view-container .accidents-stats {
   padding: 0 3rem 4rem;
+}
+.crossroad-view-container .accidents-stats > .tit-header .tit {
+  margin-bottom: 0 !important;
 }
 .crossroad-view-container .accidents-stats-content {
   display: -webkit-box;
@@ -1770,78 +1775,105 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
 }
 .crossroad-view-container .accidents-stats-content .chart-view {
   position: relative;
-  width: 36rem;
+  width: 36.2rem;
+  margin-top: 1.5rem;
 }
 .crossroad-view-container .accidents-stats-content .txt-view {
   display: none;
-  width: 21rem;
+  width: 22rem;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-header {
-  margin: -0.8rem 0 1.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.5rem;
+  margin-bottom: 1rem;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-header .tit {
   display: block;
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem 1rem;
   line-height: normal;
   font-size: 1.8rem;
-  color: #727272;
+  color: #6d6d6d;
   font-weight: 500;
+  letter-spacing: -0.054rem;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-header .num-tit {
   display: block;
-  line-height: 3.7rem;
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: #1e5f8d;
-  font-weight: 700;
+  font-weight: 500;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-header .num-tit em {
   display: inline-block;
-  margin-right: 1rem;
-  vertical-align: top;
+  vertical-align: 1px;
   font-family: "GmarketSans";
   font-weight: 700;
   font-size: 2.8rem;
+  letter-spacing: -0.084rem;
 }
-.crossroad-view-container .accidents-stats-content .txt-view-data .data-stop::before {
-  content: "";
-  width: 2rem;
-  height: 2rem;
-  background-image: url("/base/images/icon_cases1.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: contain;
+.crossroad-view-container .accidents-stats-content .txt-view-data {
+  max-height: 19.3rem;
+  overflow-y: auto;
 }
-.crossroad-view-container .accidents-stats-content .txt-view-data .data-cw::before {
-  content: "";
-  width: 2rem;
-  height: 2rem;
-  background-image: url("/base/images/icon_cases2.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: contain;
+.crossroad-view-container .accidents-stats-content .txt-view-data::-webkit-scrollbar {
+  width: 0.4rem;
 }
-.crossroad-view-container .accidents-stats-content .txt-view-data .data-reverse::before {
+.crossroad-view-container .accidents-stats-content .txt-view-data [class*=sudden]::before {
   content: "";
-  width: 2rem;
-  height: 2rem;
-  background-image: url("/base/images/icon_cases3.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: contain;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 999px;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data .sudden1::before {
+  background: #ffdd86;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data .sudden2::before {
+  background: #ffceb2;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data .sudden3::before {
+  background: #f67676;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data .sudden4::before {
+  background: #bdbdbd;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data .sudden5::before {
+  background: #519990;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data .sudden6::before {
+  background: #6d6cb8;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data tr:first-child th,
+.crossroad-view-container .accidents-stats-content .txt-view-data tr:first-child td {
+  border-top: 0.1rem solid #e8e8e8;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data tr td:last-child {
+  font-size: 1.2rem;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data th,
 .crossroad-view-container .accidents-stats-content .txt-view-data td {
-  padding: 0.6rem 0;
-  border-bottom: 0.5rem solid #fff;
-  background: #f8f8f8;
+  padding: 0.55rem 0;
+  border-bottom: 0.1rem solid #e8e8e8;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data th {
   padding-left: 1rem;
@@ -1867,7 +1899,7 @@
   line-height: 1.8rem;
   font-size: 1.4rem;
   color: #727272;
-  font-weight: 600;
+  font-weight: 500;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data td {
   line-height: 1.8rem;
@@ -1876,17 +1908,16 @@
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data td em {
   display: inline-block;
-  margin-right: 0.5rem;
   font-family: "GmarketSans";
-  font-weight: 700;
-  font-size: 1.6rem;
+  font-weight: 600;
+  font-size: 1.4rem;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data td:last-child em {
   margin-right: 0;
 }
 .crossroad-view-container .accidents-stats-content .chart-container {
   width: 100%;
-  height: 18rem;
+  height: 18.1rem;
 }
 .crossroad-view-container .accidents-stats-content .cumulative-num {
   position: absolute;
@@ -1909,7 +1940,7 @@
   padding: 3.2rem 3rem 0;
 }
 .crossroad-view-container .accidents-list .data-tbl-gray.xs {
-  height: 36.3rem;
+  height: 33rem;
 }
 .crossroad-view-container .accidents-list .data-tbl-gray.xs table thead th {
   padding: 0.95rem 0;
@@ -2631,7 +2662,7 @@
 @media screen and (max-height: 955px) {
   /* 교차로 상세 > 돌발 탭 컨텐츠 */
   .crossroad-view-container .accidents-list .data-tbl-gray.xs {
-    height: 33rem;
+    height: 30rem;
   }
 }
 /* 미디어 쿼리 */
