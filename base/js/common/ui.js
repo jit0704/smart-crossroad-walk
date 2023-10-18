@@ -95,7 +95,7 @@ var cmmnUi = {
     $('.pop-user-info').hide();
   },
   map: function () {
-    // 231016 수정
+    // 231018 수정
     if ($('.ly-map').length !== 0) {
       // 지도 우측 상단 현재 구역 드롭다운
       $('.area-box').dropdown();
@@ -103,19 +103,19 @@ var cmmnUi = {
       // 지도 우측 상단 아이콘바 영역 버튼 토글
       var $mapIconBarwrap = $('.map-iconbar-container');
       $('.btn-display', $mapIconBarwrap).on('click', function () {
-        var $parent = $(this).parent();
-        if ($parent.hasClass('open')) {
-          $parent.removeClass('open');
-        } else {
-          $mapIconBarwrap.removeClass('open');
-          $parent.addClass('open');
-        }
+        $(this).parent().toggleClass('open');
       });
+      // 아이콘바 영역 버튼아이콘 리스트 클릭 이벤트
       $('.map-icon-list button', $mapIconBarwrap).on('click', function () {
         var $this = $(this);
-        $this.parent().find('button').removeClass('active');
-        $this.addClass('active');
-        $this.closest('.map-iconbar-container').removeClass('open');
+
+        if ($this.closest('.map-iconbar-container').hasClass('map-selection')) {
+          $this.parent().find('button').removeClass('active');
+          $this.addClass('active');
+          $this.closest('.map-selection').removeClass('open');
+        } else {
+          $this.toggleClass('active');
+        }
 
         if ($this.hasClass('ic1')) {
           classNameReplace($this, 'ic1');
@@ -129,6 +129,16 @@ var cmmnUi = {
           classNameReplace($this, 'ic5');
         }
       });
+
+      // 최초 지도 접속시 지도 아이콘 default : 일반지도
+      $('.map-iconbar-container.map-selection .map-icon-list .ic1')
+        .trigger('click')
+        .closest('.map-iconbar-container.map-selection')
+        .removeClass('open');
+
+      // 최초 지도 접속시 마커 전체 노출
+      $('.map-iconbar-container').not('.map-iconbar-container.map-selection').addClass('open');
+
       // 아이콘들에 대한 표출 여부를 정할 수 있게 해주는 버튼의 아이콘 클래스명을 교체해주는 helper함수
       function classNameReplace(_this, className) {
         var $targetbtn = $('.btn-display', '.map-iconbar-container.map-selection');

@@ -1831,26 +1831,6 @@ body ::-webkit-scrollbar-track {
 .map-iconbar-container .btn-display span:hover {
   background-image: url(/base/images/map-right-iconbar/icon_map_hover.png);
 }
-.map-iconbar-container .btn-display.ic1 span {
-  background-image: url(/base/images/map-right-iconbar/iconbar1_hover.png);
-  background-size: 50% auto;
-  background-color: #ebf8ff;
-}
-.map-iconbar-container .btn-display.ic2 span {
-  background-image: url(/base/images/map-right-iconbar/iconbar2_hover.png);
-  background-size: 50% auto;
-  background-color: #ebf8ff;
-}
-.map-iconbar-container .btn-display.ic3 span {
-  background-image: url(/base/images/map-right-iconbar/iconbar3_hover.png);
-  background-size: 50% auto;
-  background-color: #ebf8ff;
-}
-.map-iconbar-container .btn-display.ic4 span {
-  background-image: url(/base/images/map-right-iconbar/iconbar4_hover.png);
-  background-size: 40% auto;
-  background-color: #ebf8ff;
-}
 .map-iconbar-container .map-icon-list {
   display: none;
   margin-top: 0.4rem;
@@ -2007,17 +1987,26 @@ body ::-webkit-scrollbar-track {
 .map-iconbar-container.map-selection .btn-display:hover em {
   color: #03a0fc;
 }
+.map-iconbar-container.map-selection .btn-display.ic1 span {
+  background-color: #ebf8ff;
+}
 .map-iconbar-container.map-selection .btn-display.ic1 span::before {
   background-image: url(/base/images/map-right-iconbar/map_selection1_hover.png);
 }
 .map-iconbar-container.map-selection .btn-display.ic1 em {
   color: #03a0fc;
 }
+.map-iconbar-container.map-selection .btn-display.ic2 span {
+  background-color: #ebf8ff;
+}
 .map-iconbar-container.map-selection .btn-display.ic2 span::before {
   background-image: url(/base/images/map-right-iconbar/map_selection2_hover.png);
 }
 .map-iconbar-container.map-selection .btn-display.ic2 em {
   color: #03a0fc;
+}
+.map-iconbar-container.map-selection .btn-display.ic3 span {
+  background-color: #ebf8ff;
 }
 .map-iconbar-container.map-selection .btn-display.ic3 span::before {
   background-image: url(/base/images/map-right-iconbar/map_selection3_hover.png);
@@ -2084,31 +2073,6 @@ body ::-webkit-scrollbar-track {
 }
 .map-iconbar-container.map-selection .map-icon-list .ic3:hover span::before {
   background-image: url(/base/images/map-right-iconbar/map_selection3_hover.png);
-}
-.map-iconbar-container.map-cw .btn-display.ic1 span {
-  background-image: url(/base/images/map-right-iconbar/iconbar_intersection1_hover.png);
-  background-size: 50% auto;
-  background-color: #ebf8ff;
-}
-.map-iconbar-container.map-cw .btn-display.ic2 span {
-  background-image: url(/base/images/map-right-iconbar/iconbar_intersection2_hover.png);
-  background-size: 50% auto;
-  background-color: #ebf8ff;
-}
-.map-iconbar-container.map-cw .btn-display.ic3 span {
-  background-image: url(/base/images/map-right-iconbar/iconbar_intersection3_hover.png);
-  background-size: 65% auto;
-  background-color: #ebf8ff;
-}
-.map-iconbar-container.map-cw .btn-display.ic4 span {
-  background-image: url(/base/images/map-right-iconbar/iconbar_intersection4_hover.png);
-  background-size: 65% auto;
-  background-color: #ebf8ff;
-}
-.map-iconbar-container.map-cw .btn-display.ic5 span {
-  background-image: url(/base/images/map-right-iconbar/iconbar_intersection5_hover.png);
-  background-size: 65% auto;
-  background-color: #ebf8ff;
 }
 .map-iconbar-container.map-cw .map-icon-list .ic1 span::before {
   width: 1.8rem;
