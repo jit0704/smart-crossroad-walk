@@ -1831,6 +1831,9 @@ body ::-webkit-scrollbar-track {
 .map-iconbar-container .btn-display span:hover {
   background-image: url(/base/images/map-right-iconbar/icon_map_hover.png);
 }
+.map-iconbar-container .btn-display:not(.map-selection).ic1 span, .map-iconbar-container .btn-display:not(.map-selection).ic2 span, .map-iconbar-container .btn-display:not(.map-selection).ic3 span, .map-iconbar-container .btn-display:not(.map-selection).ic4 span {
+  background-color: #ebf8ff;
+}
 .map-iconbar-container .map-icon-list {
   display: none;
   margin-top: 0.4rem;
@@ -2073,6 +2076,9 @@ body ::-webkit-scrollbar-track {
 }
 .map-iconbar-container.map-selection .map-icon-list .ic3:hover span::before {
   background-image: url(/base/images/map-right-iconbar/map_selection3_hover.png);
+}
+.map-iconbar-container.map-cw .btn-display.ic1 span, .map-iconbar-container.map-cw .btn-display.ic2 span, .map-iconbar-container.map-cw .btn-display.ic3 span, .map-iconbar-container.map-cw .btn-display.ic4 span, .map-iconbar-container.map-cw .btn-display.ic5 span {
+  background-color: #ebf8ff;
 }
 .map-iconbar-container.map-cw .map-icon-list .ic1 span::before {
   width: 1.8rem;

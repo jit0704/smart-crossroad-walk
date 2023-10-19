@@ -115,6 +115,12 @@ var cmmnUi = {
           $this.closest('.map-selection').removeClass('open');
         } else {
           $this.toggleClass('active');
+          // 231019 추가
+          if ($this.parent().find('.active').length === 0) {
+            setTimeout(function () {
+              $this.closest('.map-iconbar-container').children('.btn-display').removeClass().addClass('btn-display');
+            }, 50);
+          }
         }
 
         if ($this.hasClass('ic1')) {

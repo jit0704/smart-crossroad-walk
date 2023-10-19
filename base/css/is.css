@@ -62,7 +62,7 @@
   -ms-flex-line-pack: stretch;
       align-content: stretch;
   gap: 0 1rem;
-  height: 22.5rem;
+  height: 22.9rem;
 }
 .main-stats-container .summary-info-display > .tit {
   display: -webkit-box;
@@ -134,7 +134,7 @@
       -ms-flex: 1;
           flex: 1;
   position: relative;
-  padding: 2.5rem 2rem;
+  padding: 2rem;
 }
 .main-stats-container .summary-info-item-wrap > li:not(:first-child)::before {
   content: "";
@@ -179,14 +179,14 @@
   font-weight: 500;
 }
 .main-stats-container .summary-info-item-wrap > li .clearly em {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   font-weight: 700;
 }
 .main-stats-container .summary-info-item-wrap > li .tbl-bind {
-  padding: 1.84rem 0.3rem 0 1rem;
+  padding: 1.5rem 1rem 0;
 }
 .main-stats-container .summary-info-item-wrap > li .tbl-bind table {
-  height: 12.7rem;
+  height: 13.8rem;
   line-height: normal;
 }
 .main-stats-container .summary-info-item-wrap > li .tbl-bind table th {
@@ -206,18 +206,20 @@
       -ms-flex: 0 0 21.5rem;
           flex: 0 0 21.5rem;
 }
-.main-stats-container .summary-info-item-wrap > li:nth-child(4) .tbl-bind td {
+.main-stats-container .summary-info-item-wrap > li:nth-child(4) .tbl-bind table {
+  height: 13rem;
+}
+.main-stats-container .summary-info-item-wrap > li:nth-child(4) .tbl-bind table td {
   letter-spacing: -0.048rem;
 }
 .main-stats-container .summary-info-item-wrap > li:last-child {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  width: 22.2rem;
+  width: 24.1rem;
 }
 .main-stats-container .summary-info-item-wrap > li:last-child .tbl-bind table {
-  width: 16rem;
-  height: 9rem;
+  height: 13rem;
 }
 .main-stats-container .summary-info-item-wrap > li.traffic-direction {
   -webkit-box-flex: 0;
@@ -1775,16 +1777,16 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -ms-flex-line-pack: end;
-      align-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .crossroad-view-container .accidents-stats-content .chart-view {
   position: relative;
   width: 36.2rem;
-  margin-top: 1.5rem;
+  margin-top: 1.2rem;
 }
 .crossroad-view-container .accidents-stats-content .txt-view {
   display: none;
@@ -1807,7 +1809,7 @@
   -ms-flex-line-pack: center;
       align-content: center;
   gap: 0 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-header .tit {
   display: block;
@@ -1833,7 +1835,7 @@
   letter-spacing: -0.084rem;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data {
-  max-height: 19.3rem;
+  max-height: 15.7rem;
   overflow-y: auto;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data::-webkit-scrollbar {
@@ -1872,7 +1874,7 @@
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data th,
 .crossroad-view-container .accidents-stats-content .txt-view-data td {
-  padding: 0.55rem 0;
+  padding: 0.3rem 0;
   border-bottom: 0.1rem solid #e8e8e8;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data th {
@@ -1897,20 +1899,20 @@
       align-content: center;
   gap: 0 0.7rem;
   line-height: 1.8rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #727272;
   font-weight: 500;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data td {
   line-height: 1.8rem;
   color: #727272;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data td em {
   display: inline-block;
   font-family: "GmarketSans";
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data td:last-child em {
   margin-right: 0;
