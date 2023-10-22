@@ -23,11 +23,12 @@
         <div class="modal-body">
           <div class="data-tbl">
             <table>
+              <!-- 231021 colgroup 너비 수정 -->
               <colgroup>
-                <col style="width: 20%" />
-                <col style="width: 30%" />
-                <col style="width: 20%" />
-                <col style="width: 30%" />
+                <col style="width: 111px" />
+                <col style="width: 242px" />
+                <col style="width: 111px" />
+                <col />
               </colgroup>
               <tbody>
                 <tr>
@@ -48,13 +49,14 @@
                 </tr>
                 <tr>
                   <th>이메일 주소</th>
-                  <td colspan="2" class="pdr-20">
+                  <td colspan="2">
                     <div class="ui input rounded">
                       <input type="text" placeholder="필수" />
                     </div>
                   </td>
-                  <td>
-                    <button class="ui secondary basic button rounded" style="width: 100%; line-height: 3.5rem">중복확인</button>
+                  <!-- 231021 pdl-15 클래스명 추가, 버튼 : 인라인 스타일 삭제 및 overlap 클래스명 추가  -->
+                  <td class="pdl-15">
+                    <button class="ui secondary basic button rounded overlap">중복확인</button>
                   </td>
                 </tr>
                 <tr>
@@ -67,12 +69,13 @@
                 </tr>
                 <tr>
                   <th>수정자 ID</th>
-                  <td class="pdr-20">
+                  <td>
                     <div class="ui input rounded">
                       <input type="text" disabled />
                     </div>
                   </td>
-                  <th>수정 일시</th>
+                  <!-- 231021 인라인 스타일 추가 -->
+                  <th style="padding-left: 0.8rem">수정 일시</th>
                   <td>
                     <div class="ui input rounded">
                       <input type="text" disabled />

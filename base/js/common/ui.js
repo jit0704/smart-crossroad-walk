@@ -188,6 +188,7 @@ var cmmnUi = {
       if ($('.search-view-container').length !== 0) {
         $('.search-view-container').addClass('is-gnb-open');
       }
+      $('.sudden-disorder-popup').addClass('is-gnb-open');
     });
     $(document).on('mouseenter', '.ly-container', function () {
       $('.gnb').removeClass('is-open');
@@ -197,6 +198,7 @@ var cmmnUi = {
       if ($('.search-view-container').length !== 0) {
         $('.search-view-container').removeClass('is-gnb-open');
       }
+      $('.sudden-disorder-popup').removeClass('is-gnb-open');
     });
     $(document).on('mouseenter', '.crossroad-view-container .tab.segment', function () {
       $('.gnb').removeClass('is-open');
