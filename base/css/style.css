@@ -1390,6 +1390,7 @@ body ::-webkit-scrollbar-track {
   font-size: 1.8rem;
   font-weight: 400;
   border-bottom: 1px solid #e8e8e8;
+  word-break: break-word;
 }
 .data-tbl.view table tbody tr:last-child th,
 .data-tbl.view table tbody tr:last-child td {
@@ -1411,6 +1412,7 @@ body ::-webkit-scrollbar-track {
   line-height: 100%;
   font-size: 1.6rem;
   border-bottom: 1px solid #cbcbcb;
+  word-break: break-word;
 }
 .data-tbl.view2 table tbody tr:last-child th,
 .data-tbl.view2 table tbody tr:last-child td {
@@ -3445,11 +3447,34 @@ body ::-webkit-scrollbar-track {
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
+.accordion-chk-list-title .ui.primary-chkbox {
+  min-width: 2rem;
+  min-height: 1.8rem;
+  line-height: 2rem;
+}
+.accordion-chk-list-title .ui.primary-chkbox input[type=checkbox] {
+  width: 2rem;
+  height: 1.8rem;
+}
+.accordion-chk-list-title .ui.primary-chkbox label::before {
+  content: "";
+  position: static;
+  width: 2rem;
+  height: 1.8rem;
+  display: inline-block;
+  vertical-align: top;
+}
+.accordion-chk-list-title .ui.primary-chkbox label::after {
+  width: 2rem;
+  height: 1.8rem;
+}
 .accordion-chk-list-title button {
   position: relative;
-  padding: 1.05rem 1.5rem 1.05rem 0;
+  padding-left: 0;
+  padding-right: 1.5rem;
+  line-height: 3.3rem;
   text-align: left;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 500;
   color: #727272;
 }
@@ -3479,23 +3504,35 @@ body ::-webkit-scrollbar-track {
 }
 .accordion-chk-list-content .ui.primary-chkbox {
   display: block;
-  padding: 1rem 0 1rem 4rem;
+  min-width: 2rem;
+  min-height: 1.8rem;
+  padding: 0.7rem 0 0.7rem 4rem;
   -webkit-transition: background 0.2s;
   transition: background 0.2s;
 }
 .accordion-chk-list-content .ui.primary-chkbox + .ui.primary-chkbox {
   border-top: 1px solid #e8e8e8;
 }
+.accordion-chk-list-content .ui.primary-chkbox input[type=checkbox] {
+  width: 2rem;
+  height: 1.8rem;
+}
 .accordion-chk-list-content .ui.primary-chkbox label {
   padding-left: 0;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #727272;
 }
 .accordion-chk-list-content .ui.primary-chkbox label::before {
   content: "";
   position: static;
+  width: 2rem;
+  height: 1.8rem;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: -0.4rem;
+}
+.accordion-chk-list-content .ui.primary-chkbox label::after {
+  width: 2rem;
+  height: 1.8rem;
 }
 .accordion-chk-list-content + .accordion-chk-list-content {
   border-top: 1px solid #e8e8e8;
@@ -3787,6 +3824,12 @@ body ::-webkit-scrollbar-track {
 .modal-container.medium {
   width: 66rem;
 }
+.modal-container.w690 {
+  width: 69rem;
+}
+.modal-container.w790 {
+  width: 79rem;
+}
 .modal-header {
   padding: 1.2rem 1.8rem;
   border-bottom: 1px solid #e8e8e8;
@@ -3807,7 +3850,8 @@ body ::-webkit-scrollbar-track {
   color: #1e5f8d;
 }
 .modal-body-sub-tit.type2 {
-  margin: 1.5rem 3rem;
+  margin: 3rem 1.5rem 1rem;
+  font-size: 1.8rem;
 }
 .modal-body-sub-tit.type3 {
   margin: 2.4rem 3rem 1.5rem;
@@ -3873,6 +3917,9 @@ body ::-webkit-scrollbar-track {
 .modal-body .data-tbl-very {
   margin: 0 2.5rem;
   border: 0;
+}
+.modal-body .data-tbl-very::-webkit-scrollbar {
+  width: 0.4rem;
 }
 .modal-body .data-tbl-very .ui.very.basic.table thead th {
   font-size: 1.6rem;
@@ -3940,34 +3987,21 @@ body ::-webkit-scrollbar-track {
   max-height: 83.8rem;
   overflow-y: auto;
 }
-.modal-bodybot-bind .data-tbl-very.md {
-  max-height: none;
+.modal-bodybot-bind .data-tbl-very.md.type2 {
+  max-height: 14.5rem;
 }
-.modal-bodybot-bind .data-tbl-very.md.type2 thead tr:first-child th {
-  padding-top: 0.6rem !important;
-}
-.modal-bodybot-bind .data-tbl-very.md.type2 thead tr:first-child th:nth-child(1), .modal-bodybot-bind .data-tbl-very.md.type2 thead tr:first-child th:nth-child(2), .modal-bodybot-bind .data-tbl-very.md.type2 thead tr:first-child th:nth-child(3) {
-  padding-top: 0 !important;
-}
-.modal-bodybot-bind .data-tbl-very.md.type2 thead tr:last-child th {
-  padding: 0.4rem 0.5rem 0.6rem !important;
-  font-weight: 400;
-}
-.modal-bodybot-bind .data-tbl-very.md.type2 thead th {
-  padding: 0 !important;
-  line-height: normal;
-  font-size: 1.6rem;
-}
-.modal-bodybot-bind .data-tbl-very.md.type2 tbody td {
-  padding: 1.5rem 2.25rem;
-  line-height: normal;
+.modal-bodybot-bind .data-tbl-very.md.type2 .ui.very.basic.table thead th {
+  padding: 0.55rem 0 !important;
   font-size: 1.4rem;
 }
-.modal-bodybot-bind .data-tbl-very.md.type2.is-form tbody td {
-  padding: 0.75rem 0 !important;
+.modal-bodybot-bind .data-tbl-very.md.type2 .ui.very.basic.table tbody td {
+  padding: 0.9rem 1.2rem !important;
 }
-.modal-bodybot-bind .data-tbl-very.md.type2.is-form tbody td .selectbox-wrap.xs select {
-  width: 6.25rem;
+.modal-bodybot-bind .data-tbl-very.md.type2.is-form .ui.very.basic.table tbody td {
+  padding: 0.9rem 0 !important;
+}
+.modal-bodybot-bind .data-tbl-very.md.type2.is-form .ui.very.basic.table tbody td .selectbox-wrap.xs select {
+  width: 5.25rem;
   min-width: none;
   padding: 0.55rem 0.7rem 0.55rem 1.7rem;
   line-height: 100%;
@@ -3975,32 +4009,32 @@ body ::-webkit-scrollbar-track {
   border-color: #cbcbcb;
   background-image: url(/base/images/arr_down_gray.png);
 }
-.modal-bodybot-bind .data-tbl-very.md.type2.is-form tbody td .ui.input.rounded.xs {
-  width: 6.25rem;
+.modal-bodybot-bind .data-tbl-very.md.type2.is-form .ui.very.basic.table tbody td .ui.input.rounded.xs {
+  width: 5.25rem;
 }
-.modal-bodybot-bind .data-tbl-very.md.type2.is-form tbody td .ui.input.rounded.xs input {
+.modal-bodybot-bind .data-tbl-very.md.type2.is-form .ui.very.basic.table tbody td .ui.input.rounded.xs input {
   line-height: 2.3rem;
   padding: 0;
   text-align: center;
   color: #727272;
 }
-.modal-bodybot-bind .data-tbl-very.md.type3 thead th {
-  padding: 1rem 0 !important;
-  line-height: normal;
-  font-size: 1.6rem;
-}
-.modal-bodybot-bind .data-tbl-very.md.type3 tbody td {
-  padding: 1.05rem 2.25rem;
+.modal-bodybot-bind .data-tbl-very.md.type3 .ui.very.basic.table thead th {
+  padding: 0.75rem 0 !important;
   line-height: normal;
   font-size: 1.4rem;
 }
-.modal-bodybot-bind .data-tbl-very.md.type3.is-form tbody td {
-  padding: 0.6rem 0 !important;
+.modal-bodybot-bind .data-tbl-very.md.type3 .ui.very.basic.table tbody td {
+  padding: 1rem 1.25rem !important;
+  line-height: normal;
+  font-size: 1.4rem;
 }
-.modal-bodybot-bind .data-tbl-very.md.type3.is-form tbody td .ui.input.rounded.xs {
+.modal-bodybot-bind .data-tbl-very.md.type3.is-form .ui.very.basic.table tbody td {
+  padding: 0.55rem 0 !important;
+}
+.modal-bodybot-bind .data-tbl-very.md.type3.is-form .ui.very.basic.table tbody td .ui.input.rounded.xs {
   width: 8rem;
 }
-.modal-bodybot-bind .data-tbl-very.md.type3.is-form tbody td .ui.input.rounded.xs input {
+.modal-bodybot-bind .data-tbl-very.md.type3.is-form .ui.very.basic.table tbody td .ui.input.rounded.xs input {
   line-height: 2.3rem;
   padding: 0;
   text-align: center;
@@ -4644,6 +4678,7 @@ body ::-webkit-scrollbar-track {
 .car-num-recog-popup .car-num-recog-list li {
   width: 15rem;
   background: #727272;
+  border-radius: 0.5rem 0.5rem 0.4rem 0.4rem;
 }
 .car-num-recog-popup .car-num-recog-list li img {
   width: 100%;
@@ -6664,7 +6699,7 @@ body ::-webkit-scrollbar-track {
           align-items: stretch;
   -ms-flex-line-pack: stretch;
       align-content: stretch;
-  gap: 0 1rem;
+  gap: 0 0.5rem;
 }
 .unit-group .bind .radio-txt {
   -webkit-box-flex: 1;
@@ -6673,6 +6708,9 @@ body ::-webkit-scrollbar-track {
 }
 .unit-group .bind .radio-txt span {
   display: block;
+  padding: 0.4rem 0.5rem;
+  line-height: normal;
+  font-size: 1.6rem;
 }
 
 /* 대시보드 - 메인(구역 내 전체 시스템 집계 현황) */
