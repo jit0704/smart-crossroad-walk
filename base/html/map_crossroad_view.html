@@ -1393,7 +1393,20 @@
         $thisCameraPopup.fadeOut(150);
       });
 
-      // 230914 수정 : 차종별 토글 버튼
+      // 231024 추가 : 카메라 팝업의 resizable이벤트 stop시 팝업이 body스크롤 바깥으로 넘어가는지 감지하여 넘어가지 않게 위치를 수정해주는 함수
+      function bodyElInvadeDetect($parent, $parentPositionTop) {
+        var scrollTop = $(document).scrollTop();
+        var scrollHeight = $(document).height();
+        var windowHeight = $(window).height();
+        var maxScroll = scrollHeight - windowHeight; //최대 스크롤 높이
+        var currentScroll = scrollTop; //현재 스크롤 위치
+
+        if (maxScroll > 17) {
+          $parent.css('top', $parentPositionTop - maxScroll - 15);
+        }
+      }
+
+      // 231024 수정 : 차종별 토글 버튼
       $('.btn-model').on('click', function () {
         var $this = $(this);
         var $parent = $this.closest('.camera-popup');
@@ -1401,25 +1414,37 @@
         var $modelTrafficH = $modelTraffic.height();
         $this.toggleClass('active');
         if ($this.is('.active')) {
-          $modelTraffic.fadeIn(200);
-          $parent.find('.ui-resizable-e').css('height', `calc(100% + ${$modelTrafficH}px)`);
-          $parent.find('.ui-resizable-s').css('bottom', -$modelTrafficH);
-          $parent.find('.ui-resizable-se').css('bottom', -$modelTrafficH);
+          $modelTraffic.show(0);
+          bodyElInvadeDetect($parent, parseInt($parent.css('top')));
         } else {
-          $modelTraffic.fadeOut(200);
+          $modelTraffic.hide(0);
           $parent.find('.ui-resizable-e').css('height', '100%');
           $parent.find('.ui-resizable-s').css('bottom', '-5px');
           $parent.find('.ui-resizable-se').css('bottom', '1px');
         }
       });
 
-      // 230914 추가 : 리사이징 이벤트 기능
+      // 231024 수정 : 리사이징 이벤트 기능
       $('.camera-popup').resizable({
         maxWidth: 800,
         maxHeight: 772,
         minWidth: 300,
         minHeight: 272,
-        aspectRatio: 8 / 7,
+        // aspectRatio: 8 / 7,
+        resize: function (e, ui) {
+          var $el = $(ui.element);
+          if ($el.find('.btn-model').hasClass('active')) {
+            $('.camera-popup').resizable('option', 'minHeight', 462);
+          } else {
+            $('.camera-popup').resizable('option', 'minHeight', 272);
+          }
+          $el.css('height', 'auto');
+          $('body').addClass('ov-hide');
+        },
+        stop: function (e, ui) {
+          $('body').removeClass('ov-hide');
+          bodyElInvadeDetect($(ui.element), ui.position.top);
+        },
       });
 
       // 230914 수정 : 카메라 팝업 드래그 이벤트 기능
