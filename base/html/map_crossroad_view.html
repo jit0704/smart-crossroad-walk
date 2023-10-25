@@ -15,6 +15,7 @@
     <!-- includeHTML.js : 퍼블리싱 확인용 include -->
     <script src="/base/js/common/includeHTML.js"></script>
     <script src="/base/js/common/ui.js"></script>
+    <script src="/base/js/common/map-iconbar.js"></script>
     <link rel="stylesheet" href="http://map.ngii.go.kr/emap/css/map/OpenLayers-6.4.3.css" />
     <link rel="stylesheet" href="/base/css/common.css" />
     <link rel="stylesheet" href="/base/css/is.css" />
@@ -1415,9 +1416,11 @@
         $this.toggleClass('active');
         if ($this.is('.active')) {
           $modelTraffic.show(0);
+          $('body').addClass('ov-hide'); // 231025 추가
           bodyElInvadeDetect($parent, parseInt($parent.css('top')));
         } else {
           $modelTraffic.hide(0);
+          $('body').removeClass('ov-hide'); // 231025 추가
           $parent.find('.ui-resizable-e').css('height', '100%');
           $parent.find('.ui-resizable-s').css('bottom', '-5px');
           $parent.find('.ui-resizable-se').css('bottom', '1px');
@@ -1442,7 +1445,7 @@
           $('body').addClass('ov-hide');
         },
         stop: function (e, ui) {
-          $('body').removeClass('ov-hide');
+          // $('body').removeClass('ov-hide'); // 231025 삭제
           bodyElInvadeDetect($(ui.element), ui.position.top);
         },
       });

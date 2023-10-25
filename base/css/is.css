@@ -606,6 +606,16 @@
   color: #999999;
 }
 
+/* 교차로 원시 이력 > Excel Down 검색 조건 팝업 */
+.primitive-data .filter-grouop .date-group {
+  margin-left: 0;
+}
+.primitive-data .txt-condition {
+  margin: 1rem 0 0 0;
+  line-height: normal;
+  font-size: 1.4rem;
+}
+
 /* 교차로 유출입 교통량 */
 .crossroads-flow-container .filter-grouop {
   margin-bottom: 3.2rem;
@@ -1461,10 +1471,11 @@
 
 /* 돌발 발생 이력 : 돌발 상태 확인 팝업 */
 .outbreak-situation {
-  padding: 3rem 2.4rem 0;
+  padding: 2rem 2.5rem 0;
 }
 .outbreak-situation > em {
-  font-size: 2rem;
+  line-height: normal;
+  font-size: 1.8rem;
   color: #1e5f8d;
   font-weight: 500;
 }
@@ -1485,12 +1496,12 @@
   -ms-flex-line-pack: center;
       align-content: center;
   gap: 0 3.5rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 .outbreak-situation .geomji-type .ui.checkbox.primary-chkbox label {
   padding-left: 2.6rem;
-  line-height: 100%;
-  font-size: 1.8rem;
+  line-height: 1.8rem;
+  font-size: 1.6rem;
   color: #727272;
 }
 .outbreak-situation .geomji-type .ui.checkbox.primary-chkbox label::before, .outbreak-situation .geomji-type .ui.checkbox.primary-chkbox label::after {

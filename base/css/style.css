@@ -789,11 +789,10 @@ body ::-webkit-scrollbar-track {
   font-weight: 400;
 }
 .ui.breadcrumb .section.active {
-  color: #adadad;
+  color: #03a0fc;
   font-weight: 400;
 }
 .ui.breadcrumb .section.active:hover {
-  color: #03a0fc;
   cursor: pointer;
 }
 .ui.input {
@@ -3800,20 +3799,20 @@ body ::-webkit-scrollbar-track {
 .modal-container.w340 {
   width: 34rem;
 }
+.modal-container.w424 {
+  width: 42.4rem;
+}
 .modal-container.w427 {
   width: 42.7rem;
 }
 .modal-container.w450 {
   width: 45rem;
 }
-.modal-container.w466 {
-  width: 46.6rem;
+.modal-container.w475 {
+  width: 47.5rem;
 }
 .modal-container.w480 {
   width: 48rem;
-}
-.modal-container.w508 {
-  width: 50.8rem;
 }
 .modal-container.w510 {
   width: 51rem;
@@ -4078,11 +4077,12 @@ body ::-webkit-scrollbar-track {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding: 1.8rem;
+  padding: 1rem 1.8rem;
   border-bottom: 1px solid #e8e8e8;
 }
 .custom-popup-header .tit {
-  font-size: 2.4rem;
+  line-height: 2.9rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: #1e5f8d;
 }
@@ -4106,13 +4106,14 @@ body ::-webkit-scrollbar-track {
   -ms-flex-line-pack: center;
       align-content: center;
   gap: 0 0.4rem;
-  padding: 2.2rem 0 2.5rem;
+  padding: 1.5rem 0 2.5rem;
 }
 .custom-popup-btn-group .button.basic.rounded {
   width: 8rem;
+  line-height: 3.1rem !important;
 }
 .custom-popup.alert, .custom-popup.confirm {
-  width: 44.1rem;
+  width: 40rem;
 }
 .custom-popup.alert .custom-popup-body, .custom-popup.confirm .custom-popup-body {
   display: -webkit-box;
@@ -4130,13 +4131,12 @@ body ::-webkit-scrollbar-track {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  min-height: 7.3rem;
-  padding: 2.5rem 3rem 0;
+  padding: 2.5rem 2.2rem 0;
   text-align: center;
 }
 .custom-popup.alert .custom-popup-body p, .custom-popup.confirm .custom-popup-body p {
   line-height: normal;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 /*---------------------------------------------------------------
@@ -4288,7 +4288,7 @@ body ::-webkit-scrollbar-track {
   background: #4878c1 !important;
 }
 .camera-popup.current-active .model-traffic {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   border-color: #2867e1;
   background: #003f9d;
 }
@@ -4478,7 +4478,6 @@ body ::-webkit-scrollbar-track {
 }
 .camera-popup-bottom .bot-info2 .btn-model.active {
   background: #727272;
-  border-color: #999999;
 }
 .camera-popup-bottom .bot-info2 .btn-model.active::after {
   -webkit-transform: rotate(180deg);
@@ -4491,11 +4490,6 @@ body ::-webkit-scrollbar-track {
 
 .model-traffic {
   display: none;
-  background: #3d3d3d;
-  border-radius: 0.5rem;
-  border: 1px solid #727272;
-  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
 }
 .model-traffic > .tit {
   display: -webkit-box;
@@ -4521,16 +4515,15 @@ body ::-webkit-scrollbar-track {
 }
 .model-traffic > .tit::before {
   content: "";
-  display: block;
-  width: 0.5rem;
-  height: 1.4rem;
+  width: 0.3rem;
+  height: 1rem;
   background-image: url("/base/images/icon_dot_double.png");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: 50% 50%;
   background-size: contain;
 }
 .model-traffic-data {
-  padding: 0 2rem 1.5rem;
+  padding: 0 1rem 0.5rem;
 }
 .model-traffic-data li {
   display: -webkit-box;
@@ -4550,7 +4543,7 @@ body ::-webkit-scrollbar-track {
       align-content: center;
   line-height: 2.4rem;
   border-radius: 0.5rem;
-  border: 0.75px solid #999999;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   text-align: center;
   font-size: 1.2rem;
 }
@@ -5243,10 +5236,9 @@ body ::-webkit-scrollbar-track {
   color: #999999;
 }
 .ly-map .ui.breadcrumb .section.active {
-  color: #999999;
+  color: #03a0fc;
 }
 .ly-map .ui.breadcrumb .section.active:hover {
-  color: #03a0fc;
   cursor: pointer;
 }
 .ly-map .system-nav {

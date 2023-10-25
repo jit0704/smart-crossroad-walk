@@ -16,21 +16,24 @@
   </head>
   <body>
     <div id="ex" class="modal">
-      <div class="modal-container w508">
+      <!-- 231025 w475클래스명으로 변경 -->
+      <div class="modal-container w475">
         <div class="modal-header">
           <span class="tit">Excel Down 검색 조건</span>
         </div>
         <!-- //modal-header -->
         <div class="modal-body">
-          <div class="data-tbl">
+          <!-- 231025 primitive-data 클래스명 추가 -->
+          <div class="data-tbl primitive-data">
             <table>
               <colgroup>
-                <col style="width: 20%" />
+                <col style="width: 100px" />
                 <col />
               </colgroup>
               <tbody>
                 <tr>
-                  <th class="txt-center">분석기간</th>
+                  <!-- 231025 분석기간 th태그에 txt-center클래스명 삭제 -->
+                  <th>분석기간</th>
                   <td>
                     <div class="filter-grouop">
                       <!-- 달력 날짜 초기화는 맨 아래 스크립트 참고   -->
