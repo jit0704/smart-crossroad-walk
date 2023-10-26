@@ -1051,21 +1051,62 @@ body ::-webkit-scrollbar-track {
   min-height: 2.2rem;
   line-height: 2.2rem;
 }
-.ui.primary-chkbox label::before,
-.ui.primary-chkbox label::after,
 .ui.primary-chkbox input[type=checkbox] {
   width: 2.5rem;
   height: 2.2rem;
+}
+.ui.primary-chkbox label::before {
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 2px solid #c6c6c6;
+  border-radius: 3px;
+}
+.ui.primary-chkbox input:focus ~ label:before {
+  background: #fff;
+  border-color: #c6c6c6;
+}
+.ui.primary-chkbox input:checked ~ label:before,
+.ui.primary-chkbox input:checked:focus ~ label:before {
+  display: none;
+}
+.ui.primary-chkbox.c-navy label::before {
+  border-color: #1e5f8d;
+}
+.ui.primary-chkbox.c-navy input:focus ~ label:before {
+  border-color: #1e5f8d;
+}
+.ui.primary-chkbox.c-navy input:checked ~ label:after {
+  content: "";
+  width: 2.5rem;
+  height: 2.2rem;
+  background-image: url("/base/images/icon_checkbox.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ui.primary-chkbox.c-bluesky input:checked ~ label:after {
+  content: "";
+  width: 2.5rem;
+  height: 2.2rem;
+  background-image: url("/base/images/icon_checkbox.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
 }
 .ui.primary-chkbox.txt-none.md {
   width: 2rem;
   height: 1.8rem;
 }
 .ui.primary-chkbox.txt-none.md label::before,
-.ui.primary-chkbox.txt-none.md label::after,
 .ui.primary-chkbox.txt-none.md input[type=checkbox] {
   width: 2rem;
   height: 1.8rem;
+}
+.ui.primary-chkbox.txt-none.md.c-bluesky input:checked ~ label:after {
+  content: "";
+  width: 2rem;
+  height: 1.8rem;
+  background-size: cover;
 }
 .ui.primary-chkbox.txt-none label {
   font-size: 0;
@@ -1081,9 +1122,13 @@ body ::-webkit-scrollbar-track {
   color: #727272;
 }
 .ui.primary-chkbox.md label::before,
-.ui.primary-chkbox.md label::after,
 .ui.primary-chkbox.md input[type=checkbox] {
   width: 1.8rem;
+  height: 1.8rem;
+}
+.ui.primary-chkbox.md.c-bluesky input:checked ~ label:after {
+  content: "";
+  width: 2rem;
   height: 1.8rem;
 }
 .ui.primary-chkbox.xs {
@@ -1092,14 +1137,22 @@ body ::-webkit-scrollbar-track {
   line-height: 1.1rem;
 }
 .ui.primary-chkbox.xs label {
-  padding-left: 1.8rem;
+  padding-left: 1.5rem;
   font-size: 1.2rem;
 }
 .ui.primary-chkbox.xs label::before,
-.ui.primary-chkbox.xs label::after,
 .ui.primary-chkbox.xs input[type=checkbox] {
   width: 1.1rem;
   height: 1.1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.ui.primary-chkbox.xs.c-bluesky input:checked ~ label:after {
+  content: "";
+  width: 1.2rem;
+  height: 1.1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .label-dropdown {
   display: -webkit-box;
@@ -3452,13 +3505,12 @@ body ::-webkit-scrollbar-track {
   line-height: 2rem;
 }
 .accordion-chk-list-title .ui.primary-chkbox input[type=checkbox] {
-  width: 2rem;
+  width: 1.8rem;
   height: 1.8rem;
 }
 .accordion-chk-list-title .ui.primary-chkbox label::before {
   content: "";
-  position: static;
-  width: 2rem;
+  width: 1.8rem !important;
   height: 1.8rem;
   display: inline-block;
   vertical-align: top;
@@ -3493,10 +3545,14 @@ body ::-webkit-scrollbar-track {
 .accordion-chk-list-content {
   display: none;
 }
+.accordion-chk-list-content .accordion-chk-list-title .ui.primary-chkbox {
+  padding-left: 4rem;
+}
 .accordion-chk-list-content .accordion-chk-list-title .ui.primary-chkbox input {
-  top: 1rem;
-  left: auto;
-  right: -0.2rem;
+  left: 4rem;
+}
+.accordion-chk-list-content .accordion-chk-list-title button {
+  padding-left: 2rem;
 }
 .accordion-chk-list-content .accordion-chk-list-title button::after {
   right: 4rem;
@@ -3505,7 +3561,6 @@ body ::-webkit-scrollbar-track {
   display: block;
   min-width: 2rem;
   min-height: 1.8rem;
-  padding: 0.7rem 0 0.7rem 4rem;
   -webkit-transition: background 0.2s;
   transition: background 0.2s;
 }
@@ -3524,12 +3579,11 @@ body ::-webkit-scrollbar-track {
 .accordion-chk-list-content .ui.primary-chkbox label::before {
   content: "";
   position: static;
-  width: 2rem;
-  height: 1.8rem;
   display: inline-block;
-  vertical-align: -0.4rem;
+  vertical-align: -0.3rem;
 }
 .accordion-chk-list-content .ui.primary-chkbox label::after {
+  top: 0.1rem;
   width: 2rem;
   height: 1.8rem;
 }
@@ -3539,8 +3593,17 @@ body ::-webkit-scrollbar-track {
 .accordion-chk-list-content .accordion-chk-list-content .ui.primary-chkbox {
   padding-left: 6.9rem;
 }
+.accordion-chk-list-content .accordion-chk-list-content .ui.primary-chkbox input:checked + label {
+  padding-left: 2.6rem;
+}
+.accordion-chk-list-content .accordion-chk-list-content .ui.primary-chkbox label {
+  line-height: 3.5rem;
+}
 .accordion-chk-list-content .accordion-chk-list-content .ui.primary-chkbox label::before {
   margin-right: 0.8rem;
+}
+.accordion-chk-list-content .accordion-chk-list-content .ui.primary-chkbox label::after {
+  top: 0.9rem;
 }
 
 /* 데이터 테이블 목록 */
@@ -3930,6 +3993,16 @@ body ::-webkit-scrollbar-track {
 }
 .modal-body .data-tbl-very .ui.very.basic.table.is-chkbox tbody td {
   padding: 0.85rem 1.3rem !important;
+}
+.modal-body .data-tbl-very .ui.very.basic.table.is-chkbox tbody td .ui.primary-chkbox {
+  min-width: 2.2rem;
+}
+.modal-body .data-tbl-very .ui.very.basic.table.is-chkbox tbody td .ui.primary-chkbox label::before {
+  width: 2rem;
+  height: 2rem;
+}
+.modal-body .data-tbl-very .ui.very.basic.table.is-chkbox tbody td .ui.primary-chkbox input:checked ~ label:after {
+  width: 2.2rem;
 }
 .modal-body .button-group-only-right {
   margin: 1.5rem 2.5rem 0;

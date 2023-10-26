@@ -620,16 +620,13 @@
 .crossroads-flow-container .filter-grouop {
   margin-bottom: 3.2rem;
 }
-.crossroads-flow-container .filter-grouop .ui.primary-chkbox {
-  min-width: 1.8rem;
-  min-height: 1.8rem;
-  line-height: 1.8rem;
-}
 .crossroads-flow-container .filter-grouop .ui.primary-chkbox label {
-  padding-left: 3rem;
-  line-height: 2.2rem;
+  line-height: 2.1rem;
   font-size: 1.8rem;
   color: #727272;
+}
+.crossroads-flow-container .filter-grouop .ui.primary-chkbox label::before, .crossroads-flow-container .filter-grouop .ui.primary-chkbox label::after {
+  top: 0.15rem;
 }
 .crossroads-flow-view {
   display: -webkit-box;
@@ -1504,8 +1501,12 @@
   font-size: 1.6rem;
   color: #727272;
 }
-.outbreak-situation .geomji-type .ui.checkbox.primary-chkbox label::before, .outbreak-situation .geomji-type .ui.checkbox.primary-chkbox label::after {
+.outbreak-situation .geomji-type .ui.checkbox.primary-chkbox label::before {
   width: 1.8rem;
+  height: 1.8rem;
+}
+.outbreak-situation .geomji-type .ui.checkbox.primary-chkbox label::after {
+  width: 2rem;
   height: 1.8rem;
 }
 
