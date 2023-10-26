@@ -3583,7 +3583,6 @@ body ::-webkit-scrollbar-track {
   vertical-align: -0.3rem;
 }
 .accordion-chk-list-content .ui.primary-chkbox label::after {
-  top: 0.1rem;
   width: 2rem;
   height: 1.8rem;
 }
@@ -3603,7 +3602,7 @@ body ::-webkit-scrollbar-track {
   margin-right: 0.8rem;
 }
 .accordion-chk-list-content .accordion-chk-list-content .ui.primary-chkbox label::after {
-  top: 0.9rem;
+  top: 0.8rem;
 }
 
 /* 데이터 테이블 목록 */
