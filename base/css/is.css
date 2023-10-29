@@ -588,7 +588,7 @@
 
 /* 교차로 원시 이력 */
 .stats-container.primitive .filter-grouop {
-  margin-bottom: 3rem;
+  margin-bottom: 1.8rem;
 }
 .stats-container.primitive .button-function-group {
   margin-bottom: 0.8rem;
@@ -597,6 +597,9 @@
   margin-bottom: 0;
   font-size: 1.6rem;
   color: #1e5f8d;
+}
+.stats-container.primitive .data-tbl-very {
+  height: 69.9rem;
 }
 
 .txt-condition {
@@ -648,7 +651,7 @@
 }
 .crossroads-flow-board {
   position: relative;
-  width: 110.1rem;
+  width: 100rem;
   height: 74.1rem;
   border-radius: 1rem;
   background: #fff;
@@ -698,11 +701,11 @@
 .crossroads-flow-board .flow-stats-detail {
   width: 19.7rem;
   height: 22.6rem;
-  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-top: 0;
 }
 .crossroads-flow-board .flow-stats-detail.reverse {
-  border-top: 1px solid #999999;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom: 0;
 }
 .crossroads-flow-board .flow-stats-detail.reverse .arrow .flow-straight.strt::before {
@@ -745,7 +748,7 @@
   font-size: 1.4rem;
   color: #fff;
   font-weight: 500;
-  background: #999999;
+  background: rgba(0, 0, 0, 0.2);
 }
 .crossroads-flow-board .flow-stats-detail .arrow {
   display: -webkit-box;
@@ -764,8 +767,8 @@
   -ms-flex-line-pack: start;
       align-content: flex-start;
   height: 6.5rem;
-  border-top: 1px solid #999999;
-  border-bottom: 1px solid #999999;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .crossroads-flow-board .flow-stats-detail .arrow button {
   -webkit-box-flex: 1;
@@ -775,7 +778,7 @@
   padding: 0;
 }
 .crossroads-flow-board .flow-stats-detail .arrow button:not(:first-child) {
-  border-left: 1px solid #999999;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
 .crossroads-flow-board .flow-stats-detail .arrow button.flow-straight {
   display: -webkit-box;
@@ -889,7 +892,7 @@
   color: #999999;
 }
 .crossroads-flow-board .flow-stats-detail .num em:not(:first-child) {
-  border-left: 1px solid #999999;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
 .crossroads-flow-board .flow-stats-detail .num em.active {
   color: #727272;

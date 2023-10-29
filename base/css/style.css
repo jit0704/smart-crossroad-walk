@@ -775,6 +775,9 @@ body ::-webkit-scrollbar-track {
   display: block;
   font-size: 1.4rem;
 }
+.ui.breadcrumb.pdb-24 {
+  padding-bottom: 2.4rem !important;
+}
 .ui.breadcrumb .icon.home {
   font-size: 1.7rem;
   color: #adadad;
@@ -1077,9 +1080,9 @@ body ::-webkit-scrollbar-track {
 }
 .ui.primary-chkbox.c-navy input:checked ~ label:after {
   content: "";
-  width: 2.5rem;
-  height: 2.2rem;
-  background-image: url("/base/images/icon_checkbox.png");
+  width: 2.55rem;
+  height: 2.25rem;
+  background-image: url("/base/images/icon_checkbox_navy.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -1273,8 +1276,8 @@ body ::-webkit-scrollbar-track {
   line-height: 100%;
 }
 .ui.basic.table.is-fncbtn tbody td {
-  padding-top: 0.812rem;
-  padding-bottom: 0.812rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
 }
 .ui.basic.table.is-fncbtn2 tbody td {
   padding-top: 0.76rem;
@@ -1306,7 +1309,7 @@ body ::-webkit-scrollbar-track {
   line-height: 100%;
 }
 .ui.basic.table.is-data-grid thead tr th {
-  height: 2.34rem;
+  height: 2.34rem !important;
   padding: 0 !important;
   line-height: 100%;
   border-bottom: 0;
@@ -1318,7 +1321,7 @@ body ::-webkit-scrollbar-track {
   font-size: 1.2rem;
 }
 .ui.basic.table.is-data-grid tbody td {
-  padding: 0.6rem 1.2rem;
+  padding: 0.591rem 1.2rem;
   line-height: 1.32rem;
   font-size: 1.2rem;
   color: #727272;
@@ -1345,7 +1348,7 @@ body ::-webkit-scrollbar-track {
   background: #ebf8ff;
 }
 .ui.basic.table tbody td {
-  padding: 1.215rem 1.4rem;
+  padding: 0.998rem 1.4rem;
   line-height: normal;
   font-size: 1.6rem;
   color: #727272;
@@ -2484,8 +2487,11 @@ body ::-webkit-scrollbar-track {
   right: 2rem;
   bottom: 2rem;
   z-index: 1;
-  width: 7.6rem;
+  width: auto;
+  max-width: 7.6rem;
+  padding: 0 1.2rem;
   line-height: 3.3rem;
+  letter-spacing: -0.042rem;
   border-radius: 0.5rem;
   background: #fff;
   font-size: 1.4rem;
@@ -4763,6 +4769,7 @@ body ::-webkit-scrollbar-track {
 
 /* 돌발/장애 탭 팝업 */
 .sudden-disorder-popup {
+  display: none;
   position: fixed;
   left: 5.45rem;
   bottom: 2rem;
@@ -4773,6 +4780,9 @@ body ::-webkit-scrollbar-track {
   background: #fff;
   -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.sudden-disorder-popup.active {
+  display: block;
 }
 .sudden-disorder-popup.is-gnb-open {
   left: 18rem;
@@ -4804,8 +4814,8 @@ body ::-webkit-scrollbar-track {
 }
 .sudden-disorder-popup .tab-sudden-list {
   overflow-y: auto;
-  min-height: 9.72rem;
-  max-height: 14.8rem;
+  min-height: 14.8rem;
+  max-height: 25.1rem;
 }
 .sudden-disorder-popup .tab-sudden-list::-webkit-scrollbar {
   width: 0.4rem;
@@ -4863,6 +4873,11 @@ body ::-webkit-scrollbar-track {
 }
 .sudden-disorder-popup .tab-sudden-list li > .txt em {
   color: #3d3d3d;
+}
+.sudden-disorder-popup .tab-sudden-list li > .txt .txt-badge {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 .sudden-disorder-popup .tab-sudden-list li.read {
   border-color: #f8f8f8;
@@ -4949,9 +4964,6 @@ body ::-webkit-scrollbar-track {
   color: #727272;
 }
 
-.tab-disorder .ui.button.basic.secondary.c-gray-type3 {
-  line-height: 1.75rem;
-}
 .tab-disorder .tab-sudden-list li:not(.read):hover {
   border-color: #ebebeb;
   background: #ebebeb;

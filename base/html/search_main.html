@@ -142,7 +142,12 @@
       <!-- //search-view-container -->
 
       <main class="ly-container">
-        <div id="map1" class="ly-map"></div>
+        <div id="map1" class="ly-map">
+          <!-- 돌발/장애 탭 팝업 -->
+          <!-- active클래스 추가시 노출 / 제거시 숨김 -->
+          <div class="sudden-disorder-popup active" include-html="/base/html/common/sudden_disorder_popup.html"></div>
+          <!-- //sudden-disorder-popup -->
+        </div>
         <!-- //ly-map -->
       </main>
       <!-- //ly-container -->
@@ -216,6 +221,20 @@
       $('.js-custom-wrap-system .chk-box button', $searchContainer).on('click', function () {
         var $txt = $(this).text();
         $(this).closest('.js-custom-wrap-system').removeClass('active').children('.btn-custom').text($txt);
+      });
+
+      // 돌발/장애 탭 메뉴 (퍼블리싱 확인용)
+      setTimeout(function () {
+        $('.sudden-disorder-popup .menu .item').tab({
+          context: $('.sudden-disorder-popup'),
+        });
+      }, 200);
+
+      /* gnb알림 버튼 클릭 이벤트 : 아래 js는 퍼블리싱 확인용입니다. 참고해서 개발화면에 반영 부탁드립니다. */
+      $(document).on('click', '.btn-bell', function () {
+        $('.sudden-disorder-popup').addClass('active');
+        $('.gnb .aside .btn-m').removeClass('active');
+        $('.gnb .aside .pop-user-info').hide();
       });
     </script>
   </body>

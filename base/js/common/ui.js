@@ -80,10 +80,46 @@ var cmmnUi = {
     //   $('.gnb').removeClass('is-open');
     // });
 
+    // 231028 추가: 돌발/장애탭의 리스트 높이가 다를 경우 두개를 비교하여 리스트의 높이값을 큰 값으로 적용
+    setTimeout(function () {
+      var $tabSudden = $('.tab-sudden-list', '.sudden-disorder-tab-wrap');
+      var heights = []; // 돌발/장애탭의 높이를 저장할 배열
+      var maxHeight = null; // 돌발/장애탭의 최대 높이를 담는 변수
+
+      // 비동기 처리
+      setTimeout(function () {
+        maxHeight = Math.max(...heights);
+      }, 100);
+
+      $tabSudden.each(function (_, el) {
+        var $elClosest = $(el).closest('.sudden-disorder-tab-wrap');
+        var $elParent = $(el).parent();
+        $elParent.addClass('active'); // 돌발/장애탭 리스트 높이값을 얻기 위해 리스트를 잠시 보이게 설정
+        heights.push($elParent.children('.tab-sudden-list').eq(0).height()); // 높이를 배열에 추가
+
+        // 돌발/장애탭 리스트 높이값 비교
+        if ($elClosest.children().eq(0).outerHeight(true) !== $elClosest.children().eq(1).outerHeight(true)) {
+          // 돌발/장애탭 리스트 스크롤 유/무 조건에 맞추기위해 분기 처리
+          if (maxHeight < 251 || maxHeight > 148) {
+            // 비동기 처리
+            setTimeout(function () {
+              $(el).css({
+                'min-height': 'auto',
+                'max-height': 'none',
+                height: maxHeight,
+              });
+            }, 150);
+          }
+        }
+        $elClosest.children().eq(1).removeClass('active'); // 돌발/장애탭 리스트 설정 원복;
+      });
+    }, 250);
+
     // 좌측 메뉴 프로필 보기
     $('.gnb .aside .btn-m').on('click', function () {
       $(this).addClass('active');
       $('.pop-user-info').fadeIn(250);
+      $('.sudden-disorder-popup').removeClass('active');
     });
     $(document).on('mouseenter', '.ly-map, .ly-sub, .real-time-outbreak-container', function () {
       cmmnUi.profilePopInit();
@@ -190,6 +226,7 @@ var cmmnUi = {
         $('.search-view-container').addClass('is-gnb-open');
       }
       $('.sudden-disorder-popup').addClass('is-gnb-open');
+      $('.filter-grouop .selectbox-wrap select').blur(); // 231028 목록 화면에서 셀렉트 박스가 펼쳐진 상태일때 gnb를 open하면 select option값이 gnb를 뚫고 올라오는 현상 수정
     });
     $(document).on('mouseenter', '.ly-container', function () {
       $('.gnb').removeClass('is-open');
@@ -203,6 +240,7 @@ var cmmnUi = {
     });
     $(document).on('mouseenter', '.crossroad-view-container .tab.segment', function () {
       $('.gnb').removeClass('is-open');
+      $('.sudden-disorder-popup').removeClass('is-gnb-open');
       cmmnUi.profilePopInit();
     });
     $(document).on('mouseenter', '.roi-view-container .tab.segment', function () {
@@ -212,13 +250,26 @@ var cmmnUi = {
     $(document).on('mouseenter', '.search-view-container > section', function () {
       $('.gnb').removeClass('is-open');
       $(this).parent('.search-view-container').removeClass('is-gnb-open');
+      $('.sudden-disorder-popup').removeClass('is-gnb-open');
       cmmnUi.profilePopInit();
     });
 
     // 1depth 메뉴의 하위 메뉴 initialize
     $dropdownEl.dropdown({
-      onShow: function () {},
+      onShow: function () {
+        if ($('.sudden-disorder-popup').hasClass('active')) {
+          $('.sudden-disorder-popup').removeClass('active');
+        }
+      },
       onHide: function () {
+        if ($('.sudden-disorder-popup').hasClass('active')) {
+          return true;
+        }
+
+        if ($('.gnb .aside .btn-m').hasClass('active')) {
+          return true;
+        }
+
         if ($(this).find('.ui.accordion').length !== 0) {
           return isAccordionState;
         } else {
@@ -252,6 +303,8 @@ var cmmnUi = {
       setTimeout(function () {
         isAccordionState = false;
       }, 250);
+      $('.gnb .aside .btn-m').removeClass('active');
+      $('.gnb .aside .pop-user-info').hide();
     });
 
     // 아코디언메뉴 클릭시 isAccordionState의 side effect 처리
