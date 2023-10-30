@@ -1558,7 +1558,7 @@
   background-size: contain;
 }
 .crossroad-view-container .tab.segment > section:not(:first-child) {
-  border-top: 1px solid #dcdcdc;
+  border-top: 1px solid #e8e8e8;
 }
 .crossroad-view-container .tab.segment > section > .tit, .crossroad-view-container .tab.segment > section > .stats-tit-option > .tit, .crossroad-view-container .tab.segment > section > .tit-header .tit {
   display: block;
@@ -1745,14 +1745,44 @@
 .crossroad-view-container .video-container {
   padding-top: 4.3rem !important;
 }
+.crossroad-view-container .video-container .ui.buttons.basic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
+  padding: 2rem 3rem;
+}
+.crossroad-view-container .video-container .ui.buttons.basic .btn-third {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #727272;
+}
 .crossroad-view-container .cr-camera-info {
   padding: 0 3rem 2.8rem;
 }
 .crossroad-view-container .cr-camera-info .data-tbl-gray.xs {
-  height: auto;
+  height: 16rem;
 }
 .crossroad-view-container .cr-camera-info .data-tbl-gray.xs table thead th {
-  padding: 0.95rem 0;
+  padding: 0.85rem 0;
+  font-size: 1.4rem;
+}
+.crossroad-view-container .cr-camera-info .data-tbl-gray.xs table tbody td {
+  padding: 0.82rem 0;
+  font-size: 1.4rem;
 }
 .crossroad-view-container .cr-camera-view,
 .crossroad-view-container .license-plate-recognition {
@@ -1771,6 +1801,9 @@
 .crossroad-view-container .license-plate-recognition .tbl-custom-radio-container th,
 .crossroad-view-container .license-plate-recognition .tbl-custom-radio-container td {
   padding-bottom: 0.4rem;
+}
+.crossroad-view-container .license-plate-recognition {
+  border-bottom: 1px solid #e8e8e8;
 }
 .crossroad-view-container .accidents-container {
   padding-top: 3.8rem !important;
@@ -2680,6 +2713,11 @@
   /* 교차로 상세 > 돌발 탭 컨텐츠 */
   .crossroad-view-container .accidents-list .data-tbl-gray.xs {
     height: 30rem;
+  }
+  .crossroad-view-container .cr-camera-view,
+  .crossroad-view-container .license-plate-recognition {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
   }
 }
 /* 미디어 쿼리 */

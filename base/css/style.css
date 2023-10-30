@@ -1348,7 +1348,7 @@ body ::-webkit-scrollbar-track {
   background: #ebf8ff;
 }
 .ui.basic.table tbody td {
-  padding: 0.998rem 1.4rem;
+  padding: 1.015rem 1.4rem;
   line-height: normal;
   font-size: 1.6rem;
   color: #727272;
@@ -5498,6 +5498,7 @@ body ::-webkit-scrollbar-track {
 }
 .ly-setting .data-tbl-very .ui.very.basic.table thead th {
   height: 4.7rem;
+  padding: 0 !important;
 }
 .ly-copyright {
   width: 100%;

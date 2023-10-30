@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>카메라 관리 상세 팝업</title>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <!-- includeHTML.js : 퍼블리싱 확인용 include -->
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" href="/base/css/common.css" />
+  </head>
+  <body>
+    <div id="ex" class="modal">
+      <div class="modal-container medium">
+        <div class="modal-header">
+          <span class="tit">카메라 정보</span>
+        </div>
+        <!-- //modal-header -->
+        <div class="modal-body">
+          <div class="data-tbl view">
+            <table>
+              <colgroup>
+                <col style="width: 150px" />
+                <col />
+                <col style="width: 150px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>구역</th>
+                  <td>태릉</td>
+                  <th>지점</th>
+                  <td>태릉입구역</td>
+                </tr>
+                <tr>
+                  <th>지점 ID</th>
+                  <td colspan="3">1001</td>
+                </tr>
+                <tr>
+                  <th>지점 주소</th>
+                  <td colspan="3">서울 노원구 동일로 지하 992-1</td>
+                </tr>
+                <tr>
+                  <th>카메라 ID</th>
+                  <td>CAM100101</td>
+                  <th>카메라 명</th>
+                  <td>CAM1</td>
+                </tr>
+                <tr>
+                  <th>촬영 방향</th>
+                  <td>북</td>
+                  <th>채널</th>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <th>IP 주소</th>
+                  <td colspan="3">192.168.172.130</td>
+                </tr>
+                <tr>
+                  <th>RTSP 주소</th>
+                  <td colspan="3">rtsp://192.168.172.130:558/LiveChannel/media.smp</td>
+                </tr>
+                <tr>
+                  <th>해상도</th>
+                  <td>1920 x 1080</td>
+                  <th>각도</th>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <th>위도</th>
+                  <td>37.123456</td>
+                  <th>경도</th>
+                  <td>128.123456</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //data-tbl -->
+        </div>
+        <!-- //modal-body -->
+        <div class="modal-bottom button-both">
+          <span class="left">
+            <a href="#" rel="modal:close" class="ui secondary basic button rounded">Map</a>
+          </span>
+          <span class="right">
+            <a href="#" class="btn-modal-open ui primary basic button rounded">수정</a>
+            <a href="#" rel="modal:close" class="ui secondary basic button rounded">목록</a>
+          </span>
+        </div>
+        <!-- //modal-bottom -->
+      </div>
+      <!-- //modal-container -->
+    </div>
+    <!-- //modal -->
+
+    <a href="#ex" type="button" class="btn-modal-open screen-out"> 퍼블리싱 확인용 버튼 </a>
+
+    <script>
+      // 퍼블리싱 확인용
+      $(function () {
+        setTimeout(function () {
+          $('[href="#ex"]').trigger('click');
+        }, 20);
+      });
+    </script>
+  </body>
+</html>
