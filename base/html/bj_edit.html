@@ -24,10 +24,10 @@
           <div class="data-tbl">
             <table>
               <colgroup>
-                <col style="width: 20%" />
-                <col style="width: 30%" />
-                <col style="width: 20%" />
-                <col style="width: 30%" />
+                <col style="width: 15%" />
+                <col style="width: 35%" />
+                <col style="width: 15%" />
+                <col style="width: 35%" />
               </colgroup>
               <tbody>
                 <tr>
@@ -39,10 +39,27 @@
                   </td>
                 </tr>
                 <tr>
-                  <th>실행 주기</th>
+                  <th>실행 종류</th>
                   <td class="pdr-20">
+                    <div class="selectbox-wrap rounded">
+                      <select>
+                        <option value="">Cron</option>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                  </td>
+                  <th>실행 주기</th>
+                  <td>
                     <div class="ui input rounded">
                       <input type="text" />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>최종 실행</th>
+                  <td class="pdr-20">
+                    <div class="ui input rounded">
+                      <input type="text" disabled />
                     </div>
                   </td>
                   <th>실행 상태</th>
@@ -52,14 +69,6 @@
                         <option value="">Y</option>
                         <option value="">N</option>
                       </select>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>최종 실행</th>
-                  <td colspan="3">
-                    <div class="ui input rounded">
-                      <input type="text" />
                     </div>
                   </td>
                 </tr>

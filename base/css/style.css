@@ -5487,6 +5487,10 @@ body ::-webkit-scrollbar-track {
 .ly-setting.type2 > .data-tbl-very {
   height: 66.3rem;
 }
+.ly-setting.type2 > .data-tbl-very .ui.basic.table.is-fncbtn tbody td {
+  padding-top: 0.914rem;
+  padding-bottom: 0.915rem;
+}
 .ly-setting .ui.breadcrumb {
   padding: 3.6rem 0 3.7rem;
 }

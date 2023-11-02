@@ -1624,6 +1624,9 @@
 }
 .crossroad-view-container .stats-tit-option .ico-up-boxgray {
   padding: 0;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .crossroad-view-container .stats-tit-option .option-list {
   display: none;
