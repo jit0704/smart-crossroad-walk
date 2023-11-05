@@ -597,10 +597,13 @@
               </table>
             </div>
             <!-- //data-tbl-gray -->
-
-            <a href="#" class="ui secondary basic button rounded">돌발 상세 조회</a>
           </section>
           <!-- //accidents-list -->
+
+          <!-- 231104 돌발 상세 조회 버튼 이동됨 -->
+          <div class="ui buttons basic">
+            <a href="#" class="btn-third">돌발 상세 조회</a>
+          </div>
         </div>
         <!-- //돌발 탭 -->
 
@@ -1332,7 +1335,9 @@
       });
 
       // 탭 퍼블리싱 확인용
-      $('.crossroad-view-container .menu .item').tab();
+      $('.crossroad-view-container .menu .item').tab({
+        context: $('.crossroad-view-container'),
+      });
 
       // 230921 추가 : 상세화면 데이터 영역 x축으로 늘리는 기능
       // 231012 수정
@@ -1502,7 +1507,9 @@
 
       // 돌발/장애 탭 메뉴 (퍼블리싱 확인용)
       setTimeout(function () {
-        $('.sudden-disorder-popup .menu .item').tab();
+        $('.sudden-disorder-popup .menu .item').tab({
+          context: $('.sudden-disorder-popup'),
+        });
       }, 200);
 
       /* gnb알림 버튼 클릭 이벤트 : 아래 js는 퍼블리싱 확인용입니다. 참고해서 개발화면에 반영 부탁드립니다. */

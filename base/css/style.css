@@ -220,6 +220,10 @@ body ::-webkit-scrollbar-track {
   padding-right: 2rem !important;
 }
 
+.border-bot0 {
+  border-bottom: 0 !important;
+}
+
 /*---------------------------------------------------------------
   [overwrite style]
   - menu
@@ -3631,7 +3635,7 @@ body ::-webkit-scrollbar-track {
 }
 .data-tbl-very.md {
   height: auto;
-  max-height: 12.2rem;
+  max-height: 20.1rem;
 }
 
 /*---------------------------------------------------------------
@@ -4065,7 +4069,7 @@ body ::-webkit-scrollbar-track {
   overflow-y: auto;
 }
 .modal-bodybot-bind .data-tbl-very.md.type2 {
-  max-height: 14.5rem;
+  max-height: 23.8rem;
 }
 .modal-bodybot-bind .data-tbl-very.md.type2 .ui.very.basic.table thead th {
   padding: 0.55rem 0 !important;
@@ -4094,6 +4098,9 @@ body ::-webkit-scrollbar-track {
   padding: 0;
   text-align: center;
   color: #727272;
+}
+.modal-bodybot-bind .data-tbl-very.md.type3 {
+  max-height: 17.9rem;
 }
 .modal-bodybot-bind .data-tbl-very.md.type3 .ui.very.basic.table thead th {
   padding: 0.75rem 0 !important;
@@ -5500,9 +5507,19 @@ body ::-webkit-scrollbar-track {
 .ly-setting .button-function-group {
   margin-bottom: 1.3rem;
 }
-.ly-setting .data-tbl-very .ui.very.basic.table thead th {
+.ly-setting > .data-tbl-very .ui.very.basic.table {
+  table-layout: fixed;
+}
+.ly-setting > .data-tbl-very .ui.very.basic.table thead th {
   height: 4.7rem;
   padding: 0 !important;
+}
+.ly-setting > .data-tbl-very .ui.very.basic.table tbody td {
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
 }
 .ly-copyright {
   width: 100%;
@@ -5515,6 +5532,109 @@ body ::-webkit-scrollbar-track {
 }
 .ly-copyright.c-white {
   background: #fff;
+}
+
+/* 좌우 목록 화면 */
+.list-left-right-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  gap: 0 3.6rem;
+  margin-top: -0.6rem;
+}
+.list-left-right-wrap .list-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.list-left-right-wrap .list-container .size2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  gap: 4.2rem 0;
+}
+.list-left-right-wrap .list-container .size2 > article {
+  width: 100%;
+}
+.list-left-right-wrap .list-container .tit-bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding-bottom: 1rem;
+}
+.list-left-right-wrap .list-container .tit-bind.only-tit {
+  height: 4.1rem;
+}
+.list-left-right-wrap .list-container .tit-bind .tit {
+  display: block;
+  line-height: normal;
+  color: #1e5f8d;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.list-left-right-wrap .list-container .tit-bind .ui.button.basic.primary.rounded {
+  width: 6rem;
+  padding: 0;
+  line-height: 3.1rem;
+}
+.list-left-right-wrap .list-container .data-tbl-very.height-auto {
+  height: auto;
+}
+.list-left-right-wrap .list-container .data-tbl-very.height-type1 {
+  height: 62.4rem;
+}
+.list-left-right-wrap .list-container .data-tbl-very.height-type2 {
+  height: 44.57rem;
+}
+.list-left-right-wrap .list-container .ui.basic.table thead th {
+  padding: 1.1rem 0 !important;
+}
+.list-left-right-wrap .list-container .ui.basic.table tbody td {
+  padding-top: 1.224rem;
+  padding-bottom: 1.225rem;
+}
+.list-left-right-wrap .list-container .selectbox-wrap.rounded.xs select {
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+  font-size: 1.4rem;
+  text-align: center;
+  background-size: 0.8rem 0.5rem;
 }
 
 /* 로그인/ID, pw 찾기 */

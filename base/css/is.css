@@ -1748,6 +1748,29 @@
 .crossroad-view-container .video-container {
   padding-top: 4.3rem !important;
 }
+.crossroad-view-container .video-container.ui.tab.segment.active {
+  height: calc(100vh - 183px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+.crossroad-view-container .video-container.ui.tab.segment.active > section, .crossroad-view-container .video-container.ui.tab.segment.active > div {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 .crossroad-view-container .video-container .ui.buttons.basic {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1765,6 +1788,7 @@
   -ms-flex-line-pack: center;
       align-content: center;
   gap: 0 0.4rem;
+  margin-top: auto;
   padding: 2rem 3rem;
 }
 .crossroad-view-container .video-container .ui.buttons.basic .btn-third {
@@ -1778,10 +1802,14 @@
 }
 .crossroad-view-container .cr-camera-info .data-tbl-gray.xs {
   height: 16rem;
+  border-bottom: 0;
 }
 .crossroad-view-container .cr-camera-info .data-tbl-gray.xs table thead th {
   padding: 0.85rem 0;
   font-size: 1.4rem;
+}
+.crossroad-view-container .cr-camera-info .data-tbl-gray.xs table tbody tr:last-child td {
+  border-bottom: 1px solid #e8e8e8;
 }
 .crossroad-view-container .cr-camera-info .data-tbl-gray.xs table tbody td {
   padding: 0.82rem 0;
@@ -1810,6 +1838,45 @@
 }
 .crossroad-view-container .accidents-container {
   padding-top: 3.8rem !important;
+}
+.crossroad-view-container .accidents-container.ui.tab.segment.active {
+  height: calc(100vh - 178px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+.crossroad-view-container .accidents-container.ui.tab.segment.active > section, .crossroad-view-container .accidents-container.ui.tab.segment.active > div {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.crossroad-view-container .accidents-container > .ui.buttons.basic {
+  display: block;
+  margin: 2.1rem 0 0;
+  padding: 2rem 3rem;
+  line-height: 3rem;
+  border-top: 1px solid #e8e8e8;
+  font-size: 1.6rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.crossroad-view-container .accidents-container > .ui.buttons.basic .btn-third {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 0.6rem;
+  color: #727272;
 }
 .crossroad-view-container .accidents-stats {
   padding: 0 3rem 4rem;
@@ -1990,13 +2057,18 @@
   font-weight: 300;
 }
 .crossroad-view-container .accidents-list {
+  margin-bottom: auto;
   padding: 3.2rem 3rem 0;
 }
 .crossroad-view-container .accidents-list .data-tbl-gray.xs {
-  height: 33rem;
+  height: calc(100vh - 599px);
+  border-bottom: 0;
 }
 .crossroad-view-container .accidents-list .data-tbl-gray.xs table thead th {
   padding: 0.95rem 0;
+}
+.crossroad-view-container .accidents-list .data-tbl-gray.xs table tbody tr:last-child td {
+  border-bottom: 1px solid #e8e8e8;
 }
 .crossroad-view-container .accidents-list .data-tbl-gray.xs table tbody td {
   padding: 0.69rem 0;
@@ -2004,12 +2076,6 @@
 }
 .crossroad-view-container .accidents-list .data-tbl-gray.xs table tbody td .ico-picture {
   padding: 0;
-}
-.crossroad-view-container .accidents-list .ui.secondary.basic {
-  width: calc(100% - 3rem);
-  margin-top: 3.5rem;
-  line-height: 2.9rem;
-  font-size: 1.6rem;
 }
 
 /* 교차로 상세 > 영상 탭의 분할 화면 */
@@ -2714,9 +2780,6 @@
 -----------------------------------------------------------------*/
 @media screen and (max-height: 955px) {
   /* 교차로 상세 > 돌발 탭 컨텐츠 */
-  .crossroad-view-container .accidents-list .data-tbl-gray.xs {
-    height: 30rem;
-  }
   .crossroad-view-container .cr-camera-view,
   .crossroad-view-container .license-plate-recognition {
     padding-top: 2.4rem;

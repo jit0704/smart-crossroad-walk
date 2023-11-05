@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>시나리오 항목 설정</title>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <!-- includeHTML.js : 퍼블리싱 확인용 include -->
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" href="/base/css/common.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- GNB -->
+      <nav class="gnb" include-html="/base/html/common/gnb.html"></nav>
+
+      <main class="ly-container">
+        <div class="ly-sub">
+          <div class="ly-setting">
+            <div class="ui breadcrumb">
+              <i class="home icon"></i>
+              <i class="right angle icon divider"></i>
+              <span class="section">횡단보도</span>
+              <i class="right angle icon divider"></i>
+              <span class="section">시스템 설정</span>
+              <i class="right angle icon divider"></i>
+              <div class="section">시나리오 항목 설정</div>
+            </div>
+            <!-- //breadcrumb -->
+
+            <section class="filter-grouop">
+              <div class="inner">
+                <div class="selectbox-wrap primary label-none">
+                  <select>
+                    <option value="">구역</option>
+                    <option value="">아이템1</option>
+                    <option value="">아이템2</option>
+                    <option value="">아이템3</option>
+                  </select>
+                </div>
+                <!-- //selectbox-wrap -->
+                <div class="selectbox-wrap primary label-none">
+                  <select>
+                    <option value="">시설물 종류</option>
+                    <option value="">아이템1</option>
+                    <option value="">아이템2</option>
+                    <option value="">아이템3</option>
+                  </select>
+                </div>
+                <!-- //selectbox-wrap -->
+                <div class="selectbox-wrap primary label-none">
+                  <select>
+                    <option value="">신호 유형</option>
+                    <option value="">아이템1</option>
+                    <option value="">아이템2</option>
+                    <option value="">아이템3</option>
+                  </select>
+                </div>
+                <!-- //selectbox-wrap -->
+                <button type="button" class="btn-data-search">검색</button>
+              </div>
+              <!-- //inner -->
+            </section>
+            <!-- //filter-grouop -->
+
+            <section class="list-left-right-wrap">
+              <div class="list-container">
+                <div class="tit-bind only-tit">
+                  <em class="tit">시나리오 시설물 종류</em>
+                </div>
+                <!-- //tit-bind -->
+                <div class="data-tbl-very height-type1">
+                  <table class="ui very basic table">
+                    <colgroup>
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>구역</th>
+                        <th>시설물 종류</th>
+                        <th>신호 유형</th>
+                        <th>시나리오 항목 개수</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="active">
+                        <td>태릉</td>
+                        <td>음성안내장치</td>
+                        <td>등기신호</td>
+                        <td>7</td>
+                      </tr>
+                      <tr>
+                        <td>태릉</td>
+                        <td>음성안내장치</td>
+                        <td>등기신호</td>
+                        <td>7</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //data-tbl-very -->
+
+                <div class="paging-group" include-html="/base/html/common/paging.html"></div>
+                <!-- //paging-group -->
+              </div>
+              <!-- //list-container -->
+
+              <div class="list-container">
+                <section class="size2">
+                  <article>
+                    <div class="tit-bind">
+                      <em class="tit">시나리오 시설물 종류</em>
+                      <a href="#" class="ui primary basic button rounded">적용</a>
+                    </div>
+                    <!-- //tit-bind -->
+                    <div class="data-tbl-very border-bot0 height-auto">
+                      <table class="ui very basic table">
+                        <colgroup>
+                          <col style="width: 33.33%" />
+                          <col style="width: 33.33%" />
+                          <col style="width: 33.33%" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>시설물 종류</th>
+                            <th>신호 유형</th>
+                            <th>시나리오 항목 개수</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>등기신호</td>
+                            <td>CVIB</td>
+                            <td>
+                              <div class="selectbox-wrap rounded xs">
+                                <select style="width: 100px">
+                                  <option value="">1</option>
+                                  <option value="">2</option>
+                                  <option value="">3</option>
+                                  <option value="">4</option>
+                                  <option value="">5</option>
+                                  <option value="">6</option>
+                                  <option value="">7</option>
+                                </select>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- //data-tbl-very -->
+                  </article>
+                  <article>
+                    <div class="tit-bind only-tit">
+                      <em class="tit">시나리오 항목 정의</em>
+                    </div>
+                    <!-- //tit-bind -->
+                    <div class="data-tbl-very height-type2">
+                      <table class="ui very basic table">
+                        <thead>
+                          <tr>
+                            <th>순서</th>
+                            <th>항목 명</th>
+                            <th>값(0)</th>
+                            <th>값(1)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>보행신호</td>
+                            <td>적색</td>
+                            <td>녹색</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>보행신호</td>
+                            <td>적색</td>
+                            <td>녹색</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- //data-tbl-very -->
+                  </article>
+                </section>
+              </div>
+              <!-- //list-container -->
+            </section>
+            <!-- //list-left-right-wrap -->
+          </div>
+          <!-- //ly-setting -->
+        </div>
+        <!-- //ly-sub -->
+      </main>
+      <!-- //ly-container -->
+
+      <footer class="ly-copyright c-white" include-html="/base/html/common/footer.html"></footer>
+    </div>
+    <!-- //wrapper -->
+  </body>
+</html>
