@@ -173,9 +173,9 @@
           <section class="cr-camera-info">
             <div class="tit-header">
               <em class="tit">카메라 정보</em>
-              <span class="right">
+              <!-- <span class="right">
                 <a href="#" class="btn-md2">카메라 관리</a>
-              </span>
+              </span> -->
             </div>
             <!-- //tit-header -->
             <div class="data-tbl-gray xs">
@@ -226,9 +226,78 @@
           <!-- //cr-camera-info -->
 
           <section class="cr-camera-view">
-            <em class="tit">카메라 View</em>
+            <em class="tit">영상 레이아웃</em>
 
-            <div class="custom-radio-rectangle-two lg">
+            <table class="tbl-custom-radio-container">
+              <colgroup>
+                <col style="width: 90px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>분할 화면</th>
+                  <td>
+                    <div class="custom-radio-rectangle-two">
+                      <label>
+                        <input type="radio" name="display1" />
+                        <span class="txt">보기</span>
+                      </label>
+                      <label>
+                        <input type="radio" name="display1" />
+                        <span class="txt">숨기기</span>
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>영상 명칭</th>
+                  <td>
+                    <div class="custom-radio-rectangle-two">
+                      <label>
+                        <input type="radio" name="display2" />
+                        <span class="txt">보기</span>
+                      </label>
+                      <label>
+                        <input type="radio" name="display2" />
+                        <span class="txt">숨기기</span>
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>영상 ROI</th>
+                  <td>
+                    <div class="custom-radio-rectangle-two">
+                      <label>
+                        <input type="radio" name="display3" disabled />
+                        <span class="txt">보기</span>
+                      </label>
+                      <label>
+                        <input type="radio" name="display3" disabled />
+                        <span class="txt">숨기기</span>
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>객체 Boxing</th>
+                  <td>
+                    <div class="custom-radio-rectangle-two">
+                      <label>
+                        <input type="radio" name="display4" />
+                        <span class="txt">보기</span>
+                      </label>
+                      <label>
+                        <input type="radio" name="display4" />
+                        <span class="txt">숨기기</span>
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- <div class="custom-radio-rectangle-two lg">
               <label>
                 <input type="radio" name="ch-all" />
                 <span class="txt">분할 화면</span>
@@ -237,83 +306,91 @@
                 <input type="radio" name="ch-all" />
                 <span class="txt">지도 화면</span>
               </label>
-            </div>
+            </div> -->
           </section>
           <!-- //cr-camera-view -->
 
           <section class="license-plate-recognition">
             <em class="tit">차량 번호 인식</em>
-
-            <table class="tbl-custom-radio-container">
-              <colgroup>
-                <col style="width: 8rem" />
-                <col />
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th>채널 1</th>
-                  <td>
-                    <div class="custom-radio-rectangle-two">
-                      <label>
-                        <input type="radio" name="ch2-1" />
-                        <span class="txt">보기</span>
-                      </label>
-                      <label>
-                        <input type="radio" name="ch2-1" />
-                        <span class="txt">숨기기</span>
-                      </label>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>채널 2</th>
-                  <td>
-                    <div class="custom-radio-rectangle-two">
-                      <label>
-                        <input type="radio" name="ch2-2" />
-                        <span class="txt">보기</span>
-                      </label>
-                      <label>
-                        <input type="radio" name="ch2-2" />
-                        <span class="txt">숨기기</span>
-                      </label>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>채널 3</th>
-                  <td>
-                    <div class="custom-radio-rectangle-two">
-                      <label>
-                        <input type="radio" name="ch2-3" disabled />
-                        <span class="txt">보기</span>
-                      </label>
-                      <label>
-                        <input type="radio" name="ch2-3" disabled />
-                        <span class="txt">숨기기</span>
-                      </label>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>채널 4</th>
-                  <td>
-                    <div class="custom-radio-rectangle-two">
-                      <label>
-                        <input type="radio" name="ch2-4" />
-                        <span class="txt">보기</span>
-                      </label>
-                      <label>
-                        <input type="radio" name="ch2-4" />
-                        <span class="txt">숨기기</span>
-                      </label>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <!-- 231106 tbl-custom-radio-wrap div 추가 -->
+            <div class="tbl-custom-radio-wrap">
+              <table class="tbl-custom-radio-container">
+                <colgroup>
+                  <col style="width: 90px" />
+                  <col />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>채널 1</th>
+                    <td>
+                      <div class="custom-radio-rectangle-two">
+                        <label>
+                          <input type="radio" name="ch2-1" />
+                          <span class="txt">보기</span>
+                        </label>
+                        <label>
+                          <input type="radio" name="ch2-1" />
+                          <span class="txt">숨기기</span>
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>채널 2</th>
+                    <td>
+                      <div class="custom-radio-rectangle-two">
+                        <label>
+                          <input type="radio" name="ch2-2" />
+                          <span class="txt">보기</span>
+                        </label>
+                        <label>
+                          <input type="radio" name="ch2-2" />
+                          <span class="txt">숨기기</span>
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>채널 3</th>
+                    <td>
+                      <div class="custom-radio-rectangle-two">
+                        <label>
+                          <input type="radio" name="ch2-3" disabled />
+                          <span class="txt">보기</span>
+                        </label>
+                        <label>
+                          <input type="radio" name="ch2-3" disabled />
+                          <span class="txt">숨기기</span>
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>채널 4</th>
+                    <td>
+                      <div class="custom-radio-rectangle-two">
+                        <label>
+                          <input type="radio" name="ch2-4" />
+                          <span class="txt">보기</span>
+                        </label>
+                        <label>
+                          <input type="radio" name="ch2-4" />
+                          <span class="txt">숨기기</span>
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //tbl-custom-radio-wrap -->
           </section>
           <!-- //license-plate-recognition -->
+
+          <div class="ui buttons basic">
+            <a href="#" class="btn-third">카메라 관리</a>
+            <a href="#" class="btn-third">영상인식 ROI 설정</a>
+          </div>
         </div>
         <!-- //영상 탭 -->
         <div class="ui bottom attached tab segment accidents-container" data-tab="third">
@@ -326,13 +403,68 @@
             </div>
             <!-- //tit-header -->
             <article class="accidents-stats-content">
-              <div class="chart-container">
-                <img src="https://www.dummyimage.com/360x180/ddd/000.png&amp;text=Chart+Area" alt="퍼블리싱 확인용 더미 이미지" class="dummy-img" />
+              <!-- 231018 수정 -->
+              <div class="chart-view">
+                <div class="chart-container">
+                  <img src="https://www.dummyimage.com/362x181/ddd/000.png&amp;text=Chart+Area" alt="퍼블리싱 확인용 더미 이미지" class="dummy-img" />
+                </div>
+                <dl class="cumulative-num">
+                  <dt>돌발 유형 별 누적 건수</dt>
+                  <dd>(2023년 5월 21일 00시 ~ 현재)</dd>
+                </dl>
               </div>
-              <dl class="cumulative-num">
-                <dt>돌발 유형 별 누적 건수</dt>
-                <dd>(2023.00.00 ~ 2023.00.00)</dd>
-              </dl>
+              <!-- //chart-view -->
+              <!-- 231018 수정 -->
+              <div class="txt-view">
+                <div class="txt-view-header">
+                  <span class="tit">총 돌발 건수</span>
+                  <span class="num-tit"><em>9,999</em>건</span>
+                </div>
+                <!-- //txt-view-header -->
+                <div class="txt-view-data">
+                  <table>
+                    <colgroup>
+                      <col style="width: 120px" />
+                      <col />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th><em class="sudden1">무단횡단</em></th>
+                        <td><em>999</em>건</td>
+                        <td><em>21</em>%</td>
+                      </tr>
+                      <tr>
+                        <th><em class="sudden2">정지</em></th>
+                        <td><em>999</em>건</td>
+                        <td><em>69</em>%</td>
+                      </tr>
+                      <tr>
+                        <th><em class="sudden3">역주행</em></th>
+                        <td><em>999</em>건</td>
+                        <td><em>10</em>%</td>
+                      </tr>
+                      <tr>
+                        <th><em class="sudden4">꼬리물기</em></th>
+                        <td><em>999</em>건</td>
+                        <td><em>10</em>%</td>
+                      </tr>
+                      <tr>
+                        <th><em class="sudden5">정지선 위반</em></th>
+                        <td><em>999</em>건</td>
+                        <td><em>10</em>%</td>
+                      </tr>
+                      <tr>
+                        <th><em class="sudden6">지정 차로 위반</em></th>
+                        <td><em>999</em>건</td>
+                        <td><em>10</em>%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //txt-view-data -->
+              </div>
+              <!-- //txt-view -->
             </article>
           </section>
           <!-- //accidents-stats -->
@@ -454,7 +586,7 @@
                       <button type="button" class="ico-picture"><span class="screen-out">돌발 스틸컷 보기 버튼</span></button>
                     </td>
                   </tr>
-                  <tr>
+                  <!-- <tr>
                     <td>11:30:15</td>
                     <td>00방면</td>
                     <td>북</td>
@@ -463,15 +595,18 @@
                     <td>
                       <button type="button" class="ico-picture"><span class="screen-out">돌발 스틸컷 보기 버튼</span></button>
                     </td>
-                  </tr>
+                  </tr> -->
                 </tbody>
               </table>
             </div>
             <!-- //data-tbl-gray -->
-
-            <a href="#" class="ui secondary basic button rounded">돌발 상세 조회</a>
           </section>
           <!-- //accidents-list -->
+
+          <!-- 231104 돌발 상세 조회 버튼 이동됨 -->
+          <div class="ui buttons basic">
+            <a href="#" class="btn-third">돌발 상세 조회</a>
+          </div>
         </div>
         <!-- //돌발 탭 -->
 

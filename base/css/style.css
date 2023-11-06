@@ -1865,6 +1865,52 @@ body ::-webkit-scrollbar-track {
   border-bottom-right-radius: 0.5rem;
 }
 
+.radio-btn-stack-list-container li + li {
+  margin-top: 0.4rem;
+}
+.radio-btn-stack-list-container label {
+  position: relative;
+  display: block;
+}
+.radio-btn-stack-list-container label input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.radio-btn-stack-list-container label input:checked + .txt {
+  background: #f8f8f8;
+}
+.radio-btn-stack-list-container label .txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 3.3rem;
+  padding: 0 1rem 0 2rem;
+  line-height: 2.9rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e8e8e8;
+  font-size: 1.6rem;
+  color: #727272;
+  background: #fff;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
 /* 지도에서 사용하는 UI */
 .map-iconbar-container {
   position: absolute;
@@ -5580,6 +5626,27 @@ body ::-webkit-scrollbar-track {
 .list-left-right-wrap .list-container .size2 > article {
   width: 100%;
 }
+.list-left-right-wrap .list-container .size3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  gap: 0.7rem 0;
+}
+.list-left-right-wrap .list-container .size3 > article {
+  width: 100%;
+}
 .list-left-right-wrap .list-container .tit-bind {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5635,6 +5702,10 @@ body ::-webkit-scrollbar-track {
   font-size: 1.4rem;
   text-align: center;
   background-size: 0.8rem 0.5rem;
+}
+.list-left-right-wrap .radio-btn-stack-list-container {
+  overflow-y: auto;
+  height: 34.8rem;
 }
 
 /* 로그인/ID, pw 찾기 */

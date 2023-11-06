@@ -1836,6 +1836,13 @@
 .crossroad-view-container .license-plate-recognition {
   border-bottom: 1px solid #e8e8e8;
 }
+.crossroad-view-container .license-plate-recognition .tbl-custom-radio-wrap {
+  overflow-y: auto;
+  height: 13.6rem;
+}
+.crossroad-view-container .license-plate-recognition .tbl-custom-radio-wrap::-webkit-scrollbar {
+  width: 0.4rem;
+}
 .crossroad-view-container .accidents-container {
   padding-top: 3.8rem !important;
 }
