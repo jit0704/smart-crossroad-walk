@@ -651,8 +651,8 @@
 }
 .crossroads-flow-board {
   position: relative;
-  width: 100rem;
-  height: 74.1rem;
+  width: 95.6rem;
+  height: 73.8rem;
   border-radius: 1rem;
   background: #fff;
   -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
@@ -961,7 +961,7 @@
           align-items: flex-start;
   -ms-flex-line-pack: start;
       align-content: flex-start;
-  gap: 1.3rem 0;
+  gap: 1rem 0;
 }
 .crossroads-flow-traffic .flow-traffic {
   width: 100%;

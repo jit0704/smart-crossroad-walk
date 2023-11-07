@@ -490,6 +490,14 @@ body ::-webkit-scrollbar-track {
   background-position: 0 0;
   background-size: contain;
 }
+.ico-set-signal-light.cw {
+  width: 1.3rem;
+  height: 2.1rem;
+  background-image: url("/base/images/cw/set_icon_signallight.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
 .ico-set-los {
   display: inline-block;
   width: 1.5rem;
@@ -715,6 +723,22 @@ body ::-webkit-scrollbar-track {
   width: 8.3rem;
   height: 3.2rem;
   background-image: url("/base/images//vehicle-signal/signal_none.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-vehicle-signal.cw.green {
+  width: 2.4rem;
+  height: 4.1rem;
+  background-image: url("/base/images//cw/signal_green.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-vehicle-signal.cw.red {
+  width: 2.4rem;
+  height: 4.1rem;
+  background-image: url("/base/images//cw/signal_red.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -5454,6 +5478,9 @@ body ::-webkit-scrollbar-track {
 }
 .ly-map .system-nav > .ico-set-item.active .ico-set-los {
   background-image: url(/base/images/set_icon_los_active.png);
+}
+.ly-map .system-nav > .ico-set-item.active.cw .ico-set-signal-light {
+  background-image: url(/base/images/cw/set_icon_signallight_active.png);
 }
 .ly-map .system-nav > .ico-set-item.active em {
   color: #03a0fc;
