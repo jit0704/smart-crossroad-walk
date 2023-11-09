@@ -857,6 +857,7 @@ body ::-webkit-scrollbar-track {
 }
 .ui.input.rounded.xs input {
   line-height: 2.4rem;
+  font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
 }
 .ui.input.rounded.md input {
@@ -5716,12 +5717,24 @@ body ::-webkit-scrollbar-track {
 .list-left-right-wrap .list-container .data-tbl-very.height-type2 {
   height: 44.57rem;
 }
+.list-left-right-wrap .list-container .data-tbl-very.height-type2 .ui.basic.table tbody td {
+  padding-top: 0.82rem;
+  padding-bottom: 0.83rem;
+}
 .list-left-right-wrap .list-container .ui.basic.table thead th {
   padding: 1.1rem 0 !important;
 }
 .list-left-right-wrap .list-container .ui.basic.table tbody td {
   padding-top: 1.224rem;
   padding-bottom: 1.225rem;
+}
+.list-left-right-wrap .list-container .ui.basic.table tbody td .ui.input.rounded.xs {
+  display: block;
+}
+.list-left-right-wrap .list-container .ui.basic.table tbody td .ui.input.rounded.xs input {
+  line-height: 2.5rem;
+  font-size: 1.6rem;
+  color: #727272;
 }
 .list-left-right-wrap .list-container .selectbox-wrap.rounded.xs select {
   padding-top: 0.35rem;
