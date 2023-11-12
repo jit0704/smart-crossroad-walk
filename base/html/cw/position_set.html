@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>영상인식 위경도 설정</title>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <!-- includeHTML.js : 퍼블리싱 확인용 include -->
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" href="/base/css/common.css" />
+    <link rel="stylesheet" href="/base/css/cw.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- GNB -->
+      <nav class="gnb" include-html="/base/html/common/gnb.html"></nav>
+
+      <div class="roi-view-container latlong">
+        <div class="roi-view-header">
+          <h2>한양아파트 앞</h2>
+          <div class="right">
+            <div class="selectbox-wrap xs">
+              <select>
+                <option value="">채널1</option>
+                <option value="">채널2</option>
+                <option value="">채널3</option>
+              </select>
+            </div>
+            <span class="txt">세종과학예술영재학교방면</span>
+          </div>
+          <!-- //right -->
+        </div>
+        <!-- //roi-view-header -->
+        <div class="ui top attached tabular menu rounded">
+          <a href="#none;" class="item active" data-tab="first">카메라 위경도 설정</a>
+        </div>
+        <!-- //menu -->
+
+        <div class="ui bottom attached tab segment active" data-tab="first">
+          <section class="perceive-section">
+            <div class="perceive-header">
+              <h3>위경도 설정</h3>
+            </div>
+            <!-- //perceive-header -->
+            <div class="perceive-body">
+              <div class="perceive-header">
+                <h3>카메라 설치 위치</h3>
+                <span class="right">
+                  <button type="button" class="btn-md bg-navy">저장</button>
+                </span>
+              </div>
+              <!-- //perceive-header -->
+              <table>
+                <colgroup>
+                  <col style="width: 25%" />
+                  <col style="width: 75%" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>위도 정보</th>
+                    <td>
+                      <div class="form-bind">
+                        <div class="selectbox-wrap rounded xs">
+                          <select>
+                            <option value="">N</option>
+                            <option value="">S</option>
+                            <option value="">E</option>
+                            <option value="">W</option>
+                          </select>
+                        </div>
+                        <div class="ui input rounded center xs">
+                          <input type="text" value="35.123456" />
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>경도 정보</th>
+                    <td>
+                      <div class="form-bind">
+                        <div class="selectbox-wrap rounded xs">
+                          <select>
+                            <option value="">N</option>
+                            <option value="">S</option>
+                            <option value="">E</option>
+                            <option value="">W</option>
+                          </select>
+                        </div>
+                        <div class="ui input rounded center xs">
+                          <input type="text" value="126.123456" />
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>각도</th>
+                    <td>
+                      <div class="ui input rounded center xs">
+                        <input type="text" value="0 ~ 359.9" />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //perceive-body -->
+          </section>
+          <!-- //perceive-section -->
+
+          <section class="roi-set-list-section">
+            <div class="roi-set-list-header">
+              <h3>좌표 매칭</h3>
+              <span class="right">
+                <button type="button" class="btn-md bg-navy">영상 좌표 설정</button>
+                <button type="button" class="btn-md bg-navy">저장</button>
+              </span>
+            </div>
+            <!-- //roi-set-list-header -->
+
+            <div class="data-tbl-gray xs">
+              <table>
+                <colgroup>
+                  <col />
+                  <col />
+                  <col style="width: 110px" />
+                  <col style="width: 110px" />
+                  <col />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>영상 X</th>
+                    <th>영상 Y</th>
+                    <th>위도 정보</th>
+                    <th>경도 정보</th>
+                    <th>삭제</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>
+                      <div class="form-bind">
+                        <div class="selectbox-wrap rounded xs">
+                          <select>
+                            <option value="">N</option>
+                            <option value="">S</option>
+                            <option value="">E</option>
+                            <option value="">W</option>
+                          </select>
+                        </div>
+                        <div class="ui input rounded center xs">
+                          <input type="text" value="35.123456" />
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="form-bind">
+                        <div class="selectbox-wrap rounded xs">
+                          <select>
+                            <option value="">N</option>
+                            <option value="">S</option>
+                            <option value="">E</option>
+                            <option value="">W</option>
+                          </select>
+                        </div>
+                        <div class="ui input rounded center xs">
+                          <input type="text" value="126.123456" />
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <button type="button" class="ico-wastebasket"><span class="screen-out">삭제 버튼</span></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>
+                      <div class="form-bind">
+                        <div class="selectbox-wrap rounded xs">
+                          <select>
+                            <option value="">N</option>
+                            <option value="">S</option>
+                            <option value="">E</option>
+                            <option value="">W</option>
+                          </select>
+                        </div>
+                        <div class="ui input rounded center xs">
+                          <input type="text" value="35.123456" />
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="form-bind">
+                        <div class="selectbox-wrap rounded xs">
+                          <select>
+                            <option value="">N</option>
+                            <option value="">S</option>
+                            <option value="">E</option>
+                            <option value="">W</option>
+                          </select>
+                        </div>
+                        <div class="ui input rounded center xs">
+                          <input type="text" value="126.123456" />
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <button type="button" class="ico-wastebasket"><span class="screen-out">삭제 버튼</span></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //data-tbl-gray -->
+          </section>
+          <!-- //roi-set-list-section -->
+        </div>
+        <!-- //차량 ROI 컨텐츠 -->
+
+        <div class="ui buttons basic">
+          <a href="#" class="btn-third">지점 상세 화면</a>
+          <a href="#" class="btn-third">ROI 목록 화면</a>
+        </div>
+        <!-- //buttons -->
+      </div>
+      <!-- //roi-view-container -->
+
+      <main class="ly-container">
+        <!-- temp-map 클래스명 : 퍼블리싱 작업 확인용 -->
+        <div id="map1" class="ly-map type2 temp-map">
+          <video autoplay loop muted width="100%" height="100%">
+            <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <!-- //ly-map -->
+      </main>
+      <!-- //ly-container -->
+
+      <footer class="ly-copyright" include-html="/base/html/common/footer.html"></footer>
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      /* 아래 js는 퍼블리싱 확인용입니다. 참고해서 개발화면에 반영 부탁드립니다. */
+      // 탭 메뉴
+      $('.roi-view-container .menu .item').tab();
+    </script>
+  </body>
+</html>
