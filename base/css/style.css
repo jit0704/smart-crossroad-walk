@@ -5383,6 +5383,17 @@ body ::-webkit-scrollbar-track {
   background-position: 0 0;
   background-size: cover;
 }
+.ly-map .speech-bubble-guide6 {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  width: 14.7rem;
+  height: 5rem;
+  background-image: url("/base/images/speech_bubble6.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
 .ly-map .ui.breadcrumb {
   position: absolute;
   top: 1.7rem;
