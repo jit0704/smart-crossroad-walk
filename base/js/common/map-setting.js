@@ -116,10 +116,15 @@ var mapSetting = {
       if (iconCamera.is('.moving')) {
         iconCamera.draggable({
           containment: '.ly-map',
+          create: function () {
+            $(this).children('.speech-bubble-guide7').show(); // 231121 추가
+          },
           drag: function () {
             $('.js-move-end').attr('data-name', menuData).fadeOut(200);
+            $(this).children('.speech-bubble-guide7').show(); // 231121 추가
           },
           stop: function (e, ui) {
+            $(this).children('.speech-bubble-guide7').hide(); // 231121 추가
             // 드래그가 끝날 때 좌표를 저장.
             var endX = e.clientX + 20;
             var endY = e.clientY + 20;
@@ -226,10 +231,15 @@ var mapSetting = {
       if (iconRadar.is('.moving')) {
         iconRadar.draggable({
           containment: '.ly-map',
+          create: function () {
+            $(this).children('.speech-bubble-guide8').show(); // 231121 추가
+          },
           drag: function () {
             $('.js-move-end').attr('data-name', menuData).fadeOut(200);
+            $(this).children('.speech-bubble-guide8').show(); // 231121 추가
           },
           stop: function (e, ui) {
+            $(this).children('.speech-bubble-guide8').hide(); // 231121 추가
             // 드래그가 끝날 때 좌표를 저장.
             var endX = e.clientX + 20;
             var endY = e.clientY + 20;
@@ -334,10 +344,15 @@ var mapSetting = {
       if (iconSignalLight.is('.moving')) {
         iconSignalLight.draggable({
           containment: '.ly-map',
+          create: function () {
+            $(this).children('.speech-bubble-guide9').show(); // 231121 추가
+          },
           drag: function () {
             $('.js-move-end').attr('data-name', menuData).fadeOut(200);
+            $(this).children('.speech-bubble-guide9').show(); // 231121 추가
           },
           stop: function (e, ui) {
+            $(this).children('.speech-bubble-guide9').hide(); // 231121 추가
             // 드래그가 끝날 때 좌표를 저장.
             var endX = e.clientX + 20;
             var endY = e.clientY + 20;
@@ -442,10 +457,15 @@ var mapSetting = {
       if (iconLos.is('.moving')) {
         iconLos.draggable({
           containment: '.ly-map',
+          create: function () {
+            $(this).children('.speech-bubble-guide10').show(); // 231121 추가
+          },
           drag: function () {
             $('.js-move-end').attr('data-name', menuData).fadeOut(200);
+            $(this).children('.speech-bubble-guide10').show(); // 231121 추가
           },
           stop: function (e, ui) {
+            $(this).children('.speech-bubble-guide10').hide(); // 231121 추가
             // 드래그가 끝날 때 좌표를 저장.
             var endX = e.clientX + 20;
             var endY = e.clientY + 20;

@@ -136,7 +136,11 @@
 
           <!-- 교차로 아이콘1 -->
           <div class="los-display lv-a" style="left: 400px; top: 382px">
-            <i class="ico-cr"><span class="screen-out">교차로</span></i>
+            <i class="ico-cr">
+              <span class="screen-out">교차로</span>
+              <!-- 231121 안내 말풍선 추가 -->
+              <i class="speech-bubble-guide6"><span class="screen-out">지점을 드래그하여 원하시는 위치로 이동시키세요</span></i>
+            </i>
 
             <i class="traffic-display top c-red" style="transform: rotate(0deg)"></i>
             <i class="traffic-display bottom c-orange" style="transform: rotate(0deg)"></i>
@@ -146,7 +150,11 @@
 
           <!-- 교차로 아이콘2 -->
           <div class="los-display lv-a" style="left: 800px; top: 650px">
-            <i class="ico-cr"><span class="screen-out">교차로2</span></i>
+            <i class="ico-cr">
+              <span class="screen-out">교차로2</span>
+              <!-- 231121 안내 말풍선 추가 -->
+              <i class="speech-bubble-guide6"><span class="screen-out">지점을 드래그하여 원하시는 위치로 이동시키세요</span></i>
+            </i>
 
             <i class="traffic-display top c-red" style="transform: rotate(0deg)"></i>
             <i class="traffic-display bottom c-orange" style="transform: rotate(0deg)"></i>
@@ -267,10 +275,15 @@
           if (iconCrossRoad.is('.moving')) {
             iconCrossRoad.draggable({
               containment: '.ly-map',
+              create: function () {
+                $(this).children('.speech-bubble-guide6').show(); // 231121 추가
+              },
               drag: function () {
                 $('.js-move-end').attr('data-name', menuData).fadeOut(200);
+                $(this).children('.speech-bubble-guide6').show(); // 231121 추가
               },
               stop: function (e, ui) {
+                $(this).children('.speech-bubble-guide6').hide(); // 231121 추가
                 // 드래그가 끝날 때 좌표를 저장.
                 var endX = e.clientX + 20;
                 var endY = e.clientY + 20;

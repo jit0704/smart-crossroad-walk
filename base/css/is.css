@@ -502,7 +502,7 @@
 }
 .stats-container .divide-4.title-none > ul {
   overflow-y: auto;
-  height: 40.8rem;
+  height: 44.5rem;
 }
 .stats-container .divide-4.title-none > ul::-webkit-scrollbar {
   width: 0.4rem;
@@ -534,6 +534,7 @@
   gap: 1rem;
 }
 .stats-container .divide-4 li .chart-wrap {
+  width: 86.8rem;
   height: 19.6rem;
   padding: 1.4rem 2.5rem;
   border-radius: 0.5rem;
@@ -579,6 +580,9 @@
 }
 .stats-container .divide-4 li .chart-wrap:nth-child(4) h3::before {
   background: #c2c2c2;
+}
+.stats-container .divide-4 li .chart-wrap .chart-container {
+  height: 13.7rem;
 }
 .stats-container .divide-4 li + li {
   margin-top: 1rem;
