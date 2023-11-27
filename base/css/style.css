@@ -8397,9 +8397,8 @@ body ::-webkit-scrollbar-track {
 }
 .dashboard-reform-body .traffic-share-ranking-container [class*=ranking-container] .chart-wrap {
   width: 33rem;
-  height: 25.7rem;
-  margin: 0 auto;
-  padding: 2.53rem 0 1.87rem;
+  height: 21.9rem;
+  margin: 1.87rem auto;
 }
 .dashboard-reform-body .point-container {
   height: 100%;
@@ -8490,6 +8489,65 @@ body ::-webkit-scrollbar-track {
   bottom: 0;
   width: 50%;
   border-radius: 0.4rem;
+}
+.dashboard-reform.type-b .dashboard-reform-body {
+  grid-template-columns: 76.5rem 62.9rem 1fr;
+}
+.dashboard-reform.type-b .dashboard-reform-body > .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  gap: 1rem 0rem;
+}
+.dashboard-reform.type-b .dashboard-reform-body > .right > section:not(:first-child) {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 1rem;
+  background: #fff;
+}
+.dashboard-reform.type-b .dashboard-reform-body > .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  gap: 1rem 0rem;
+}
+.dashboard-reform.type-b .dashboard-reform-body > .left > section {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 1rem;
+  background: #fff;
+}
+.dashboard-reform.type-b .dashboard-reform-body .traffic-share-ranking-container [class*=ranking-container] .chart-wrap {
+  width: 32.7rem;
+  height: 20rem;
+  margin: 2.85rem auto;
+}
+.dashboard-reform.type-b .dashboard-reform-body .point-container {
+  width: 100%;
 }
 
 /* 대시보드 - 교차로/횡단보도 현황 */
@@ -8912,14 +8970,15 @@ body ::-webkit-scrollbar-track {
   }
 }
 @media screen and (max-height: 955px) {
-  /* 교차로 대시보드 A, B */
+  /* 교차로 대시보드 A */
   .dashboard-reform-body .hindrance-container .dashboard-noti-list {
     max-height: 17.8rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
   .dashboard-reform-body .traffic-share-ranking-container [class*=ranking-container] .chart-wrap {
-    height: 21.7rem;
+    margin: 0 auto;
+    padding: 2rem 0;
   }
   .dashboard-reform-body .point-container {
     height: 99.2%;
@@ -8930,5 +8989,10 @@ body ::-webkit-scrollbar-track {
   }
   .dashboard-reform-body .point-container .point-list-container > ul li + li {
     margin-top: 0.95rem;
+  }
+  /* 교차로 대시보드 B */
+  .dashboard-reform.type-b .dashboard-reform-body .traffic-share-ranking-container [class*=ranking-container] .chart-wrap {
+    margin-top: 0.85rem;
+    margin-bottom: 0.85rem;
   }
 }

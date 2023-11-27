@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>교차로 대시보드 B</title>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <!-- includeHTML.js : 퍼블리싱 확인용 include -->
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" href="/base/css/common.css" />
+    <link rel="stylesheet" href="/base/css/is.css" />
+
+    <style>
+      /* 퍼블리싱 확인용 */
+      .dummy-img {
+        display: block;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- GNB -->
+      <nav class="gnb" include-html="/base/html/common/gnb.html"></nav>
+
+      <main class="ly-container">
+        <div class="ly-sub type2 bg-gray">
+          <div class="dashboard-reform type-b">
+            <section class="dashboard-status-filter">
+              <span class="left">
+                <a href="#" class="btn-md2 active">현황</a>
+                <a href="#" class="btn-md2">교차로</a>
+              </span>
+              <div class="right">
+                <div class="selectbox-wrap primary label-none">
+                  <select>
+                    <option value="">구역</option>
+                    <option value="">아이템1</option>
+                    <option value="">아이템2</option>
+                    <option value="">아이템3</option>
+                  </select>
+                </div>
+                <!-- //selectbox-wrap -->
+              </div>
+            </section>
+            <!-- //dashboard-status-filter -->
+
+            <section class="dashboard-reform-body">
+              <article class="left">
+                <section class="congested-ranking-container">
+                  <div class="dashboard-reform-tit-wrap">
+                    <em>접근로 정체 순위</em>
+                  </div>
+                  <!-- //dashboard-reform-tit-wrap -->
+                  <div class="gap-tbl">
+                    <table>
+                      <colgroup>
+                        <col style="width: 4rem" />
+                        <col style="width: 2rem" />
+                        <col style="width: 2.1rem" />
+                        <col style="width: 2.1rem" />
+                        <col style="width: 7.6rem" />
+                        <col style="width: 7.6rem" />
+                        <col />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th><span>순위</span></th>
+                          <th><span>지점명</span></th>
+                          <th><span>도로 명</span></th>
+                          <th><span>도로 방향 명</span></th>
+                          <th><span>도로방향</span></th>
+                          <th><span>평균속도</span></th>
+                          <th><span>교통량</span></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <i>1</i>
+                          </td>
+                          <td>
+                            <span class="txt">불당아이파크아파트10아파트10</span>
+                          </td>
+                          <td>
+                            <span class="txt">불당아이파크아파트10아파트10</span>
+                          </td>
+                          <td>
+                            <span class="txt">불당아이파크아파트10아파트10</span>
+                          </td>
+                          <td>북</td>
+                          <td>21 km/h</td>
+                          <td>9,930,589</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <i>2</i>
+                          </td>
+                          <td>
+                            <span class="txt">불당아이파크아파트10</span>
+                          </td>
+                          <td>
+                            <span class="txt">불당아이파크아파트10</span>
+                          </td>
+                          <td>
+                            <span class="txt">불당아이파크아파트10</span>
+                          </td>
+                          <td>북</td>
+                          <td>21 km/h</td>
+                          <td>9,930,589</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <i>3</i>
+                          </td>
+                          <td>
+                            <span class="txt">가산가산디지털 1로</span>
+                          </td>
+                          <td>
+                            <span class="txt">가산가산디지털 1로</span>
+                          </td>
+                          <td>
+                            <span class="txt">가산가산디지털 1로</span>
+                          </td>
+                          <td>북</td>
+                          <td>21 km/h</td>
+                          <td>9,930,589</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <i>4</i>
+                          </td>
+                          <td>
+                            <span class="txt">태릉입구역</span>
+                          </td>
+                          <td>
+                            <span class="txt">태릉입구역</span>
+                          </td>
+                          <td>
+                            <span class="txt">태릉입구역</span>
+                          </td>
+                          <td>북</td>
+                          <td>21 km/h</td>
+                          <td>9,930,589</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <i>5</i>
+                          </td>
+                          <td>
+                            <span class="txt">태릉입구역</span>
+                          </td>
+                          <td>
+                            <span class="txt">태릉입구역</span>
+                          </td>
+                          <td>
+                            <span class="txt">태릉입구역</span>
+                          </td>
+                          <td>북</td>
+                          <td>21 km/h</td>
+                          <td>9,930,589</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //gap-tbl -->
+                </section>
+                <!-- //congested-ranking-container -->
+
+                <section class="traffic-increase-container">
+                  <div class="traffic-increase-wrap">
+                    <div class="dashboard-reform-tit-wrap type2">
+                      <em>전일 대비 교통량 증감률 TOP 5</em>
+                      <time>2023. 08. 01 11:00~12:00</time>
+                    </div>
+                    <!-- //dashboard-reform-tit-wrap -->
+                    <div class="ranking-tbl">
+                      <table>
+                        <colgroup>
+                          <col style="width: 2.4rem" />
+                          <col style="width: 15.75rem" />
+                          <col />
+                          <col style="width: 3.3rem" />
+                          <col style="width: 1.8rem" />
+                        </colgroup>
+                        <tbody>
+                          <tr class="increase">
+                            <td>
+                              <i>1</i>
+                            </td>
+                            <td>
+                              <span class="txt">태릉입구역 사거리 사거리</span>
+                            </td>
+                            <td class="fluctuate"><i class="num">9,300</i>대 증가</td>
+                            <td class="fluctuate"><i class="num">40</i>%</td>
+                            <td class="fluctuate">▲</td>
+                          </tr>
+                          <tr class="increase">
+                            <td>
+                              <i>2</i>
+                            </td>
+                            <td>
+                              <span class="txt">태릉입구역</span>
+                            </td>
+                            <td class="fluctuate"><i class="num">9,300</i>대 증가</td>
+                            <td class="fluctuate"><i class="num">40</i>%</td>
+                            <td class="fluctuate">▲</td>
+                          </tr>
+                          <tr class="increase">
+                            <td>
+                              <i>3</i>
+                            </td>
+                            <td>
+                              <span class="txt">태릉입구역</span>
+                            </td>
+                            <td class="fluctuate"><i class="num">9,300</i>대 증가</td>
+                            <td class="fluctuate"><i class="num">40</i>%</td>
+                            <td class="fluctuate">▲</td>
+                          </tr>
+                          <tr class="increase">
+                            <td>
+                              <i>4</i>
+                            </td>
+                            <td>
+                              <span class="txt">태릉입구역</span>
+                            </td>
+                            <td class="fluctuate"><i class="num">9,300</i>대 증가</td>
+                            <td class="fluctuate"><i class="num">40</i>%</td>
+                            <td class="fluctuate">▲</td>
+                          </tr>
+                          <tr class="decrease">
+                            <td>
+                              <i>5</i>
+                            </td>
+                            <td>
+                              <span class="txt">태릉입구역</span>
+                            </td>
+                            <td class="fluctuate"><i class="num">7,900</i>대 감소</td>
+                            <td class="fluctuate"><i class="num">35</i>%</td>
+                            <td class="fluctuate">▼</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- //ranking-tbl -->
+                  </div>
+                  <!-- //traffic-increase-wrap -->
+                  <div class="traffic-increase-wrap">
+                    <div class="dashboard-reform-tit-wrap type2">
+                      <em>전주 대비 교통량 증감률 TOP 5</em>
+                      <time>2023. 08. 01 11:00~12:00</time>
+                    </div>
+                    <!-- //dashboard-reform-tit-wrap -->
+                    <div class="ranking-tbl">
+                      <table>
+                        <colgroup>
+                          <col style="width: 2.4rem" />
+                          <col style="width: 15.75rem" />
+                          <col />
+                          <col style="width: 3.3rem" />
+                          <col style="width: 1.8rem" />
+                        </colgroup>
+                        <tbody>
+                          <tr class="increase">
+                            <td>
+                              <i>1</i>
+                            </td>
+                            <td>
+                              <span class="txt">태릉입구역 사거리 사거리</span>
+                            </td>
+                            <td class="fluctuate"><i class="num">9,300</i>대 증가</td>
+                            <td class="fluctuate"><i class="num">40</i>%</td>
+                            <td class="fluctuate">▲</td>
+                          </tr>
+                          <tr class="increase">
+                            <td>
+                              <i>2</i>
+                            </td>
+                            <td>
+                              <span class="txt">태릉입구역</span>
+                            </td>
+                            <td class="fluctuate"><i class="num">9,300</i>대 증가</td>
+                            <td class="fluctuate"><i class="num">40</i>%</td>
+                            <td class="fluctuate">▲</td>
+                          </tr>
+                          <tr class="increase">
+                            <td>
+                              <i>3</i>
+                            </td>
+                            <td>
+                              <span class="txt">태릉입구역</span>
+                            </td>
+                            <td class="fluctuate"><i class="num">9,300</i>대 증가</td>
+                            <td class="fluctuate"><i class="num">40</i>%</td>
+                            <td class="fluctuate">▲</td>
+                          </tr>
+                          <tr class="increase">
+                            <td>
+                              <i>4</i>
+                            </td>
+                            <td>
+                              <span class="txt">태릉입구역</span>
+                            </td>
+                            <td class="fluctuate"><i class="num">9,300</i>대 증가</td>
+                            <td class="fluctuate"><i class="num">40</i>%</td>
+                            <td class="fluctuate">▲</td>
+                          </tr>
+                          <tr class="decrease">
+                            <td>
+                              <i>5</i>
+                            </td>
+                            <td>
+                              <span class="txt">태릉입구역</span>
+                            </td>
+                            <td class="fluctuate"><i class="num">7,900</i>대 감소</td>
+                            <td class="fluctuate"><i class="num">35</i>%</td>
+                            <td class="fluctuate">▼</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- //ranking-tbl -->
+                  </div>
+                  <!-- //traffic-increase-wrap -->
+                </section>
+                <!-- //traffic-increase-container -->
+
+                <section class="traffic-share-ranking-container">
+                  <div class="traffic-ranking-container">
+                    <div class="dashboard-reform-tit-wrap">
+                      <em>교통량 TOP 5</em>
+                    </div>
+                    <!-- //dashboard-reform-tit-wrap -->
+                    <div class="chart-wrap">
+                      <!-- 차트 사이즈 : 327(px) X 200(px) -->
+                      <img
+                        src="https://www.dummyimage.com/327x200/ddd/000.png&amp;text=Chart+Area"
+                        alt="퍼블리싱 확인용 더미 이미지"
+                        class="dummy-img"
+                      />
+                    </div>
+                    <!-- //chart-wrap -->
+                  </div>
+                  <!-- //traffic-ranking-container -->
+                  <div class="share-ranking-container">
+                    <div class="dashboard-reform-tit-wrap">
+                      <em>점유율 TOP 5</em>
+                    </div>
+                    <!-- //dashboard-reform-tit-wrap -->
+                    <div class="chart-wrap">
+                      <!-- 차트 사이즈 : 327(px) X 200(px) -->
+                      <img
+                        src="https://www.dummyimage.com/327x200/ddd/000.png&amp;text=Chart+Area"
+                        alt="퍼블리싱 확인용 더미 이미지"
+                        class="dummy-img"
+                      />
+                    </div>
+                    <!-- //chart-wrap -->
+                  </div>
+                  <!-- //share-ranking-container -->
+                </section>
+                <!-- //traffic-share-ranking-container -->
+              </article>
+              <!-- //left -->
+
+              <article class="center">
+                <div class="point-container">
+                  <div class="dashboard-reform-tit-wrap type3">
+                    <em>지점 별 LOS</em>
+                    <time>2023. 08. 01 11:00~12:00</time>
+                  </div>
+                  <!-- //dashboard-reform-tit-wrap -->
+                  <div class="point-list-container">
+                    <!-- 퍼센트 게이지 : i 태그에 인라인 스타일 속성에 width값 추가하여 사용해주세요. -->
+                    <ul>
+                      <li>
+                        <em>가산디지털단지 역 가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i style="width: 20%"></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i style="width: 40%"></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i style="width: 80%"></i></span>
+                      </li>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>가산디지털단지 역</em>
+                        <span class="c-midnightblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>구로디지털단지 역</em>
+                        <span class="c-lightskyblue"><i></i></span>
+                      </li>
+                      <li>
+                        <em>범지기마을 가재마을 6</em>
+                        <span class="c-royalblue"><i></i></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- //point-list-container -->
+                </div>
+                <!-- //point-container -->
+              </article>
+              <!-- //center -->
+
+              <article class="right">
+                <section class="los-top-accidents-container">
+                  <em class="tit">LOS 등급</em>
+                  <div class="lev-bind">
+                    <div class="lev-left">
+                      <em>태릉입구역</em>
+                      <i>기존등급 : <b>A</b></i>
+                    </div>
+                    <!-- //lev-left -->
+                    <em class="grade">F</em>
+                  </div>
+                  <!-- //lev-bind -->
+                </section>
+                <!-- //los-top-accidents-container -->
+
+                <section class="accidents-container">
+                  <div class="dashboard-reform-tit-wrap">
+                    <em>돌발 현황</em>
+                  </div>
+                  <!-- //dashboard-reform-tit-wrap -->
+                  <div class="accidents-current">
+                    <div class="chart-bind">
+                      <div class="chart-wrap">
+                        <!-- 차트 사이즈 : 124(px) X 124(px) -->
+                        <img
+                          src="https://www.dummyimage.com/124x124/ddd/000.png&amp;text=Chart+Area"
+                          alt="퍼블리싱 확인용 더미 이미지"
+                          class="dummy-img"
+                        />
+                      </div>
+                      <!-- //chart-wrap -->
+                      <ul class="accidents-current-legend">
+                        <li>
+                          <span class="tit sudden1">꼬리물기</span>
+                          <div class="right">
+                            <span><em>50</em>건</span>
+                            <span><em>62</em>%</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit sudden2">정지선 위반</span>
+                          <div class="right">
+                            <span><em>50</em>건</span>
+                            <span><em>62</em>%</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit sudden3">지정차로 위반</span>
+                          <div class="right">
+                            <span><em>50</em>건</span>
+                            <span><em>62</em>%</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit sudden4">무단횡단</span>
+                          <div class="right">
+                            <span><em>999</em>건</span>
+                            <span><em>36</em>%</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit sudden5">정지</span>
+                          <div class="right">
+                            <span><em>20</em>건</span>
+                            <span><em>23</em>%</span>
+                          </div>
+                        </li>
+                        <li>
+                          <span class="tit sudden6">역주행</span>
+                          <div class="right">
+                            <span><em>50</em>건</span>
+                            <span><em>62</em>%</span>
+                          </div>
+                        </li>
+                      </ul>
+                      <!-- //event-current-legend -->
+                    </div>
+                    <!-- //chart-bind -->
+                    <ul class="dashboard-noti-list">
+                      <li>
+                        <i class="ico-sudden1"></i>
+                        <div class="noti-info">
+                          <p><em>[꼬리물기]</em>태릉입구역 무단횡단 발생</p>
+                          <time>2023-10-24 15:30</time>
+                        </div>
+                        <span class="pass">2시간 전</span>
+                      </li>
+                      <li>
+                        <i class="ico-sudden2"></i>
+                        <div class="noti-info">
+                          <p><em>[꼬리물기]</em>태릉입구역 역주행 발생</p>
+                          <time>2023-10-24 15:30</time>
+                        </div>
+                        <span class="pass">2시간 전</span>
+                      </li>
+                      <li>
+                        <i class="ico-sudden3"></i>
+                        <div class="noti-info">
+                          <p><em>[정지선 위반]</em>태릉입구역 역주행 발생</p>
+                          <time>2023-10-24 15:30</time>
+                        </div>
+                        <span class="pass">2시간 전</span>
+                      </li>
+                      <li>
+                        <i class="ico-sudden4"></i>
+                        <div class="noti-info">
+                          <p><em>[지정차로 위반]</em>태릉입구역 차량정지 발생 발생</p>
+                          <time>2023-10-24 15:30</time>
+                        </div>
+                        <span class="pass">2시간 전</span>
+                      </li>
+                    </ul>
+                    <!-- //dashboard-noti-list -->
+                  </div>
+                  <!-- //accidents-current -->
+                </section>
+                <!-- //accidents-container -->
+
+                <section class="hindrance-container">
+                  <div class="dashboard-reform-tit-wrap">
+                    <em>장애 현황</em>
+                  </div>
+                  <!-- //dashboard-reform-tit-wrap -->
+                  <ul class="dashboard-noti-list">
+                    <li>
+                      <i class="ico-hindrance1"></i>
+                      <div class="noti-info">
+                        <p><em>[카메라이상]</em>태릉입구역 교차로 카메라 이상</p>
+                        <time>2023-10-24 15:30</time>
+                      </div>
+                      <span class="pass">2시간 전</span>
+                    </li>
+                    <li>
+                      <i class="ico-hindrance2"></i>
+                      <div class="noti-info">
+                        <p><em>[분석서버 이상]</em>태릉입구역 교차로 카메라</p>
+                        <time>2023-10-24 15:30</time>
+                      </div>
+                      <span class="pass">2시간 전</span>
+                    </li>
+                    <li>
+                      <i class="ico-hindrance3"></i>
+                      <div class="noti-info">
+                        <p><em>[카메라이상]</em>태릉입구역 교차로 카메라 이상</p>
+                        <time>2023-10-24 15:30</time>
+                      </div>
+                      <span class="pass">2시간 전</span>
+                    </li>
+                    <li>
+                      <i class="ico-hindrance1"></i>
+                      <div class="noti-info">
+                        <p><em>[상태감시장치 이상]</em>태릉입구역 교차로 상태...</p>
+                        <time>2023-10-24 15:30</time>
+                      </div>
+                      <span class="pass">2시간 전</span>
+                    </li>
+                    <li>
+                      <i class="ico-hindrance2"></i>
+                      <div class="noti-info">
+                        <p><em>[분석서버 이상]</em>태릉입구역 교차로 카메라</p>
+                        <time>2023-10-24 15:30</time>
+                      </div>
+                      <span class="pass">2시간 전</span>
+                    </li>
+                  </ul>
+                  <!-- //dashboard-noti-list -->
+                </section>
+                <!-- //hindrance-container -->
+              </article>
+              <!-- //right -->
+            </section>
+            <!-- //dashboard-reform-body -->
+          </div>
+          <!-- //dashboard-reform -->
+        </div>
+        <!-- //ly-sub -->
+      </main>
+      <!-- //ly-container -->
+
+      <footer class="ly-copyright c-white" include-html="/base/html/common/footer.html"></footer>
+    </div>
+    <!-- //wrapper -->
+  </body>
+</html>
