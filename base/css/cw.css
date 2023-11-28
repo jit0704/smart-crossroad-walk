@@ -2859,6 +2859,20 @@
   text-align: center;
   background-size: 0.8rem 0.4rem;
 }
+.roi-view-container.latlong .perceive-section {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.roi-view-container.latlong .perceive-section > .perceive-header {
+  padding: 1rem 3rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+.roi-view-container.latlong .perceive-section > .perceive-header h3 {
+  line-height: normal;
+  font-weight: 700;
+  color: #03a0fc;
+}
 .roi-view-container.latlong .roi-view-header {
   padding-top: 4rem;
 }
@@ -2866,7 +2880,10 @@
   font-size: 1.6rem;
 }
 .roi-view-container.latlong .perceive-header {
-  margin-bottom: 2.6rem;
+  margin-bottom: 0;
+}
+.roi-view-container.latlong .perceive-body {
+  padding: 1.5rem 3rem 0;
 }
 .roi-view-container.latlong .perceive-body .perceive-header {
   margin-bottom: 1.4rem;

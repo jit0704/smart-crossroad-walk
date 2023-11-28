@@ -12,7 +12,6 @@
     <script src="/base/js/common/includeHTML.js"></script>
     <script src="/base/js/common/ui.js"></script>
     <link rel="stylesheet" href="/base/css/common.css" />
-    <link rel="stylesheet" href="/base/css/is.css" />
 
     <style>
       /* 퍼블리싱 확인용 */
@@ -175,18 +174,23 @@
               <!-- //dashboard-status-content1 -->
 
               <article class="dashboard-status-content2">
+                <!-- 231122 보행 정보 수정 -->
                 <div class="status-content2-1">
                   <div class="status-content-hedaer">
-                    <em>실시간 보행 정보</em>
+                    <em>보행 정보</em>
                     <div class="right">
                       <span class="radio-txt3-wrap">
                         <label class="radio-txt3">
-                          <input type="radio" name="traffic" checked />
-                          <em>교통량</em>
+                          <input type="radio" name="walk" checked />
+                          <em>횡단</em>
                         </label>
                         <label class="radio-txt3">
-                          <input type="radio" name="traffic" />
-                          <em>속도</em>
+                          <input type="radio" name="walk" />
+                          <em>대기</em>
+                        </label>
+                        <label class="radio-txt3">
+                          <input type="radio" name="walk" />
+                          <em>무단횡단</em>
                         </label>
                       </span>
                       <!-- //radio-txt3-wrap -->
@@ -220,18 +224,19 @@
                   <!-- //status-chart -->
                 </div>
                 <!-- //status-content2-1 -->
+                <!-- 231122 통행 정보 수정 -->
                 <div class="status-content2-2">
                   <div class="status-content-hedaer">
-                    <em>실시간 통행 정보</em>
+                    <em>통행 정보</em>
                     <div class="right">
                       <span class="radio-txt3-wrap">
                         <label class="radio-txt3">
-                          <input type="radio" name="traffic2" checked />
-                          <em>교통량</em>
+                          <input type="radio" name="pass" checked />
+                          <em>통과차량</em>
                         </label>
                         <label class="radio-txt3">
-                          <input type="radio" name="traffic2" />
-                          <em>속도</em>
+                          <input type="radio" name="pass" />
+                          <em>정지선 위반 차량</em>
                         </label>
                       </span>
                       <!-- //radio-txt3-wrap -->

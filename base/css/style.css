@@ -900,6 +900,26 @@ body ::-webkit-scrollbar-track {
   width: 100%;
   font-size: 1.8rem;
 }
+.ui.input input::-webkit-input-placeholder {
+  font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+.ui.input input::-moz-placeholder {
+  font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+.ui.input input:-ms-input-placeholder {
+  font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+.ui.input input::-ms-input-placeholder {
+  font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+.ui.input input::placeholder {
+  font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
 .ui.input input:disabled {
   border-color: #e8e8e8 !important;
   background: #f8f8f8;
@@ -1996,6 +2016,9 @@ body ::-webkit-scrollbar-track {
   overflow: hidden;
   border-radius: 0.3rem;
   border: 1px solid #999999;
+}
+.radio-txt3-wrap .radio-txt3:not(:first-child) {
+  border-left: 1px solid #999999;
 }
 
 .custom-radio-rectangle-two {
