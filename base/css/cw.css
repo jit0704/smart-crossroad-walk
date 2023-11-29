@@ -35,7 +35,7 @@
 
 /* 교차로 통계 메인 */
 .main-stats-container .filter-grouop {
-  margin-bottom: 3.45rem;
+  margin-bottom: 3.25rem;
 }
 .main-stats-container .summary-info-wrap > .tit {
   display: -webkit-box;
@@ -65,212 +65,137 @@
   display: block;
   width: 0.5rem;
   height: 1.4rem;
-  background-image: url("/base/images/icon_dot_double.png");
+  background-image: url("/base/images/icon_dot_double_gray.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
 }
 .main-stats-container .summary-info-display {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
-  gap: 0 1rem;
-  height: 23.8rem;
-}
-.main-stats-container .summary-info-item-wrap {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
+  padding: 2rem 0;
   border-radius: 0.5rem;
   background: #fff;
-  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
-          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+}
+.main-stats-container .summary-info-item-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  background: #fff;
 }
 .main-stats-container .summary-info-item-wrap > li {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   position: relative;
-  padding: 2rem;
+  min-height: 23rem;
+  padding: 0 2rem;
 }
 .main-stats-container .summary-info-item-wrap > li:not(:first-child)::before {
   content: "";
   position: absolute;
-  top: 2.5rem;
-  bottom: 2.5rem;
+  top: 0;
+  bottom: 0;
   left: 0;
   width: 0.1rem;
   background: #e8e8e8;
 }
-.main-stats-container .summary-info-item-wrap > li > .tit {
+.main-stats-container .summary-info-item-wrap > li .bind .tit {
   display: block;
-  padding: 0.75rem 1rem;
-  line-height: 100%;
+  padding: 0 1rem;
+  line-height: 3.3rem;
   border-radius: 0.5rem;
-  background: #f0fafd;
+  background: #f0f7fa;
   font-size: 1.8rem;
   color: #003c68;
   font-weight: 600;
-  letter-spacing: -0.06rem;
 }
-.main-stats-container .summary-info-item-wrap > li .clearly {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
-  gap: 0 0.5rem;
-  height: calc(100% - 3.5rem);
-  font-size: 2.6rem;
+.main-stats-container .summary-info-item-wrap > li .bind .clearly {
+  padding: 3.2rem 0;
+  line-height: 3.1rem;
   color: #727272;
+  text-align: center;
+  font-size: 2.6rem;
   font-weight: 500;
 }
-.main-stats-container .summary-info-item-wrap > li .clearly em {
+.main-stats-container .summary-info-item-wrap > li .bind .clearly em {
+  display: inline-block;
   font-size: 2.4rem;
   font-weight: 700;
 }
-.main-stats-container .summary-info-item-wrap > li .tbl-bind {
-  padding: 2rem 1rem 0;
+.main-stats-container .summary-info-item-wrap > li .bind .tbl-count {
+  margin-top: 1rem;
+  padding: 0 1rem;
 }
-.main-stats-container .summary-info-item-wrap > li .tbl-bind table {
-  height: 13.8rem;
-  line-height: normal;
+.main-stats-container .summary-info-item-wrap > li .bind .tbl-count table {
+  height: 5.8rem;
 }
-.main-stats-container .summary-info-item-wrap > li .tbl-bind table th {
+.main-stats-container .summary-info-item-wrap > li .bind .tbl-count table tbody td {
+  padding: 0;
+  vertical-align: middle;
   font-size: 1.6rem;
   color: #727272;
-  font-weight: 400;
-  vertical-align: middle;
-}
-.main-stats-container .summary-info-item-wrap > li .tbl-bind table td {
-  font-size: 1.6rem;
-  color: #727272;
-  vertical-align: middle;
-}
-.main-stats-container .summary-info-item-wrap > li .tbl-bind table td em {
-  font-weight: 700;
-}
-.main-stats-container .summary-info-item-wrap > li:nth-child(4) {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 22.6rem;
-          flex: 0 0 22.6rem;
-}
-.main-stats-container .summary-info-item-wrap > li:nth-child(4) .tbl-bind table {
-  height: 14rem;
-}
-.main-stats-container .summary-info-item-wrap > li:nth-child(4) .tbl-bind table td {
   letter-spacing: -0.048rem;
 }
-.main-stats-container .summary-info-item-wrap > li:nth-child(5) {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 18rem;
-          flex: 0 0 18rem;
-}
-.main-stats-container .summary-info-item-wrap > li:nth-child(5) .tbl-bind table {
-  height: 14rem;
-}
-.main-stats-container .summary-info-item-wrap > li:nth-child(6) {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 24.49rem;
-          flex: 0 0 24.49rem;
-}
-.main-stats-container .summary-info-item-wrap > li:last-child {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  width: 25.1rem;
-}
-.main-stats-container .summary-info-item-wrap > li:last-child .tbl-bind table {
-  height: 14rem;
-}
-.main-stats-container .summary-info-item-wrap > li.traffic-direction {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 37.8rem;
-          flex: 0 0 37.8rem;
-}
-.main-stats-container .summary-info-item-wrap > li.traffic-direction .tbl-bind table {
-  height: 14rem;
-}
-.main-stats-container .summary-info-item-wrap > li.traffic-direction th span {
+.main-stats-container .summary-info-item-wrap > li .bind .tbl-count table tbody td:first-child span {
   display: block;
-  width: 17rem;
-  letter-spacing: -0.068rem;
+  width: 18.1rem;
+  line-height: normal;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: normal;
 }
-.main-stats-container .summary-info-item-wrap > li.traffic-direction td span {
-  display: inline-block;
-  width: 3.9rem;
-  margin: 0 1rem;
-  text-align: center;
+.main-stats-container .summary-info-item-wrap > li .bind .tbl-count table tbody td:last-child {
+  padding-left: 3rem;
+}
+.main-stats-container .summary-info-item-wrap > li .bind .tbl-count table tbody td:last-child em {
+  font-weight: 700;
 }
 .main-stats-container .summary-info-chart {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  gap: 0 1rem;
   margin-top: 1rem;
 }
 .main-stats-container .summary-info-chart > section {
-  height: 46.2rem;
-  padding: 2rem 3rem;
+  position: relative;
+  height: 43rem;
+  padding: 2.5rem 3rem;
   border-radius: 0.5rem;
   background: #fff;
   -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
           box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+.main-stats-container .summary-info-chart > section .chart-container {
+  width: 154.2rem;
+  height: 34.1rem;
+  margin-top: 3.9rem;
+}
+.main-stats-container .summary-info-chart > section aside {
+  position: absolute;
+  top: 2.55rem;
+  right: 3rem;
+}
+.main-stats-container .summary-info-chart > section aside .selectbox-wrap.xs {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.main-stats-container .summary-info-chart > section aside .selectbox-wrap.xs select {
+  width: auto;
+  min-width: 11.4rem;
+  padding: 0.33rem 2rem 0.33rem 0.5rem;
+  font-size: 1.6rem;
 }
 .main-stats-container .summary-info-chart .road-sort {
   width: 11.4rem;
@@ -292,86 +217,6 @@
 }
 .main-stats-container .summary-info-chart .road-sort button.active {
   background: #e8e8e8;
-}
-.main-stats-container .summary-info-chart .tit-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-.main-stats-container .summary-info-chart .tit-header em {
-  font-size: 1.8rem;
-  color: #727272;
-  font-weight: 500;
-}
-.main-stats-container .summary-info-chart .tit-header .selectbox-wrap.xs select {
-  width: auto;
-  min-width: 11.4rem;
-  padding: 0.33rem 2rem 0.33rem 0.5rem;
-  font-size: 1.6rem;
-}
-.main-stats-container .summary-info-chart .chart1 {
-  position: relative;
-  width: 124.5rem;
-}
-.main-stats-container .summary-info-chart .chart1 .chart-container {
-  width: 103.1rem;
-  height: 36.4rem;
-  margin-top: 5rem;
-}
-.main-stats-container .summary-info-chart .chart1 aside {
-  position: absolute;
-  top: 2.55rem;
-  right: 3rem;
-}
-.main-stats-container .summary-info-chart .chart1 aside .selectbox-wrap.xs {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.main-stats-container .summary-info-chart .chart1 aside .selectbox-wrap.xs select {
-  width: auto;
-  min-width: 11.4rem;
-  padding: 0.33rem 2rem 0.33rem 0.5rem;
-  font-size: 1.6rem;
-}
-.main-stats-container .summary-info-chart .chart2 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-.main-stats-container .summary-info-chart .chart2 .chart-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  height: calc(100% - 2.8rem);
-}
-.main-stats-container .summary-info-chart .chart2 .chart-container .chart-inner {
-  width: 31rem;
-  height: 31rem;
 }
 
 /* 교차로 통계 */

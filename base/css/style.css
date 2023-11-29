@@ -10,7 +10,6 @@ body {
 
 body {
   min-width: 1920px;
-  overflow-x: auto;
   font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
@@ -929,7 +928,7 @@ body ::-webkit-scrollbar-track {
   text-align: center;
 }
 .ui.input.md.label-none {
-  width: 20rem;
+  width: 28rem;
   height: 3.4rem;
 }
 .ui.input.md.label-none input {

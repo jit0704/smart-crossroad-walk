@@ -36,10 +36,17 @@ var cmmnUi = {
     //   { passive: false },
     // );
 
-    /* 좌측 메뉴에 노출되는 상세 화면(접고/펼치기) 인터랙션 */
-    // 상세 화면 유무 체크
     $(window)
       .on('resize', function () {
+        // 작업 환경 디버깅을 위해서 추가(서비스에는 지장 없음)
+        if ($(window).width() < 1600) {
+          $('body').css('overflow-x', 'auto');
+        } else {
+          $('body').css('overflow-x', 'hidden');
+        }
+
+        /* 좌측 메뉴에 노출되는 상세 화면(접고/펼치기) 인터랙션 */
+        // 상세 화면 유무 체크
         if ($('.crossroad-view-container').length !== 0) {
           $('.wrapper').addClass('is-crossroad-view');
         }
@@ -54,7 +61,7 @@ var cmmnUi = {
       })
       .resize();
 
-    // 상세 화면 접고/펼치기
+    // 좌측 메뉴에 노출되는 상세 화면 접고/펼치기
     $('.btn-crossroad-view').on('click', function () {
       var $parent = $(this).parent('.crossroad-view-container');
       var $forefather = $(this).closest('.is-crossroad-view');
