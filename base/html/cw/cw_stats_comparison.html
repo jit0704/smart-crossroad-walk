@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>횡단보도 비교 통계</title>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <!-- includeHTML.js : 퍼블리싱 확인용 include -->
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" href="/base/css/common.css" />
+    <link rel="stylesheet" href="/base/css/cw.css" />
+
+    <style>
+      /* 퍼블리싱 확인용 */
+      .dummy-img {
+        display: block;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- GNB -->
+      <nav class="gnb" include-html="/base/html/common/gnb.html"></nav>
+
+      <main class="ly-container">
+        <div class="ly-sub bg-gray">
+          <div class="ly-setting">
+            <div class="ui breadcrumb">
+              <i class="home icon"></i>
+              <i class="right angle icon divider"></i>
+              <span class="section">횡단보도</span>
+              <i class="right angle icon divider"></i>
+              <span class="section">통계</span>
+              <i class="right angle icon divider"></i>
+              <div class="section">횡단보도 비교 통계</div>
+            </div>
+            <!-- //breadcrumb -->
+            <div class="stats-container comparison">
+              <section class="filter-grouop">
+                <div class="inner">
+                  <div class="selectbox-wrap primary label-none">
+                    <select>
+                      <option value="">분석 유형</option>
+                      <option value="">아이템1</option>
+                      <option value="">아이템2</option>
+                      <option value="">아이템3</option>
+                    </select>
+                  </div>
+                  <!-- //selectbox-wrap -->
+                  <div class="selectbox-wrap primary label-none">
+                    <select>
+                      <option value="">분석 기간</option>
+                      <option value="">아이템1</option>
+                      <option value="">아이템2</option>
+                      <option value="">아이템3</option>
+                    </select>
+                  </div>
+                  <!-- //selectbox-wrap -->
+
+                  <!-- 달력 날짜 초기화는 맨 아래 스크립트 참고   -->
+                  <div class="date-group">
+                    <input type="date" class="input-date" data-start="date-start" />
+                    <i>~</i>
+                    <input type="date" class="input-date" data-end="date-end" />
+                  </div>
+                  <!-- //date-group -->
+
+                  <div class="ui checkbox primary-chkbox md c-bluesky">
+                    <input id="chk1" type="checkbox" />
+                    <label for="chk1">주말 제외</label>
+                  </div>
+                  <!-- //checkbox -->
+                  <div class="ui checkbox primary-chkbox md c-bluesky">
+                    <input id="chk2" type="checkbox" />
+                    <label for="chk2">공휴일 제외</label>
+                  </div>
+                  <!-- //checkbox -->
+
+                  <button class="btn-data-search">비교 지점 선택</button>
+                  <button class="btn-data-search">검색</button>
+                </div>
+                <!-- //inner -->
+                <p class="branch-result">선택 지점 : 지점명1, 지점명2, 지점명3, 지점명4</p>
+              </section>
+              <!-- //filter-grouop -->
+              <section class="divide-none">
+                <h2>지점 비교</h2>
+                <div class="chart-container">
+                  <!-- 차트 크기 1686(px) x 219(px) -->
+                  <img src="https://www.dummyimage.com/1686x219/f9f9f9/000.png&amp;text=Chart+Area" alt="퍼블리싱 확인용 더미 이미지" />
+                </div>
+              </section>
+              <!-- //divide-none -->
+              <section class="divide-4 title-none">
+                <ul>
+                  <li>
+                    <div class="chart-wrap">
+                      <h3>지점명 1</h3>
+                      <div class="chart-container">
+                        <!-- 차트 크기 819(px) x 144(px) -->
+                        <img src="https://www.dummyimage.com/819x144/f9f9f9/000.png&amp;text=Chart+Area" alt="퍼블리싱 확인용 더미 이미지" />
+                      </div>
+                    </div>
+                    <!-- //chart-wrap -->
+                    <div class="chart-wrap">
+                      <h3>지점명 2</h3>
+                      <div class="chart-container">
+                        <!-- 차트 크기 819(px) x 144(px) -->
+                        <img src="https://www.dummyimage.com/819x144/f9f9f9/000.png&amp;text=Chart+Area" alt="퍼블리싱 확인용 더미 이미지" />
+                      </div>
+                    </div>
+                    <!-- //chart-wrap -->
+                    <div class="chart-wrap">
+                      <h3>지점명 3</h3>
+                      <div class="chart-container">
+                        <!-- 차트 크기 819(px) x 144(px) -->
+                        <img src="https://www.dummyimage.com/819x144/f9f9f9/000.png&amp;text=Chart+Area" alt="퍼블리싱 확인용 더미 이미지" />
+                      </div>
+                    </div>
+                    <!-- //chart-wrap -->
+                    <div class="chart-wrap">
+                      <h3>지점명 4</h3>
+                      <div class="chart-container">
+                        <!-- 차트 크기 819(px) x 144(px) -->
+                        <img src="https://www.dummyimage.com/819x144/f9f9f9/000.png&amp;text=Chart+Area" alt="퍼블리싱 확인용 더미 이미지" />
+                      </div>
+                    </div>
+                    <!-- //chart-wrap -->
+                  </li>
+                  <li>
+                    <div class="chart-wrap">
+                      <h3>지점명 1</h3>
+                      <div class="chart-container">
+                        <!-- 차트 크기 819(px) x 144(px) -->
+                        <img src="https://www.dummyimage.com/819x144/f9f9f9/000.png&amp;text=Chart+Area" alt="퍼블리싱 확인용 더미 이미지" />
+                      </div>
+                    </div>
+                    <!-- //chart-wrap -->
+                    <div class="chart-wrap">
+                      <h3>지점명 2</h3>
+                      <div class="chart-container">
+                        <!-- 차트 크기 819(px) x 144(px) -->
+                        <img src="https://www.dummyimage.com/819x144/f9f9f9/000.png&amp;text=Chart+Area" alt="퍼블리싱 확인용 더미 이미지" />
+                      </div>
+                    </div>
+                    <!-- //chart-wrap -->
+                    <div class="chart-wrap">
+                      <h3>지점명 3</h3>
+                      <div class="chart-container">
+                        <!-- 차트 크기 819(px) x 144(px) -->
+                        <img src="https://www.dummyimage.com/819x144/f9f9f9/000.png&amp;text=Chart+Area" alt="퍼블리싱 확인용 더미 이미지" />
+                      </div>
+                    </div>
+                    <!-- //chart-wrap -->
+                    <div class="chart-wrap">
+                      <h3>지점명 4</h3>
+                      <div class="chart-container">
+                        <!-- 차트 크기 819(px) x 144(px) -->
+                        <img src="https://www.dummyimage.com/819x144/f9f9f9/000.png&amp;text=Chart+Area" alt="퍼블리싱 확인용 더미 이미지" />
+                      </div>
+                    </div>
+                    <!-- //chart-wrap -->
+                  </li>
+                </ul>
+              </section>
+              <!-- //divide-4 -->
+            </div>
+            <!-- //stats-container -->
+          </div>
+          <!-- //ly-setting -->
+        </div>
+        <!-- //ly-sub -->
+      </main>
+      <!-- //ly-container -->
+
+      <footer class="ly-copyright c-white" include-html="/base/html/common/footer.html"></footer>
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      // 달력 날짜 초기화
+      function dateInit() {
+        return new Date().toISOString().substring(0, 10);
+      }
+      $('[data-start="date-start"]').attr('value', dateInit());
+      $('[data-end="date-end"]').attr('value', dateInit());
+    </script>
+  </body>
+</html>

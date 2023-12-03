@@ -4166,6 +4166,9 @@ body ::-webkit-scrollbar-track {
 .modal-container.medium {
   width: 66rem;
 }
+.modal-container.w682 {
+  width: 68.2rem;
+}
 .modal-container.w690 {
   width: 69rem;
 }

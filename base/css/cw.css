@@ -333,7 +333,7 @@
 .stats-container .divide-4 {
   overflow-y: auto;
   width: calc(100% + 0.4rem);
-  height: 44rem;
+  height: 44.5rem;
   margin-top: 1rem;
 }
 .stats-container .divide-4::-webkit-scrollbar {
@@ -410,8 +410,8 @@
 }
 .stats-container .divide-4 li .chart-wrap {
   width: 86.8rem;
-  height: 19.6rem;
-  padding: 1.4rem 2.5rem;
+  height: 21.35rem;
+  padding: 2rem 2.5rem;
   border-radius: 0.5rem;
   background: #fff;
   -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
@@ -462,16 +462,22 @@
 .stats-container .divide-4 li + li {
   margin-top: 1rem;
 }
+.stats-container.comparison .filter-grouop {
+  margin-bottom: 2.85rem;
+}
+.stats-container.comparison .divide-none .chart-container {
+  height: 26.29rem;
+}
 
 /* 교차로 비교 통계 > 비교 지점 선택 팝업 */
 .comparison-branch tbody .branch-tit {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: #1e5f8d;
   text-align: center;
 }
 .comparison-branch tbody .name-tit {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: #727272;
   text-align: center;
@@ -479,7 +485,7 @@
 
 /* 교차로 원시 이력 */
 .stats-container.primitive .filter-grouop {
-  margin-bottom: 1.8rem;
+  margin-bottom: 3.15rem;
 }
 .stats-container.primitive .button-function-group {
   margin-bottom: 0.8rem;
@@ -490,7 +496,11 @@
   color: #1e5f8d;
 }
 .stats-container.primitive .data-tbl-very {
-  height: 69.9rem;
+  height: 68.7rem;
+}
+.stats-container.primitive .data-tbl-very .ui.basic.table.is-data-grid thead tr th {
+  height: 3.5rem !important;
+  font-size: 1.4rem !important;
 }
 
 .txt-condition {
@@ -2838,7 +2848,10 @@
   .stats-container .divide-4.sub-title-none > ul li {
     width: 49.6%;
   }
-  .stats-container .divide-4 li .chart-wrap {
+  .stats-container .divide-4.sub-title-none > ul li .chart-wrap {
     width: 100%;
+  }
+  .stats-container .divide-4 li .chart-wrap {
+    width: 49.7%;
   }
 }

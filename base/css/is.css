@@ -590,13 +590,13 @@
 
 /* 교차로 비교 통계 > 비교 지점 선택 팝업 */
 .comparison-branch tbody .branch-tit {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: #1e5f8d;
   text-align: center;
 }
 .comparison-branch tbody .name-tit {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: #727272;
   text-align: center;
