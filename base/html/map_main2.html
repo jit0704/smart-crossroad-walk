@@ -382,6 +382,59 @@
             <!-- //angle-adjust-container -->
           </div>
           <!-- //angle-adjust-popup -->
+
+          <!-- 231204 지점 목록 팝업 추가 -->
+          <div class="branch-list-popup">
+            <div class="branch-list-header">
+              <em>지점 목록</em>
+              <button type="button" class="btn-close"><span class="screen-out">지점 목록 닫기</span></button>
+            </div>
+            <!-- //branch-list-header -->
+            <div class="branch-list-search">
+              <div class="selectbox-wrap xs">
+                <select>
+                  <option value="">전체</option>
+                  <option value="">내용1</option>
+                  <option value="">내용2</option>
+                </select>
+              </div>
+              <!-- //selectbox-wrap -->
+              <div class="ui input rounded xs">
+                <input type="text" placeholder="검색어 입력" />
+                <button type="button" class="btn-del"><span class="screen-out">삭제</span></button>
+              </div>
+              <!-- //input -->
+            </div>
+            <!-- //branch-list-search -->
+            <ul class="branch-list-body">
+              <li>
+                <i class="ico-c"></i>
+                <em class="txt">오일뱅크쌍용대로지점앞</em>
+                <span class="bind">
+                  <button type="button" class="btn-branch1"><span class="screen-out">버튼</span></button>
+                  <button type="button" class="btn-branch2"><span class="screen-out">버튼</span></button>
+                </span>
+              </li>
+              <li>
+                <i class="ico-h"></i>
+                <em class="txt">오일뱅크쌍용대로지점앞쌍용대로지점앞</em>
+                <span class="bind">
+                  <button type="button" class="btn-branch1"><span class="screen-out">버튼</span></button>
+                  <button type="button" class="btn-branch2"><span class="screen-out">버튼</span></button>
+                </span>
+              </li>
+              <li>
+                <i class="ico-h"></i>
+                <em class="txt">오일뱅크쌍용대로지점앞쌍용대로지점앞</em>
+                <span class="bind">
+                  <button type="button" class="btn-branch1"><span class="screen-out">버튼</span></button>
+                  <button type="button" class="btn-branch2"><span class="screen-out">버튼</span></button>
+                </span>
+              </li>
+            </ul>
+            <!-- //branch-list-body -->
+          </div>
+          <!-- //branch-list-popup -->
         </div>
         <!-- //ly-map -->
       </main>
@@ -440,6 +493,45 @@
         start: function () {
           $(this).css('transform', 'none');
         },
+      });
+
+      // 231204 지점 목록 검색창 활성화 이벤트 및 삭제 버튼 클릭시 생기는 side effect처리
+      $('.branch-list-search .ui.input .btn-del').on('mousedown', function () {
+        const $parent = $(this).parent();
+        // .btn-del을 클릭한 경우에는 active 클래스 유지하고 clicked 클래스 추가
+        $parent.addClass('active');
+        $(this).addClass('clicked');
+      });
+
+      // .btn-del이 포커스를 잃으면 clicked 클래스를 제거하고 .ui.input input에 blur 이벤트 발생
+      $('.branch-list-search .ui.input .btn-del').on('focusout', function () {
+        $(this).removeClass('clicked');
+        const $input = $(this).parent().find('input');
+
+        // .btn-del 클릭 후 input에 focus가 되면 active 클래스 유지
+        if ($input.is(':focus')) {
+          $(this).parent().addClass('active');
+        } else {
+          $(this).parent().removeClass('active');
+        }
+      });
+
+      // .ui.input input에 focus시 active 클래스 유지
+      $('.branch-list-search .ui.input input').on('focus', function () {
+        $(this).parent().addClass('active');
+      });
+
+      // .ui.input input에 blur시 active 클래스 제거
+      $('.branch-list-search .ui.input input').on('blur', function () {
+        const $parent = $(this).parent();
+
+        // 비동기적으로 .btn-del을 클릭한 경우를 확인
+        setTimeout(() => {
+          // .btn-del을 클릭한 경우에는 active 클래스 유지
+          if (!$parent.find('.btn-del').hasClass('clicked')) {
+            $parent.removeClass('active');
+          }
+        }, 0);
       });
     </script>
   </body>
