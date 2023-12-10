@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>지도</title>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="http://map.ngii.go.kr/emap/js/map/OpenLayers-6.4.3.js"></script>
+    <script src="http://map.ngii.go.kr/nps/common/lib/proj4js/proj4.js"></script>
+    <script src="http://map.ngii.go.kr/openapi/wmts_ngiiMap_v6.4.3.js?apikey=04trYP9_xwLAfALjwZ-B8g"></script>
+    <!-- includeHTML.js : 퍼블리싱 확인용 include -->
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/ui.js"></script>
+    <script src="/base/js/common/map-iconbar.js"></script>
+    <link rel="stylesheet" href="http://map.ngii.go.kr/emap/css/map/OpenLayers-6.4.3.css" />
+    <link rel="stylesheet" href="/base/css/common.css" />
+    <link rel="stylesheet" href="/base/css/cw.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- GNB -->
+      <nav class="gnb" include-html="/base/html/common/gnb.html"></nav>
+
+      <div class="crosswalk-view-container">
+        <h2>한양 아파트 앞</h2>
+      </div>
+      <!-- //crosswalk-view-container -->
+
+      <main class="ly-container">
+        <div id="map1" class="ly-map">
+          <!-- 우측 상단 아이콘바 -->
+          <div class="map-iconbar-container map-selection pos-right2">
+            <button type="button" class="btn-display">
+              <span><em>일반지도</em></span>
+            </button>
+            <div class="map-icon-list">
+              <button type="button" class="ic1">
+                <span><em>일반지도</em></span>
+              </button>
+              <button type="button" class="ic2">
+                <span><em>야간지도</em></span>
+              </button>
+              <button type="button" class="ic3">
+                <span><em>위성지도</em></span>
+              </button>
+            </div>
+            <!-- //map-icon-list -->
+          </div>
+          <!-- //map-iconbar-container -->
+
+          <div class="map-iconbar-container map-cw pos-right1">
+            <button type="button" class="btn-display">
+              <span><em class="screen-out">현재 적용된 아이콘</em></span>
+            </button>
+            <div class="map-icon-list">
+              <button type="button" class="ic1">
+                <span><em>차량정보</em></span>
+              </button>
+              <button type="button" class="ic2">
+                <span><em>LOS</em></span>
+              </button>
+              <button type="button" class="ic3">
+                <span><em>신호등</em></span>
+              </button>
+              <button type="button" class="ic4">
+                <span><em>카메라</em></span>
+              </button>
+              <button type="button" class="ic5">
+                <span><em>레이더</em></span>
+              </button>
+            </div>
+            <!-- //map-icon-list -->
+          </div>
+          <!-- //map-iconbar-container -->
+          <!-- //우측 상단 아이콘바 -->
+
+          <button type="button" class="btn-los-legend">LOS 범례</button>
+          <div class="los-legend-container">
+            <header>
+              <em>접근로 별 LOS 표준 범례</em>
+              <button type="button" class="btn-close">
+                <span class="screen-out">범례 팝업 닫기</span>
+              </button>
+            </header>
+            <div class="los-legend-content">
+              <ul>
+                <li class="lv-a">A등급</li>
+                <li class="lv-b">B등급</li>
+                <li class="lv-c">C등급</li>
+                <li class="lv-d">D등급</li>
+              </ul>
+              <ul>
+                <li class="lv-e">E등급</li>
+                <li class="lv-f">F등급</li>
+                <li class="lv-ff">FF등급</li>
+                <li class="lv-fff">FFF등급</li>
+              </ul>
+            </div>
+            <!-- //los-legend-content -->
+          </div>
+          <!-- //los-legend-container -->
+
+          <!-- 영상 분할 화면 -->
+          <section class="split-screen-container">
+            <div class="split-screen">
+              <!-- <span class="split-screen-info">
+                <i>채널1</i>
+                <em>천안동남카메라1</em>
+              </span> -->
+              <video autoplay loop muted width="100%" height="100%" poster="/base/images/cannot_connection.png" class="split-video">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <!-- //split-screen -->
+            <div class="split-screen">
+              <!-- <span class="split-screen-info">
+                <i>채널2</i>
+                <em>천안동남카메라2</em>
+              </span> -->
+              <video autoplay loop muted width="100%" height="100%" poster="/base/images/cannot_connection.png" class="split-video">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <!-- //split-screen -->
+            <div class="split-screen">
+              <!-- <span class="split-screen-info">
+                <i>채널3</i>
+                <em>천안동남카메라3</em>
+              </span> -->
+              <video autoplay loop muted width="100%" height="100%" poster="/base/images/cannot_connection.png" class="split-video">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <!-- //split-screen -->
+            <div class="split-screen">
+              <i class="no-video"><span class="screen-out">영상 없음</span></i>
+            </div>
+            <!-- //split-screen -->
+          </section>
+          <!-- //split-screen-container -->
+
+          <!-- 영상 확대 full팝업 -->
+          <div class="split-screen expend-video">
+            <!-- <span class="split-screen-info">
+              <i>채널${num}</i>
+              <em>${카메라명}</em>
+            </span> -->
+            <video autoplay loop muted width="100%" height="100%" poster="/base/images/cannot_connection.png" class="split-video">
+              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <!-- //split-screen -->
+        </div>
+        <!-- //ly-map -->
+      </main>
+      <!-- //ly-container -->
+
+      <footer class="ly-copyright" include-html="/base/html/common/footer.html"></footer>
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      // map init
+      window.onload = function () {
+        var map1 = new ngii_wmts.map('map1', { zoom: 6 });
+      };
+
+      // 탭 퍼블리싱 확인용
+      $('.crossroad-view-container .menu .item').tab();
+
+      // 상세화면 데이터 영역 x축으로 늘리는 기능 비활성화
+      $('.crossroad-view-container').resizable({
+        handles: 'e',
+        minWidth: 422,
+        maxWidth: 572,
+      });
+      $('.crossroad-view-container').resizable('destroy');
+
+      // 영상 확대 팝업 클릭 이벤트
+      $(document).on('dblclick', '.split-video', function () {
+        $('.split-screen.expend-video').addClass('active');
+      });
+      $(document).on('dblclick', '.split-screen.expend-video', function () {
+        $('.split-screen.expend-video').removeClass('active');
+      });
+    </script>
+  </body>
+</html>

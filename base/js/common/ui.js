@@ -51,9 +51,9 @@ var cmmnUi = {
           $('.wrapper').addClass('is-crossroad-view');
         }
 
-        // if ($('.roi-view-container').length !== 0) {
-        //   $('.wrapper').addClass('is-roi-view');
-        // }
+        if ($('.crosswalk-view-container').length !== 0) {
+          $('.wrapper').addClass('is-crosswalk-view');
+        }
 
         // if ($('.search-view-container').length !== 0) {
         //   $('.wrapper').addClass('is-search-view');
@@ -62,9 +62,9 @@ var cmmnUi = {
       .resize();
 
     // 좌측 메뉴에 노출되는 상세 화면 접고/펼치기
-    $('.btn-crossroad-view').on('click', function () {
-      var $parent = $(this).parent('.crossroad-view-container');
-      var $forefather = $(this).closest('.is-crossroad-view');
+    $('.btn-crossroad-view, .btn-crosswalk-view').on('click', function () {
+      var $parent = $(this).parent('.crossroad-view-container, .crosswalk-view-container');
+      var $forefather = $(this).closest('.is-crossroad-view, .is-crosswalk-view');
       var $parentWidth = $parent.width() - 54;
       // $('.is-crossroad-view').toggleClass('is-fold');
       if ($forefather.hasClass('is-fold')) {
@@ -227,7 +227,8 @@ var cmmnUi = {
     $(document).on('mouseenter', '.gnb', function () {
       $('.gnb').addClass('is-open');
       hoverState($('.is-crossroad-view').addClass('is-hover'), '.is-crossroad-view');
-      hoverState($('.is-roi-view').addClass('is-hover'), '.is-roi-view');
+      hoverState($('.is-crosswalk-view').addClass('is-hover'), '.is-crosswalk-view');
+      // hoverState($('.is-roi-view').addClass('is-hover'), '.is-roi-view');
       // hoverState($('.is-search-view').addClass('is-hover'), '.is-search-view');
       if ($('.search-view-container').length !== 0) {
         $('.search-view-container').addClass('is-gnb-open');
@@ -238,7 +239,8 @@ var cmmnUi = {
     $(document).on('mouseenter', '.ly-container', function () {
       $('.gnb').removeClass('is-open');
       hoverState($('.is-crossroad-view').removeClass('is-hover'), '.is-crossroad-view');
-      hoverState($('.is-roi-view').removeClass('is-hover'), '.is-roi-view');
+      hoverState($('.is-crosswalk-view').removeClass('is-hover'), '.is-crosswalk-view');
+      // hoverState($('.is-roi-view').removeClass('is-hover'), '.is-roi-view');
       // hoverState($('.is-search-view').removeClass('is-hover'), '.is-search-view');
       if ($('.search-view-container').length !== 0) {
         $('.search-view-container').removeClass('is-gnb-open');

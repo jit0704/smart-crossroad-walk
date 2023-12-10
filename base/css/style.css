@@ -1914,6 +1914,7 @@ body ::-webkit-scrollbar-track {
 .selectbox-wrap.xs select {
   min-width: 6rem;
   padding: 0.4rem 0.5rem;
+  line-height: normal;
   font-size: 1.2rem;
   color: #1e5f8d;
   border-radius: 0.5rem;
@@ -4156,6 +4157,9 @@ body ::-webkit-scrollbar-track {
   border-radius: 0.5rem;
   -webkit-box-shadow: 0.4rem 0.4rem 1.2rem 0rem rgba(0, 0, 0, 0.1);
           box-shadow: 0.4rem 0.4rem 1.2rem 0rem rgba(0, 0, 0, 0.1);
+}
+.modal-container.w316 {
+  width: 31.6rem;
 }
 .modal-container.w340 {
   width: 34rem;

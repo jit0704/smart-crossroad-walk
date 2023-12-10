@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>영상인식 상세설정 팝업</title>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <!-- includeHTML.js : 퍼블리싱 확인용 include -->
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" href="/base/css/common.css" />
+    <link rel="stylesheet" href="/base/css/cw.css" />
+  </head>
+  <body>
+    <div id="ex" class="modal">
+      <div class="modal-container medium">
+        <div class="modal-header">
+          <span class="tit">영상인식 상세설정</span>
+        </div>
+        <!-- //modal-header -->
+        <div class="modal-body">
+          <div class="image-reco-set-container">
+            <em class="tit">설정하고자 하는 항목을 선택해주세요</em>
+            <div class="image-reco-set-btn-group">
+              <button type="button" id="set1">디스플레이 모드 설정</button>
+              <button type="button" id="set2">인식 박스 모드 설정</button>
+              <button type="button" id="set3">객체 인식 임계치 설정</button>
+              <button type="button" id="set4">검지결과 전송 서버 정보 설정</button>
+              <button type="button" id="set5">학습 파일명 관리</button>
+              <button type="button" id="set6">핸드오버 적용 설정</button>
+              <button type="button" id="set7">검지결과 전송 모드 설정</button>
+              <button type="button" id="set8">객체 Boxing 설정</button>
+              <button type="button" id="set9">이미지파일 생성 설정</button>
+            </div>
+            <!-- //image-reco-set-btn-group -->
+            <div class="image-reco-set-view">
+              <section class="set-content1" data-set-view="set1">
+                <em>디스플레이 모드 설정</em>
+                <div class="data-tbl">
+                  <table>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>카메라 채널 선택</th>
+                        <td>
+                          <div class="select-bind">
+                            <div class="selectbox-wrap rounded">
+                              <select>
+                                <option value="">전체</option>
+                                <option value="">아이템1</option>
+                                <option value="">아이템2</option>
+                                <option value="">아이템3</option>
+                              </select>
+                            </div>
+                          </div>
+                          <!-- //select-bind -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Operation Mode</th>
+                        <td>
+                          <div class="chk-bind">
+                            <div class="ui checkbox primary-chkbox md c-bluesky">
+                              <input id="set1-chk1" type="checkbox" />
+                              <label for="set1-chk1">인식 동작 모드</label>
+                            </div>
+                            <div class="ui checkbox primary-chkbox md c-bluesky">
+                              <input id="set1-chk2" type="checkbox" />
+                              <label for="set1-chk2">설정 모드</label>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //data-tbl -->
+                <div class="set-content-btn-group">
+                  <button class="ui primary basic button rounded">저장</button>
+                </div>
+              </section>
+              <section class="set-content2" data-set-view="set2">
+                <em>인식 박스 모드 설정</em>
+                <div class="data-tbl">
+                  <table>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>카메라 채널 선택</th>
+                        <td>
+                          <div class="select-bind">
+                            <div class="selectbox-wrap rounded">
+                              <select>
+                                <option value="">전체</option>
+                                <option value="">아이템1</option>
+                                <option value="">아이템2</option>
+                                <option value="">아이템3</option>
+                              </select>
+                            </div>
+                            <button class="ui secondary basic button rounded">조회</button>
+                          </div>
+                          <!-- //select-bind -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>ViewBox Mode</th>
+                        <td>
+                          <div class="chk-bind">
+                            <div class="ui checkbox primary-chkbox md c-bluesky">
+                              <input id="set2-chk1" type="checkbox" />
+                              <label for="set2-chk1">오리지널 모드</label>
+                            </div>
+                            <div class="ui checkbox primary-chkbox md c-bluesky">
+                              <input id="set2-chk2" type="checkbox" />
+                              <label for="set2-chk2">Tracking 모드</label>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //data-tbl -->
+                <div class="set-content-btn-group">
+                  <button class="ui primary basic button rounded">저장</button>
+                </div>
+              </section>
+              <section class="set-content3" data-set-view="set3">
+                <em>객체 인식 임계치 설정</em>
+                <div class="data-tbl">
+                  <table>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>카메라 채널 선택</th>
+                        <td>
+                          <div class="select-bind">
+                            <div class="selectbox-wrap rounded">
+                              <select>
+                                <option value="">전체</option>
+                                <option value="">아이템1</option>
+                                <option value="">아이템2</option>
+                                <option value="">아이템3</option>
+                              </select>
+                            </div>
+                            <button class="ui secondary basic button rounded">조회</button>
+                          </div>
+                          <!-- //select-bind -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Detection</th>
+                        <td>
+                          <div class="input-bind">
+                            <div class="ui input rounded">
+                              <input type="text" />
+                            </div>
+                            <span>(0~100)</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>NMS</th>
+                        <td>
+                          <div class="input-bind">
+                            <div class="ui input rounded">
+                              <input type="text" />
+                            </div>
+                            <span>(0~100)</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //data-tbl -->
+                <div class="set-content-btn-group">
+                  <button class="ui primary basic button rounded">저장</button>
+                </div>
+              </section>
+              <section class="set-content4" data-set-view="set4">
+                <em>검지결과 전송 서버 정보 설정</em>
+                <div class="data-tbl">
+                  <table>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>카메라 채널 선택</th>
+                        <td>
+                          <div class="select-bind">
+                            <div class="selectbox-wrap rounded">
+                              <select>
+                                <option value="">전체</option>
+                                <option value="">아이템1</option>
+                                <option value="">아이템2</option>
+                                <option value="">아이템3</option>
+                              </select>
+                            </div>
+                            <button class="ui secondary basic button rounded">조회</button>
+                          </div>
+                          <!-- //select-bind -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>객체 정보 전송 모드</th>
+                        <td>
+                          <div class="chk-bind">
+                            <div class="ui checkbox primary-chkbox md c-bluesky">
+                              <input id="set4-chk1" type="checkbox" />
+                              <label for="set4-chk1">항상</label>
+                            </div>
+                            <div class="ui checkbox primary-chkbox md c-bluesky">
+                              <input id="set4-chk2" type="checkbox" />
+                              <label for="set4-chk2">객체만 가능</label>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //data-tbl -->
+                <div class="set-content-btn-group">
+                  <button class="ui primary basic button rounded">저장</button>
+                </div>
+              </section>
+              <section class="set-content5" data-set-view="set5">
+                <em>학습 파일명 관리</em>
+                <div class="data-tbl">
+                  <table>
+                    <colgroup>
+                      <col style="width: 100px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>학습 파일명</th>
+                        <td>
+                          <div class="ui input rounded" style="width: 250px">
+                            <input type="text" />
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //data-tbl -->
+                <div class="set-content-btn-group">
+                  <button class="ui secondary basic button rounded">조회</button>
+                  <button class="ui primary basic button rounded">저장</button>
+                </div>
+              </section>
+              <section class="set-content6" data-set-view="set6">
+                <em>핸드오버 적용 설정</em>
+                <div class="data-tbl">
+                  <table>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>카메라 채널 선택</th>
+                        <td>
+                          <div class="select-bind">
+                            <div class="selectbox-wrap rounded">
+                              <select>
+                                <option value="">전체</option>
+                                <option value="">아이템1</option>
+                                <option value="">아이템2</option>
+                                <option value="">아이템3</option>
+                              </select>
+                            </div>
+                            <button class="ui secondary basic button rounded">조회</button>
+                          </div>
+                          <!-- //select-bind -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>HandOver Mode</th>
+                        <td>
+                          <div class="chk-bind">
+                            <div class="ui checkbox primary-chkbox md c-bluesky">
+                              <input id="set6-chk1" type="checkbox" />
+                              <label for="set6-chk1">적용</label>
+                            </div>
+                            <div class="ui checkbox primary-chkbox md c-bluesky">
+                              <input id="set6-chk2" type="checkbox" />
+                              <label for="set6-chk2">미적용</label>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //data-tbl -->
+                <div class="set-content-btn-group">
+                  <button class="ui primary basic button rounded">저장</button>
+                </div>
+              </section>
+              <section class="set-content7" data-set-view="set7">
+                <em>검지결과 전송 모드 설정</em>
+                <div class="data-tbl">
+                  <table>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>SERVER IP</th>
+                        <td>
+                          <div class="ui input rounded" style="width: 300px">
+                            <input type="text" />
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>SERVER PORT</th>
+                        <td>
+                          <div class="ui input rounded" style="width: 300px">
+                            <input type="text" />
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //data-tbl -->
+                <div class="set-content-btn-group">
+                  <button class="ui secondary basic button rounded">조회</button>
+                  <button class="ui primary basic button rounded">저장</button>
+                </div>
+              </section>
+              <section class="set-content8" data-set-view="set8">
+                <em>영상 표출 내 객체 Boxing 설정</em>
+                <div class="data-tbl">
+                  <table>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>카메라 채널 선택</th>
+                        <td>
+                          <div class="select-bind">
+                            <div class="selectbox-wrap rounded">
+                              <select>
+                                <option value="">전체</option>
+                                <option value="">아이템1</option>
+                                <option value="">아이템2</option>
+                                <option value="">아이템3</option>
+                              </select>
+                            </div>
+                            <button class="ui secondary basic button rounded">조회</button>
+                          </div>
+                          <!-- //select-bind -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>객체 정보 전송 모드</th>
+                        <td>
+                          <div class="chk-bind">
+                            <div class="ui checkbox primary-chkbox md c-bluesky">
+                              <input id="set8-chk1" type="checkbox" />
+                              <label for="set8-chk1">미표시</label>
+                            </div>
+                            <div class="ui checkbox primary-chkbox md c-bluesky">
+                              <input id="set8-chk2" type="checkbox" />
+                              <label for="set8-chk2">표시</label>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //data-tbl -->
+                <div class="set-content-btn-group">
+                  <button class="ui primary basic button rounded">저장</button>
+                </div>
+              </section>
+              <section class="set-content9" data-set-view="set9">
+                <em>이미지파일 생성 설정</em>
+                <div class="data-tbl">
+                  <table>
+                    <colgroup>
+                      <col style="width: 130px" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>카메라 채널 선택</th>
+                        <td>
+                          <div class="select-bind">
+                            <div class="selectbox-wrap rounded">
+                              <select>
+                                <option value="">전체</option>
+                                <option value="">아이템1</option>
+                                <option value="">아이템2</option>
+                                <option value="">아이템3</option>
+                              </select>
+                            </div>
+                            <button class="ui secondary basic button rounded">조회</button>
+                          </div>
+                          <!-- //select-bind -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>이미지 생성 모드</th>
+                        <td>
+                          <div class="chk-bind">
+                            <div class="ui checkbox primary-chkbox md c-bluesky">
+                              <input id="set9-chk1" type="checkbox" />
+                              <label for="set9-chk1">종료</label>
+                            </div>
+                            <div class="ui checkbox primary-chkbox md c-bluesky">
+                              <input id="set9-chk2" type="checkbox" />
+                              <label for="set9-chk2">시작</label>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //data-tbl -->
+                <div class="set-content-btn-group">
+                  <button class="ui primary basic button rounded">저장</button>
+                </div>
+              </section>
+            </div>
+            <!-- //image-reco-set-view -->
+          </div>
+          <!-- //image-reco-set-container -->
+        </div>
+        <!-- //modal-body -->
+      </div>
+      <!-- //modal-container -->
+    </div>
+    <!-- //modal -->
+
+    <a href="#ex" type="button" class="btn-modal-open screen-out"> 퍼블리싱 확인용 버튼 </a>
+
+    <script>
+      $(function () {
+        // 퍼블리싱 확인용
+        setTimeout(function () {
+          $('.btn-modal-open').trigger('click');
+        }, 20);
+
+        // 버튼 클릭시 상세 뷰 노출 이벤트
+        $(document).on('click', '.image-reco-set-btn-group button', function () {
+          var $id = $(this).attr('id');
+          $('.image-reco-set-btn-group button').removeClass('active');
+          $(this).addClass('active');
+          $('.image-reco-set-view').show();
+
+          $('.image-reco-set-view [class*="set-content"]').each(function (index, el) {
+            var $el = $(el);
+            $el.removeClass('active');
+
+            if ($el.attr('data-set-view') === $id) {
+              $el.addClass('active');
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

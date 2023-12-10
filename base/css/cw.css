@@ -3,34 +3,24 @@
   [스마트 횡단보도 CSS]
 -----------------------------------------------------------------*/
 /* 레이아웃 */
-.wrapper.is-crossroad-view.is-fold .crossroad-view-container {
+.wrapper.is-crosswalk-view .camera-popup-content {
+  height: calc(100% - 2rem);
+  padding-bottom: 0;
+}
+.wrapper.is-crosswalk-view.is-fold .crosswalk-view-container {
   left: -36.8rem;
 }
-.wrapper.is-crossroad-view.is-fold .crossroad-view-container .btn-crossroad-view::before {
+.wrapper.is-crosswalk-view.is-fold .crosswalk-view-container .btn-crosswalk-view::before {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.wrapper.is-crossroad-view.is-fold .ly-map {
+.wrapper.is-crosswalk-view.is-fold .ly-map {
   margin-left: 5.4rem;
 }
-.wrapper.is-crossroad-view.is-fold.is-hover .crossroad-view-container {
+.wrapper.is-crosswalk-view.is-fold.is-hover .crosswalk-view-container {
   left: -24.3rem !important;
   width: 42.2rem !important;
-}
-.wrapper.is-roi-view.is-fold .roi-view-container {
-  left: -36.8rem;
-}
-.wrapper.is-roi-view.is-fold .roi-view-container .btn-roi-view::before {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-.wrapper.is-roi-view.is-fold .ly-map {
-  margin-left: 5.4rem;
-}
-.wrapper.is-roi-view.is-fold.is-hover .roi-view-container {
-  left: -24.3rem;
 }
 
 /* 횡단보도 통계 메인 */
@@ -469,7 +459,7 @@
   height: 26.29rem;
 }
 
-/* 교차로 비교 통계 > 비교 지점 선택 팝업 */
+/* 횡단보도 비교 통계 > 비교 지점 선택 팝업 */
 .comparison-branch tbody .branch-tit {
   font-size: 1.6rem;
   font-weight: 600;
@@ -483,7 +473,7 @@
   text-align: center;
 }
 
-/* 교차로 원시 이력 */
+/* 횡단보도 원시 이력 */
 .stats-container.primitive .filter-grouop {
   margin-bottom: 3.15rem;
 }
@@ -510,7 +500,7 @@
   color: #999999;
 }
 
-/* 교차로 원시 이력 > Excel Down 검색 조건 팝업 */
+/* 횡단보도 원시 이력 > Excel Down 검색 조건 팝업 */
 .primitive-data .filter-grouop .date-group {
   margin-left: 0;
 }
@@ -520,424 +510,11 @@
   font-size: 1.4rem;
 }
 
-/* 교차로 유출입 교통량 */
-.crossroads-flow-container .filter-grouop {
-  margin-bottom: 3.2rem;
-}
-.crossroads-flow-container .filter-grouop .ui.primary-chkbox label {
-  line-height: 2.1rem;
-  font-size: 1.8rem;
-  color: #727272;
-}
-.crossroads-flow-container .filter-grouop .ui.primary-chkbox label::before, .crossroads-flow-container .filter-grouop .ui.primary-chkbox label::after {
-  top: 0.15rem;
-}
-.crossroads-flow-view {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  gap: 0 1.2rem;
-}
-.crossroads-flow-board {
-  position: relative;
-  width: 95.6rem;
-  height: 73.8rem;
-  border-radius: 1rem;
-  background: #fff;
-  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
-          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
-}
-.crossroads-flow-board > .tit {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  gap: 0 0.6rem;
-  position: absolute;
-  top: 2.5rem;
-  left: 2.43rem;
-  line-height: normal;
-  font-size: 2rem;
-  color: #999999;
-  font-weight: 600;
-}
-.crossroads-flow-board > .tit::before {
-  content: "";
-  display: block;
-  width: 0.5rem;
-  height: 1.4rem;
-  background-image: url("/base/images/icon_dot_double.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: contain;
-}
-.crossroads-flow-board .flow-stats-wrap {
-  width: 63.7rem;
-  height: 64.9rem;
-  margin: 4.6rem auto 0;
-}
-.crossroads-flow-board .flow-stats-detail {
-  width: 19.7rem;
-  height: 22.6rem;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-top: 0;
-}
-.crossroads-flow-board .flow-stats-detail.reverse {
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  border-bottom: 0;
-}
-.crossroads-flow-board .flow-stats-detail.reverse .arrow .flow-straight.strt::before {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-.crossroads-flow-board .flow-stats-detail.reverse .arrow .flow-straight.in::before {
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-.crossroads-flow-board .flow-stats-detail.reverse .arrow .flow-straight.out::before {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-.crossroads-flow-board .flow-stats-detail.reverse .arrow .flow-turn.left::before {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-.crossroads-flow-board .flow-stats-detail.reverse .arrow .flow-turn.right::before {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-.crossroads-flow-board .flow-stats-detail.reverse .road-name {
-  padding: 1.7rem 0 0;
-}
-.crossroads-flow-board .flow-stats-detail .road-name {
-  display: block;
-  padding-bottom: 1.7rem;
-  text-align: center;
-}
-.crossroads-flow-board .flow-stats-detail .road-name em {
-  display: inline-block;
-  padding: 0 0.4rem;
-  line-height: 2.1rem;
-  font-size: 1.4rem;
-  color: #fff;
-  font-weight: 500;
-  background: rgba(0, 0, 0, 0.2);
-}
-.crossroads-flow-board .flow-stats-detail .arrow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  height: 6.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-.crossroads-flow-board .flow-stats-detail .arrow button {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  height: 6.5rem;
-  padding: 0;
-}
-.crossroads-flow-board .flow-stats-detail .arrow button:not(:first-child) {
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-}
-.crossroads-flow-board .flow-stats-detail .arrow button.flow-straight {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-.crossroads-flow-board .flow-stats-detail .arrow button.flow-straight::before {
-  content: "";
-  width: 2rem;
-  height: 4.3rem;
-  background-image: url("/base/images/arr_big_straight-down.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: contain;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
-}
-.crossroads-flow-board .flow-stats-detail .arrow button.flow-straight.active-blue::before {
-  background-image: url(/base/images/arr_big_straight-down_blue.png);
-}
-.crossroads-flow-board .flow-stats-detail .arrow button.flow-straight.active-darkgray::before {
-  background-image: url(/base/images/arr_big_straight-down_darkgray.png);
-}
-.crossroads-flow-board .flow-stats-detail .arrow button.flow-straight.in::before {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-.crossroads-flow-board .flow-stats-detail .arrow button.flow-turn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-.crossroads-flow-board .flow-stats-detail .arrow button.flow-turn.left::before {
-  content: "";
-  width: 3.1rem;
-  height: 4rem;
-  background-image: url("/base/images/arr_big_left-turn.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: contain;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
-}
-.crossroads-flow-board .flow-stats-detail .arrow button.flow-turn.left.active::before {
-  background-image: url(/base/images/arr_big_left-turn_darkgray.png);
-}
-.crossroads-flow-board .flow-stats-detail .arrow button.flow-turn.right::before {
-  content: "";
-  width: 3.1rem;
-  height: 4rem;
-  background-image: url("/base/images/arr_big_right-turn.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: contain;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
-}
-.crossroads-flow-board .flow-stats-detail .arrow button.flow-turn.right.active::before {
-  background-image: url(/base/images/arr_big_right-turn_darkgray.png);
-}
-.crossroads-flow-board .flow-stats-detail .num {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-}
-.crossroads-flow-board .flow-stats-detail .num em {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  line-height: 2.9rem;
-  padding: 0 1rem;
-  text-align: center;
-  font-size: 1.2rem;
-  color: #999999;
-}
-.crossroads-flow-board .flow-stats-detail .num em:not(:first-child) {
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-}
-.crossroads-flow-board .flow-stats-detail .num em.active {
-  color: #727272;
-  font-weight: 700;
-}
-.crossroads-flow-board .flow-stats-detail .num em.active-blue {
-  color: #1e5f8d;
-  font-weight: 700;
-}
-.crossroads-flow-board .flow-stats-top .flow-stats-detail {
-  margin: 0 auto;
-}
-.crossroads-flow-board .flow-stats-mid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  height: 19.7rem;
-}
-.crossroads-flow-board .flow-stats-mid .flow-stats-detail {
-  margin-top: -0.2rem;
-  border-width: 0.5px;
-}
-.crossroads-flow-board .flow-stats-mid .flow-stats-detail:first-child {
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  margin-left: 0.95rem;
-}
-.crossroads-flow-board .flow-stats-mid .flow-stats-detail:last-child {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-  margin-right: 0.95rem;
-}
-.crossroads-flow-board .flow-stats-bot .flow-stats-detail {
-  margin: -0.1rem auto 0;
-}
-.crossroads-flow-traffic {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  gap: 1rem 0;
-}
-.crossroads-flow-traffic .flow-traffic {
-  width: 100%;
-  height: 36.4rem;
-  padding: 2.2rem 2.5rem 3rem;
-  border-radius: 1rem;
-  background: #fff;
-  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
-          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
-}
-.crossroads-flow-traffic .flow-traffic > .tit {
-  display: block;
-  margin-bottom: 1.7rem;
-  line-height: normal;
-  font-size: 2.2rem;
-  color: #1e5f8d;
-  font-weight: 700;
-}
-.crossroads-flow-traffic .flow-traffic-data li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  gap: 0 1.5rem;
-  text-align: center;
-}
-.crossroads-flow-traffic .flow-traffic-data li:first-child {
-  border-radius: 0.5rem;
-  background: #1e5f8d;
-}
-.crossroads-flow-traffic .flow-traffic-data li:not(:first-child) {
-  margin-top: 0.8rem;
-  border-radius: 0.5rem;
-  border: 1px solid #e8e8e8;
-}
-.crossroads-flow-traffic .flow-traffic-data li.active:not(:first-child) {
-  background: #f8f8f8;
-}
-.crossroads-flow-traffic .flow-traffic-data li em {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 1rem 0;
-  line-height: normal;
-  font-size: 1.8rem;
-  color: #fff;
-  font-weight: 600;
-}
-.crossroads-flow-traffic .flow-traffic-data li span {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 1.4rem 0;
-  line-height: normal;
-  font-size: 1.6rem;
-  color: #727272;
-  font-weight: 500;
-}
-
 /* 공통 영역을 특정 화면에서만 수정이 되어서 style 재정의...
-  - 교차로 통계
-  - 교차로 상세 통계
-  - 교차로 비교 통계
-  - 교차로 원시 이력
+  - 횡단보도 통계
+  - 횡단보도 상세 통계
+  - 횡단보도 비교 통계
+  - 횡단보도 원시 이력
   - 교차로 유출입 교통량
 */
 .main-stats-container,
@@ -974,489 +551,8 @@
   line-height: 2.6rem;
 }
 
-/* 실시간 돌발 조회 */
-.real-time-outbreak-container {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-}
-.real-time-outbreak-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  width: 39.8rem;
-  height: calc(99.9vh - 20px);
-  margin-left: 5.4rem;
-  border-right: 1px solid #e8e8e8;
-}
-.real-time-outbreak-list > .tit {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  gap: 0 0.6rem;
-  width: 100%;
-  padding: 4rem 3rem 1.6rem;
-  line-height: 2.4rem;
-  border-bottom: 1px solid #e8e8e8;
-  font-size: 2rem;
-  color: #858585;
-  font-weight: 600;
-}
-.real-time-outbreak-list > .tit::before {
-  content: "";
-  display: block;
-  width: 0.5rem;
-  height: 1.4rem;
-  background-image: url("/base/images/icon_dot_double.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: contain;
-}
-.real-time-outbreak-list .paging-group {
-  width: 100%;
-  margin: 2.4rem 0;
-}
-.real-time-outbreak-item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  overflow-y: auto;
-  width: 100%;
-  border-bottom: 1px solid #e8e8e8;
-}
-.real-time-outbreak-item::-webkit-scrollbar {
-  width: 0.4rem;
-}
-.real-time-outbreak-item .btn-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  padding: 1.25rem 3.8rem 1.25rem 3rem;
-  border-bottom: 1px solid #e8e8e8;
-  text-align: left;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
-}
-.real-time-outbreak-item .btn-item.active {
-  background: #f8f8f8;
-}
-.real-time-outbreak-item .data-list li + li {
-  margin-top: 0.3rem;
-}
-.real-time-outbreak-item .data-list em {
-  display: inline-block;
-  margin-right: 0.6rem;
-  font-size: 1.4rem;
-  color: #03a0fc;
-  font-weight: 600;
-}
-.real-time-outbreak-item .data-list span {
-  font-size: 1.4rem;
-  color: #727272;
-}
-.real-time-outbreak-item .outbreak-type {
-  width: 7rem;
-  line-height: 6rem;
-  border-radius: 0.5rem;
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-.real-time-outbreak-item .outbreak-type.reverse-run {
-  color: #ca4e4e;
-  background: #ffeaea;
-}
-.real-time-outbreak-item .outbreak-type.stop {
-  color: #e76100;
-  background: #ffecdb;
-}
-.real-time-outbreak-item .outbreak-type.walker {
-  color: #786b9b;
-  background: #edeaf9;
-}
-.real-time-outbreak-item .outbreak-type.other {
-  color: #999999;
-  background: #e8e8e8;
-}
-.real-time-outbreak-view {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  height: 100%;
-  padding: 4.7rem 4rem 0;
-  background: #f8f8f8;
-}
-.real-time-outbreak-view-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  padding: 0 1rem 2.5rem;
-  border-bottom: 1px solid #cbcbcb;
-}
-.real-time-outbreak-view-header .tit {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  gap: 0 0.6rem;
-  line-height: 100%;
-  font-size: 2rem;
-  color: #858585;
-  font-weight: 600;
-}
-.real-time-outbreak-view-header .tit::before {
-  content: "";
-  display: block;
-  width: 0.5rem;
-  height: 1.4rem;
-  background-image: url("/base/images/icon_dot_double.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: contain;
-}
-.real-time-outbreak-view-header .right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-.real-time-outbreak-view-header .right > span {
-  min-width: 16rem;
-  font-size: 1.8rem;
-  color: #727272;
-}
-.real-time-outbreak-view-header .right .selectbox-wrap.rounded {
-  min-width: 12.5rem;
-  margin: 0 0.4rem 0 1.4rem;
-}
-.real-time-outbreak-view-header .right .selectbox-wrap.rounded select {
-  padding: 0.5rem 0.7rem;
-  line-height: 100%;
-  color: #727272;
-  font-weight: 500;
-}
-.real-time-outbreak-view-header .right .btn-gray-bg {
-  width: 6.2rem;
-}
-.real-time-outbreak-view .outbreak-info > .tit {
-  display: block;
-  padding: 2.6rem 0 0 1rem;
-  line-height: 100%;
-  font-size: 2.2rem;
-  color: #1e5f8d;
-  font-weight: 700;
-}
-.real-time-outbreak-view .outbreak-info-list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  margin-top: 1rem;
-  border-radius: 0.5rem;
-  background: #fff;
-  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
-          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
-}
-.real-time-outbreak-view .outbreak-info-list li > div {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  gap: 0.6rem 0;
-  position: relative;
-  padding: 2.45rem 2rem;
-  line-height: normal;
-}
-.real-time-outbreak-view .outbreak-info-list li > div .tit {
-  font-size: 1.8rem;
-  color: #999999;
-  font-weight: 500;
-}
-.real-time-outbreak-view .outbreak-info-list li > div .txt {
-  font-size: 2rem;
-  color: #5285aa;
-  font-weight: 600;
-}
-.real-time-outbreak-view .outbreak-info-list li > div::after {
-  content: "";
-  position: absolute;
-  top: 2rem;
-  bottom: 2rem;
-  right: 0;
-  width: 0.1rem;
-  background: #e8e8e8;
-}
-.real-time-outbreak-view .outbreak-info-list li > div:nth-child(3) {
-  padding: 0 2rem;
-}
-.real-time-outbreak-view .outbreak-info-list li > div:nth-child(3)::after {
-  top: 50%;
-  bottom: auto;
-  height: 6rem;
-  margin-top: -3rem;
-}
-.real-time-outbreak-view .outbreak-info-list li > div:last-child::after {
-  display: none;
-}
-.real-time-outbreak-view .outbreak-video-picture {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  gap: 0 1.5rem;
-  margin-top: 3.75rem;
-}
-.real-time-outbreak-view .outbreak-video-picture [class*=header] {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  padding: 0 1rem 1rem;
-}
-.real-time-outbreak-view .outbreak-video-picture [class*=header] .tit {
-  font-size: 2.2rem;
-  color: #1e5f8d;
-  font-weight: 700;
-}
-.real-time-outbreak-view .outbreak-video-picture [class*=header] .right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  gap: 0 0.4rem;
-}
-.real-time-outbreak-view .outbreak-video-picture [class*=header] .right .btn-md.bg-navy {
-  font-size: 1.6rem;
-  line-height: 1.9rem;
-}
-.real-time-outbreak-view .outbreak-video-picture .default-state {
-  display: block;
-  width: 100%;
-  height: 44.3rem;
-  border-radius: 0.5rem;
-}
-.real-time-outbreak-view .outbreak-video-picture .unexpected-scene {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-.real-time-outbreak-view .outbreak-video-picture .unexpected-scene .default-state {
-  background: url(/base/images/icon_picture_lg.png) no-repeat 50% 50% #e8e8e8;
-  background-size: 7.36rem 5rem;
-}
-.real-time-outbreak-view .outbreak-video-picture .scene-cctv {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-.real-time-outbreak-view .outbreak-video-picture .scene-cctv .default-state {
-  background: url(/base/images/icon_play_lg.png) no-repeat 50% 50% #e8e8e8;
-  background-size: 6.2rem 6.2rem;
-}
-
-/* 돌발 발생 이력 */
-.outbreak-record .filter-grouop {
-  margin-bottom: 3rem;
-}
-.outbreak-record .button-function-group {
-  margin-bottom: 0.8rem;
-}
-.outbreak-record .button-function-group .left {
-  margin-bottom: 0;
-  font-size: 1.6rem;
-  color: #1e5f8d;
-}
-.outbreak-record .button-function-group .right .ui.button.basic.primary {
-  width: 12.7rem;
-}
-
-/* 돌발 발생 이력 : 돌발 상태 확인 팝업 */
-.outbreak-situation {
-  padding: 2rem 2.5rem 0;
-}
-.outbreak-situation > em {
-  line-height: normal;
-  font-size: 1.8rem;
-  color: #1e5f8d;
-  font-weight: 500;
-}
-.outbreak-situation .geomji-type {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  gap: 0 3.5rem;
-  margin-top: 1.5rem;
-}
-.outbreak-situation .geomji-type .ui.checkbox.primary-chkbox label {
-  padding-left: 2.6rem;
-  line-height: 1.8rem;
-  font-size: 1.6rem;
-  color: #727272;
-}
-.outbreak-situation .geomji-type .ui.checkbox.primary-chkbox label::before {
-  width: 1.8rem;
-  height: 1.8rem;
-}
-.outbreak-situation .geomji-type .ui.checkbox.primary-chkbox label::after {
-  width: 2rem;
-  height: 1.8rem;
-}
-
-/* 교차로 상세 탭(통계/영상/돌발) 화면 */
-.crossroad-view-container {
+/* 횡단보도 상세 탭(통계/영상/시설물/모니터링) 화면 */
+.crosswalk-view-container {
   position: fixed;
   left: 5.4rem;
   top: 0;
@@ -1467,7 +563,7 @@
   -webkit-box-shadow: 2px -4px 8px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 2px -4px 8px 0px rgba(0, 0, 0, 0.25);
 }
-.crossroad-view-container > h2 {
+.crosswalk-view-container > h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1489,7 +585,7 @@
   font-weight: 600;
   color: #858585;
 }
-.crossroad-view-container > h2::before {
+.crosswalk-view-container > h2::before {
   content: "";
   display: block;
   width: 0.5rem;
@@ -1499,17 +595,143 @@
   background-position: 0 0;
   background-size: contain;
 }
-.crossroad-view-container .tab.segment > section:not(:first-child) {
+.crosswalk-view-container .ui.tabular.menu.rounded .item[data-tab=third]::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("/base/images/icon_facility.png");
+}
+.crosswalk-view-container .ui.tabular.menu.rounded .item.active[data-tab=third]::before {
+  background-image: url("/base/images/icon_facility_white.png");
+}
+.crosswalk-view-container .ui.tabular.menu.rounded .item[data-tab=four]::before {
+  width: 1.5rem;
+  height: 0.8rem;
+  background-image: url("/base/images/icon_eye_gray.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.crosswalk-view-container .ui.tabular.menu.rounded .item.active[data-tab=four]::before {
+  background-image: url("/base/images/icon_eye_white.png");
+}
+.crosswalk-view-container .tab.segment > section:not(:first-child) {
   border-top: 1px solid #e8e8e8;
 }
-.crossroad-view-container .tab.segment > section > .tit, .crossroad-view-container .tab.segment > section > .stats-tit-option > .tit, .crossroad-view-container .tab.segment > section > .tit-header .tit {
+.crosswalk-view-container .tab.segment > section > .tit-bind .tit, .crosswalk-view-container .tab.segment > section > .stats-tit-option > .tit, .crosswalk-view-container .tab.segment > section > .tit-header .tit {
   display: block;
-  margin-bottom: 1.5rem;
   font-size: 2rem;
   font-weight: 600;
   color: #6d6d6d;
 }
-.crossroad-view-container .display-info {
+.crosswalk-view-container .time-analysis {
+  font-size: 1.2rem;
+  color: #999999;
+}
+.crosswalk-view-container .stats-tit-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-bottom: 0.9rem;
+}
+.crosswalk-view-container .stats-tit-option-bind {
+  position: relative;
+  margin-left: 0.8rem;
+  font-size: 0;
+}
+.crosswalk-view-container .stats-tit-option .ico-up-boxgray {
+  padding: 0;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.crosswalk-view-container .stats-tit-option .option-list {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  top: 2.6rem;
+  right: 0.2rem;
+  min-width: 10rem;
+  padding: 0.3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
+}
+.crosswalk-view-container .stats-tit-option .option-list button {
+  display: block;
+  line-height: 2rem;
+  padding: 0 0.4rem;
+  text-align: left;
+  font-size: 1.2rem;
+  color: #999999;
+  border-radius: 0.3rem;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.crosswalk-view-container .stats-tit-option .option-list button:not(:first-child) {
+  margin-top: 0.3rem;
+}
+.crosswalk-view-container .stats-tit-option .option-list button:hover {
+  background: #e8e8e8;
+}
+.crosswalk-view-container .stats-tit-option .option-list button.active {
+  color: #fff;
+  background: #999999;
+}
+.crosswalk-view-container .stats-tit-option .time-analysis {
+  margin-left: auto;
+  margin-right: 0.5rem;
+}
+.crosswalk-view-container .stats-tit-option .bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.2rem;
+}
+.crosswalk-view-container .tit-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.crosswalk-view-container .stats-num {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1525,23 +747,20 @@
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
 }
-.crossroad-view-container .display-info .left {
-  line-height: 100%;
-  color: #1e5f8d;
-  font-size: 2rem;
+.crosswalk-view-container .stats-num > em {
+  font-family: "GmarketSans";
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #2f6993;
+}
+.crosswalk-view-container .stats-num > em i {
+  font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 2.2rem;
   font-weight: 500;
 }
-.crossroad-view-container .display-info .left em {
-  font-size: 2.8rem;
-  font-weight: 700;
-}
-.crossroad-view-container .time-analysis {
-  font-size: 1.2rem;
-  color: #999999;
-}
-.crossroad-view-container .stats-tit-option {
+.crosswalk-view-container .stats-num .differ span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1549,93 +768,45 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  gap: 0 0.8rem;
-}
-.crossroad-view-container .stats-tit-option-bind {
-  position: relative;
-  padding-top: 0.2rem;
-  font-size: 0;
-}
-.crossroad-view-container .stats-tit-option .ico-up-boxgray {
-  padding: 0;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-.crossroad-view-container .stats-tit-option .option-list {
-  display: none;
-  position: absolute;
-  z-index: 5;
-  top: 2.6rem;
-  right: 0.2rem;
-  min-width: 10rem;
-  padding: 0.3rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 0.5rem;
-  background: #fff;
-  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
-}
-.crossroad-view-container .stats-tit-option .option-list button {
-  display: block;
-  line-height: 2rem;
-  padding: 0 0.4rem;
-  text-align: left;
+  line-height: 1.4rem;
+  text-align: right;
+  color: #03a0fc;
   font-size: 1.2rem;
-  color: #999999;
-  border-radius: 0.3rem;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
+  font-weight: 500;
 }
-.crossroad-view-container .stats-tit-option .option-list button:not(:first-child) {
-  margin-top: 0.3rem;
+.crosswalk-view-container .stats-num .differ span:not(:first-child) {
+  margin-top: 0.8rem;
+  color: #825ebc;
 }
-.crossroad-view-container .stats-tit-option .option-list button:hover {
-  background: #e8e8e8;
+.crosswalk-view-container .stats-num .differ span em {
+  display: inline-block;
+  margin-left: 0.5rem;
+  line-height: 1.4rem;
+  font-size: 2rem;
+  font-weight: 800;
 }
-.crossroad-view-container .stats-tit-option .option-list button.active {
-  color: #fff;
-  background: #999999;
+.crosswalk-view-container .stats-num .differ span em i {
+  font-size: 1.4rem;
+  font-weight: 400;
 }
-.crossroad-view-container .tit-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-.crossroad-view-container .progress-bar {
-  margin-bottom: 1.4rem;
-}
-.crossroad-view-container .chart-container img,
-.crossroad-view-container .chart-container figure {
+.crosswalk-view-container .chart-container img,
+.crosswalk-view-container .chart-container figure {
   height: 100%;
   -o-object-fit: fill;
      object-fit: fill;
 }
-.crossroad-view-container .chart-container .dummy-img {
+.crosswalk-view-container .chart-container .dummy-img {
   display: block;
 }
-.crossroad-view-container .btn-crossroad-view {
+.crosswalk-view-container .btn-crosswalk-view {
   position: absolute;
   top: 50%;
   right: -2.4rem;
@@ -1648,7 +819,7 @@
   -webkit-box-shadow: 4px 2px 8px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 4px 2px 8px 0px rgba(0, 0, 0, 0.25);
 }
-.crossroad-view-container .btn-crossroad-view::before {
+.crosswalk-view-container .btn-crosswalk-view::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -1662,35 +833,171 @@
   background-position: 0 0;
   background-size: contain;
 }
-.crossroad-view-container .stats-traffic {
-  padding: 3.7rem 4rem 3.1rem;
+.crosswalk-view-container .cw-report {
+  padding: 3.7rem 4rem 2.8rem;
 }
-.crossroad-view-container .stats-speed {
-  padding: 2.6rem 4rem;
+.crosswalk-view-container .cw-report > .tit-bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-bottom: 1.9rem;
 }
-.crossroad-view-container .stats-speed .display-info .left em i {
-  font-size: 2.2rem;
+.crosswalk-view-container .cw-report .stats-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
 }
-.crossroad-view-container .stats-speed .display-info .right {
-  text-align: right;
+.crosswalk-view-container .cw-report .stats-content.size4 {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.4rem;
 }
-.crossroad-view-container .stats-speed .chart-container {
-  height: 14.4rem;
+.crosswalk-view-container .cw-report .stats-content.size4 li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 49%;
+          flex: 1 0 49%;
 }
-.crossroad-view-container .stats-los {
-  padding: 2.6rem 4rem;
+.crosswalk-view-container .cw-report .stats-content.size5 {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.4rem;
 }
-.crossroad-view-container .stats-los .display-info .left em {
-  font-size: 3.2rem;
-  color: #e57003;
+.crosswalk-view-container .cw-report .stats-content.size5 li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 32.33%;
+          flex: 0 0 32.33%;
 }
-.crossroad-view-container .stats-los .chart-container {
-  height: 15rem;
+.crosswalk-view-container .cw-report .stats-content li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0.2rem 0;
+  height: 8.5rem;
+  border-radius: 0.5rem;
+  background: #f8f8f8;
 }
-.crossroad-view-container .video-container {
+.crosswalk-view-container .cw-report .stats-content li .txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.1rem;
+  color: #727272;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.crosswalk-view-container .cw-report .stats-content li .txt::before {
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.crosswalk-view-container .cw-report .stats-content li em {
+  padding-left: 1.8rem;
+  font-family: "GmarketSans";
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: -0.054rem;
+}
+.crosswalk-view-container .cw-report .stats-content li em i {
+  font-family: Pretendard, Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: -0.042rem;
+}
+.crosswalk-view-container .cw-report .stats-content li.cw-num .txt::before {
+  background-image: url("/base/images/icon_stats1.png");
+}
+.crosswalk-view-container .cw-report .stats-content li.cw-num em {
+  color: #3199d6;
+}
+.crosswalk-view-container .cw-report .stats-content li.wait-num .txt::before {
+  background-image: url("/base/images/icon_stats2.png");
+}
+.crosswalk-view-container .cw-report .stats-content li.wait-num em {
+  color: #8d82cf;
+}
+.crosswalk-view-container .cw-report .stats-content li.jaywalking-num .txt::before {
+  background-image: url("/base/images/icon_stats3.png");
+}
+.crosswalk-view-container .cw-report .stats-content li.jaywalking-num em {
+  color: #e28f8f;
+}
+.crosswalk-view-container .cw-report .stats-content li.sign-num .txt::before {
+  background-image: url("/base/images/icon_stats4.png");
+}
+.crosswalk-view-container .cw-report .stats-content li.sign-num em {
+  color: #32ae13;
+}
+.crosswalk-view-container .cw-report .stats-content li.violation-num .txt::before {
+  background-image: url("/base/images/icon_stats5.png");
+}
+.crosswalk-view-container .cw-report .stats-content li.violation-num em {
+  color: #845f53;
+}
+.crosswalk-view-container .stats-cw {
+  padding: 2.8rem 4rem;
+}
+.crosswalk-view-container .stats-cw .chart-container {
+  height: 15.6rem;
+}
+.crosswalk-view-container .video-container {
   padding-top: 4.3rem !important;
 }
-.crossroad-view-container .video-container.ui.tab.segment.active {
+.crosswalk-view-container .video-container.ui.tab.segment.active {
   height: calc(100vh - 183px);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1708,12 +1015,12 @@
   -ms-flex-line-pack: start;
       align-content: flex-start;
 }
-.crossroad-view-container .video-container.ui.tab.segment.active > section, .crossroad-view-container .video-container.ui.tab.segment.active > div {
+.crosswalk-view-container .video-container.ui.tab.segment.active > section, .crosswalk-view-container .video-container.ui.tab.segment.active > div {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.crossroad-view-container .video-container .ui.buttons.basic {
+.crosswalk-view-container .video-container .ui.buttons.basic {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1733,62 +1040,72 @@
   margin-top: auto;
   padding: 2rem 3rem;
 }
-.crossroad-view-container .video-container .ui.buttons.basic .btn-third {
+.crosswalk-view-container .video-container .ui.buttons.basic .btn-third {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  color: #727272;
+  height: 3.6rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  color: #999999;
 }
-.crossroad-view-container .cr-camera-info {
+.crosswalk-view-container .video-container .ui.buttons.basic .btn-third:first-child {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 3.6rem;
+}
+.crosswalk-view-container .cw-camera-info {
   padding: 0 3rem 2.8rem;
 }
-.crossroad-view-container .cr-camera-info .data-tbl-gray.xs {
+.crosswalk-view-container .cw-camera-info .data-tbl-gray.xs {
   height: 16rem;
+  margin-top: 1.4rem;
   border-bottom: 0;
 }
-.crossroad-view-container .cr-camera-info .data-tbl-gray.xs table thead th {
+.crosswalk-view-container .cw-camera-info .data-tbl-gray.xs table thead th {
   padding: 0.85rem 0;
   font-size: 1.4rem;
 }
-.crossroad-view-container .cr-camera-info .data-tbl-gray.xs table tbody tr:last-child td {
+.crosswalk-view-container .cw-camera-info .data-tbl-gray.xs table tbody tr:last-child td {
   border-bottom: 1px solid #e8e8e8;
 }
-.crossroad-view-container .cr-camera-info .data-tbl-gray.xs table tbody td {
+.crosswalk-view-container .cw-camera-info .data-tbl-gray.xs table tbody td {
   padding: 0.82rem 0;
   font-size: 1.4rem;
 }
-.crossroad-view-container .cr-camera-view,
-.crossroad-view-container .license-plate-recognition {
+.crosswalk-view-container .cw-camera-view,
+.crosswalk-view-container .object-recognition {
   padding: 3.2rem 3rem 3.4rem;
 }
-.crossroad-view-container .cr-camera-view .tbl-custom-radio-container th,
-.crossroad-view-container .license-plate-recognition .tbl-custom-radio-container th {
+.crosswalk-view-container .cw-camera-view .tbl-custom-radio-container,
+.crosswalk-view-container .object-recognition .tbl-custom-radio-container {
+  margin-top: 1.6rem;
+}
+.crosswalk-view-container .cw-camera-view .tbl-custom-radio-container th,
+.crosswalk-view-container .object-recognition .tbl-custom-radio-container th {
   font-size: 1.4rem;
   color: #727272;
   font-weight: 400;
   text-align: left;
   vertical-align: middle;
 }
-.crossroad-view-container .cr-camera-view .tbl-custom-radio-container th,
-.crossroad-view-container .cr-camera-view .tbl-custom-radio-container td,
-.crossroad-view-container .license-plate-recognition .tbl-custom-radio-container th,
-.crossroad-view-container .license-plate-recognition .tbl-custom-radio-container td {
+.crosswalk-view-container .cw-camera-view .tbl-custom-radio-container th,
+.crosswalk-view-container .cw-camera-view .tbl-custom-radio-container td,
+.crosswalk-view-container .object-recognition .tbl-custom-radio-container th,
+.crosswalk-view-container .object-recognition .tbl-custom-radio-container td {
   padding-bottom: 0.4rem;
 }
-.crossroad-view-container .license-plate-recognition {
+.crosswalk-view-container .object-recognition {
   border-bottom: 1px solid #e8e8e8;
 }
-.crossroad-view-container .license-plate-recognition .tbl-custom-radio-wrap {
+.crosswalk-view-container .object-recognition .tbl-custom-radio-container th {
+  color: #1e5f8d;
+}
+.crosswalk-view-container .facility-container {
+  margin: 3.8rem 0 0 !important;
+}
+.crosswalk-view-container .facility-container.ui.tab.segment.active {
   overflow-y: auto;
-  height: 13.6rem;
-}
-.crossroad-view-container .license-plate-recognition .tbl-custom-radio-wrap::-webkit-scrollbar {
-  width: 0.4rem;
-}
-.crossroad-view-container .accidents-container {
-  padding-top: 3.8rem !important;
-}
-.crossroad-view-container .accidents-container.ui.tab.segment.active {
   height: calc(100vh - 178px);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1806,14 +1123,31 @@
   -ms-flex-line-pack: start;
       align-content: flex-start;
 }
-.crossroad-view-container .accidents-container.ui.tab.segment.active > section, .crossroad-view-container .accidents-container.ui.tab.segment.active > div {
-  width: 100%;
+.crosswalk-view-container .facility-container.ui.tab.segment.active::-webkit-scrollbar {
+  width: 0.4rem;
+}
+.crosswalk-view-container .facility-container.ui.tab.segment.active > section, .crosswalk-view-container .facility-container.ui.tab.segment.active > div {
+  width: calc(100% - 0.4rem);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.crossroad-view-container .accidents-container > .ui.buttons.basic {
-  display: block;
-  margin: 2.1rem 0 0;
+.crosswalk-view-container .facility-container > .ui.buttons.basic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
   padding: 2rem 3rem;
   line-height: 3rem;
   border-top: 1px solid #e8e8e8;
@@ -1821,19 +1155,68 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.crossroad-view-container .accidents-container > .ui.buttons.basic .btn-third {
-  display: block;
-  width: 100%;
-  padding: 0.7rem 0.6rem;
+.crosswalk-view-container .facility-container > .ui.buttons.basic::after {
+  display: none;
+}
+.crosswalk-view-container .facility-container > .ui.buttons.basic .btn-third {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 3.1rem;
+  font-size: 1.4rem;
   color: #727272;
 }
-.crossroad-view-container .accidents-stats {
-  padding: 0 3rem 4rem;
+.crosswalk-view-container .facility-list {
+  padding: 0 3rem 2.8rem;
 }
-.crossroad-view-container .accidents-stats > .tit-header .tit {
-  margin-bottom: 0 !important;
+.crosswalk-view-container .facility-list .data-tbl-gray.xs {
+  height: 22.25rem;
+  margin-top: 1.4rem;
 }
-.crossroad-view-container .accidents-stats-content {
+.crosswalk-view-container .facility-list .data-tbl-gray.xs table thead th {
+  padding: 0.85rem 0;
+  font-size: 1.4rem;
+}
+.crosswalk-view-container .facility-list .data-tbl-gray.xs table tbody tr:last-child td {
+  border-bottom: 1px solid #e8e8e8;
+}
+.crosswalk-view-container .facility-list .data-tbl-gray.xs table tbody td {
+  padding: 0.92rem 0;
+  vertical-align: middle;
+}
+.crosswalk-view-container .facility-list .data-tbl-gray.xs table tbody td .ico-picture {
+  padding: 0;
+}
+.crosswalk-view-container .facility-status {
+  padding: 2.8rem 3rem;
+}
+.crosswalk-view-container .facility-status .tit-header {
+  margin-bottom: 1.8rem;
+}
+.crosswalk-view-container .facility-status .sub-tit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.8rem;
+  color: #727272;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.crosswalk-view-container .facility-status .sub-tit-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1850,105 +1233,86 @@
   -ms-flex-line-pack: center;
       align-content: center;
 }
-.crossroad-view-container .accidents-stats-content .chart-view {
-  position: relative;
-  width: 36.2rem;
-  margin-top: 1.2rem;
+.crosswalk-view-container .facility-status .sub-tit::before {
+  content: "";
 }
-.crossroad-view-container .accidents-stats-content .txt-view {
-  display: none;
-  width: 22rem;
+.crosswalk-view-container .facility-status .vms li + li {
+  margin-top: 1.4rem;
 }
-.crossroad-view-container .accidents-stats-content .txt-view-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  gap: 0 0.5rem;
-  margin-bottom: 0.4rem;
+.crosswalk-view-container .facility-status .vms .sub-tit {
+  margin-bottom: 0.7rem;
 }
-.crossroad-view-container .accidents-stats-content .txt-view-header .tit {
+.crosswalk-view-container .facility-status .vms .sub-tit::before {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-image: url("/base/images/bul_quad.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.crosswalk-view-container .facility-status .vms figure {
+  margin: 0;
+  padding: 0.9rem 0.85rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+.crosswalk-view-container .facility-status .vms figure img {
   display: block;
-  margin: 0 0 0.5rem 1rem;
+  height: 10.9rem;
+}
+.crosswalk-view-container .facility-status .voice-guide {
+  margin-top: 3rem;
+}
+.crosswalk-view-container .facility-status .voice-guide li + li {
+  margin-top: 1rem;
+}
+.crosswalk-view-container .facility-status .voice-guide .sub-tit {
+  margin-bottom: 0.85rem;
+}
+.crosswalk-view-container .facility-status .voice-guide .sub-tit::before {
+  width: 1.8rem;
+  height: 1.37rem;
+  background-image: url("/base/images/bul_sound.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.crosswalk-view-container .facility-status .voice-guide .warn {
+  display: block;
+  padding: 0.4rem 1rem;
+  line-height: normal;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  color: #8c8c8c;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.crosswalk-view-container .facility-status .focus-light {
+  margin-top: 3rem;
+}
+.crosswalk-view-container .facility-status .focus-light li + li {
+  margin-top: 1rem;
+}
+.crosswalk-view-container .facility-status .focus-light .sub-tit-wrap .percent {
+  line-height: normal;
+  color: #727272;
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+.crosswalk-view-container .facility-status .focus-light .sub-tit-wrap .percent i {
   line-height: normal;
   font-size: 1.8rem;
-  color: #6d6d6d;
-  font-weight: 500;
-  letter-spacing: -0.054rem;
+  font-weight: 600;
 }
-.crossroad-view-container .accidents-stats-content .txt-view-header .num-tit {
-  display: block;
-  font-size: 2rem;
-  color: #1e5f8d;
-  font-weight: 500;
+.crosswalk-view-container .facility-status .focus-light .sub-tit::before {
+  width: 1.8rem;
+  height: 2.08rem;
+  background-image: url("/base/images/bul_light.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
 }
-.crossroad-view-container .accidents-stats-content .txt-view-header .num-tit em {
-  display: inline-block;
-  vertical-align: 1px;
-  font-family: "GmarketSans";
-  font-weight: 700;
-  font-size: 2.8rem;
-  letter-spacing: -0.084rem;
-}
-.crossroad-view-container .accidents-stats-content .txt-view-data {
-  max-height: 15.7rem;
-  overflow-y: auto;
-}
-.crossroad-view-container .accidents-stats-content .txt-view-data::-webkit-scrollbar {
-  width: 0.4rem;
-}
-.crossroad-view-container .accidents-stats-content .txt-view-data [class*=sudden]::before {
-  content: "";
-  width: 1.2rem;
-  height: 1.2rem;
-  border-radius: 999px;
-}
-.crossroad-view-container .accidents-stats-content .txt-view-data .sudden1::before {
-  background: #ffdd86;
-}
-.crossroad-view-container .accidents-stats-content .txt-view-data .sudden2::before {
-  background: #ffceb2;
-}
-.crossroad-view-container .accidents-stats-content .txt-view-data .sudden3::before {
-  background: #f67676;
-}
-.crossroad-view-container .accidents-stats-content .txt-view-data .sudden4::before {
-  background: #bdbdbd;
-}
-.crossroad-view-container .accidents-stats-content .txt-view-data .sudden5::before {
-  background: #519990;
-}
-.crossroad-view-container .accidents-stats-content .txt-view-data .sudden6::before {
-  background: #6d6cb8;
-}
-.crossroad-view-container .accidents-stats-content .txt-view-data tr:first-child th,
-.crossroad-view-container .accidents-stats-content .txt-view-data tr:first-child td {
-  border-top: 0.1rem solid #e8e8e8;
-}
-.crossroad-view-container .accidents-stats-content .txt-view-data tr td:last-child {
-  font-size: 1.2rem;
-}
-.crossroad-view-container .accidents-stats-content .txt-view-data th,
-.crossroad-view-container .accidents-stats-content .txt-view-data td {
-  padding: 0.3rem 0;
-  border-bottom: 0.1rem solid #e8e8e8;
-}
-.crossroad-view-container .accidents-stats-content .txt-view-data th {
-  padding-left: 1rem;
-  text-align: left;
-}
-.crossroad-view-container .accidents-stats-content .txt-view-data th em {
+.crosswalk-view-container .facility-status .focus-light .light-gauge {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1964,67 +1328,129 @@
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  gap: 0 0.7rem;
-  line-height: 1.8rem;
-  font-size: 1.2rem;
+  gap: 0 0.2rem;
+  padding: 0.5rem 0.53rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ffd056;
+}
+.crosswalk-view-container .facility-status .focus-light .light-gauge span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 1.8rem;
+  border: 1px solid #ffe195;
+}
+.crosswalk-view-container .facility-status .focus-light .light-gauge span i {
+  width: 50%;
+  height: 100%;
+}
+.crosswalk-view-container .monitering-container {
+  margin-top: 2.8rem !important;
+  padding: 0 3rem 0 !important;
+}
+.crosswalk-view-container .monitering-container.ui.tab.segment.active {
+  overflow-y: auto;
+  height: calc(100vh - 167px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+.crosswalk-view-container .monitering-container.ui.tab.segment.active::-webkit-scrollbar {
+  width: 0.4rem;
+}
+.crosswalk-view-container .monitering-container.ui.tab.segment.active > section, .crosswalk-view-container .monitering-container.ui.tab.segment.active > div {
+  width: calc(100% - 0.4rem);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.crosswalk-view-container .monitering-container .data-tbl-gray.xs {
+  height: 27.5rem;
+  margin-top: 1.4rem;
+}
+.crosswalk-view-container .monitering-container .data-tbl-gray.xs th {
+  padding: 0;
+  line-height: 2.5rem;
   color: #727272;
+}
+.crosswalk-view-container .monitering-container .data-tbl-gray.xs td {
+  padding: 0;
+  line-height: 2.39rem;
+  color: #727272;
+}
+.crosswalk-view-container .monitering-container .selectbox-wrap.xs select {
+  min-width: 6.5rem;
   font-weight: 500;
 }
-.crossroad-view-container .accidents-stats-content .txt-view-data td {
-  line-height: 1.8rem;
-  color: #727272;
-  font-size: 1.2rem;
-}
-.crossroad-view-container .accidents-stats-content .txt-view-data td em {
-  display: inline-block;
-  font-family: "GmarketSans";
-  font-weight: 600;
-  font-size: 1.2rem;
-}
-.crossroad-view-container .accidents-stats-content .txt-view-data td:last-child em {
-  margin-right: 0;
-}
-.crossroad-view-container .accidents-stats-content .chart-container {
-  width: 100%;
-  height: 18.1rem;
-}
-.crossroad-view-container .accidents-stats-content .cumulative-num {
-  position: absolute;
-  left: 0;
-  bottom: 1rem;
-  z-index: 2;
-  width: 100%;
-  text-align: center;
-  color: #3d3d3d;
-}
-.crossroad-view-container .accidents-stats-content .cumulative-num dt {
+.crosswalk-view-container .monitering-container > .ui.buttons.basic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
+  padding: 2rem 0;
+  line-height: 3rem;
+  border-top: 1px solid #e8e8e8;
   font-size: 1.6rem;
-  font-weight: 600;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-.crossroad-view-container .accidents-stats-content .cumulative-num dd {
-  font-size: 1.2rem;
-  font-weight: 300;
+.crosswalk-view-container .monitering-container > .ui.buttons.basic::after {
+  display: none;
 }
-.crossroad-view-container .accidents-list {
-  margin-bottom: auto;
-  padding: 3.2rem 3rem 0;
+.crosswalk-view-container .monitering-container > .ui.buttons.basic .btn-third {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 3.1rem;
+  font-size: 1.4rem;
+  color: #727272;
 }
-.crossroad-view-container .accidents-list .data-tbl-gray.xs {
-  height: calc(100vh - 599px);
-  border-bottom: 0;
+.crosswalk-view-container .monitering-container .signal-info {
+  padding-bottom: 2.8rem;
 }
-.crossroad-view-container .accidents-list .data-tbl-gray.xs table thead th {
-  padding: 0.95rem 0;
-}
-.crossroad-view-container .accidents-list .data-tbl-gray.xs table tbody tr:last-child td {
-  border-bottom: 1px solid #e8e8e8;
-}
-.crossroad-view-container .accidents-list .data-tbl-gray.xs table tbody td {
-  padding: 0.69rem 0;
-  vertical-align: middle;
-}
-.crossroad-view-container .accidents-list .data-tbl-gray.xs table tbody td .ico-picture {
-  padding: 0;
+.crosswalk-view-container .monitering-container .facility-info,
+.crosswalk-view-container .monitering-container .cw-change-info {
+  padding: 2.8rem 0;
 }
 
 /* 교차로 상세 > 영상 탭의 분할 화면 */
@@ -2806,13 +2232,232 @@
   width: auto;
 }
 
+/* 영상인식 상세설정 팝업 */
+.image-reco-set-container {
+  padding: 2rem 2.5rem 2.5rem;
+}
+.image-reco-set-container > .tit {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: #727272;
+}
+.image-reco-set-btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.image-reco-set-btn-group button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 32.33%;
+          flex: 1 0 32.33%;
+  padding: 0 1.4rem;
+  line-height: 2.9rem;
+  text-align: center;
+  color: #999999;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border-radius: 0.3rem;
+  border: 1px solid #e8e8e8;
+  letter-spacing: -0.08rem;
+}
+.image-reco-set-btn-group button.active {
+  border: 1px solid #1e5f8d;
+  background: #1e5f8d;
+  color: #fff;
+}
+.image-reco-set-view {
+  display: none;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid #e8e8e8;
+}
+.image-reco-set-view > [class*=set-content] {
+  display: none;
+}
+.image-reco-set-view > [class*=set-content].active {
+  display: block;
+}
+.image-reco-set-view > [class*=set-content] > em {
+  display: block;
+  margin-bottom: 1.5rem;
+  line-height: normal;
+  color: #1e5f8d;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.image-reco-set-view > [class*=set-content] .data-tbl {
+  padding: 0;
+}
+.image-reco-set-view > [class*=set-content] .data-tbl tbody th,
+.image-reco-set-view > [class*=set-content] .data-tbl tbody td {
+  padding-bottom: 1.5rem;
+}
+.image-reco-set-view > [class*=set-content] .data-tbl tbody tr:last-child th,
+.image-reco-set-view > [class*=set-content] .data-tbl tbody tr:last-child td {
+  padding-bottom: 0;
+}
+.image-reco-set-view > [class*=set-content] .set-content-btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
+  margin-top: 3.2rem;
+}
+.image-reco-set-view > [class*=set-content] .set-content-btn-group .ui.button.basic {
+  width: 8rem;
+  line-height: 3.1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.image-reco-set-view > [class*=set-content] .select-bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 1rem;
+}
+.image-reco-set-view > [class*=set-content] .select-bind .selectbox-wrap {
+  width: 15rem;
+}
+.image-reco-set-view > [class*=set-content] .select-bind .ui.button.basic.secondary {
+  line-height: 3rem;
+  font-size: 1.6rem;
+}
+.image-reco-set-view > [class*=set-content] .chk-bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 1.5rem;
+}
+.image-reco-set-view > [class*=set-content] .input-bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 1rem;
+}
+.image-reco-set-view > [class*=set-content] .input-bind .ui.input.rounded {
+  width: 21rem;
+}
+.image-reco-set-view > [class*=set-content] .input-bind span {
+  color: #727272;
+  font-size: 1.6rem;
+}
+.image-reco-set-view .set-content3 .data-tbl,
+.image-reco-set-view .set-content7 .data-tbl {
+  padding: 0;
+}
+.image-reco-set-view .set-content3 .data-tbl tbody th,
+.image-reco-set-view .set-content3 .data-tbl tbody td,
+.image-reco-set-view .set-content7 .data-tbl tbody th,
+.image-reco-set-view .set-content7 .data-tbl tbody td {
+  padding-bottom: 0.8rem;
+}
+
+/* 인식 SW */
+.recognize-sw-container {
+  padding: 2rem 2.5rem;
+}
+.recognize-sw-container > p {
+  color: #727272;
+  font-size: 1.6rem;
+}
+.recognize-sw-btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 0 0.4rem;
+  padding: 0 0.9rem;
+}
+.recognize-sw-btn-group .ui.secondary.basic {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 2.9rem;
+  font-size: 1.6rem;
+}
+
 /*---------------------------------------------------------------
   [미디어 쿼리]
 -----------------------------------------------------------------*/
 @media screen and (max-height: 955px) {
   /* 교차로 상세 > 돌발 탭 컨텐츠 */
-  .crossroad-view-container .cr-camera-view,
-  .crossroad-view-container .license-plate-recognition {
+  .crosswalk-view-container .cr-camera-view,
+  .crosswalk-view-container .license-plate-recognition {
     padding-top: 2.4rem;
     padding-bottom: 2.4rem;
   }
@@ -2820,10 +2465,10 @@
 /* 미디어 쿼리 */
 @media screen and (max-height: 899px) {
   /* 교차로 통계 : scroll-y값 추가 */
-  .crossroad-view-container {
+  .crosswalk-view-container {
     height: 100%;
   }
-  .crossroad-view-container .ui.tab.segment {
+  .crosswalk-view-container .ui.tab.segment {
     overflow-y: auto;
     max-height: calc(100% - 118.45px);
   }
