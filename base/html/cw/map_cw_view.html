@@ -402,43 +402,18 @@
               <li>
                 <div class="sub-tit-wrap">
                   <em class="sub-tit">집중조명 1</em>
-                  <span class="percent">60<i>%</i></span>
+                  <span class="percent">0<i>%</i></span>
                 </div>
-                <!-- 집중조명 영역 작업중.. -->
-                <div class="light-gauge">
-                  <span>
-                    <i></i>
-                    <i></i>
-                  </span>
-                  <span>
-                    <i></i>
-                    <i></i>
-                  </span>
-                  <span>
-                    <i></i>
-                    <i></i>
-                  </span>
-                </div>
+                <!-- 231211 id값 추가 -->
+                <div id="light1" class="light-gauge"></div>
               </li>
               <li>
                 <div class="sub-tit-wrap">
                   <em class="sub-tit">집중조명 2</em>
-                  <span class="percent">60<i>%</i></span>
+                  <span class="percent">0<i>%</i></span>
                 </div>
-                <div class="light-gauge">
-                  <span>
-                    <i></i>
-                    <i></i>
-                  </span>
-                  <span>
-                    <i></i>
-                    <i></i>
-                  </span>
-                  <span>
-                    <i></i>
-                    <i></i>
-                  </span>
-                </div>
+                <!-- 231211 id값 추가 -->
+                <div id="light2" class="light-gauge"></div>
               </li>
             </ul>
           </section>
@@ -797,15 +772,16 @@
         handles: 'e',
         minWidth: 422,
         maxWidth: 672,
-        resize: function (e, ui) {
-          var currentWidth = ui.size.width;
-          var $txtView = $('.accidents-stats-content .txt-view');
-          if (currentWidth >= 640) {
-            $txtView.show();
-          } else {
-            $txtView.hide();
-          }
-        },
+        // 231211 삭제
+        // resize: function (e, ui) {
+        //   var currentWidth = ui.size.width;
+        //   var $txtView = $('.accidents-stats-content .txt-view');
+        //   if (currentWidth >= 640) {
+        //     $txtView.show();
+        //   } else {
+        //     $txtView.hide();
+        //   }
+        // },
       });
 
       // 통계 탭 > 타이틀(평균 속도 / LOS 등급)버튼 클릭 이벤트
@@ -914,6 +890,27 @@
         $('.gnb .aside .btn-m').removeClass('active');
         $('.gnb .aside .pop-user-info').hide();
       });
+
+      // 231211 집중조명 퍼센트 게이지 UI함수
+      /**
+       * @param {el} 퍼센트 게이지 요소의 Id값
+       * @param {number} 0 ~ 100까지의 숫자
+       */
+      function lightGauge(el, number) {
+        var $lightEl = $(el);
+        $lightEl.parent('li').find('.percent').html(`${number}<i>%</i>`);
+        for (var i = 0; i < 50; i++) {
+          var span = $('<span></span>');
+          span.append('<i></i>');
+          span.append('<i></i>');
+          $lightEl.append(span);
+        }
+        for (var i = 0; i < number; i++) {
+          $(el).find('span > i').eq(i).addClass('active');
+        }
+      }
+      lightGauge('#light1', 49);
+      lightGauge('#light2', 70);
     </script>
   </body>
 </html>

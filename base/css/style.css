@@ -1735,6 +1735,9 @@ body ::-webkit-scrollbar-track {
 .ranking-tbl table tbody tr.decrease td.fluctuate {
   color: #5285aa;
 }
+.ranking-tbl table tbody tr.stationarily td.fluctuate {
+  color: #999999;
+}
 .ranking-tbl table tbody td {
   height: 3.1rem;
   vertical-align: middle;
@@ -8110,22 +8113,22 @@ body ::-webkit-scrollbar-track {
   border-radius: 100%;
 }
 .dashboard-main .dashboard-current-right .event-current-legend li .tit.sudden1::before {
-  background: #ffdd86;
+  background: #9a9a9a;
 }
 .dashboard-main .dashboard-current-right .event-current-legend li .tit.sudden2::before {
-  background: #ffceb2;
+  background: #ba2b62;
 }
 .dashboard-main .dashboard-current-right .event-current-legend li .tit.sudden3::before {
-  background: #f67676;
+  background: #efafc9;
 }
 .dashboard-main .dashboard-current-right .event-current-legend li .tit.sudden4::before {
-  background: #bdbdbd;
+  background: #324b7e;
 }
 .dashboard-main .dashboard-current-right .event-current-legend li .tit.sudden5::before {
-  background: #519990;
+  background: #7e9aae;
 }
 .dashboard-main .dashboard-current-right .event-current-legend li .tit.sudden6::before {
-  background: #6d6cb8;
+  background: #cfe3f1;
 }
 .dashboard-main .dashboard-current-right .event-current-legend li .right {
   display: -webkit-box;
@@ -8471,22 +8474,22 @@ body ::-webkit-scrollbar-track {
   border-radius: 100%;
 }
 .dashboard-reform-body .accidents-current-legend li .tit.sudden1::before {
-  background: #324b7e;
-}
-.dashboard-reform-body .accidents-current-legend li .tit.sudden2::before {
-  background: #7e9aae;
-}
-.dashboard-reform-body .accidents-current-legend li .tit.sudden3::before {
-  background: #cfe3f1;
-}
-.dashboard-reform-body .accidents-current-legend li .tit.sudden4::before {
   background: #9a9a9a;
 }
-.dashboard-reform-body .accidents-current-legend li .tit.sudden5::before {
+.dashboard-reform-body .accidents-current-legend li .tit.sudden2::before {
   background: #ba2b62;
 }
-.dashboard-reform-body .accidents-current-legend li .tit.sudden6::before {
+.dashboard-reform-body .accidents-current-legend li .tit.sudden3::before {
   background: #efafc9;
+}
+.dashboard-reform-body .accidents-current-legend li .tit.sudden4::before {
+  background: #324b7e;
+}
+.dashboard-reform-body .accidents-current-legend li .tit.sudden5::before {
+  background: #7e9aae;
+}
+.dashboard-reform-body .accidents-current-legend li .tit.sudden6::before {
+  background: #cfe3f1;
 }
 .dashboard-reform-body .accidents-current-legend li .right {
   display: -webkit-box;

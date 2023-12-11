@@ -1359,6 +1359,9 @@
   width: 50%;
   height: 100%;
 }
+.crosswalk-view-container .facility-status .focus-light .light-gauge span i.active {
+  background: #ffe195;
+}
 .crosswalk-view-container .monitering-container {
   margin-top: 2.8rem !important;
   padding: 0 3rem 0 !important;
@@ -1463,7 +1466,7 @@
 }
 .split-screen-info {
   position: absolute;
-  left: 2.26rem;
+  left: 2.16rem;
   top: 2.38rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1483,8 +1486,9 @@
   gap: 0 1.3rem;
 }
 .split-screen-info i {
-  padding: 0 1.8rem;
+  min-width: 8rem;
   line-height: 3.1rem;
+  text-align: center;
   font-size: 1.8rem;
   color: #fff;
   font-weight: 500;
@@ -1492,9 +1496,10 @@
   background: rgba(255, 255, 255, 0.3);
 }
 .split-screen-info em {
+  line-height: normal;
   font-size: 2rem;
   color: #fff;
-  font-weight: 600;
+  font-weight: 500;
 }
 .split-screen .split-video {
   border-radius: 0.5rem;

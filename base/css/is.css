@@ -2042,22 +2042,22 @@
   border-radius: 999px;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data .sudden1::before {
-  background: #ffdd86;
+  background: #9a9a9a;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data .sudden2::before {
-  background: #ffceb2;
+  background: #ba2b62;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data .sudden3::before {
-  background: #f67676;
+  background: #efafc9;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data .sudden4::before {
-  background: #bdbdbd;
+  background: #324b7e;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data .sudden5::before {
-  background: #519990;
+  background: #7e9aae;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data .sudden6::before {
-  background: #6d6cb8;
+  background: #cfe3f1;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data tr:first-child th,
 .crossroad-view-container .accidents-stats-content .txt-view-data tr:first-child td {
@@ -2164,7 +2164,7 @@
 }
 .split-screen-info {
   position: absolute;
-  left: 2.26rem;
+  left: 2.16rem;
   top: 2.38rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2184,8 +2184,9 @@
   gap: 0 1.3rem;
 }
 .split-screen-info i {
-  padding: 0 1.8rem;
+  min-width: 8rem;
   line-height: 3.1rem;
+  text-align: center;
   font-size: 1.8rem;
   color: #fff;
   font-weight: 500;
@@ -2195,7 +2196,7 @@
 .split-screen-info em {
   font-size: 2rem;
   color: #fff;
-  font-weight: 600;
+  font-weight: 500;
 }
 .split-screen .split-video {
   border-radius: 0.5rem;
