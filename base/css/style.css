@@ -397,21 +397,27 @@ body ::-webkit-scrollbar-track {
 }
 .ico-point {
   display: inline-block;
-  width: 1rem;
-  height: 1.7rem;
+  width: 1.43rem;
+  height: 2rem;
   background-image: url("/base/images/icon_point_gray2.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
 }
+.ico-point:hover {
+  background-image: url("/base/images/icon_point_gray2_active.png");
+}
 .ico-look {
   display: inline-block;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 1.36rem;
+  height: 2rem;
   background-image: url("/base/images/icon_look.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+}
+.ico-look:hover {
+  background-image: url("/base/images/icon_look_active.png");
 }
 .ico-wastebasket {
   display: inline-block;
@@ -5424,8 +5430,23 @@ body ::-webkit-scrollbar-track {
   margin: 0 auto;
 }
 
-/* 지점 목록 팝업 */
+/* 지점 목록 버튼 및 팝업 */
+.btn-branch-list {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.2rem;
+  z-index: 1;
+  padding: 0;
+  width: 4.2rem;
+  height: 4.2rem;
+  background-image: url("/base/images/btn_hamburger.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
 .branch-list-popup {
+  display: none;
   position: absolute;
   top: 2.5rem;
   left: 2.2rem;
@@ -8798,6 +8819,21 @@ body ::-webkit-scrollbar-track {
 .dashboard-reform.type-b .dashboard-reform-body .point-container {
   width: 100%;
 }
+.dashboard-reform-body .accidents-container {
+  height: 43.4rem;
+}
+.dashboard-reform-body .hindrance-container {
+  height: 30.6rem;
+}
+.dashboard-reform-body .congested-ranking-container .gap-tbl {
+  height: 20.7rem;
+}
+.dashboard-reform-body .traffic-increase-container .ranking-tbl {
+  height: 19.1rem;
+}
+.dashboard-reform-body .point-container .point-list-container {
+  height: 78.22rem;
+}
 
 /* 대시보드 - 교차로/횡단보도 현황 */
 .dashboard-status-filter {
@@ -9048,20 +9084,28 @@ body ::-webkit-scrollbar-track {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  height: 31.2rem;
   border-radius: 1rem;
   background: #fff;
   -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
           box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+}
+.dashboard-status-content2 > div .status-chart {
+  height: 25.6rem;
 }
 .dashboard-status-content2 .status-chart-bind {
   width: 82.8rem;
   height: 19.5rem;
 }
 .dashboard-status-content3 {
+  height: 31.1rem;
   border-radius: 1rem;
   background: #fff;
   -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
           box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+}
+.dashboard-status-content3 .status-chart {
+  height: 25.6rem;
 }
 .dashboard-status-content3 .status-chart-bind {
   width: 100%;
@@ -9218,8 +9262,15 @@ body ::-webkit-scrollbar-track {
     height: 100%;
   }
 }
-@media screen and (max-height: 955px) {
+@media screen and (max-height: 925px) {
+  /* Dashboard 교차로 현황 */
+  .dashboard-status-filter {
+    padding: 2rem 0 1rem;
+  }
   /* 교차로 대시보드 A */
+  .dashboard-reform-body .hindrance-container {
+    height: 26.9rem;
+  }
   .dashboard-reform-body .hindrance-container .dashboard-noti-list {
     max-height: 17.8rem;
     margin-top: 2rem;
@@ -9233,6 +9284,7 @@ body ::-webkit-scrollbar-track {
     height: 99.2%;
   }
   .dashboard-reform-body .point-container .point-list-container {
+    height: 74.35rem;
     padding-top: 2.3rem;
     padding-bottom: 2.3rem;
   }

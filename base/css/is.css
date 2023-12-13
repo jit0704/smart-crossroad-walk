@@ -2805,13 +2805,23 @@
 
 /* 돌발 ROI 탭 */
 .tab-accidental-roi .perceive-body table:first-child {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 .tab-accidental-roi .perceive-body table:first-child th {
   text-align: center;
 }
+.tab-accidental-roi .perceive-body table tr + tr th,
+.tab-accidental-roi .perceive-body table tr + tr td {
+  padding-top: 1rem;
+}
 .tab-accidental-roi .roi-set-list-section .data-tbl-gray.xs {
   height: 23.1rem;
+}
+.tab-accidental-roi .roi-set-list-section .data-tbl-gray.xs thead th {
+  height: 3.3rem;
+}
+.tab-accidental-roi .roi-set-list-section .data-tbl-gray.xs tbody td {
+  padding: 0.69rem 0;
 }
 
 /* 교차로 ROI 탭 */

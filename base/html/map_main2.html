@@ -384,6 +384,10 @@
           <!-- //angle-adjust-popup -->
 
           <!-- 231204 지점 목록 팝업 추가 -->
+          <!-- 231212 지점 목록 버튼 추가 -->
+          <button type="button" class="btn-branch-list">
+            <span class="screen-out">지점 목록 버튼</span>
+          </button>
           <div class="branch-list-popup">
             <div class="branch-list-header">
               <em>지점 목록</em>
@@ -394,8 +398,8 @@
               <div class="selectbox-wrap xs">
                 <select>
                   <option value="">전체</option>
-                  <option value="">내용1</option>
-                  <option value="">내용2</option>
+                  <option value="">횡단보도</option>
+                  <option value="">교차로</option>
                 </select>
               </div>
               <!-- //selectbox-wrap -->
@@ -493,6 +497,14 @@
         start: function () {
           $(this).css('transform', 'none');
         },
+      });
+
+      // 231212 지점 목록 버튼 클릭 이벤트
+      $(document).on('click', '.btn-branch-list', function () {
+        $('.branch-list-popup').show(70);
+      });
+      $(document).on('click', '.branch-list-popup .btn-close', function () {
+        $('.branch-list-popup').hide(70);
       });
 
       // 231204 지점 목록 검색창 활성화 이벤트 및 삭제 버튼 클릭시 생기는 side effect처리
