@@ -346,14 +346,29 @@ body ::-webkit-scrollbar-track {
   - 그레이 라인 박스
   - 체크박스 리스트 아코디언 메뉴(연계 카메라 등록 팝업)
 -----------------------------------------------------------------*/
-.ico-cw {
+.ico-system-cr {
   display: inline-block;
-  width: 4.7rem;
-  height: 5.7rem;
-  background-image: url("/base/images/icon_cw.png");
+  width: 3.2rem;
+  height: 4.46rem;
+  background-image: url("/base/images/icon_system_cr.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+}
+.ico-system-cr.active {
+  background-image: url(/base/images/icon_system_cr_active.png);
+}
+.ico-system-cw {
+  display: inline-block;
+  width: 3.2rem;
+  height: 4.46rem;
+  background-image: url("/base/images/icon_system_cw.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-system-cw.active {
+  background-image: url(/base/images/icon_system_cw_active.png);
 }
 .ico-cw2 {
   display: inline-block;
@@ -681,7 +696,7 @@ body ::-webkit-scrollbar-track {
 .ico-los-a {
   display: inline-block;
   width: 4.6rem;
-  height: 6.4rem;
+  height: 6rem;
   background-image: url("/base/images//los/icon_los_a.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -690,7 +705,7 @@ body ::-webkit-scrollbar-track {
 .ico-los-b {
   display: inline-block;
   width: 4.6rem;
-  height: 6.4rem;
+  height: 6rem;
   background-image: url("/base/images//los/icon_los_b.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -699,7 +714,7 @@ body ::-webkit-scrollbar-track {
 .ico-los-c {
   display: inline-block;
   width: 4.6rem;
-  height: 6.4rem;
+  height: 6rem;
   background-image: url("/base/images//los/icon_los_c.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -708,7 +723,7 @@ body ::-webkit-scrollbar-track {
 .ico-los-d {
   display: inline-block;
   width: 4.6rem;
-  height: 6.4rem;
+  height: 6rem;
   background-image: url("/base/images//los/icon_los_d.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -717,7 +732,7 @@ body ::-webkit-scrollbar-track {
 .ico-los-e {
   display: inline-block;
   width: 4.6rem;
-  height: 6.4rem;
+  height: 6rem;
   background-image: url("/base/images//los/icon_los_e.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -726,7 +741,7 @@ body ::-webkit-scrollbar-track {
 .ico-los-f {
   display: inline-block;
   width: 4.6rem;
-  height: 6.4rem;
+  height: 6rem;
   background-image: url("/base/images//los/icon_los_f.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -735,7 +750,7 @@ body ::-webkit-scrollbar-track {
 .ico-los-ff {
   display: inline-block;
   width: 4.6rem;
-  height: 6.4rem;
+  height: 6rem;
   background-image: url("/base/images//los/icon_los_ff.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -744,7 +759,7 @@ body ::-webkit-scrollbar-track {
 .ico-los-fff {
   display: inline-block;
   width: 4.6rem;
-  height: 6.4rem;
+  height: 6rem;
   background-image: url("/base/images//los/icon_los_fff.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -2300,7 +2315,7 @@ body ::-webkit-scrollbar-track {
 }
 .map-iconbar-container .map-icon-list .ic3 span::before {
   width: 1.6rem;
-  height: 1.6rem;
+  height: 1.3rem;
   background-image: url("/base/images/map-right-iconbar/iconbar3.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -2894,28 +2909,28 @@ body ::-webkit-scrollbar-track {
   background-size: contain !important;
 }
 .los-legend-content ul li.lv-a::before {
-  background: url(/base/images/los/icon_los_a.png) no-repeat 0 0;
+  background: url(/base/images/los/icon_los_a2.png) no-repeat 0 0;
 }
 .los-legend-content ul li.lv-b::before {
-  background: url(/base/images/los/icon_los_b.png) no-repeat 0 0;
+  background: url(/base/images/los/icon_los_b2.png) no-repeat 0 0;
 }
 .los-legend-content ul li.lv-c::before {
-  background: url(/base/images/los/icon_los_c.png) no-repeat 0 0;
+  background: url(/base/images/los/icon_los_c2.png) no-repeat 0 0;
 }
 .los-legend-content ul li.lv-d::before {
-  background: url(/base/images/los/icon_los_d.png) no-repeat 0 0;
+  background: url(/base/images/los/icon_los_d2.png) no-repeat 0 0;
 }
 .los-legend-content ul li.lv-e::before {
-  background: url(/base/images/los/icon_los_e.png) no-repeat 0 0;
+  background: url(/base/images/los/icon_los_e2.png) no-repeat 0 0;
 }
 .los-legend-content ul li.lv-f::before {
-  background: url(/base/images/los/icon_los_f.png) no-repeat 0 0;
+  background: url(/base/images/los/icon_los_f2.png) no-repeat 0 0;
 }
 .los-legend-content ul li.lv-ff::before {
-  background: url(/base/images/los/icon_los_ff.png) no-repeat 0 0;
+  background: url(/base/images/los/icon_los_ff2.png) no-repeat 0 0;
 }
 .los-legend-content ul li.lv-fff::before {
-  background: url(/base/images/los/icon_los_fff.png) no-repeat 0 0;
+  background: url(/base/images/los/icon_los_fff2.png) no-repeat 0 0;
 }
 .los-legend-container.tab .tab-header {
   display: -webkit-box;
@@ -5623,8 +5638,8 @@ body ::-webkit-scrollbar-track {
   margin-left: auto;
 }
 .branch-list-body li .bind .btn-branch1 {
-  width: 1rem;
-  height: 1.64rem;
+  width: 1.2rem;
+  height: 1.7rem;
   background-image: url("/base/images/icon_maker.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -5636,12 +5651,15 @@ body ::-webkit-scrollbar-track {
   background-image: url("/base/images/icon_maker_active.png");
 }
 .branch-list-body li .bind .btn-branch2 {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.15rem;
+  height: 1.7rem;
   background-image: url("/base/images/icon_view2.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+}
+.branch-list-body li .bind .btn-branch2:hover {
+  background-image: url("/base/images/icon_view2_active.png");
 }
 
 /*---------------------------------------------------------------
@@ -5764,7 +5782,8 @@ body ::-webkit-scrollbar-track {
 .ly-map > [class*=ico] {
   cursor: pointer;
 }
-.ly-map .ico-cw,
+.ly-map .ico-system-cr,
+.ly-map .ico-system-cw,
 .ly-map .ico-triangle-exclamation {
   position: absolute;
   z-index: 1;

@@ -168,8 +168,7 @@
 }
 .main-stats-container .summary-info-chart > section .chart-container {
   width: 154.2rem;
-  height: 34.1rem;
-  margin-top: 3.9rem;
+  height: 38rem;
 }
 .main-stats-container .summary-info-chart > section aside {
   position: absolute;
@@ -189,7 +188,6 @@
 }
 .main-stats-container .summary-info-chart .road-sort {
   width: 11.4rem;
-  margin-top: 4.7rem;
 }
 .main-stats-container .summary-info-chart .road-sort button {
   display: block;
@@ -518,36 +516,30 @@
   - 교차로 유출입 교통량
 */
 .main-stats-container,
-.stats-container,
-.crossroads-flow-container {
+.stats-container {
   margin-top: -1.95rem;
 }
 .main-stats-container .filter-grouop > .inner,
-.stats-container .filter-grouop > .inner,
-.crossroads-flow-container .filter-grouop > .inner {
+.stats-container .filter-grouop > .inner {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
 }
 .main-stats-container .filter-grouop .selectbox-wrap.primary.label-none select,
-.stats-container .filter-grouop .selectbox-wrap.primary.label-none select,
-.crossroads-flow-container .filter-grouop .selectbox-wrap.primary.label-none select {
+.stats-container .filter-grouop .selectbox-wrap.primary.label-none select {
   height: 3rem;
   font-size: 1.6rem;
 }
 .main-stats-container .filter-grouop .date-group input,
-.stats-container .filter-grouop .date-group input,
-.crossroads-flow-container .filter-grouop .date-group input {
+.stats-container .filter-grouop .date-group input {
   height: 3rem;
 }
 .main-stats-container .filter-grouop .ui.primary-chkbox.md label,
-.stats-container .filter-grouop .ui.primary-chkbox.md label,
-.crossroads-flow-container .filter-grouop .ui.primary-chkbox.md label {
+.stats-container .filter-grouop .ui.primary-chkbox.md label {
   font-size: 1.6rem;
 }
 .main-stats-container .filter-grouop .btn-data-search,
-.stats-container .filter-grouop .btn-data-search,
-.crossroads-flow-container .filter-grouop .btn-data-search {
+.stats-container .filter-grouop .btn-data-search {
   line-height: 2.6rem;
 }
 
@@ -2199,16 +2191,21 @@
   margin-bottom: 0;
 }
 .roi-view-container.latlong .perceive-body {
-  padding: 1.5rem 3rem 0;
+  padding: 2.8rem 3rem 0;
 }
 .roi-view-container.latlong .perceive-body .perceive-header {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.5rem;
 }
 .roi-view-container.latlong .roi-set-list-section .data-tbl-gray {
-  height: 39.3rem;
+  max-height: 39.3rem;
+  height: auto;
+  border-bottom: 0;
 }
 .roi-view-container.latlong .roi-set-list-section .data-tbl-gray thead th {
   padding: 0.95rem 0;
+}
+.roi-view-container.latlong .roi-set-list-section .data-tbl-gray tbody tr:last-child td {
+  border-bottom: 1px solid #e8e8e8;
 }
 .roi-view-container.latlong .roi-set-list-section .data-tbl-gray tbody td {
   padding: 0.74rem 0;
@@ -2229,6 +2226,55 @@
 .roi-view-container.latlong .roi-set-list-section .data-tbl-gray tbody td .form-bind .ui.input.rounded.xs input {
   padding: 0 0.4rem;
   line-height: 1.8rem;
+}
+.roi-view-container.latlong .roi-set-list-section .add-row {
+  position: relative;
+  padding: 0.8rem 0;
+  text-align: center;
+  font-size: 0;
+  border-bottom: 1px solid #cbcbcb;
+}
+.roi-view-container.latlong .roi-set-list-section .add-row button {
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-image: url("/base/images/icon_plus_gray.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.roi-view-container.latlong .roi-set-list-section .add-row button:hover {
+  background-image: url("/base/images/icon_plus_gray2.png");
+}
+.roi-view-container.latlong .roi-set-list-section .add-row button:hover ~ .add-row-tip {
+  display: block;
+}
+.roi-view-container.latlong .roi-set-list-section .add-row button:active {
+  background-image: url("/base/images/icon_plus_blue.png");
+}
+.roi-view-container.latlong .roi-set-list-section .add-row-tip {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: -2.5rem;
+  z-index: 1;
+  min-width: 28.3rem;
+  padding: 0.7rem 1rem;
+  line-height: normal;
+  font-size: 1.2rem;
+  color: #999999;
+  font-weight: 500;
+  border-radius: 0.3rem;
+  background: #f8f8f8;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.roi-view-container.latlong .roi-set-list-section .add-row-tip svg {
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  margin-left: -0.6rem;
 }
 .roi-view-container.latlong .roi-set-list-header {
   margin-bottom: 1.4rem;
