@@ -370,6 +370,15 @@ body ::-webkit-scrollbar-track {
 .ico-system-cw.active {
   background-image: url(/base/images/icon_system_cw_active.png);
 }
+.ico-cw {
+  display: inline-block;
+  width: 3.2rem;
+  height: 4.45rem;
+  background-image: url("/base/images/icon_cw.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
 .ico-cw2 {
   display: inline-block;
   width: 2.1rem;
@@ -381,16 +390,12 @@ body ::-webkit-scrollbar-track {
 }
 .ico-cr {
   display: inline-block;
-  width: 4.4rem;
-  height: 5.7rem;
+  width: 3.2rem;
+  height: 4.45rem;
   background-image: url("/base/images/icon_cr.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
-}
-.ico-cr.active {
-  width: 4.7rem;
-  background-image: url(/base/images/icon_cr_active.png);
 }
 .ico-cr2 {
   display: inline-block;
@@ -552,7 +557,7 @@ body ::-webkit-scrollbar-track {
 .ico-map-above-los {
   display: inline-block;
   width: 4.6rem;
-  height: 6.4rem;
+  height: 6rem;
   background-image: url("/base/images/icon_los.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -3122,7 +3127,7 @@ body ::-webkit-scrollbar-track {
   position: relative;
   z-index: 3;
   display: inline-block;
-  margin-top: 0.6rem;
+  margin-top: 1rem;
   cursor: pointer;
 }
 .los-display .ico-cr.moving {
@@ -5784,7 +5789,8 @@ body ::-webkit-scrollbar-track {
 }
 .ly-map .ico-system-cr,
 .ly-map .ico-system-cw,
-.ly-map .ico-triangle-exclamation {
+.ly-map .ico-triangle-exclamation,
+.ly-map .ico-cw {
   position: absolute;
   z-index: 1;
 }

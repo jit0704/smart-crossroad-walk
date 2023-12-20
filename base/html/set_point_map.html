@@ -161,6 +161,9 @@
             <i class="traffic-display left" style="transform: rotate(0deg)"></i>
             <i class="traffic-display right" style="transform: rotate(0deg)"></i>
           </div>
+
+          <!-- 231219 횡단보도 아이콘 추가 -->
+          <i class="ico-cw" style="left: 900px; top: 350px"><span class="screen-out">횡단보도</span></i>
         </div>
         <!-- //ly-map -->
       </main>
@@ -227,9 +230,10 @@
         // 마우스 커서가 교차로 아이콘으로 바뀌었을때 지도 위 클릭 이벤트: 메뉴 팝업 생성
         // (국토지리정보원 API 호출시 지도 최상단 부모 클래스명이 ol-viewport로 나옵니다. 개발환경에서도 동일하게 나오는지 확인이 필요하고, 만약 클래스명이 다르면 ol-viewport클래스명 수정이 필요합니다. 참고 바랍니다.)
         // 230927 ico-set-cr-active로 클래스명 수정
+        // 231219 변수 x, y값의 숫자 값 수정
         $(document).on('click', '.ico-set-cr-active .ol-viewport', function (e) {
-          var x = e.clientX + 20;
-          var y = e.clientY + 20;
+          var x = e.clientX + 5;
+          var y = e.clientY + 5;
           $('.js-add-branch').fadeIn(200).css({
             left: x,
             top: y,
