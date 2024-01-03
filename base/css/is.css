@@ -134,7 +134,7 @@
   padding: 0.75rem 1rem;
   line-height: 100%;
   border-radius: 0.5rem;
-  background: #f0fafd;
+  background: #f0f8fa;
   font-size: 1.8rem;
   color: #003c68;
   font-weight: 600;
@@ -613,6 +613,7 @@
   margin-bottom: 0;
   font-size: 1.6rem;
   color: #1e5f8d;
+  font-weight: 500;
 }
 .stats-container.primitive .data-tbl-very {
   height: 69.9rem;
@@ -1067,11 +1068,6 @@
   - 교차로 원시 이력
   - 교차로 유출입 교통량
 */
-.main-stats-container,
-.stats-container,
-.crossroads-flow-container {
-  margin-top: -1.95rem;
-}
 .main-stats-container .filter-grouop > .inner,
 .stats-container .filter-grouop > .inner,
 .crossroads-flow-container .filter-grouop > .inner {
@@ -1232,10 +1228,10 @@
 }
 .real-time-outbreak-item .outbreak-type {
   width: 7rem;
-  line-height: 6rem;
+  line-height: 5.8rem;
   border-radius: 0.5rem;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 .real-time-outbreak-item .outbreak-type.reverse-run {
@@ -1253,6 +1249,24 @@
 .real-time-outbreak-item .outbreak-type.other {
   color: #999999;
   background: #e8e8e8;
+}
+.real-time-outbreak-item .outbreak-type.tail {
+  color: #324b7e;
+  background: #d8deea;
+}
+.real-time-outbreak-item .outbreak-type.stop-line-violation {
+  height: 5.8rem;
+  line-height: normal;
+  padding: 1rem 0;
+  color: #64859c;
+  background: #d0e1ec;
+}
+.real-time-outbreak-item .outbreak-type.lane-designation-violation {
+  height: 5.8rem;
+  line-height: normal;
+  padding: 1rem 0;
+  color: #8db5d1;
+  background: #ecf7ff;
 }
 .real-time-outbreak-view {
   -webkit-box-flex: 1;
@@ -1332,7 +1346,7 @@
 }
 .real-time-outbreak-view-header .right > span {
   min-width: 16rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #727272;
 }
 .real-time-outbreak-view-header .right .selectbox-wrap.rounded {
@@ -1340,13 +1354,15 @@
   margin: 0 0.4rem 0 1.4rem;
 }
 .real-time-outbreak-view-header .right .selectbox-wrap.rounded select {
-  padding: 0.5rem 0.7rem;
+  padding: 0.6rem 0.7rem;
   line-height: 100%;
   color: #727272;
+  font-size: 1.6rem;
   font-weight: 500;
 }
 .real-time-outbreak-view-header .right .btn-gray-bg {
   width: 6.2rem;
+  font-size: 1.6rem;
 }
 .real-time-outbreak-view .outbreak-info > .tit {
   display: block;
@@ -1697,40 +1713,44 @@
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
+.crossroad-view-container .stats-tit-option .ico-up-boxgray.active {
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+}
 .crossroad-view-container .stats-tit-option .option-list {
   display: none;
   position: absolute;
   z-index: 5;
   top: 2.6rem;
   right: 0.2rem;
-  min-width: 10rem;
-  padding: 0.3rem;
+  overflow: hidden;
+  min-width: 10.8rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 0.5rem;
   background: #fff;
-  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
 }
 .crossroad-view-container .stats-tit-option .option-list button {
   display: block;
-  line-height: 2rem;
-  padding: 0 0.4rem;
+  line-height: 2.7rem;
+  padding: 0 1rem;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
   color: #999999;
-  border-radius: 0.3rem;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
-}
-.crossroad-view-container .stats-tit-option .option-list button:not(:first-child) {
-  margin-top: 0.3rem;
+  letter-spacing: -0.07rem;
 }
 .crossroad-view-container .stats-tit-option .option-list button:hover {
-  background: #e8e8e8;
+  color: #fff;
+  font-weight: 500;
+  background: #999999;
 }
 .crossroad-view-container .stats-tit-option .option-list button.active {
   color: #fff;
+  font-weight: 500;
   background: #999999;
 }
 .crossroad-view-container .tit-header {
@@ -1864,7 +1884,9 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  color: #727272;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1.4rem;
 }
 .crossroad-view-container .cr-camera-info {
   padding: 0 3rem 2.8rem;
@@ -1872,6 +1894,9 @@
 .crossroad-view-container .cr-camera-info .data-tbl-gray.xs {
   height: 16rem;
   border-bottom: 0;
+}
+.crossroad-view-container .cr-camera-info .data-tbl-gray.xs table {
+  table-layout: fixed;
 }
 .crossroad-view-container .cr-camera-info .data-tbl-gray.xs table thead th {
   padding: 0.85rem 0;
@@ -1883,6 +1908,14 @@
 .crossroad-view-container .cr-camera-info .data-tbl-gray.xs table tbody td {
   padding: 0.82rem 0;
   font-size: 1.4rem;
+}
+.crossroad-view-container .cr-camera-info .data-tbl-gray.xs table tbody td .cam-name {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
 }
 .crossroad-view-container .cr-camera-view,
 .crossroad-view-container .license-plate-recognition {
@@ -1951,8 +1984,9 @@
 .crossroad-view-container .accidents-container > .ui.buttons.basic .btn-third {
   display: block;
   width: 100%;
-  padding: 0.7rem 0.6rem;
-  color: #727272;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1.4rem;
 }
 .crossroad-view-container .accidents-stats {
   padding: 0 3rem 4rem;
@@ -2420,23 +2454,31 @@
 }
 .roi-view-container .roi-set-btn1 {
   display: block;
+  width: 100%;
   margin-top: 1rem;
-  line-height: 2.6rem;
+  line-height: 3rem;
+  padding: 0;
   border-radius: 0.5rem;
   border: 1px solid #d3e3ee;
   background: #ebf8ff;
   font-size: 1.6rem;
   color: #1e5f8d;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .roi-view-container .roi-set-btn2 {
   display: block;
+  width: 100%;
   margin-top: 0.4rem;
-  line-height: 3.8rem;
+  line-height: 3.2rem;
+  padding: 0;
   border-radius: 0.5rem;
   background: #1e5f8d;
   font-size: 1.6rem;
   font-weight: 600;
   color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .roi-view-container .roi-set-list-section {
   padding: 3.2rem 3rem 0;
@@ -2738,6 +2780,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  font-size: 1.4rem;
 }
 .roi-view-header {
   display: -webkit-box;

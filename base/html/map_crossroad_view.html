@@ -146,7 +146,7 @@
                 <button type="button" class="ico-up-boxgray"><span class="screen-out">버튼</span></button>
                 <span class="option-list">
                   <button type="button">LOS 등급</button>
-                  <button type="button">도로 별 LOS 등급</button>
+                  <button type="button">도로 별 LOS등급</button>
                 </span>
               </div>
             </div>
@@ -179,7 +179,14 @@
             </div>
             <!-- //tit-header -->
             <div class="data-tbl-gray xs">
+              <!-- 231224 colgroup 및 카메라명 td 영역 수정  -->
               <table>
+                <colgroup>
+                  <col />
+                  <col style="width: 37.2%" />
+                  <col />
+                  <col />
+                </colgroup>
                 <thead>
                   <tr>
                     <th>채널</th>
@@ -192,28 +199,36 @@
                 <tbody>
                   <tr>
                     <td>1</td>
-                    <td>CAM1</td>
+                    <td>
+                      <span class="cam-name">버들마을우미린아파트123</span>
+                    </td>
                     <td>북</td>
                     <td>192.168.1.1</td>
                     <td>정상</td>
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td>CAM1</td>
+                    <td>
+                      <span class="cam-name">CAM1</span>
+                    </td>
                     <td>북</td>
                     <td>192.168.1.1</td>
                     <td>정상</td>
                   </tr>
                   <tr>
                     <td>3</td>
-                    <td>CAM1</td>
+                    <td>
+                      <span class="cam-name">CAM1</span>
+                    </td>
                     <td>북</td>
                     <td>192.168.1.1</td>
                     <td>정상</td>
                   </tr>
                   <tr>
                     <td>4</td>
-                    <td>CAM1</td>
+                    <td>
+                      <span class="cam-name">CAM1</span>
+                    </td>
                     <td>북</td>
                     <td>192.168.1.1</td>
                     <td>정상</td>
@@ -1362,15 +1377,19 @@
       // 통계 탭 > 타이틀(평균 속도 / LOS 등급)버튼 클릭 이벤트
       $('.stats-tit-option-bind .ico-up-boxgray').on('click', function () {
         var $optionList = $(this).parent().find('.option-list');
+        $('.stats-tit-option-bind .ico-up-boxgray').removeClass('active'); // 231224 추가
         if ($optionList.css('display') === 'none') {
+          $(this).addClass('active'); // 231224 추가
           $('.option-list').fadeOut(150);
           $optionList.fadeIn(150);
         } else {
+          $(this).removeClass('active'); // 231224 추가
           $optionList.fadeOut(150);
         }
       });
       $('.option-list button').each(function (_, el) {
         $(el).on('click', function () {
+          $('.stats-tit-option-bind .ico-up-boxgray').removeClass('active'); // 231224 추가
           $(el).parent().find('button').removeClass('active');
           $(el).addClass('active');
           $(el).parent().hide();

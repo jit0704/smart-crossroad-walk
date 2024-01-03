@@ -45,7 +45,7 @@
                   - 항목이 4개일 경우 stats-content에 size4 클래스 추가
                   - 항목이 5개일 경우 stats-content에 size5 클래스 추가
             -->
-            <ul class="stats-content">
+            <ul class="stats-content size5">
               <li class="cw-num">
                 <span class="txt">횡단자 수</span>
                 <em>2,250<i>명</i></em>
@@ -58,14 +58,14 @@
                 <span class="txt">무단횡단자 수</span>
                 <em>2,250<i>명</i></em>
               </li>
-              <!-- <li class="sign-num">
+              <li class="sign-num">
                 <span class="txt">신호 연장 횟수</span>
                 <em>2,250<i>명</i></em>
               </li>
               <li class="violation-num">
                 <span class="txt">정지선 위반 횟수</span>
                 <em>2,250<i>명</i></em>
-              </li> -->
+              </li>
             </ul>
             <!-- //stats-content -->
           </section>
@@ -790,15 +790,19 @@
       // 통계 탭 > 타이틀(평균 속도 / LOS 등급)버튼 클릭 이벤트
       $('.stats-tit-option-bind .ico-up-boxgray').on('click', function () {
         var $optionList = $(this).parent().find('.option-list');
+        $('.stats-tit-option-bind .ico-up-boxgray').removeClass('active'); // 231224 추가
         if ($optionList.css('display') === 'none') {
+          $(this).addClass('active'); // 231224 추가
           $('.option-list').fadeOut(150);
           $optionList.fadeIn(150);
         } else {
+          $(this).removeClass('active'); // 231224 추가
           $optionList.fadeOut(150);
         }
       });
       $('.option-list button').each(function (_, el) {
         $(el).on('click', function () {
+          $('.stats-tit-option-bind .ico-up-boxgray').removeClass('active'); // 231224 추가
           $(el).parent().find('button').removeClass('active');
           $(el).addClass('active');
           $(el).parent().hide();

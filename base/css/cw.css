@@ -105,7 +105,7 @@
   padding: 0 1rem;
   line-height: 3.3rem;
   border-radius: 0.5rem;
-  background: #f0f7fa;
+  background: #f0f8fa;
   font-size: 1.8rem;
   color: #003c68;
   font-weight: 600;
@@ -482,6 +482,7 @@
   margin-bottom: 0;
   font-size: 1.6rem;
   color: #1e5f8d;
+  font-weight: 500;
 }
 .stats-container.primitive .data-tbl-very {
   height: 68.7rem;
@@ -515,10 +516,6 @@
   - 횡단보도 원시 이력
   - 교차로 유출입 교통량
 */
-.main-stats-container,
-.stats-container {
-  margin-top: -1.95rem;
-}
 .main-stats-container .filter-grouop > .inner,
 .stats-container .filter-grouop > .inner {
   -webkit-box-flex: 0;
@@ -648,40 +645,44 @@
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
+.crosswalk-view-container .stats-tit-option .ico-up-boxgray.active {
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+}
 .crosswalk-view-container .stats-tit-option .option-list {
   display: none;
   position: absolute;
   z-index: 5;
   top: 2.6rem;
   right: 0.2rem;
-  min-width: 10rem;
-  padding: 0.3rem;
+  overflow: hidden;
+  min-width: 10.8rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 0.5rem;
   background: #fff;
-  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
 }
 .crosswalk-view-container .stats-tit-option .option-list button {
   display: block;
-  line-height: 2rem;
-  padding: 0 0.4rem;
+  line-height: 2.7rem;
+  padding: 0 1rem;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
   color: #999999;
-  border-radius: 0.3rem;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
-}
-.crosswalk-view-container .stats-tit-option .option-list button:not(:first-child) {
-  margin-top: 0.3rem;
+  letter-spacing: -0.07rem;
 }
 .crosswalk-view-container .stats-tit-option .option-list button:hover {
-  background: #e8e8e8;
+  color: #fff;
+  font-weight: 500;
+  background: #999999;
 }
 .crosswalk-view-container .stats-tit-option .option-list button.active {
   color: #fff;
+  font-weight: 500;
   background: #999999;
 }
 .crosswalk-view-container .stats-tit-option .time-analysis {
@@ -844,7 +845,7 @@
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  margin-bottom: 1.9rem;
+  margin-bottom: 1.4rem;
 }
 .crosswalk-view-container .cw-report .stats-content {
   display: -webkit-box;
@@ -873,6 +874,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1 0 49%;
           flex: 1 0 49%;
+  height: 5.3rem;
 }
 .crosswalk-view-container .cw-report .stats-content.size5 {
   -ms-flex-wrap: wrap;
@@ -883,6 +885,7 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 0 32.33%;
           flex: 0 0 32.33%;
+  height: 6.3rem;
 }
 .crosswalk-view-container .cw-report .stats-content li {
   -webkit-box-flex: 1;
@@ -924,7 +927,7 @@
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  gap: 0 0.1rem;
+  gap: 0 0.3rem;
   color: #727272;
   font-size: 1.2rem;
   font-weight: 500;
@@ -1031,20 +1034,23 @@
   gap: 0 0.4rem;
   margin-top: auto;
   padding: 2rem 3rem;
+  border-top: 1px solid #e8e8e8;
 }
 .crosswalk-view-container .video-container .ui.buttons.basic .btn-third {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 3.6rem;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
+  height: 4.4rem;
+  line-height: 1.5rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  font-size: 1.4rem;
   color: #999999;
 }
 .crosswalk-view-container .video-container .ui.buttons.basic .btn-third:first-child {
   padding-top: 0;
   padding-bottom: 0;
-  line-height: 3.6rem;
+  line-height: 4.4rem;
 }
 .crosswalk-view-container .cw-camera-info {
   padding: 0 3rem 2.8rem;
@@ -1086,9 +1092,6 @@
 .crosswalk-view-container .object-recognition .tbl-custom-radio-container th,
 .crosswalk-view-container .object-recognition .tbl-custom-radio-container td {
   padding-bottom: 0.4rem;
-}
-.crosswalk-view-container .object-recognition {
-  border-bottom: 1px solid #e8e8e8;
 }
 .crosswalk-view-container .object-recognition .tbl-custom-radio-container th {
   color: #1e5f8d;
@@ -1158,7 +1161,6 @@
   padding-bottom: 0;
   line-height: 3.1rem;
   font-size: 1.4rem;
-  color: #727272;
 }
 .crosswalk-view-container .facility-list {
   padding: 0 3rem 2.8rem;
@@ -1356,7 +1358,6 @@
 }
 .crosswalk-view-container .monitering-container {
   margin-top: 2.8rem !important;
-  padding: 0 3rem 0 !important;
 }
 .crosswalk-view-container .monitering-container.ui.tab.segment.active {
   overflow-y: auto;
@@ -1438,14 +1439,13 @@
   padding-bottom: 0;
   line-height: 3.1rem;
   font-size: 1.4rem;
-  color: #727272;
 }
 .crosswalk-view-container .monitering-container .signal-info {
-  padding-bottom: 2.8rem;
+  padding: 0 3rem 2.8rem;
 }
 .crosswalk-view-container .monitering-container .facility-info,
 .crosswalk-view-container .monitering-container .cw-change-info {
-  padding: 2.8rem 0;
+  padding: 2.8rem 3rem;
 }
 
 /* 교차로 상세 > 영상 탭의 분할 화면 */
@@ -1693,6 +1693,7 @@
   color: #fff;
   background: #727272;
   border-color: #727272;
+  font-weight: 600;
 }
 .roi-view-container .roi-set-area-button-group button:first-child,
 .roi-view-container .roi-set-area-button-group a:first-child {
@@ -1718,22 +1719,30 @@
 }
 .roi-view-container .roi-set-btn1 {
   display: block;
+  width: 100%;
   margin-top: 1rem;
-  line-height: 2.6rem;
+  line-height: 3rem;
+  padding: 0;
   border-radius: 0.5rem;
   border: 1px solid #d3e3ee;
   background: #ebf8ff;
   font-size: 1.6rem;
   color: #1e5f8d;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .roi-view-container .roi-set-btn2 {
   display: block;
+  width: 100%;
   margin-top: 0.4rem;
-  line-height: 3.8rem;
+  line-height: 3.2rem;
+  padding: 0;
   border-radius: 0.5rem;
   background: #1e5f8d;
   font-size: 1.6rem;
   color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .roi-view-container .roi-set-btn2 em {
   font-weight: 600;
@@ -2038,6 +2047,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  font-size: 1.4rem;
 }
 .roi-view-header {
   display: -webkit-box;
@@ -2243,14 +2253,11 @@
   background-position: 0 0;
   background-size: contain;
 }
-.roi-view-container.latlong .roi-set-list-section .add-row button:hover {
-  background-image: url("/base/images/icon_plus_gray2.png");
-}
-.roi-view-container.latlong .roi-set-list-section .add-row button:hover ~ .add-row-tip {
-  display: block;
-}
-.roi-view-container.latlong .roi-set-list-section .add-row button:active {
+.roi-view-container.latlong .roi-set-list-section .add-row button.active {
   background-image: url("/base/images/icon_plus_blue.png");
+}
+.roi-view-container.latlong .roi-set-list-section .add-row button.active ~ .add-row-tip {
+  display: block;
 }
 .roi-view-container.latlong .roi-set-list-section .add-row-tip {
   display: none;

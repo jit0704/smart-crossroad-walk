@@ -252,6 +252,11 @@ var cmmnUi = {
       $('.sudden-disorder-popup').removeClass('is-gnb-open');
       cmmnUi.profilePopInit();
     });
+    $(document).on('mouseenter', '.crosswalk-view-container .tab.segment', function () {
+      $('.gnb').removeClass('is-open');
+      $('.sudden-disorder-popup').removeClass('is-gnb-open');
+      cmmnUi.profilePopInit();
+    });
     $(document).on('mouseenter', '.roi-view-container .tab.segment', function () {
       $('.gnb').removeClass('is-open');
       cmmnUi.profilePopInit();
