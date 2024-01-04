@@ -491,6 +491,7 @@
   width: calc(100% + 0.4rem);
   height: 44rem;
   margin-top: 2.1rem;
+  padding-bottom: 1rem;
 }
 .stats-container .divide-4::-webkit-scrollbar {
   width: 0.4rem;
@@ -1547,8 +1548,12 @@
 }
 .outbreak-record .button-function-group .left {
   margin-bottom: 0;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #1e5f8d;
+}
+.outbreak-record .button-function-group .right .ui.button.basic.secondary {
+  padding: 0 1.3rem;
+  font-weight: 500;
 }
 .outbreak-record .button-function-group .right .ui.button.basic.primary {
   width: 12.7rem;
@@ -2546,7 +2551,7 @@
   gap: 0 0.2rem;
 }
 .roi-view-container .roi-set-list-header .right .btn-md:first-child {
-  width: 5.2rem;
+  width: 6.2rem;
 }
 .roi-view-container .roi-set-list-header .right .btn-md:last-child {
   width: 4.1rem;

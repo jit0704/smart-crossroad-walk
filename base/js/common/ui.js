@@ -235,6 +235,7 @@ var cmmnUi = {
       }
       $('.sudden-disorder-popup').addClass('is-gnb-open');
       $('.filter-grouop .selectbox-wrap select').blur(); // 231028 목록 화면에서 셀렉트 박스가 펼쳐진 상태일때 gnb를 open하면 select option값이 gnb를 뚫고 올라오는 현상 수정
+      $('body').addClass('is-notify-position-adjust'); // 돌발 알림 위치 조정
     });
     $(document).on('mouseenter', '.ly-container', function () {
       $('.gnb').removeClass('is-open');
@@ -246,6 +247,7 @@ var cmmnUi = {
         $('.search-view-container').removeClass('is-gnb-open');
       }
       $('.sudden-disorder-popup').removeClass('is-gnb-open');
+      $('body').removeClass('is-notify-position-adjust'); // 돌발 알림 위치 조정
     });
     $(document).on('mouseenter', '.crossroad-view-container .tab.segment', function () {
       $('.gnb').removeClass('is-open');

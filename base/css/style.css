@@ -1182,6 +1182,11 @@ body ::-webkit-scrollbar-track {
   border: 0;
   color: #fff;
 }
+.btn-md[disabled] {
+  background: #999999;
+  border-color: #999999;
+  color: #fff;
+}
 .btn-gray-bg, .btn-data-search {
   min-width: 6.2rem;
   line-height: 2.8rem;
@@ -5764,6 +5769,10 @@ body ::-webkit-scrollbar-track {
   font-size: 1.2em;
   font-weight: bold;
   text-shadow: 1px 1px 0 #000;
+}
+
+body.is-notify-position-adjust #notify.bottom-left {
+  left: 18rem;
 }
 
 /*---------------------------------------------------------------
