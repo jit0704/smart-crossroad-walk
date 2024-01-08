@@ -2344,8 +2344,8 @@ body ::-webkit-scrollbar-track {
   background-image: url(/base/images/map-right-iconbar/iconbar3_hover.png);
 }
 .map-iconbar-container .map-icon-list .ic4 span::before {
-  width: 0.85rem;
-  height: 1.6rem;
+  width: 1.2rem;
+  height: 2rem;
   background-image: url("/base/images/map-right-iconbar/iconbar4.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -3104,28 +3104,28 @@ body ::-webkit-scrollbar-track {
   text-align: center;
 }
 .los-display.lv-a {
-  background: rgba(9, 147, 206, 0.3);
+  background: rgba(9, 147, 206, 0.2);
 }
 .los-display.lv-b {
-  background: rgba(79, 181, 0, 0.3);
+  background: rgba(79, 181, 0, 0.2);
 }
 .los-display.lv-c {
-  background: rgba(250, 167, 26, 0.3);
+  background: rgba(250, 167, 26, 0.2);
 }
 .los-display.lv-d {
-  background: rgba(229, 112, 3, 0.3);
+  background: rgba(229, 112, 3, 0.2);
 }
 .los-display.lv-e {
-  background: rgba(212, 0, 0, 0.3);
+  background: rgba(212, 0, 0, 0.2);
 }
 .los-display.lv-f {
-  background: rgba(137, 33, 33, 0.3);
+  background: rgba(137, 33, 33, 0.2);
 }
 .los-display.lv-ff {
-  background: rgba(158, 0, 123, 0.3);
+  background: rgba(158, 0, 123, 0.2);
 }
 .los-display.lv-fff {
-  background: rgba(55, 0, 124, 0.3);
+  background: rgba(55, 0, 124, 0.2);
 }
 .los-display .ico-cr {
   position: relative;
@@ -6846,17 +6846,17 @@ body.is-notify-position-adjust #notify.bottom-left {
   content: "";
   position: absolute;
   top: 0;
-  left: 2.7rem;
+  left: 2.2rem;
 }
 .gnb .aside .btn-bell.outbreak-active::after {
   content: "";
   display: block;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2.2rem;
+  height: 2.2rem;
   background-image: url("/base/images/icon_triangle_exclamation_red2.png");
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-size: 1.8rem;
+  background-size: contain;
 }
 .gnb .aside .btn-bell.hindrance-active::after {
   content: "";

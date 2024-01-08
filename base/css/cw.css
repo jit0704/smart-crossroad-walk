@@ -1585,7 +1585,7 @@
   color: #6d6d6d;
 }
 .roi-view-container .perceive-section {
-  padding: 2.9rem 3rem 2.8rem;
+  padding: 2.8rem 3rem 2.8rem;
   border-bottom: 1px solid #e8e8e8;
 }
 .roi-view-container .perceive-header {
@@ -1748,7 +1748,7 @@
   font-weight: 600;
 }
 .roi-view-container .roi-set-list-section {
-  padding: 3.2rem 3rem 0;
+  padding: 2.8rem 3rem 0;
 }
 .roi-view-container .roi-set-list-section .data-tbl-gray table {
   width: 100%;
@@ -1792,7 +1792,7 @@
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.5rem;
 }
 .roi-view-container .roi-set-list-header .right {
   display: -webkit-box;
@@ -2065,7 +2065,7 @@
           align-items: flex-start;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding: 2.6rem 2.4rem 1.8rem 2.4rem;
+  padding: 4rem 2.4rem 1.8rem 2.4rem;
 }
 .roi-view-header h2 {
   display: -webkit-box;
@@ -2512,6 +2512,12 @@
 /*---------------------------------------------------------------
   [미디어 쿼리]
 -----------------------------------------------------------------*/
+@media screen and (max-height: 925px) {
+  /* 영상인식 ROI설정 > 객체ROI/돌발ROI/교차로ROI */
+  .roi-view-header {
+    padding-top: 1.8rem;
+  }
+}
 @media screen and (max-height: 955px) {
   /* 교차로 상세 > 돌발 탭 컨텐츠 */
   .crosswalk-view-container .cr-camera-view,
