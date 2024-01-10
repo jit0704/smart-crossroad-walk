@@ -4431,19 +4431,19 @@ body ::-webkit-scrollbar-track {
   padding: 0.9rem 1.2rem !important;
 }
 .modal-bodybot-bind .data-tbl-very.md.type2.is-form .ui.very.basic.table tbody td {
-  padding: 0.9rem 0 !important;
+  padding: 0.9rem 0.5rem !important;
 }
 .modal-bodybot-bind .data-tbl-very.md.type2.is-form .ui.very.basic.table tbody td .selectbox-wrap.xs select {
-  width: 5.25rem;
-  min-width: none;
-  padding: 0.55rem 0.7rem 0.55rem 1.7rem;
+  width: 4.75rem;
+  min-width: auto;
+  padding: 0.55rem 1.35rem 0.55rem 1.35rem;
   line-height: 100%;
   color: #727272;
   border-color: #cbcbcb;
   background-image: url(/base/images/arr_down_gray.png);
 }
 .modal-bodybot-bind .data-tbl-very.md.type2.is-form .ui.very.basic.table tbody td .ui.input.rounded.xs {
-  width: 5.25rem;
+  width: 4.75rem;
 }
 .modal-bodybot-bind .data-tbl-very.md.type2.is-form .ui.very.basic.table tbody td .ui.input.rounded.xs input {
   line-height: 2.3rem;
@@ -5721,11 +5721,13 @@ body ::-webkit-scrollbar-track {
 }
 #notify > .notify-item {
   display: none;
+  width: 31.9rem;
   position: relative;
   margin-top: -0.1rem;
-  padding: 1.4rem 1.7rem;
-  border: 1px solid #c50000;
-  background: #f8f8f8;
+  padding: 1rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#cd4f4f), to(#ae2f2f));
+  background: linear-gradient(180deg, #cd4f4f 0%, #ae2f2f 100%);
+  border-radius: 0.5rem;
   cursor: pointer;
 }
 #notify > .notify-item:last-child {
@@ -5736,8 +5738,9 @@ body ::-webkit-scrollbar-track {
 }
 #notify .notify-bug {
   display: inline-block;
-  width: 2.2rem;
-  height: 2rem;
+  vertical-align: middle;
+  width: 3.2rem;
+  height: 3.2rem;
   background-image: url("/base/images/icon_triangle_exclamation2.png");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -5753,12 +5756,17 @@ body ::-webkit-scrollbar-track {
 }
 #notify p {
   display: inline-block;
+  width: calc(100% - 4.3rem);
   margin-left: 1rem;
   line-height: 2rem;
-  vertical-align: top;
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #c50000;
+  vertical-align: middle;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
 }
 #notify p em {
   font-weight: 600;
@@ -6867,6 +6875,9 @@ body.is-notify-position-adjust #notify.bottom-left {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+}
+.gnb .aside .btn-bell.outbreak-hindrance::before {
+  background-image: url(/base/images/icon_noti_yellow.png);
 }
 .gnb .aside .btn-bell.outbreak-hindrance::after {
   content: "";
