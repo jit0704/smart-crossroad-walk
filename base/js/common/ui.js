@@ -107,13 +107,13 @@ var cmmnUi = {
         // 돌발/장애탭 리스트 높이값 비교
         if ($elClosest.children().eq(0).outerHeight(true) !== $elClosest.children().eq(1).outerHeight(true)) {
           // 돌발/장애탭 리스트 스크롤 유/무 조건에 맞추기위해 분기 처리
-          if (maxHeight < 251 || maxHeight > 148) {
+          if (maxHeight < 256 || maxHeight > 152) {
             // 비동기 처리
             setTimeout(function () {
               $(el).css({
                 'min-height': 'auto',
                 'max-height': 'none',
-                height: maxHeight,
+                height: maxHeight === 251 ? 256 : maxHeight,
               });
             }, 150);
           }
