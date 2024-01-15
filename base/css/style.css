@@ -6898,6 +6898,9 @@ body.is-notify-position-adjust #notify.bottom-left {
   background-position: 0 0;
   background-size: contain;
 }
+.gnb .aside .btn-bell.outbreak-hindrance {
+  color: #ffe298;
+}
 .gnb .aside .btn-bell.outbreak-hindrance::before {
   background-image: url(/base/images/icon_noti_yellow.png);
 }
@@ -8676,7 +8679,7 @@ body.is-notify-position-adjust #notify.bottom-left {
   background: #ffe9f2;
 }
 .dashboard-reform-body .dashboard-noti-list li .sign-sudden3 {
-  color: #B13C3C;
+  color: #b13c3c;
   background: #ffdada;
 }
 .dashboard-reform-body .dashboard-noti-list li .sign-sudden4 {
