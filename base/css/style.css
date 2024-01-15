@@ -5219,21 +5219,29 @@ body ::-webkit-scrollbar-track {
   font-weight: 600;
   border-radius: 2rem;
 }
-.sudden-disorder-popup .tab-sudden-list li .noti-sudden1 {
-  color: #324b7e;
-  background: #d8deea;
-}
 .sudden-disorder-popup .tab-sudden-list li .noti-sudden2 {
+  color: #b24974;
+  background: #ffe9f2;
+}
+.sudden-disorder-popup .tab-sudden-list li .noti-sudden3 {
+  color: #b13c3c;
+  background: #ffdada;
+}
+.sudden-disorder-popup .tab-sudden-list li .noti-sudden4 {
+  color: #727272;
+  background: #cbcbcb;
+}
+.sudden-disorder-popup .tab-sudden-list li .noti-sudden6 {
   color: #64859c;
   background: #d0e0ec;
 }
-.sudden-disorder-popup .tab-sudden-list li .noti-sudden3 {
+.sudden-disorder-popup .tab-sudden-list li .noti-sudden7 {
   color: #8db5d1;
   background: #ecf7ff;
 }
-.sudden-disorder-popup .tab-sudden-list li .noti-sudden4 {
-  color: #b24974;
-  background: #ffe9f2;
+.sudden-disorder-popup .tab-sudden-list li .noti-sudden9 {
+  color: #324b7e;
+  background: #d8deea;
 }
 .sudden-disorder-popup .tab-sudden-list li.read {
   background: #f8f8f8;
@@ -8218,9 +8226,6 @@ body.is-notify-position-adjust #notify.bottom-left {
   vertical-align: middle;
   border-radius: 100%;
 }
-.dashboard-main .dashboard-current-right .event-current-legend li .tit.sudden1::before {
-  background: #9a9a9a;
-}
 .dashboard-main .dashboard-current-right .event-current-legend li .tit.sudden2::before {
   background: #ba2b62;
 }
@@ -8228,13 +8233,16 @@ body.is-notify-position-adjust #notify.bottom-left {
   background: #efafc9;
 }
 .dashboard-main .dashboard-current-right .event-current-legend li .tit.sudden4::before {
-  background: #324b7e;
-}
-.dashboard-main .dashboard-current-right .event-current-legend li .tit.sudden5::before {
-  background: #7e9aae;
+  background: #9a9a9a;
 }
 .dashboard-main .dashboard-current-right .event-current-legend li .tit.sudden6::before {
+  background: #7e9aae;
+}
+.dashboard-main .dashboard-current-right .event-current-legend li .tit.sudden7::before {
   background: #cfe3f1;
+}
+.dashboard-main .dashboard-current-right .event-current-legend li .tit.sudden9::before {
+  background: #324b7e;
 }
 .dashboard-main .dashboard-current-right .event-current-legend li .right {
   display: -webkit-box;
@@ -8579,9 +8587,6 @@ body.is-notify-position-adjust #notify.bottom-left {
   vertical-align: middle;
   border-radius: 100%;
 }
-.dashboard-reform-body .accidents-current-legend li .tit.sudden1::before {
-  background: #9a9a9a;
-}
 .dashboard-reform-body .accidents-current-legend li .tit.sudden2::before {
   background: #ba2b62;
 }
@@ -8589,13 +8594,16 @@ body.is-notify-position-adjust #notify.bottom-left {
   background: #efafc9;
 }
 .dashboard-reform-body .accidents-current-legend li .tit.sudden4::before {
-  background: #324b7e;
-}
-.dashboard-reform-body .accidents-current-legend li .tit.sudden5::before {
-  background: #7e9aae;
+  background: #9a9a9a;
 }
 .dashboard-reform-body .accidents-current-legend li .tit.sudden6::before {
+  background: #7e9aae;
+}
+.dashboard-reform-body .accidents-current-legend li .tit.sudden7::before {
   background: #cfe3f1;
+}
+.dashboard-reform-body .accidents-current-legend li .tit.sudden9::before {
+  background: #324b7e;
 }
 .dashboard-reform-body .accidents-current-legend li .right {
   display: -webkit-box;
@@ -8663,21 +8671,29 @@ body.is-notify-position-adjust #notify.bottom-left {
   text-align: center;
   border-radius: 2rem;
 }
-.dashboard-reform-body .dashboard-noti-list li .sign-sudden1 {
-  color: #324b7e;
-  background: #d8deea;
-}
 .dashboard-reform-body .dashboard-noti-list li .sign-sudden2 {
+  color: #b24974;
+  background: #ffe9f2;
+}
+.dashboard-reform-body .dashboard-noti-list li .sign-sudden3 {
+  color: #B13C3C;
+  background: #ffdada;
+}
+.dashboard-reform-body .dashboard-noti-list li .sign-sudden4 {
+  color: #727272;
+  background: #cbcbcb;
+}
+.dashboard-reform-body .dashboard-noti-list li .sign-sudden6 {
   color: #64859c;
   background: #d0e0ec;
 }
-.dashboard-reform-body .dashboard-noti-list li .sign-sudden3 {
+.dashboard-reform-body .dashboard-noti-list li .sign-sudden7 {
   color: #8db5d1;
   background: #ecf7ff;
 }
-.dashboard-reform-body .dashboard-noti-list li .sign-sudden4 {
-  color: #b13c3c;
-  background: #ffdada;
+.dashboard-reform-body .dashboard-noti-list li .sign-sudden9 {
+  color: #324b7e;
+  background: #d8deea;
 }
 .dashboard-reform-body .dashboard-noti-list li .txt {
   -webkit-box-flex: 1;

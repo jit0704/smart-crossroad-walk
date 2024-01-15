@@ -2124,9 +2124,6 @@
   height: 1.2rem;
   border-radius: 999px;
 }
-.crossroad-view-container .accidents-stats-content .txt-view-data .sudden1::before {
-  background: #9a9a9a;
-}
 .crossroad-view-container .accidents-stats-content .txt-view-data .sudden2::before {
   background: #ba2b62;
 }
@@ -2134,13 +2131,16 @@
   background: #efafc9;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data .sudden4::before {
-  background: #324b7e;
-}
-.crossroad-view-container .accidents-stats-content .txt-view-data .sudden5::before {
-  background: #7e9aae;
+  background: #9a9a9a;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data .sudden6::before {
+  background: #7e9aae;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data .sudden7::before {
   background: #cfe3f1;
+}
+.crossroad-view-container .accidents-stats-content .txt-view-data .sudden9::before {
+  background: #324b7e;
 }
 .crossroad-view-container .accidents-stats-content .txt-view-data tr:first-child th,
 .crossroad-view-container .accidents-stats-content .txt-view-data tr:first-child td {
