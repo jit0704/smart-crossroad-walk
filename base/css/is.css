@@ -716,13 +716,11 @@
   height: 64.9rem;
   margin: 4.6rem auto 0;
 }
-.crossroads-flow-board .flow-stats-wrap.lane-2 .flow-stats-top .flow-stats-detail,
-.crossroads-flow-board .flow-stats-wrap.lane-2 .flow-stats-bot .flow-stats-detail {
+.crossroads-flow-board .flow-stats-wrap.none-east .flow-stats-mid .flow-stats-detail:first-child {
   position: relative;
   border: 0;
 }
-.crossroads-flow-board .flow-stats-wrap.lane-2 .flow-stats-top .flow-stats-detail::after,
-.crossroads-flow-board .flow-stats-wrap.lane-2 .flow-stats-bot .flow-stats-detail::after {
+.crossroads-flow-board .flow-stats-wrap.none-east .flow-stats-mid .flow-stats-detail:first-child::after {
   content: "";
   position: absolute;
   left: 0;
@@ -733,11 +731,41 @@
   background: url(/base/images/icon_forbid.png) no-repeat 50% 50% #f8f8f8;
   background-size: 4.9rem;
 }
-.crossroads-flow-board .flow-stats-wrap.lane-3 .flow-stats-bot .flow-stats-detail {
+.crossroads-flow-board .flow-stats-wrap.none-west .flow-stats-mid .flow-stats-detail:last-child {
   position: relative;
   border: 0;
 }
-.crossroads-flow-board .flow-stats-wrap.lane-3 .flow-stats-bot .flow-stats-detail::after {
+.crossroads-flow-board .flow-stats-wrap.none-west .flow-stats-mid .flow-stats-detail:last-child::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: url(/base/images/icon_forbid.png) no-repeat 50% 50% #f8f8f8;
+  background-size: 4.9rem;
+}
+.crossroads-flow-board .flow-stats-wrap.none-south .flow-stats-bot .flow-stats-detail {
+  position: relative;
+  border: 0;
+}
+.crossroads-flow-board .flow-stats-wrap.none-south .flow-stats-bot .flow-stats-detail::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: url(/base/images/icon_forbid.png) no-repeat 50% 50% #f8f8f8;
+  background-size: 4.9rem;
+}
+.crossroads-flow-board .flow-stats-wrap.none-north .flow-stats-top .flow-stats-detail {
+  position: relative;
+  border: 0;
+}
+.crossroads-flow-board .flow-stats-wrap.none-north .flow-stats-top .flow-stats-detail::after {
   content: "";
   position: absolute;
   left: 0;

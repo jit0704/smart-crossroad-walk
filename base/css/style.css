@@ -2944,6 +2944,7 @@ body ::-webkit-scrollbar-track {
   padding: 1rem 1.5rem;
 }
 .los-legend-container.tab .traffic-report {
+  position: relative;
   display: none;
 }
 .los-legend-container.tab .traffic-report .txt {
@@ -2971,6 +2972,9 @@ body ::-webkit-scrollbar-track {
       align-content: center;
   margin-bottom: 2.05rem;
 }
+.los-legend-container.tab .traffic-report .state:hover {
+  cursor: pointer;
+}
 .los-legend-container.tab .traffic-report .state span {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -2994,6 +2998,76 @@ body ::-webkit-scrollbar-track {
   line-height: 1.6rem;
   font-size: 1.2rem;
   color: #999999;
+}
+.los-legend-container.tab .traffic-report-tooltip {
+  display: none;
+  position: absolute;
+  bottom: -4.2rem;
+  padding: 0.8rem;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  background: #fff;
+  -webkit-filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.2));
+}
+.los-legend-container.tab .traffic-report-tooltip.smooth {
+  left: 0;
+}
+.los-legend-container.tab .traffic-report-tooltip.smooth::before {
+  left: 3.1rem;
+}
+.los-legend-container.tab .traffic-report-tooltip.smooth::after {
+  left: 3.6rem;
+}
+.los-legend-container.tab .traffic-report-tooltip.slow-down {
+  left: 1.7rem;
+}
+.los-legend-container.tab .traffic-report-tooltip.slow-down::before {
+  left: 10.5rem;
+}
+.los-legend-container.tab .traffic-report-tooltip.slow-down::after {
+  left: 11rem;
+}
+.los-legend-container.tab .traffic-report-tooltip.congested {
+  right: 0;
+}
+.los-legend-container.tab .traffic-report-tooltip.congested::before {
+  right: 2.9rem;
+}
+.los-legend-container.tab .traffic-report-tooltip.congested::after {
+  right: 3.5rem;
+}
+.los-legend-container.tab .traffic-report-tooltip::before {
+  content: "";
+  position: absolute;
+  top: -1.4rem;
+  width: 2.8rem;
+  height: 1.9rem;
+  background-image: url("/base/images/arr_polygon.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.los-legend-container.tab .traffic-report-tooltip::after {
+  content: "";
+  position: absolute;
+  top: -0.1rem;
+  width: 1.7rem;
+  height: 0.5rem;
+  background: #fff;
+}
+.los-legend-container.tab .traffic-report-tooltip table th {
+  text-align: left;
+  color: #727272;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.los-legend-container.tab .traffic-report-tooltip table td {
+  color: #999999;
+  font-size: 1.2rem;
+}
+.los-legend-container.tab .traffic-report-tooltip table i {
+  font-size: 1rem;
 }
 .los-legend-container.tab .los-info {
   display: none;
@@ -6878,6 +6952,12 @@ body.is-notify-position-adjust #notify.bottom-left {
   top: 0;
   left: 2.2rem;
 }
+.gnb .aside .btn-bell.outbreak-active {
+  color: #ffe298;
+}
+.gnb .aside .btn-bell.outbreak-active::before {
+  background-image: url(/base/images/icon_noti_yellow.png);
+}
 .gnb .aside .btn-bell.outbreak-active::after {
   content: "";
   display: block;
@@ -6887,6 +6967,12 @@ body.is-notify-position-adjust #notify.bottom-left {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+}
+.gnb .aside .btn-bell.hindrance-active {
+  color: #ffe298;
+}
+.gnb .aside .btn-bell.hindrance-active::before {
+  background-image: url(/base/images/icon_noti_yellow.png);
 }
 .gnb .aside .btn-bell.hindrance-active::after {
   content: "";
@@ -9421,5 +9507,6 @@ body.is-notify-position-adjust #notify.bottom-left {
   .dashboard-reform.type-b .dashboard-reform-body .traffic-share-ranking-container [class*=ranking-container] .chart-wrap {
     margin-top: 0.85rem;
     margin-bottom: 0.85rem;
+    padding: 0;
   }
 }

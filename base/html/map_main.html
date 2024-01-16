@@ -127,6 +127,70 @@
                 </div>
                 <!-- //state -->
                 <p>* 실제 교통상황과 일부 다를 수 있습니다.</p>
+
+                <!-- 240116 교통정보 툴팁 추가 -->
+                <!-- ::: 원활 ::: -->
+                <div class="traffic-report-tooltip smooth">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>고속도로 :</th>
+                        <td>80 km<i>▲</i></td>
+                      </tr>
+                      <tr>
+                        <th>국&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도 :</th>
+                        <td>60 km<i>▲</i>(연결로 : 40km/h<i>▲</i>)</td>
+                      </tr>
+                      <tr>
+                        <th>시내도로 :</th>
+                        <td>40 km<i>▲</i>(연결로 : 25km/h<i>▲</i>)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //traffic-report-tooltip -->
+
+                <!-- ::: 서행 ::: -->
+                <div class="traffic-report-tooltip slow-down">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>고속도로 :</th>
+                        <td>50~80 km</td>
+                      </tr>
+                      <tr>
+                        <th>국&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도 :</th>
+                        <td>50~60 km(연결로 : 20~40km/h)</td>
+                      </tr>
+                      <tr>
+                        <th>시내도로 :</th>
+                        <td>20~40 km(연결로 : 15~25km/h)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //traffic-report-tooltip -->
+
+                <!-- ::: 정체 ::: -->
+                <div class="traffic-report-tooltip congested">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>고속도로 :</th>
+                        <td>20 km<i>▼</i></td>
+                      </tr>
+                      <tr>
+                        <th>국&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;도 :</th>
+                        <td>20 km<i>▼</i>(연결로 : 10km/h<i>▼</i>)</td>
+                      </tr>
+                      <tr>
+                        <th>시내도로 :</th>
+                        <td>10 km<i>▼</i>(연결로 : 10km/h<i>▼</i>)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //traffic-report-tooltip -->
               </div>
               <!-- //traffic-report -->
               <div id="tab2" class="los-info">
@@ -348,6 +412,27 @@
         $('.los-legend-container.tab .los-legend-content > div').hide();
         $(this).addClass('active');
         $($hash).show();
+      });
+      // 240116: 범례 > 교통정보 탭 툴팁 노출
+      $('.los-legend-content .traffic-report .state span').on({
+        mouseenter: function () {
+          $('.traffic-report-tooltip').hide();
+          var $trafficReport = $(this).closest('.traffic-report');
+          switch ($(this).index()) {
+            case 0:
+              $trafficReport.find('.smooth').show();
+              break;
+            case 1:
+              $trafficReport.find('.slow-down').show();
+              break;
+            case 2:
+              $trafficReport.find('.congested').show();
+              break;
+          }
+        },
+        mouseleave: function () {
+          $('.traffic-report-tooltip').hide();
+        },
       });
 
       // 230815 팝업 호출 함수
