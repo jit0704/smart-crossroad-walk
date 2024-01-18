@@ -22,7 +22,9 @@ var ia = {
 			$('.ia-graph .graph').append(graphHtml);
 
 			//IA페이지 로드 후 설정
-			_this.cal('#gIA'+i);
+			setTimeout(function(){
+				_this.cal('#gIA'+i);
+			}, 100);
 			_this.url('#gIA'+i);
 
 			if (lens - 1 == i){
