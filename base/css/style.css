@@ -114,55 +114,55 @@ body ::-webkit-scrollbar-track {
 @font-face {
   font-family: "Pretendard";
   font-weight: 900;
-  font-display: swap;
+  font-display: fallback;
   src: local("Pretendard Black"), url("/base/font/Pretendard-Black.woff2") format("woff2");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 800;
-  font-display: swap;
+  font-display: fallback;
   src: local("Pretendard ExtraBold"), url("/base/font/Pretendard-ExtraBold.woff2");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 700;
-  font-display: swap;
+  font-display: fallback;
   src: local("Pretendard Bold"), url("/base/font/Pretendard-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 600;
-  font-display: swap;
+  font-display: fallback;
   src: local("Pretendard SemiBold"), url("/base/font/Pretendard-SemiBold.woff2") format("woff2");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 500;
-  font-display: swap;
+  font-display: fallback;
   src: local("Pretendard Medium"), url("/base/font/Pretendard-Medium.woff2") format("woff2");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
-  font-display: swap;
+  font-display: fallback;
   src: local("Pretendard Regular"), url("/base/font/Pretendard-Regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 300;
-  font-display: swap;
+  font-display: fallback;
   src: local("Pretendard Light"), url("/base/font/Pretendard-Light.woff2") format("woff2");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 200;
-  font-display: swap;
+  font-display: fallback;
   src: local("Pretendard ExtraLight"), url("/base/font/Pretendard-ExtraLight.woff2") format("woff2");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 100;
-  font-display: swap;
+  font-display: fallback;
   src: local("Pretendard Thin"), url("/base/font/Pretendard-Thin.woff2") format("woff2");
 }
 /* 웹폰트 GmarketSans */
@@ -170,21 +170,21 @@ body ::-webkit-scrollbar-track {
   font-family: "GmarketSans";
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
+  font-display: fallback;
   src: url("/base/font/GmarketSansLight.woff2") format("woff2");
 }
 @font-face {
   font-family: "GmarketSans";
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: fallback;
   src: url("/base/font/GmarketSansMedium.woff2") format("woff2");
 }
 @font-face {
   font-family: "GmarketSans";
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
+  font-display: fallback;
   src: url("/base/font/GmarketSansBold.woff2") format("woff2");
 }
 /*---------------------------------------------------------------
@@ -3543,7 +3543,7 @@ body ::-webkit-scrollbar-track {
 .button-function-group .ui.primary.basic.button.rounded {
   min-width: 11.3rem;
   padding: 0;
-  line-height: 2.9rem;
+  line-height: 3.1rem;
   font-size: 1.6rem;
   border-radius: 0.5rem;
 }
@@ -5173,7 +5173,7 @@ body ::-webkit-scrollbar-track {
   position: fixed;
   left: 5.45rem;
   bottom: 2rem;
-  z-index: 15;
+  z-index: 8;
   width: 37.7rem;
   padding: 1rem 1rem 0;
   border-radius: 0.5rem;
@@ -6952,12 +6952,6 @@ body.is-notify-position-adjust #notify.bottom-left {
   top: 0;
   left: 2.2rem;
 }
-.gnb .aside .btn-bell.outbreak-active {
-  color: #ffe298;
-}
-.gnb .aside .btn-bell.outbreak-active::before {
-  background-image: url(/base/images/icon_noti_yellow.png);
-}
 .gnb .aside .btn-bell.outbreak-active::after {
   content: "";
   display: block;
@@ -6968,10 +6962,10 @@ body.is-notify-position-adjust #notify.bottom-left {
   background-position: 0 0;
   background-size: contain;
 }
-.gnb .aside .btn-bell.hindrance-active {
+.gnb .aside .btn-bell.outbreak-active.is-btnbell-active {
   color: #ffe298;
 }
-.gnb .aside .btn-bell.hindrance-active::before {
+.gnb .aside .btn-bell.outbreak-active.is-btnbell-active::before {
   background-image: url(/base/images/icon_noti_yellow.png);
 }
 .gnb .aside .btn-bell.hindrance-active::after {
@@ -6984,10 +6978,10 @@ body.is-notify-position-adjust #notify.bottom-left {
   background-position: 0 0;
   background-size: contain;
 }
-.gnb .aside .btn-bell.outbreak-hindrance {
+.gnb .aside .btn-bell.hindrance-active.is-btnbell-active {
   color: #ffe298;
 }
-.gnb .aside .btn-bell.outbreak-hindrance::before {
+.gnb .aside .btn-bell.hindrance-active.is-btnbell-active::before {
   background-image: url(/base/images/icon_noti_yellow.png);
 }
 .gnb .aside .btn-bell.outbreak-hindrance::after {
@@ -6999,6 +6993,12 @@ body.is-notify-position-adjust #notify.bottom-left {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+}
+.gnb .aside .btn-bell.outbreak-hindrance.is-btnbell-active {
+  color: #ffe298;
+}
+.gnb .aside .btn-bell.outbreak-hindrance.is-btnbell-active::before {
+  background-image: url(/base/images/icon_noti_yellow.png);
 }
 .gnb .aside .btn-bell::before {
   content: "";

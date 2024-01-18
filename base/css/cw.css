@@ -1261,7 +1261,7 @@
   margin-top: 1rem;
 }
 .crosswalk-view-container .facility-status .voice-guide .sub-tit {
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.55rem;
 }
 .crosswalk-view-container .facility-status .voice-guide .sub-tit::before {
   width: 1.8rem;
@@ -1282,13 +1282,13 @@
   font-weight: 500;
 }
 .crosswalk-view-container .facility-status .focus-light {
-  margin-top: 3rem;
+  margin-top: 2.5rem;
 }
 .crosswalk-view-container .facility-status .focus-light li + li {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .crosswalk-view-container .facility-status .focus-light .sub-tit-wrap .percent {
-  line-height: normal;
+  line-height: 3.3rem;
   color: #727272;
   font-size: 2.8rem;
   font-weight: 600;

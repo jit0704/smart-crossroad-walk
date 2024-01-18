@@ -126,7 +126,7 @@ var cmmnUi = {
     $('.gnb .aside .btn-m').on('click', function () {
       $(this).addClass('active');
       $('.pop-user-info').fadeIn(250);
-      $('.sudden-disorder-popup').removeClass('active');
+      // $('.sudden-disorder-popup').removeClass('active'); 돌발 팝업 위에 노출시키기 위해 삭제
     });
     $(document).on('mouseenter', '.ly-map, .ly-sub, .real-time-outbreak-container', function () {
       cmmnUi.profilePopInit();

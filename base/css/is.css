@@ -716,11 +716,11 @@
   height: 64.9rem;
   margin: 4.6rem auto 0;
 }
-.crossroads-flow-board .flow-stats-wrap.none-east .flow-stats-mid .flow-stats-detail:first-child {
+.crossroads-flow-board .flow-stats-wrap.none-east .flow-stats-mid .flow-stats-detail:last-child {
   position: relative;
   border: 0;
 }
-.crossroads-flow-board .flow-stats-wrap.none-east .flow-stats-mid .flow-stats-detail:first-child::after {
+.crossroads-flow-board .flow-stats-wrap.none-east .flow-stats-mid .flow-stats-detail:last-child::after {
   content: "";
   position: absolute;
   left: 0;
@@ -731,11 +731,11 @@
   background: url(/base/images/icon_forbid.png) no-repeat 50% 50% #f8f8f8;
   background-size: 4.9rem;
 }
-.crossroads-flow-board .flow-stats-wrap.none-west .flow-stats-mid .flow-stats-detail:last-child {
+.crossroads-flow-board .flow-stats-wrap.none-west .flow-stats-mid .flow-stats-detail:first-child {
   position: relative;
   border: 0;
 }
-.crossroads-flow-board .flow-stats-wrap.none-west .flow-stats-mid .flow-stats-detail:last-child::after {
+.crossroads-flow-board .flow-stats-wrap.none-west .flow-stats-mid .flow-stats-detail:first-child::after {
   content: "";
   position: absolute;
   left: 0;
