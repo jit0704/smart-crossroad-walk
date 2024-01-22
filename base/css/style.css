@@ -219,6 +219,9 @@ body ::-webkit-scrollbar-track {
   padding-left: 1.5rem !important;
 }
 
+.pdr-15 {
+  padding-right: 1.5rem !important;
+}
 .pdr-20 {
   padding-right: 2rem !important;
 }

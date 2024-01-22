@@ -36,413 +36,442 @@
               <button type="button" id="set9">이미지파일 생성 설정</button>
             </div>
             <!-- //image-reco-set-btn-group -->
+
+            <!-- 240120: 각 section태그의 자식요소로 <div class="bind"> 요소가 추가됨.  -->
             <div class="image-reco-set-view">
               <section class="set-content1" data-set-view="set1">
-                <em>디스플레이 모드 설정</em>
-                <div class="data-tbl">
-                  <table>
-                    <colgroup>
-                      <col style="width: 130px" />
-                      <col />
-                    </colgroup>
-                    <tbody>
-                      <tr>
-                        <th>카메라 채널 선택</th>
-                        <td>
-                          <div class="select-bind">
-                            <div class="selectbox-wrap rounded">
-                              <select>
-                                <option value="">전체</option>
-                                <option value="">아이템1</option>
-                                <option value="">아이템2</option>
-                                <option value="">아이템3</option>
-                              </select>
+                <div class="bind">
+                  <em>디스플레이 모드 설정</em>
+                  <div class="data-tbl">
+                    <table>
+                      <colgroup>
+                        <col style="width: 130px" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>카메라 채널 선택</th>
+                          <td>
+                            <div class="select-bind">
+                              <div class="selectbox-wrap rounded">
+                                <select>
+                                  <option value="">전체</option>
+                                  <option value="">아이템1</option>
+                                  <option value="">아이템2</option>
+                                  <option value="">아이템3</option>
+                                </select>
+                              </div>
                             </div>
-                          </div>
-                          <!-- //select-bind -->
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Operation Mode</th>
-                        <td>
-                          <div class="chk-bind">
-                            <div class="ui checkbox primary-chkbox md c-bluesky">
-                              <input id="set1-chk1" type="checkbox" />
-                              <label for="set1-chk1">인식 동작 모드</label>
+                            <!-- //select-bind -->
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Operation Mode</th>
+                          <td>
+                            <div class="chk-bind">
+                              <div class="ui checkbox primary-chkbox md c-bluesky">
+                                <input id="set1-chk1" type="checkbox" />
+                                <label for="set1-chk1">인식 동작 모드</label>
+                              </div>
+                              <div class="ui checkbox primary-chkbox md c-bluesky">
+                                <input id="set1-chk2" type="checkbox" />
+                                <label for="set1-chk2">설정 모드</label>
+                              </div>
                             </div>
-                            <div class="ui checkbox primary-chkbox md c-bluesky">
-                              <input id="set1-chk2" type="checkbox" />
-                              <label for="set1-chk2">설정 모드</label>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //data-tbl -->
                 </div>
-                <!-- //data-tbl -->
+                <!-- //bind -->
                 <div class="set-content-btn-group">
                   <button class="ui primary basic button rounded">저장</button>
                 </div>
               </section>
               <section class="set-content2" data-set-view="set2">
-                <em>인식 박스 모드 설정</em>
-                <div class="data-tbl">
-                  <table>
-                    <colgroup>
-                      <col style="width: 130px" />
-                      <col />
-                    </colgroup>
-                    <tbody>
-                      <tr>
-                        <th>카메라 채널 선택</th>
-                        <td>
-                          <div class="select-bind">
-                            <div class="selectbox-wrap rounded">
-                              <select>
-                                <option value="">전체</option>
-                                <option value="">아이템1</option>
-                                <option value="">아이템2</option>
-                                <option value="">아이템3</option>
-                              </select>
+                <div class="bind">
+                  <em>인식 박스 모드 설정</em>
+                  <div class="data-tbl">
+                    <table>
+                      <colgroup>
+                        <col style="width: 130px" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>카메라 채널 선택</th>
+                          <td>
+                            <div class="select-bind">
+                              <div class="selectbox-wrap rounded">
+                                <select>
+                                  <option value="">전체</option>
+                                  <option value="">아이템1</option>
+                                  <option value="">아이템2</option>
+                                  <option value="">아이템3</option>
+                                </select>
+                              </div>
+                              <button class="ui secondary basic button rounded">조회</button>
                             </div>
-                            <button class="ui secondary basic button rounded">조회</button>
-                          </div>
-                          <!-- //select-bind -->
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>ViewBox Mode</th>
-                        <td>
-                          <div class="chk-bind">
-                            <div class="ui checkbox primary-chkbox md c-bluesky">
-                              <input id="set2-chk1" type="checkbox" />
-                              <label for="set2-chk1">오리지널 모드</label>
+                            <!-- //select-bind -->
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>ViewBox Mode</th>
+                          <td>
+                            <div class="chk-bind">
+                              <div class="ui checkbox primary-chkbox md c-bluesky">
+                                <input id="set2-chk1" type="checkbox" />
+                                <label for="set2-chk1">오리지널 모드</label>
+                              </div>
+                              <div class="ui checkbox primary-chkbox md c-bluesky">
+                                <input id="set2-chk2" type="checkbox" />
+                                <label for="set2-chk2">Tracking 모드</label>
+                              </div>
                             </div>
-                            <div class="ui checkbox primary-chkbox md c-bluesky">
-                              <input id="set2-chk2" type="checkbox" />
-                              <label for="set2-chk2">Tracking 모드</label>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //data-tbl -->
                 </div>
-                <!-- //data-tbl -->
+                <!-- //bind -->
                 <div class="set-content-btn-group">
                   <button class="ui primary basic button rounded">저장</button>
                 </div>
               </section>
               <section class="set-content3" data-set-view="set3">
-                <em>객체 인식 임계치 설정</em>
-                <div class="data-tbl">
-                  <table>
-                    <colgroup>
-                      <col style="width: 130px" />
-                      <col />
-                    </colgroup>
-                    <tbody>
-                      <tr>
-                        <th>카메라 채널 선택</th>
-                        <td>
-                          <div class="select-bind">
-                            <div class="selectbox-wrap rounded">
-                              <select>
-                                <option value="">전체</option>
-                                <option value="">아이템1</option>
-                                <option value="">아이템2</option>
-                                <option value="">아이템3</option>
-                              </select>
+                <div class="bind">
+                  <em>객체 인식 임계치 설정</em>
+                  <!-- 240120: 테이블 수정 -->
+                  <div class="data-tbl">
+                    <table>
+                      <colgroup>
+                        <col style="width: 130px" />
+                        <col />
+                        <col style="width: 130px" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>카메라 채널 선택</th>
+                          <td colspan="3">
+                            <div class="select-bind">
+                              <div class="selectbox-wrap rounded">
+                                <select>
+                                  <option value="">전체</option>
+                                  <option value="">아이템1</option>
+                                  <option value="">아이템2</option>
+                                  <option value="">아이템3</option>
+                                </select>
+                              </div>
+                              <button class="ui secondary basic button rounded">조회</button>
                             </div>
-                            <button class="ui secondary basic button rounded">조회</button>
-                          </div>
-                          <!-- //select-bind -->
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Detection</th>
-                        <td>
-                          <div class="input-bind">
+                            <!-- //select-bind -->
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Detection</th>
+                          <td>
+                            <div class="ui input rounded pdr-15">
+                              <input type="text" placeholder="0~100" />
+                            </div>
+                          </td>
+                          <th>NMS</th>
+                          <td>
                             <div class="ui input rounded">
-                              <input type="text" />
+                              <input type="text" placeholder="0~100" />
                             </div>
-                            <span>(0~100)</span>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>NMS</th>
-                        <td>
-                          <div class="input-bind">
-                            <div class="ui input rounded">
-                              <input type="text" />
-                            </div>
-                            <span>(0~100)</span>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //data-tbl -->
                 </div>
-                <!-- //data-tbl -->
+                <!-- //bind -->
                 <div class="set-content-btn-group">
                   <button class="ui primary basic button rounded">저장</button>
                 </div>
               </section>
               <section class="set-content4" data-set-view="set4">
-                <em>검지결과 전송 서버 정보 설정</em>
-                <div class="data-tbl">
-                  <table>
-                    <colgroup>
-                      <col style="width: 130px" />
-                      <col />
-                    </colgroup>
-                    <tbody>
-                      <tr>
-                        <th>카메라 채널 선택</th>
-                        <td>
-                          <div class="select-bind">
-                            <div class="selectbox-wrap rounded">
-                              <select>
-                                <option value="">전체</option>
-                                <option value="">아이템1</option>
-                                <option value="">아이템2</option>
-                                <option value="">아이템3</option>
-                              </select>
+                <div class="bind">
+                  <em>검지결과 전송 서버 정보 설정</em>
+                  <div class="data-tbl">
+                    <table>
+                      <colgroup>
+                        <col style="width: 130px" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>카메라 채널 선택</th>
+                          <td>
+                            <div class="select-bind">
+                              <div class="selectbox-wrap rounded">
+                                <select>
+                                  <option value="">전체</option>
+                                  <option value="">아이템1</option>
+                                  <option value="">아이템2</option>
+                                  <option value="">아이템3</option>
+                                </select>
+                              </div>
+                              <button class="ui secondary basic button rounded">조회</button>
                             </div>
-                            <button class="ui secondary basic button rounded">조회</button>
-                          </div>
-                          <!-- //select-bind -->
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>객체 정보 전송 모드</th>
-                        <td>
-                          <div class="chk-bind">
-                            <div class="ui checkbox primary-chkbox md c-bluesky">
-                              <input id="set4-chk1" type="checkbox" />
-                              <label for="set4-chk1">항상</label>
+                            <!-- //select-bind -->
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>객체 정보 전송 모드</th>
+                          <td>
+                            <div class="chk-bind">
+                              <div class="ui checkbox primary-chkbox md c-bluesky">
+                                <input id="set4-chk1" type="checkbox" />
+                                <label for="set4-chk1">항상</label>
+                              </div>
+                              <div class="ui checkbox primary-chkbox md c-bluesky">
+                                <input id="set4-chk2" type="checkbox" />
+                                <label for="set4-chk2">객체만 가능</label>
+                              </div>
                             </div>
-                            <div class="ui checkbox primary-chkbox md c-bluesky">
-                              <input id="set4-chk2" type="checkbox" />
-                              <label for="set4-chk2">객체만 가능</label>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //data-tbl -->
                 </div>
-                <!-- //data-tbl -->
+                <!-- //bind -->
                 <div class="set-content-btn-group">
                   <button class="ui primary basic button rounded">저장</button>
                 </div>
               </section>
               <section class="set-content5" data-set-view="set5">
-                <em>학습 파일명 관리</em>
-                <div class="data-tbl">
-                  <table>
-                    <colgroup>
-                      <col style="width: 100px" />
-                      <col />
-                    </colgroup>
-                    <tbody>
-                      <tr>
-                        <th>학습 파일명</th>
-                        <td>
-                          <div class="ui input rounded" style="width: 250px">
-                            <input type="text" />
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="bind">
+                  <em>학습 파일명 관리</em>
+                  <!-- 240120: 테이블 수정 -->
+                  <div class="data-tbl">
+                    <table>
+                      <colgroup>
+                        <col style="width: 100px" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>학습 파일명</th>
+                          <td>
+                            <div class="input-bind">
+                              <div class="ui input rounded">
+                                <input type="text" />
+                              </div>
+                              <button class="ui secondary basic button rounded">조회</button>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //data-tbl -->
                 </div>
-                <!-- //data-tbl -->
+                <!-- //bind -->
                 <div class="set-content-btn-group">
-                  <button class="ui secondary basic button rounded">조회</button>
                   <button class="ui primary basic button rounded">저장</button>
                 </div>
               </section>
               <section class="set-content6" data-set-view="set6">
-                <em>핸드오버 적용 설정</em>
-                <div class="data-tbl">
-                  <table>
-                    <colgroup>
-                      <col style="width: 130px" />
-                      <col />
-                    </colgroup>
-                    <tbody>
-                      <tr>
-                        <th>카메라 채널 선택</th>
-                        <td>
-                          <div class="select-bind">
-                            <div class="selectbox-wrap rounded">
-                              <select>
-                                <option value="">전체</option>
-                                <option value="">아이템1</option>
-                                <option value="">아이템2</option>
-                                <option value="">아이템3</option>
-                              </select>
+                <div class="bind">
+                  <em>핸드오버 적용 설정</em>
+                  <div class="data-tbl">
+                    <table>
+                      <colgroup>
+                        <col style="width: 130px" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>카메라 채널 선택</th>
+                          <td>
+                            <div class="select-bind">
+                              <div class="selectbox-wrap rounded">
+                                <select>
+                                  <option value="">전체</option>
+                                  <option value="">아이템1</option>
+                                  <option value="">아이템2</option>
+                                  <option value="">아이템3</option>
+                                </select>
+                              </div>
+                              <button class="ui secondary basic button rounded">조회</button>
                             </div>
-                            <button class="ui secondary basic button rounded">조회</button>
-                          </div>
-                          <!-- //select-bind -->
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>HandOver Mode</th>
-                        <td>
-                          <div class="chk-bind">
-                            <div class="ui checkbox primary-chkbox md c-bluesky">
-                              <input id="set6-chk1" type="checkbox" />
-                              <label for="set6-chk1">적용</label>
+                            <!-- //select-bind -->
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>HandOver Mode</th>
+                          <td>
+                            <div class="chk-bind">
+                              <div class="ui checkbox primary-chkbox md c-bluesky">
+                                <input id="set6-chk1" type="checkbox" />
+                                <label for="set6-chk1">적용</label>
+                              </div>
+                              <div class="ui checkbox primary-chkbox md c-bluesky">
+                                <input id="set6-chk2" type="checkbox" />
+                                <label for="set6-chk2">미적용</label>
+                              </div>
                             </div>
-                            <div class="ui checkbox primary-chkbox md c-bluesky">
-                              <input id="set6-chk2" type="checkbox" />
-                              <label for="set6-chk2">미적용</label>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //data-tbl -->
                 </div>
-                <!-- //data-tbl -->
+                <!-- //bind -->
                 <div class="set-content-btn-group">
                   <button class="ui primary basic button rounded">저장</button>
                 </div>
               </section>
               <section class="set-content7" data-set-view="set7">
-                <em>검지결과 전송 모드 설정</em>
-                <div class="data-tbl">
-                  <table>
-                    <colgroup>
-                      <col style="width: 130px" />
-                      <col />
-                    </colgroup>
-                    <tbody>
-                      <tr>
-                        <th>SERVER IP</th>
-                        <td>
-                          <div class="ui input rounded" style="width: 300px">
-                            <input type="text" />
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>SERVER PORT</th>
-                        <td>
-                          <div class="ui input rounded" style="width: 300px">
-                            <input type="text" />
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="bind">
+                  <em>검지결과 전송 모드 설정</em>
+                  <div class="data-tbl">
+                    <table>
+                      <colgroup>
+                        <col style="width: 130px" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>SERVER IP</th>
+                          <td>
+                            <div class="ui input rounded">
+                              <input type="text" />
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>SERVER PORT</th>
+                          <td>
+                            <div class="ui input rounded">
+                              <input type="text" />
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //data-tbl -->
                 </div>
-                <!-- //data-tbl -->
+                <!-- //bind -->
                 <div class="set-content-btn-group">
                   <button class="ui secondary basic button rounded">조회</button>
                   <button class="ui primary basic button rounded">저장</button>
                 </div>
               </section>
               <section class="set-content8" data-set-view="set8">
-                <em>영상 표출 내 객체 Boxing 설정</em>
-                <div class="data-tbl">
-                  <table>
-                    <colgroup>
-                      <col style="width: 130px" />
-                      <col />
-                    </colgroup>
-                    <tbody>
-                      <tr>
-                        <th>카메라 채널 선택</th>
-                        <td>
-                          <div class="select-bind">
-                            <div class="selectbox-wrap rounded">
-                              <select>
-                                <option value="">전체</option>
-                                <option value="">아이템1</option>
-                                <option value="">아이템2</option>
-                                <option value="">아이템3</option>
-                              </select>
+                <div class="bind">
+                  <em>영상 표출 내 객체 Boxing 설정</em>
+                  <div class="data-tbl">
+                    <table>
+                      <colgroup>
+                        <col style="width: 130px" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>카메라 채널 선택</th>
+                          <td>
+                            <div class="select-bind">
+                              <div class="selectbox-wrap rounded">
+                                <select>
+                                  <option value="">전체</option>
+                                  <option value="">아이템1</option>
+                                  <option value="">아이템2</option>
+                                  <option value="">아이템3</option>
+                                </select>
+                              </div>
+                              <button class="ui secondary basic button rounded">조회</button>
                             </div>
-                            <button class="ui secondary basic button rounded">조회</button>
-                          </div>
-                          <!-- //select-bind -->
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>객체 정보 전송 모드</th>
-                        <td>
-                          <div class="chk-bind">
-                            <div class="ui checkbox primary-chkbox md c-bluesky">
-                              <input id="set8-chk1" type="checkbox" />
-                              <label for="set8-chk1">미표시</label>
+                            <!-- //select-bind -->
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>객체 정보 전송 모드</th>
+                          <td>
+                            <div class="chk-bind">
+                              <div class="ui checkbox primary-chkbox md c-bluesky">
+                                <input id="set8-chk1" type="checkbox" />
+                                <label for="set8-chk1">미표시</label>
+                              </div>
+                              <div class="ui checkbox primary-chkbox md c-bluesky">
+                                <input id="set8-chk2" type="checkbox" />
+                                <label for="set8-chk2">표시</label>
+                              </div>
                             </div>
-                            <div class="ui checkbox primary-chkbox md c-bluesky">
-                              <input id="set8-chk2" type="checkbox" />
-                              <label for="set8-chk2">표시</label>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //data-tbl -->
                 </div>
-                <!-- //data-tbl -->
+                <!-- //bind -->
                 <div class="set-content-btn-group">
+                  <button class="ui secondary basic button rounded">조회</button>
                   <button class="ui primary basic button rounded">저장</button>
                 </div>
               </section>
               <section class="set-content9" data-set-view="set9">
-                <em>이미지파일 생성 설정</em>
-                <div class="data-tbl">
-                  <table>
-                    <colgroup>
-                      <col style="width: 130px" />
-                      <col />
-                    </colgroup>
-                    <tbody>
-                      <tr>
-                        <th>카메라 채널 선택</th>
-                        <td>
-                          <div class="select-bind">
-                            <div class="selectbox-wrap rounded">
-                              <select>
-                                <option value="">전체</option>
-                                <option value="">아이템1</option>
-                                <option value="">아이템2</option>
-                                <option value="">아이템3</option>
-                              </select>
+                <div class="bind">
+                  <em>이미지파일 생성 설정</em>
+                  <div class="data-tbl">
+                    <table>
+                      <colgroup>
+                        <col style="width: 130px" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>카메라 채널 선택</th>
+                          <td>
+                            <div class="select-bind">
+                              <div class="selectbox-wrap rounded">
+                                <select>
+                                  <option value="">전체</option>
+                                  <option value="">아이템1</option>
+                                  <option value="">아이템2</option>
+                                  <option value="">아이템3</option>
+                                </select>
+                              </div>
+                              <button class="ui secondary basic button rounded">조회</button>
                             </div>
-                            <button class="ui secondary basic button rounded">조회</button>
-                          </div>
-                          <!-- //select-bind -->
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>이미지 생성 모드</th>
-                        <td>
-                          <div class="chk-bind">
-                            <div class="ui checkbox primary-chkbox md c-bluesky">
-                              <input id="set9-chk1" type="checkbox" />
-                              <label for="set9-chk1">종료</label>
+                            <!-- //select-bind -->
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>이미지 생성 모드</th>
+                          <td>
+                            <div class="chk-bind">
+                              <div class="ui checkbox primary-chkbox md c-bluesky">
+                                <input id="set9-chk1" type="checkbox" />
+                                <label for="set9-chk1">종료</label>
+                              </div>
+                              <div class="ui checkbox primary-chkbox md c-bluesky">
+                                <input id="set9-chk2" type="checkbox" />
+                                <label for="set9-chk2">시작</label>
+                              </div>
                             </div>
-                            <div class="ui checkbox primary-chkbox md c-bluesky">
-                              <input id="set9-chk2" type="checkbox" />
-                              <label for="set9-chk2">시작</label>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //data-tbl -->
                 </div>
-                <!-- //data-tbl -->
+                <!-- //bind -->
                 <div class="set-content-btn-group">
+                  <button class="ui secondary basic button rounded">조회</button>
                   <button class="ui primary basic button rounded">저장</button>
                 </div>
               </section>
