@@ -2105,52 +2105,6 @@ body ::-webkit-scrollbar-track {
   border-bottom-right-radius: 0.5rem;
 }
 
-.radio-btn-stack-list-container li + li {
-  margin-top: 0.4rem;
-}
-.radio-btn-stack-list-container label {
-  position: relative;
-  display: block;
-}
-.radio-btn-stack-list-container label input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-.radio-btn-stack-list-container label input:checked + .txt {
-  background: #f8f8f8;
-}
-.radio-btn-stack-list-container label .txt {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  gap: 0 3.3rem;
-  padding: 0 1rem 0 2rem;
-  line-height: 2.9rem;
-  border-radius: 0.5rem;
-  border: 1px solid #e8e8e8;
-  font-size: 1.6rem;
-  color: #727272;
-  background: #fff;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
-}
-
 /* 지도에서 사용하는 UI */
 .map-iconbar-container {
   position: absolute;
@@ -6311,12 +6265,47 @@ body.is-notify-position-adjust #notify.bottom-left {
   -ms-flex-line-pack: start;
       align-content: flex-start;
   gap: 0 3.6rem;
-  margin-top: -0.6rem;
+  padding-top: 0.8rem;
 }
 .list-left-right-wrap .list-container {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+.list-left-right-wrap .list-container:last-child {
+  height: 71.9rem;
+  padding: 3rem 4rem;
+  border-radius: 1rem;
+  background: #f8f8f8;
+}
+.list-left-right-wrap .list-container:last-child .tit-bind .tit {
+  color: #5285aa;
+}
+.list-left-right-wrap .list-container:last-child .tit-bind .ui.button.basic.primary.rounded {
+  width: 5.6rem;
+  line-height: 2.9rem;
+  font-size: 1.6rem;
+  background: #5285aa !important;
+}
+.list-left-right-wrap .list-container:last-child .selectbox-wrap.rounded.xs select {
+  min-width: auto;
+  padding-left: 1.2rem;
+  padding-right: 0;
+  text-align: left;
+  border-color: #cbcbcb;
+}
+.list-left-right-wrap .list-container:last-child .data-tbl-very {
+  border-radius: 0.5rem;
+  border: 1px solid #e8e8e8;
+}
+.list-left-right-wrap .list-container:last-child .data-tbl-very .ui.basic.table thead th {
+  padding: 0.75rem 0 !important;
+  background: #e2e9ee;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.list-left-right-wrap .list-container:last-child .data-tbl-very .ui.basic.table tbody td {
+  background: #fff;
 }
 .list-left-right-wrap .list-container .size2 {
   display: -webkit-box;
@@ -6355,10 +6344,13 @@ body.is-notify-position-adjust #notify.bottom-left {
           align-items: flex-start;
   -ms-flex-line-pack: start;
       align-content: flex-start;
-  gap: 0.7rem 0;
+  gap: 3.85rem 0;
 }
 .list-left-right-wrap .list-container .size3 > article {
   width: 100%;
+}
+.list-left-right-wrap .list-container .size3 > article:nth-child(2) .ui.basic.table tbody td {
+  padding-block: 1rem;
 }
 .list-left-right-wrap .list-container .tit-bind {
   display: -webkit-box;
@@ -6371,15 +6363,12 @@ body.is-notify-position-adjust #notify.bottom-left {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding-bottom: 1rem;
-}
-.list-left-right-wrap .list-container .tit-bind.only-tit {
-  height: 4.1rem;
+  margin-bottom: 1.1rem;
 }
 .list-left-right-wrap .list-container .tit-bind .tit {
   display: block;
@@ -6396,22 +6385,34 @@ body.is-notify-position-adjust #notify.bottom-left {
 .list-left-right-wrap .list-container .data-tbl-very.height-auto {
   height: auto;
 }
+.list-left-right-wrap .list-container .data-tbl-very.height-auto .ui.basic.table tbody td {
+  padding-block: 0.7rem;
+}
 .list-left-right-wrap .list-container .data-tbl-very.height-type1 {
-  height: 62.4rem;
+  height: 68rem;
 }
 .list-left-right-wrap .list-container .data-tbl-very.height-type2 {
-  height: 44.57rem;
+  height: 43.5rem;
+  background: #fff;
 }
 .list-left-right-wrap .list-container .data-tbl-very.height-type2 .ui.basic.table tbody td {
-  padding-top: 0.82rem;
-  padding-bottom: 0.83rem;
+  padding-block: 0.59rem;
+}
+.list-left-right-wrap .list-container .data-tbl-very.height-type3 {
+  height: 31.6rem;
+  background: #fff;
+}
+.list-left-right-wrap .list-container .data-tbl-very.height-type3 .ui.basic.table tbody tr.active {
+  background: #f8f8f8;
+}
+.list-left-right-wrap .list-container .data-tbl-very.height-type3 .ui.basic.table tbody td {
+  cursor: pointer;
 }
 .list-left-right-wrap .list-container .ui.basic.table thead th {
-  padding: 1.1rem 0 !important;
+  padding: 0.9rem 0 !important;
 }
 .list-left-right-wrap .list-container .ui.basic.table tbody td {
-  padding-top: 1.224rem;
-  padding-bottom: 1.225rem;
+  padding-block: 0.995rem;
 }
 .list-left-right-wrap .list-container .ui.basic.table tbody td .ui.input.rounded.xs {
   display: block;
@@ -6420,6 +6421,7 @@ body.is-notify-position-adjust #notify.bottom-left {
   line-height: 2.5rem;
   font-size: 1.6rem;
   color: #727272;
+  border-color: #cbcbcb;
 }
 .list-left-right-wrap .list-container .selectbox-wrap.rounded.xs select {
   padding-top: 0.35rem;
@@ -6428,9 +6430,8 @@ body.is-notify-position-adjust #notify.bottom-left {
   text-align: center;
   background-size: 0.8rem 0.5rem;
 }
-.list-left-right-wrap .radio-btn-stack-list-container {
-  overflow-y: auto;
-  height: 34.8rem;
+.list-left-right-wrap .list-container .paging-group {
+  margin-top: 2.3rem;
 }
 
 /* 로그인/ID, pw 찾기 */
@@ -6954,6 +6955,12 @@ body.is-notify-position-adjust #notify.bottom-left {
   position: absolute;
   top: 0;
   left: 2.2rem;
+}
+.gnb .aside .btn-bell.active {
+  color: #ffe298;
+}
+.gnb .aside .btn-bell.active::before {
+  background-image: url(/base/images/icon_noti_yellow.png);
 }
 .gnb .aside .btn-bell.outbreak-active::after {
   content: "";

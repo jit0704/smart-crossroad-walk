@@ -116,8 +116,7 @@
                 <section class="size3">
                   <article>
                     <div class="tit-bind">
-                      <em class="tit">시나리오 코드 선택</em>
-                      <a href="#" class="ui primary basic button rounded">적용</a>
+                      <em class="tit">시나리오 동작 코드</em>
                     </div>
                     <!-- //tit-bind -->
                     <div class="data-tbl-very border-bot0 height-auto">
@@ -141,7 +140,20 @@
                             <td>등기신호</td>
                             <td>CVIB</td>
                             <td>0011000</td>
-                            <td>code.vm.4</td>
+                            <td>
+                              <!-- 240124: 셀렉트박스로 변경 -->
+                              <div class="selectbox-wrap rounded xs">
+                                <select style="width: 50px">
+                                  <option value="">1</option>
+                                  <option value="">2</option>
+                                  <option value="">3</option>
+                                  <option value="">4</option>
+                                  <option value="">5</option>
+                                  <option value="">6</option>
+                                  <option value="">7</option>
+                                </select>
+                              </div>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -182,39 +194,46 @@
                     <!-- //data-tbl-very -->
                   </article>
                   <article>
-                    <div class="tit-bind only-tit">
+                    <div class="tit-bind">
                       <em class="tit">동작 코드 목록</em>
+                      <!-- 240124: 기능 버튼 추가 -->
+                      <span>
+                        <button type="button" class="ui primary basic button rounded">초기화</button>
+                        <button type="button" class="ui primary basic button rounded">적용</button>
+                      </span>
                     </div>
                     <!-- //tit-bind -->
-                    <ul class="radio-btn-stack-list-container">
-                      <li>
-                        <label>
-                          <input type="radio" name="code" />
-                          <span class="txt">
-                            <i>code.vm.1</i>
-                            <em>안전운전 캠페인</em>
-                          </span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="radio" name="code" />
-                          <span class="txt">
-                            <i>code.vm.2</i>
-                            <em>대기자 알림, 안전운전 지시</em>
-                          </span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="radio" name="code" />
-                          <span class="txt">
-                            <i>code.vm.3</i>
-                            <em>보행신호 연장 알림, 보행자 존재 알림, 안전운전 지시</em>
-                          </span>
-                        </label>
-                      </li>
-                    </ul>
+
+                    <!-- 240124: 동작 코드 목록 리스트 테이블로 변경 -->
+                    <div class="data-tbl-very height-type3">
+                      <table class="ui very basic table">
+                        <colgroup>
+                          <col style="width: 110px" />
+                          <col />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>코드 명</th>
+                            <th>코드 내용</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>code.vm.1</td>
+                            <td>안전운전 캠페인</td>
+                          </tr>
+                          <tr class="active">
+                            <td>code.vm.2</td>
+                            <td>대기자 알림, 안전운전 지시</td>
+                          </tr>
+                          <tr>
+                            <td>code.vm.3</td>
+                            <td>보행신호 연장 알림, 보행자 존재 알림, 안전운전 지시</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- //data-tbl-very -->
                   </article>
                 </section>
               </div>

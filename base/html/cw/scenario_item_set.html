@@ -107,7 +107,7 @@
                 </div>
                 <!-- //data-tbl-very -->
 
-                <div class="paging-group" include-html="/base/html/common/paging.html"></div>
+                <!-- <div class="paging-group" include-html="/base/html/common/paging.html"></div> -->
                 <!-- //paging-group -->
               </div>
               <!-- //list-container -->
@@ -117,7 +117,6 @@
                   <article>
                     <div class="tit-bind">
                       <em class="tit">시나리오 시설물 종류</em>
-                      <a href="#" class="ui primary basic button rounded">적용</a>
                     </div>
                     <!-- //tit-bind -->
                     <div class="data-tbl-very border-bot0 height-auto">
@@ -140,7 +139,8 @@
                             <td>CVIB</td>
                             <td>
                               <div class="selectbox-wrap rounded xs">
-                                <select style="width: 100px">
+                                <!-- 240124: 셀렉트박스 너비값 수정 -->
+                                <select style="width: 50px">
                                   <option value="">1</option>
                                   <option value="">2</option>
                                   <option value="">3</option>
@@ -158,8 +158,10 @@
                     <!-- //data-tbl-very -->
                   </article>
                   <article>
-                    <div class="tit-bind only-tit">
+                    <!-- 240124: 적용 버튼 추가 -->
+                    <div class="tit-bind">
                       <em class="tit">시나리오 항목 정의</em>
+                      <button type="button" class="ui primary basic button rounded">적용</button>
                     </div>
                     <!-- //tit-bind -->
                     <div class="data-tbl-very height-type2">
