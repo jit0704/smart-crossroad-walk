@@ -531,8 +531,9 @@
 .stats-container .filter-grouop .date-group input {
   height: 3rem;
 }
-.main-stats-container .filter-grouop .ui.primary-chkbox.md label,
-.stats-container .filter-grouop .ui.primary-chkbox.md label {
+.main-stats-container .filter-grouop .ui.primary-chkbox label,
+.stats-container .filter-grouop .ui.primary-chkbox label {
+  padding-left: 2.3rem;
   font-size: 1.6rem;
 }
 .main-stats-container .filter-grouop .btn-data-search,
@@ -2519,7 +2520,7 @@
       align-content: center;
   gap: 0 4.7rem;
 }
-.image-reco-set-view > [class*=set-content] .chk-bind .ui.primary-chkbox.md label {
+.image-reco-set-view > [class*=set-content] .chk-bind .ui.primary-chkbox label {
   color: #999999;
   font-size: 1.4rem;
   font-weight: 700;

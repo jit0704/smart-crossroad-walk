@@ -1181,23 +1181,35 @@ body ::-webkit-scrollbar-track {
   font-size: 1.8rem;
 }
 .ui.primary-chkbox {
-  min-width: 2.5rem;
-  min-height: 2.2rem;
-  line-height: 2.2rem;
+  min-width: 1.6rem;
+  min-height: 1.6rem;
+  line-height: 1.6rem;
 }
 .ui.primary-chkbox input[type=checkbox] {
-  width: 2.5rem;
-  height: 2.2rem;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.ui.primary-chkbox input[type=checkbox]:active ~ label, .ui.primary-chkbox input[type=checkbox]:focus ~ label {
+  color: #727272;
+}
+.ui.primary-chkbox label {
+  color: #727272;
+}
+.ui.primary-chkbox label:hover {
+  color: #727272;
+}
+.ui.primary-chkbox label:hover::before {
+  border-color: #cbcbcb;
 }
 .ui.primary-chkbox label::before {
-  width: 2.2rem;
-  height: 2.2rem;
-  border: 2px solid #c6c6c6;
-  border-radius: 3px;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 2px solid #cbcbcb;
+  border-radius: 2px;
 }
 .ui.primary-chkbox input:focus ~ label:before {
   background: #fff;
-  border-color: #c6c6c6;
+  border-color: #cbcbcb;
 }
 .ui.primary-chkbox input:checked ~ label:before,
 .ui.primary-chkbox input:checked:focus ~ label:before {
@@ -1211,59 +1223,24 @@ body ::-webkit-scrollbar-track {
 }
 .ui.primary-chkbox.c-navy input:checked ~ label:after {
   content: "";
-  width: 2.55rem;
-  height: 2.25rem;
-  background-image: url("/base/images/icon_checkbox_navy.png");
+  width: 1.6rem;
+  height: 1.6rem;
+  background-image: url("/base/images/icon_checkbox_v2.png");
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-size: contain;
+  background-size: cover;
 }
 .ui.primary-chkbox.c-bluesky input:checked ~ label:after {
   content: "";
-  width: 2.5rem;
-  height: 2.2rem;
-  background-image: url("/base/images/icon_checkbox.png");
+  width: 1.6rem;
+  height: 1.6rem;
+  background-image: url("/base/images/icon_checkbox_v2.png");
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-size: contain;
-}
-.ui.primary-chkbox.txt-none.md {
-  width: 2rem;
-  height: 1.8rem;
-}
-.ui.primary-chkbox.txt-none.md label::before,
-.ui.primary-chkbox.txt-none.md input[type=checkbox] {
-  width: 2rem;
-  height: 1.8rem;
-}
-.ui.primary-chkbox.txt-none.md.c-bluesky input:checked ~ label:after {
-  content: "";
-  width: 2rem;
-  height: 1.8rem;
   background-size: cover;
 }
 .ui.primary-chkbox.txt-none label {
   font-size: 0;
-}
-.ui.primary-chkbox.md {
-  min-width: 1.8rem;
-  min-height: 1.8rem;
-  line-height: 1.8rem;
-}
-.ui.primary-chkbox.md label {
-  padding-left: 2.6rem;
-  font-size: 1.8rem;
-  color: #727272;
-}
-.ui.primary-chkbox.md label::before,
-.ui.primary-chkbox.md input[type=checkbox] {
-  width: 1.8rem;
-  height: 1.8rem;
-}
-.ui.primary-chkbox.md.c-bluesky input:checked ~ label:after {
-  content: "";
-  width: 2rem;
-  height: 1.8rem;
 }
 .ui.primary-chkbox.xs {
   min-width: 1.1rem;
@@ -3850,26 +3827,6 @@ body ::-webkit-scrollbar-track {
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.accordion-chk-list-title .ui.primary-chkbox {
-  min-width: 2rem;
-  min-height: 1.8rem;
-  line-height: 2rem;
-}
-.accordion-chk-list-title .ui.primary-chkbox input[type=checkbox] {
-  width: 1.8rem;
-  height: 1.8rem;
-}
-.accordion-chk-list-title .ui.primary-chkbox label::before {
-  content: "";
-  width: 1.8rem !important;
-  height: 1.8rem;
-  display: inline-block;
-  vertical-align: top;
-}
-.accordion-chk-list-title .ui.primary-chkbox label::after {
-  width: 2rem;
-  height: 1.8rem;
-}
 .accordion-chk-list-title button {
   position: relative;
   padding-left: 0;
@@ -3896,6 +3853,9 @@ body ::-webkit-scrollbar-track {
 .accordion-chk-list-content {
   display: none;
 }
+.accordion-chk-list-content .accordion-chk-list-title.checked > button {
+  padding-left: 1.65rem;
+}
 .accordion-chk-list-content .accordion-chk-list-title .ui.primary-chkbox {
   padding-left: 4rem;
 }
@@ -3903,24 +3863,18 @@ body ::-webkit-scrollbar-track {
   left: 4rem;
 }
 .accordion-chk-list-content .accordion-chk-list-title button {
-  padding-left: 2rem;
+  padding-left: 0.2rem;
 }
 .accordion-chk-list-content .accordion-chk-list-title button::after {
   right: 4rem;
 }
 .accordion-chk-list-content .ui.primary-chkbox {
   display: block;
-  min-width: 2rem;
-  min-height: 1.8rem;
   -webkit-transition: background 0.2s;
   transition: background 0.2s;
 }
 .accordion-chk-list-content .ui.primary-chkbox + .ui.primary-chkbox {
   border-top: 1px solid #e8e8e8;
-}
-.accordion-chk-list-content .ui.primary-chkbox input[type=checkbox] {
-  width: 2rem;
-  height: 1.8rem;
 }
 .accordion-chk-list-content .ui.primary-chkbox label {
   padding-left: 0;
@@ -3932,10 +3886,6 @@ body ::-webkit-scrollbar-track {
   position: static;
   display: inline-block;
   vertical-align: -0.3rem;
-}
-.accordion-chk-list-content .ui.primary-chkbox label::after {
-  width: 2rem;
-  height: 1.8rem;
 }
 .accordion-chk-list-content + .accordion-chk-list-content {
   border-top: 1px solid #e8e8e8;
@@ -3950,10 +3900,10 @@ body ::-webkit-scrollbar-track {
   line-height: 3.5rem;
 }
 .accordion-chk-list-content .accordion-chk-list-content .ui.primary-chkbox label::before {
-  margin-right: 0.8rem;
+  margin-right: 1rem;
 }
 .accordion-chk-list-content .accordion-chk-list-content .ui.primary-chkbox label::after {
-  top: 0.8rem;
+  top: 1rem;
 }
 
 /* 데이터 테이블 목록 */
@@ -4319,6 +4269,9 @@ body ::-webkit-scrollbar-track {
 .modal-body .data-tbl tbody td {
   padding-bottom: 0.8rem;
 }
+.modal-body .data-tbl tbody td .ui.checkbox {
+  vertical-align: middle;
+}
 .modal-body .data-tbl.view {
   padding-top: 2rem;
 }
@@ -4332,8 +4285,7 @@ body ::-webkit-scrollbar-track {
 }
 .modal-body .data-tbl.view tbody tr.is-chkbox th,
 .modal-body .data-tbl.view tbody tr.is-chkbox td {
-  padding-top: 0.73rem;
-  padding-bottom: 0.73rem;
+  padding: 0.98rem 1.5rem;
 }
 .modal-body .data-tbl-very {
   margin: 0 2.5rem;
@@ -4351,17 +4303,7 @@ body ::-webkit-scrollbar-track {
   font-size: 1.4rem;
 }
 .modal-body .data-tbl-very .ui.very.basic.table.is-chkbox tbody td {
-  padding: 0.85rem 1.3rem !important;
-}
-.modal-body .data-tbl-very .ui.very.basic.table.is-chkbox tbody td .ui.primary-chkbox {
-  min-width: 2.2rem;
-}
-.modal-body .data-tbl-very .ui.very.basic.table.is-chkbox tbody td .ui.primary-chkbox label::before {
-  width: 2rem;
-  height: 2rem;
-}
-.modal-body .data-tbl-very .ui.very.basic.table.is-chkbox tbody td .ui.primary-chkbox input:checked ~ label:after {
-  width: 2.2rem;
+  padding: 0.9rem 1.3rem !important;
 }
 .modal-body .button-group-only-right {
   margin: 1.5rem 2.5rem 0;
