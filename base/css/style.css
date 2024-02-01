@@ -665,6 +665,15 @@ body ::-webkit-scrollbar-track {
   background-position: 0 0;
   background-size: contain;
 }
+.ico-hindrance4 {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-image: url("/base/images/icon_hindrance4.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
 .ico-los-a {
   display: inline-block;
   width: 4.6rem;
@@ -1216,7 +1225,9 @@ body ::-webkit-scrollbar-track {
   display: none;
 }
 .ui.primary-chkbox.c-navy label::before {
+  border-width: 0.1rem;
   border-color: #1e5f8d;
+  background: transparent;
 }
 .ui.primary-chkbox.c-navy input:focus ~ label:before {
   border-color: #1e5f8d;
@@ -1384,8 +1395,15 @@ body ::-webkit-scrollbar-track {
   line-height: 100%;
 }
 .ui.basic.table.is-fncbtn tbody td {
-  padding-top: 0.9rem;
-  padding-bottom: 0.9rem;
+  padding-top: 0.74rem;
+  padding-bottom: 0.735rem;
+}
+.ui.basic.table.is-fncbtn tbody td .ui.button.basic.secondary {
+  padding: 0 1.2rem;
+  line-height: 2.1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-color: #727272 !important;
 }
 .ui.basic.table.is-fncbtn2 tbody td {
   padding-top: 0.76rem;
@@ -1396,8 +1414,15 @@ body ::-webkit-scrollbar-track {
   line-height: 100%;
 }
 .ui.basic.table.is-fncbtn-and-chkbox tbody td {
-  padding-top: 0.812rem;
-  padding-bottom: 0.812rem;
+  padding-top: 0.74rem;
+  padding-bottom: 0.735rem;
+}
+.ui.basic.table.is-fncbtn-and-chkbox tbody td .ui.button.basic.secondary {
+  padding: 0 1.2rem;
+  line-height: 2.1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-color: #727272 !important;
 }
 .ui.basic.table.is-fncbtn-and-chkbox2 thead th {
   padding: 0 !important;
@@ -1412,8 +1437,7 @@ body ::-webkit-scrollbar-track {
   line-height: 100%;
 }
 .ui.basic.table.is-chkbox-fncbtn-none tbody td {
-  padding-top: 1.51rem;
-  padding-bottom: 1.51rem;
+  padding-block: 1.145rem;
   line-height: 100%;
 }
 .ui.basic.table.is-data-grid thead tr th {
@@ -1456,7 +1480,7 @@ body ::-webkit-scrollbar-track {
   background: #ebf8ff;
 }
 .ui.basic.table tbody td {
-  padding: 1.015rem 1.4rem;
+  padding: 0.895rem 1.4rem;
   line-height: normal;
   font-size: 1.6rem;
   color: #727272;
@@ -3464,6 +3488,19 @@ body ::-webkit-scrollbar-track {
   -ms-flex-line-pack: center;
       align-content: center;
 }
+.button-function-group.t-margin {
+  margin-top: 4.5rem;
+}
+.button-function-group.align-right {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.button-function-group.align-right .ui.button.basic {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+}
 .button-function-group .ui.buttons {
   gap: 0 0.4rem;
 }
@@ -3473,6 +3510,9 @@ body ::-webkit-scrollbar-track {
   line-height: 2.9rem;
   font-size: 1.6rem;
   border-radius: 0.5rem;
+}
+.button-function-group .ui.button.basic.secondary.rounded.lrpd {
+  padding-inline: 1.6rem;
 }
 .button-function-group .ui.primary.basic.button.rounded {
   min-width: 11.3rem;
@@ -3909,7 +3949,7 @@ body ::-webkit-scrollbar-track {
 /* 데이터 테이블 목록 */
 .data-tbl-very {
   overflow-y: auto;
-  height: 61.6rem;
+  height: 66.5rem;
   border: 1px solid #e8e8e8;
 }
 .data-tbl-very thead {
@@ -6147,11 +6187,21 @@ body.is-notify-position-adjust #notify.bottom-left {
   background: #f8f8f8;
 }
 .ly-setting.type2 > .data-tbl-very {
-  height: 66.3rem;
+  height: 68.1rem;
+}
+.ly-setting.type2 > .data-tbl-very .ui.basic.table.is-default tbody td {
+  padding-block: 0.945rem;
 }
 .ly-setting.type2 > .data-tbl-very .ui.basic.table.is-fncbtn tbody td {
-  padding-top: 0.914rem;
-  padding-bottom: 0.915rem;
+  padding-top: 0.79rem;
+  padding-bottom: 0.8rem;
+}
+.ly-setting.type2 > .data-tbl-very .ui.basic.table.is-fncbtn-and-chkbox tbody td {
+  padding-top: 0.79rem;
+  padding-bottom: 0.8rem;
+}
+.ly-setting.type2 .paging-group {
+  margin-top: 2.3rem;
 }
 .ly-setting .ui.breadcrumb {
   padding: 3.6rem 0 1.7rem;
@@ -6166,7 +6216,7 @@ body.is-notify-position-adjust #notify.bottom-left {
   table-layout: fixed;
 }
 .ly-setting > .data-tbl-very .ui.very.basic.table thead th {
-  height: 4.7rem;
+  height: 4.1rem;
   padding: 0 !important;
 }
 .ly-setting > .data-tbl-very .ui.very.basic.table tbody td {
@@ -8580,11 +8630,11 @@ body.is-notify-position-adjust #notify.bottom-left {
   margin-bottom: 1.5rem;
 }
 .dashboard-reform-body .accidents-current .chart-wrap {
-  width: 12.4rem;
+  width: 12rem;
 }
 .dashboard-reform-body .accidents-current-legend {
   overflow-y: auto;
-  width: 16.7rem;
+  width: 18.3rem;
   max-height: 15.6rem;
 }
 .dashboard-reform-body .accidents-current-legend::-webkit-scrollbar {
@@ -9258,8 +9308,64 @@ body.is-notify-position-adjust #notify.bottom-left {
   height: 25.6rem;
 }
 .dashboard-status-content2 .status-chart-bind {
-  width: 82.8rem;
+  min-width: 82.8rem;
   height: 19.5rem;
+}
+.dashboard-status-content2 .status-chart-bind.type2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  gap: 0 3rem;
+}
+.dashboard-status-content2 .status-chart-bind .custom-legend {
+  min-width: 7.3rem;
+}
+.dashboard-status-content2 .status-chart-bind .custom-legend button {
+  display: block;
+  padding: 0;
+  line-height: 1.8rem;
+  text-align: left;
+  font-size: 1.4rem;
+  color: #727272;
+}
+.dashboard-status-content2 .status-chart-bind .custom-legend button + button {
+  margin-top: 0.4rem;
+}
+.dashboard-status-content2 .status-chart-bind .custom-legend button::before {
+  content: "";
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.4rem;
+  vertical-align: -0.1rem;
+  border-radius: 99.9rem;
+}
+.dashboard-status-content2 .status-chart-bind .custom-legend .item1::before {
+  background: #f67676;
+}
+.dashboard-status-content2 .status-chart-bind .custom-legend .item2::before {
+  background: #50ddd5;
+}
+.dashboard-status-content2 .status-chart-bind .custom-legend .item3::before {
+  background: #03a0fc;
+}
+.dashboard-status-content2 .status-chart-bind .custom-legend .item4::before {
+  background: #5350dd;
+}
+.dashboard-status-content2 .status-chart-bind .custom-legend .item5::before {
+  background: #545454;
 }
 .dashboard-status-content3 {
   height: 31.1rem;
