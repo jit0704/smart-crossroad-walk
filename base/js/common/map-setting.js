@@ -10,6 +10,10 @@ var mapSetting = {
     mapSetting.radar();
     mapSetting.signalLight();
     mapSetting.los();
+    // 240203: straight, left-turn, straight-left 함수 추가
+    mapSetting.straight();
+    mapSetting.leftTurn();
+    mapSetting.straightLeft();
   },
   common: function () {
     // 지도 화면 우측 중간에 있는 system-nav에서 클릭된 아이콘 상태를 ly-map div태그에 class명으로 추가해주는 함수.
@@ -29,13 +33,37 @@ var mapSetting = {
       $this.toggleClass('active');
       $('.system-nav .ico-set-item').not(this).removeClass('active');
 
+      // 1depth 신호등 버튼이 활성화 상태일 경우를 제외한 나머지 아이콘 클릭시 2depth 신호등 메뉴 숨김 처리
+      if (!$this.parent('.sub-signal-light').hasClass('active')) {
+        $('.system-nav.sub-signal-light').removeClass('active');
+      }
+
       systemNavState($this, '.camera.active', 'ico-set-camera-active');
       systemNavState($this, '.radar.active', 'ico-set-radar-active');
-      systemNavState($this, '.signal-light.active', 'ico-set-signal-light-active');
+      systemNavState($this, '.signal-light.cw.active', 'ico-set-signal-light-active'); // 240203 수정
       systemNavState($this, '.los.active', 'ico-set-los-active');
+      // 240203 추가
+      systemNavState($this, '.signal-light2.active', 'ico-set-signal-light-active2');
+      systemNavState($this, '.straight.active', 'ico-set-straight-active');
+      systemNavState($this, '.left-turn.active', 'ico-set-left-turn-active');
+      systemNavState($this, '.straight-left.active', 'ico-set-straight-left-active');
 
       // 카메라/레이더/신호등/LOS 추가 메뉴 팝업 숨김
       $('.js-add-branch').fadeOut(200);
+    });
+
+    // 240203 추가: /is/map_setting.html 우축 중간 시스템 네비게이션 - 신호등 클릭시 서브 아이콘 버튼에 대한 클릭 이벤트
+    $('.system-nav .signal-light.is-sub-icon').on('click', function () {
+      if ($(this).hasClass('active')) {
+        $('.system-nav.sub-signal-light').addClass('active');
+      } else {
+        $('.system-nav.sub-signal-light').removeClass('active');
+      }
+    });
+    $('.system-nav.sub-signal-light .ico-set-item').on('click', function () {
+      var $this = $(this);
+      // 1depth 신호등 버튼에 active클래스 유지
+      $('.system-nav .signal-light.is-sub-icon').addClass('active');
     });
 
     // 메뉴 팝업의 취소 버튼 눌렀을때 메뉴 팝업 숨김
@@ -282,7 +310,8 @@ var mapSetting = {
   signalLight: function () {
     // 마우스 커서가 신호등 아이콘으로 바뀌었을때 커서 위에 안내 말풍선 노출
     var $speechBubbleSignalLight = $('.speech-bubble-guide4');
-    $(document).on('mousemove', '.ly-map.ico-set-signal-light-active', function (e) {
+    // 240203: selector 클래스명 추가
+    $(document).on('mousemove', '.ly-map.ico-set-signal-light-active, .ly-map.ico-set-signal-light-active2', function (e) {
       var x = e.clientX - $(this).offset().left;
       var y = e.clientY - $(this).offset().top;
       $speechBubbleSignalLight.css({
@@ -292,17 +321,25 @@ var mapSetting = {
     });
 
     // 특정 요소에 마우스가 올라갔을때 말풍선 숨김
-    var targetParent = '.ly-map.ico-set-signal-light-active';
-    var targetTag = `${targetParent} .ui.dropdown.area-box, ${targetParent} .map-type, ${targetParent} .system-nav, ${targetParent} .menu-popup`;
-    $(document).on('mouseenter', targetTag, function () {
-      $speechBubbleSignalLight.hide();
-    });
-    $(document).on('mouseleave', targetTag, function () {
-      $speechBubbleSignalLight.show();
-    });
+    // 240203 수정
+    var targetParents = ['.ly-map.ico-set-signal-light-active', '.ly-map.ico-set-signal-light-active2'];
+    var targetElements = ['.ui.dropdown.area-box', '.map-type', '.system-nav', '.menu-popup'];
+    var targetSelector = targetParents.map((parent) => targetElements.map((element) => `${parent} ${element}`).join(', ')).join(', ');
+    $(document).on(
+      {
+        mouseenter: function () {
+          $speechBubbleSignalLight.hide();
+        },
+        mouseleave: function () {
+          $speechBubbleSignalLight.show();
+        },
+      },
+      targetSelector,
+    );
 
     // 마우스 커서가 신호등 아이콘으로 바뀌었을때 지도 위 클릭 이벤트: 메뉴 팝업 생성
-    $(document).on('click', '.ico-set-signal-light-active .ol-viewport', function (e) {
+    // 240203: selector 클래스명 추가
+    $(document).on('click', '.ico-set-signal-light-active .ol-viewport, .ico-set-signal-light-active2 .ol-viewport', function (e) {
       var x = e.clientX + 20;
       var y = e.clientY + 20;
       $('.js-add-branch').fadeIn(200).css({
@@ -503,6 +540,103 @@ var mapSetting = {
         // LOS 아이콘 위치를 원복함
         $(`.ico-map-above-los[data-name="${menuData}"]`).draggable('destroy').removeClass('moving').css($iconLosPosInit);
       }
+    });
+  },
+  // 240203: straight, left-turn, straight-left 함수 추가
+  straight: function () {
+    // 마우스 커서가 신호등 아이콘으로 바뀌었을때 커서 위에 안내 말풍선 노출
+    var $speechBubbleStraight = $('.speech-bubble-guide4');
+    $(document).on('mousemove', '.ly-map.ico-set-straight-active', function (e) {
+      var x = e.clientX - $(this).offset().left;
+      var y = e.clientY - $(this).offset().top;
+      $speechBubbleStraight.css({
+        left: x - 10,
+        top: y - 75,
+      });
+    });
+
+    // 특정 요소에 마우스가 올라갔을때 말풍선 숨김
+    var targetParent = '.ly-map.ico-set-straight-active';
+    var targetTag = `${targetParent} .ui.dropdown.area-box, ${targetParent} .map-type, ${targetParent} .system-nav, ${targetParent} .menu-popup`;
+    $(document).on('mouseenter', targetTag, function () {
+      $speechBubbleStraight.hide();
+    });
+    $(document).on('mouseleave', targetTag, function () {
+      $speechBubbleStraight.show();
+    });
+
+    // 마우스 커서가 레이더 아이콘으로 바뀌었을때 지도 위 클릭 이벤트: 메뉴 팝업 생성
+    $(document).on('click', '.ico-set-straight-active .ol-viewport', function (e) {
+      var x = e.clientX + 20;
+      var y = e.clientY + 20;
+      $('.js-add-branch').fadeIn(200).css({
+        left: x,
+        top: y,
+      });
+    });
+  },
+  leftTurn: function () {
+    // 마우스 커서가 신호등 아이콘으로 바뀌었을때 커서 위에 안내 말풍선 노출
+    var $speechBubbleleftTurn = $('.speech-bubble-guide4');
+    $(document).on('mousemove', '.ly-map.ico-set-left-turn-active', function (e) {
+      var x = e.clientX - $(this).offset().left;
+      var y = e.clientY - $(this).offset().top;
+      $speechBubbleleftTurn.css({
+        left: x - 10,
+        top: y - 75,
+      });
+    });
+
+    // 특정 요소에 마우스가 올라갔을때 말풍선 숨김
+    var targetParent = '.ly-map.ico-set-left-turn-active';
+    var targetTag = `${targetParent} .ui.dropdown.area-box, ${targetParent} .map-type, ${targetParent} .system-nav, ${targetParent} .menu-popup`;
+    $(document).on('mouseenter', targetTag, function () {
+      $speechBubbleleftTurn.hide();
+    });
+    $(document).on('mouseleave', targetTag, function () {
+      $speechBubbleleftTurn.show();
+    });
+
+    // 마우스 커서가 레이더 아이콘으로 바뀌었을때 지도 위 클릭 이벤트: 메뉴 팝업 생성
+    $(document).on('click', '.ico-set-left-turn-active .ol-viewport', function (e) {
+      var x = e.clientX + 20;
+      var y = e.clientY + 20;
+      $('.js-add-branch').fadeIn(200).css({
+        left: x,
+        top: y,
+      });
+    });
+  },
+  straightLeft: function () {
+    // 마우스 커서가 신호등 아이콘으로 바뀌었을때 커서 위에 안내 말풍선 노출
+    var $speechBubbleStraightLeft = $('.speech-bubble-guide4');
+    $(document).on('mousemove', '.ly-map.ico-set-straight-left-active', function (e) {
+      var x = e.clientX - $(this).offset().left;
+      var y = e.clientY - $(this).offset().top;
+      $speechBubbleStraightLeft.css({
+        left: x - 10,
+        top: y - 75,
+      });
+    });
+
+    // 특정 요소에 마우스가 올라갔을때 말풍선 숨김
+    var targetParent = '.ly-map.ico-set-straight-left-active';
+    var targetTag = `${targetParent} .ui.dropdown.area-box, ${targetParent} .map-type, ${targetParent} .system-nav, ${targetParent} .menu-popup`;
+    $(document).on('mouseenter', targetTag, function () {
+      $speechBubbleStraightLeft.hide();
+    });
+    $(document).on('mouseleave', targetTag, function () {
+      $speechBubbleStraightLeft.show();
+    });
+
+    // 마우스 커서가 레이더 아이콘으로 바뀌었을때 지도 위 클릭 이벤트: 메뉴 팝업 생성
+    $(document).on('click', '.ico-set-straight-left-active .ol-viewport', function (e) {
+      var x = e.clientX + 20;
+      var y = e.clientY + 20;
+      $('.js-add-branch').fadeIn(200).css({
+        left: x,
+        top: y,
+      });
     });
   },
 };

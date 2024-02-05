@@ -1065,6 +1065,13 @@
   color: #1e5f8d;
   font-weight: 700;
 }
+.crossroads-flow-traffic .flow-traffic-data {
+  overflow-y: auto;
+  max-height: 26.9rem;
+}
+.crossroads-flow-traffic .flow-traffic-data::-webkit-scrollbar {
+  width: 0.4rem;
+}
 .crossroads-flow-traffic .flow-traffic-data li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1085,6 +1092,8 @@
   text-align: center;
 }
 .crossroads-flow-traffic .flow-traffic-data li:first-child {
+  position: sticky;
+  top: 0;
   border-radius: 0.5rem;
   background: #1e5f8d;
 }

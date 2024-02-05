@@ -522,6 +522,15 @@ body ::-webkit-scrollbar-track {
   background-position: 0 0;
   background-size: contain;
 }
+.ico-set-signal-light2 {
+  display: inline-block;
+  width: 2.9rem;
+  height: 1.3rem;
+  background-image: url("/base/images/set_icon_signallight2.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
 .ico-set-signal-light.cw {
   width: 1.3rem;
   height: 2.1rem;
@@ -535,6 +544,33 @@ body ::-webkit-scrollbar-track {
   width: 1.5rem;
   height: 2rem;
   background-image: url("/base/images/set_icon_los.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-set-straight {
+  display: inline-block;
+  width: 1.5rem;
+  height: 2rem;
+  background-image: url("/base/images/set_icon_straight.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-set-left-turn {
+  display: inline-block;
+  width: 2.1rem;
+  height: 2rem;
+  background-image: url("/base/images/set_icon_left_turn.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.ico-set-straight-left {
+  display: inline-block;
+  width: 2.2rem;
+  height: 2.4rem;
+  background-image: url("/base/images/set_icon_straight_left.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -6088,6 +6124,32 @@ body.is-notify-position-adjust #notify.bottom-left {
 .ly-map .system-nav > .ico-set-item.active em {
   color: #03a0fc;
 }
+.ly-map .system-nav.sub-signal-light {
+  right: 5.8rem;
+  margin-top: 1.3rem;
+  display: none;
+}
+.ly-map .system-nav.sub-signal-light.active {
+  display: block;
+}
+.ly-map .system-nav.sub-signal-light .ico-set-item > em {
+  color: #cbcbcb;
+}
+.ly-map .system-nav.sub-signal-light .ico-set-item.active .ico-set-signal-light2 {
+  background-image: url(/base/images/set_icon_signallight2_active.png);
+}
+.ly-map .system-nav.sub-signal-light .ico-set-item.active .ico-set-straight {
+  background-image: url(/base/images/set_icon_straight_active.png);
+}
+.ly-map .system-nav.sub-signal-light .ico-set-item.active .ico-set-left-turn {
+  background-image: url(/base/images/set_icon_left_turn_active.png);
+}
+.ly-map .system-nav.sub-signal-light .ico-set-item.active .ico-set-straight-left {
+  background-image: url(/base/images/set_icon_straight_left_active.png);
+}
+.ly-map .system-nav.sub-signal-light .ico-set-item.active > em {
+  color: #6abf60;
+}
 .ly-map.ico-set-cr-active {
   cursor: url(/base/images/set_icon_cr_violet.png) 23.5 59, auto;
 }
@@ -6127,6 +6189,38 @@ body.is-notify-position-adjust #notify.bottom-left {
   cursor: url(/base/images/icon_los_opacity.png) 21 17, auto;
 }
 .ly-map.ico-set-los-active .speech-bubble-guide5 {
+  top: -100px;
+  left: -100px;
+  display: block;
+}
+.ly-map.ico-set-signal-light-active2 {
+  cursor: url(/base/images/icon_signal_light_opacity.png) 40 17, auto;
+}
+.ly-map.ico-set-signal-light-active2 .speech-bubble-guide4 {
+  top: -100px;
+  left: -100px;
+  display: block;
+}
+.ly-map.ico-set-straight-active {
+  cursor: url(/base/images/set_icon_straight_active.png) 15 17, auto;
+}
+.ly-map.ico-set-straight-active .speech-bubble-guide4 {
+  top: -100px;
+  left: -100px;
+  display: block;
+}
+.ly-map.ico-set-left-turn-active {
+  cursor: url(/base/images/set_icon_left_turn_active.png) 25 17, auto;
+}
+.ly-map.ico-set-left-turn-active .speech-bubble-guide4 {
+  top: -100px;
+  left: -100px;
+  display: block;
+}
+.ly-map.ico-set-straight-left-active {
+  cursor: url(/base/images/set_icon_straight_left_active.png) 30 17, auto;
+}
+.ly-map.ico-set-straight-left-active .speech-bubble-guide4 {
   top: -100px;
   left: -100px;
   display: block;
@@ -9328,6 +9422,10 @@ body.is-notify-position-adjust #notify.bottom-left {
   -ms-flex-line-pack: start;
       align-content: flex-start;
   gap: 0 3rem;
+}
+.dashboard-status-content2 .status-chart-bind .chart-tie {
+  width: calc(100% - 7.3rem);
+  height: 19.5rem;
 }
 .dashboard-status-content2 .status-chart-bind .custom-legend {
   min-width: 7.3rem;
