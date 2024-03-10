@@ -1143,6 +1143,151 @@
           flex: 0 0 auto;
 }
 
+/* 교차로 유출입 교통량: 5차로 */
+.flow-stats-wrap.lane5 .flow-stats-detail {
+  height: 20.3rem;
+}
+.flow-stats-wrap.lane5 .flow-stats-detail .road-name {
+  letter-spacing: -0.05rem;
+}
+.flow-stats-wrap.lane5 .flow-stats-detail .arrow {
+  height: 6rem;
+}
+.flow-stats-wrap.lane5 .flow-stats-detail .arrow button {
+  height: 6rem;
+}
+.flow-stats-wrap.lane5 .flow-stats-detail .num em {
+  line-height: 2.6rem;
+}
+.flow-stats-wrap.lane5 .flow-stats-mid .flow-stats-detail:first-child {
+  -webkit-transform: rotate(-72deg) translateY(9.7rem);
+      -ms-transform: rotate(-72deg) translateY(9.7rem);
+          transform: rotate(-72deg) translateY(9.7rem);
+  -webkit-transform-origin: left 71%;
+      -ms-transform-origin: left 71%;
+          transform-origin: left 71%;
+}
+.flow-stats-wrap.lane5 .flow-stats-mid .flow-stats-detail:last-child {
+  -webkit-transform: rotate(72deg) translateY(0rem);
+      -ms-transform: rotate(72deg) translateY(0rem);
+          transform: rotate(72deg) translateY(0rem);
+  margin-right: 14.2rem;
+  -webkit-transform-origin: right 92%;
+      -ms-transform-origin: right 92%;
+          transform-origin: right 92%;
+}
+.flow-stats-wrap.lane5 .flow-stats-bot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 20.7rem;
+}
+.flow-stats-wrap.lane5 .flow-stats-bot .flow-stats-detail:first-child {
+  -webkit-transform-origin: 34% 71%;
+      -ms-transform-origin: 34% 71%;
+          transform-origin: 34% 71%;
+  -webkit-transform: rotate(36deg);
+      -ms-transform: rotate(36deg);
+          transform: rotate(36deg);
+}
+.flow-stats-wrap.lane5 .flow-stats-bot .flow-stats-detail:last-child {
+  -webkit-transform-origin: 66% 71%;
+      -ms-transform-origin: 66% 71%;
+          transform-origin: 66% 71%;
+  -webkit-transform: rotate(-36deg);
+      -ms-transform: rotate(-36deg);
+          transform: rotate(-36deg);
+}
+.flow-stats-wrap.lane6 .flow-stats-detail {
+  height: 18rem;
+}
+.flow-stats-wrap.lane6 .flow-stats-detail .road-name {
+  letter-spacing: -0.05rem;
+}
+.flow-stats-wrap.lane6 .flow-stats-detail .arrow {
+  height: 5rem;
+}
+.flow-stats-wrap.lane6 .flow-stats-detail .arrow button {
+  height: 5rem;
+}
+.flow-stats-wrap.lane6 .flow-stats-detail .num em {
+  line-height: 2.4rem;
+}
+.flow-stats-wrap.lane6 .flow-stats-top {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.flow-stats-wrap.lane6 .flow-stats-mid {
+  height: 18.3rem;
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.flow-stats-wrap.lane6 .flow-stats-mid.assort1 .flow-stats-detail:first-child {
+  -webkit-transform: rotate(-60deg) translateY(5.7rem);
+      -ms-transform: rotate(-60deg) translateY(5.7rem);
+          transform: rotate(-60deg) translateY(5.7rem);
+  -webkit-transform-origin: -9% 55%;
+      -ms-transform-origin: -9% 55%;
+          transform-origin: -9% 55%;
+}
+.flow-stats-wrap.lane6 .flow-stats-mid.assort1 .flow-stats-detail:last-child {
+  -webkit-transform: rotate(60deg) translateY(0rem);
+      -ms-transform: rotate(60deg) translateY(0rem);
+          transform: rotate(60deg) translateY(0rem);
+  margin-right: 10rem;
+  -webkit-transform-origin: 108% 83%;
+      -ms-transform-origin: 108% 83%;
+          transform-origin: 108% 83%;
+}
+.flow-stats-wrap.lane6 .flow-stats-mid.assort2 .flow-stats-detail .road-name {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.flow-stats-wrap.lane6 .flow-stats-mid.assort2 .flow-stats-detail:first-child {
+  -webkit-transform: rotate(-120deg) translateY(0);
+      -ms-transform: rotate(-120deg) translateY(0);
+          transform: rotate(-120deg) translateY(0);
+  -webkit-transform-origin: 45% 51%;
+      -ms-transform-origin: 45% 51%;
+          transform-origin: 45% 51%;
+  margin-top: -1rem;
+}
+.flow-stats-wrap.lane6 .flow-stats-mid.assort2 .flow-stats-detail:last-child {
+  -webkit-transform: rotate(120deg) translateY(0rem);
+      -ms-transform: rotate(120deg) translateY(0rem);
+          transform: rotate(120deg) translateY(0rem);
+  margin-right: 14rem;
+  -webkit-transform-origin: 89% 71%;
+      -ms-transform-origin: 89% 71%;
+          transform-origin: 89% 71%;
+}
+.flow-stats-wrap.lane6 .flow-stats-bot {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.flow-stats-wrap.lane6 .flow-stats-bot .flow-stats-detail {
+  -webkit-transform: translateX(0.1rem);
+      -ms-transform: translateX(0.1rem);
+          transform: translateX(0.1rem);
+  margin-top: -7.4rem;
+}
+
 /* 공통 영역을 특정 화면에서만 수정이 되어서 style 재정의...
   - 교차로 통계
   - 교차로 상세 통계

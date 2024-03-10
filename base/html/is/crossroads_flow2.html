@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>교차로 유출입 교통량</title>
+    <script src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="/base/js/lib/jquery-ui.min.js"></script>
+    <script src="/base/js/lib/semantic.min.js"></script>
+    <script src="/base/js/lib/jquery.modal.min.js"></script>
+    <!-- includeHTML.js : 퍼블리싱 확인용 include -->
+    <script src="/base/js/common/includeHTML.js"></script>
+    <script src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" href="/base/css/common.css" />
+    <link rel="stylesheet" href="/base/css/is.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- GNB -->
+      <nav class="gnb" include-html="/base/html/common/gnb.html"></nav>
+
+      <main class="ly-container">
+        <div class="ly-sub bg-gray">
+          <div class="ly-setting">
+            <div class="ui breadcrumb">
+              <i class="home icon"></i>
+              <i class="right angle icon divider"></i>
+              <span class="section">교차로</span>
+              <i class="right angle icon divider"></i>
+              <span class="section">통계</span>
+              <i class="right angle icon divider"></i>
+              <div class="section">교차로 유출입 교통량</div>
+            </div>
+            <!-- //breadcrumb -->
+            <div class="crossroads-flow-container">
+              <section class="filter-grouop" style="height: 30px"></section>
+              <!-- //filter-grouop -->
+
+              <section class="crossroads-flow-view">
+                <div class="crossroads-flow-board">
+                  <em class="tit">태릉입구역</em>
+                  <!-- 방위가 없는 경우 클래스명 정의
+                              동: none-east
+                              서: none-west
+                              남: none-south
+                              북: none-north
+                  -->
+                  <div class="flow-stats-wrap lane5">
+                    <!-- 
+                      <화살표 아이콘 색상 변경시 class명 참고>
+                        - 직선(위/아래) 화살표(블루) : active-blue
+                        - 직선(위/아래) 화살표(짙은회색) : active-darkgray
+                        - 좌/우회전                     : active
+                      <숫자 카운트 활성화 class명 참고>
+                        - active (짙은회색)
+                        - active-blue (블루)
+                    -->
+                    <div class="flow-stats-top">
+                      <div class="flow-stats-detail">
+                        <span class="road-name"><em>천안브라운스톤아파트114동앞 방면</em></span>
+                        <span class="arrow">
+                          <button type="button" class="flow-straight out active-blue"><b class="screen-out">유출</b></button>
+                          <button type="button" class="flow-straight in active-darkgray"><b class="screen-out">유입</b></button>
+                        </span>
+                        <!-- //arrow -->
+                        <span class="num">
+                          <em class="active-blue">86,589</em>
+                          <em>102,174</em>
+                        </span>
+                        <!-- //num -->
+                        <span class="arrow">
+                          <button type="button" class="flow-turn right active"><b class="screen-out">우회전</b></button>
+                          <button type="button" class="flow-straight strt active-darkgray"><b class="screen-out">진입방향</b></button>
+                          <button type="button" class="flow-turn left active"><b class="screen-out">좌회전</b></button>
+                        </span>
+                        <!-- //arrow -->
+                        <span class="num">
+                          <em class="active">86,589</em>
+                          <em>102,174</em>
+                          <em>102,174</em>
+                        </span>
+                        <!-- //num -->
+                      </div>
+                      <!-- //flow-stats-detail -->
+                    </div>
+                    <!-- //flow-stats-top -->
+                    <div class="flow-stats-mid">
+                      <div class="flow-stats-detail">
+                        <span class="road-name"><em>천안브라운스톤아파트114동앞 방면</em></span>
+                        <span class="arrow">
+                          <button type="button" class="flow-straight out"><b class="screen-out">유출</b></button>
+                          <button type="button" class="flow-straight in"><b class="screen-out">유입</b></button>
+                        </span>
+                        <!-- //arrow -->
+                        <span class="num">
+                          <em>86,589</em>
+                          <em>102,174</em>
+                        </span>
+                        <!-- //num -->
+                        <span class="arrow">
+                          <button type="button" class="flow-turn right"><b class="screen-out">우회전</b></button>
+                          <button type="button" class="flow-straight strt"><b class="screen-out">진입방향</b></button>
+                          <button type="button" class="flow-turn left"><b class="screen-out">좌회전</b></button>
+                        </span>
+                        <!-- //arrow -->
+                        <span class="num">
+                          <em>86,589</em>
+                          <em>102,174</em>
+                          <em>102,174</em>
+                        </span>
+                        <!-- //num -->
+                      </div>
+                      <!-- //flow-stats-detail -->
+                      <div class="flow-stats-detail">
+                        <span class="road-name"><em>천안브라운스톤아파트114동앞 방면</em></span>
+                        <span class="arrow">
+                          <button type="button" class="flow-straight out"><b class="screen-out">유출</b></button>
+                          <button type="button" class="flow-straight in"><b class="screen-out">유입</b></button>
+                        </span>
+                        <!-- //arrow -->
+                        <span class="num">
+                          <em>86,589</em>
+                          <em>102,174</em>
+                        </span>
+                        <!-- //num -->
+                        <span class="arrow">
+                          <button type="button" class="flow-turn right"><b class="screen-out">우회전</b></button>
+                          <button type="button" class="flow-straight strt"><b class="screen-out">진입방향</b></button>
+                          <button type="button" class="flow-turn left"><b class="screen-out">좌회전</b></button>
+                        </span>
+                        <!-- //arrow -->
+                        <span class="num">
+                          <em>86,589</em>
+                          <em>102,174</em>
+                          <em>102,174</em>
+                        </span>
+                        <!-- //num -->
+                      </div>
+                      <!-- //flow-stats-detail -->
+                    </div>
+                    <!-- //flow-stats-mid -->
+                    <div class="flow-stats-bot">
+                      <div class="flow-stats-detail reverse">
+                        <span class="num">
+                          <em>86,589</em>
+                          <em>102,174</em>
+                          <em>102,174</em>
+                        </span>
+                        <!-- //num -->
+                        <span class="arrow">
+                          <button type="button" class="flow-turn left"><b class="screen-out">좌회전</b></button>
+                          <button type="button" class="flow-straight strt"><b class="screen-out">진입방향</b></button>
+                          <button type="button" class="flow-turn right"><b class="screen-out">우회전</b></button>
+                        </span>
+                        <!-- //arrow -->
+                        <span class="num">
+                          <em>86,589</em>
+                          <em>102,174</em>
+                        </span>
+                        <!-- //num -->
+                        <span class="arrow">
+                          <button type="button" class="flow-straight in"><b class="screen-out">유입</b></button>
+                          <button type="button" class="flow-straight out"><b class="screen-out">유출</b></button>
+                        </span>
+                        <!-- //arrow -->
+                        <span class="road-name"><em>천안브라운스톤아파트114동앞 방면</em></span>
+                      </div>
+                      <!-- //flow-stats-detail -->
+                      <div class="flow-stats-detail reverse">
+                        <span class="num">
+                          <em>86,589</em>
+                          <em>102,174</em>
+                          <em>102,174</em>
+                        </span>
+                        <!-- //num -->
+                        <span class="arrow">
+                          <button type="button" class="flow-turn left"><b class="screen-out">좌회전</b></button>
+                          <button type="button" class="flow-straight strt"><b class="screen-out">진입방향</b></button>
+                          <button type="button" class="flow-turn right"><b class="screen-out">우회전</b></button>
+                        </span>
+                        <!-- //arrow -->
+                        <span class="num">
+                          <em>86,589</em>
+                          <em>102,174</em>
+                        </span>
+                        <!-- //num -->
+                        <span class="arrow">
+                          <button type="button" class="flow-straight in"><b class="screen-out">유입</b></button>
+                          <button type="button" class="flow-straight out"><b class="screen-out">유출</b></button>
+                        </span>
+                        <!-- //arrow -->
+                        <span class="road-name"><em>천안브라운스톤아파트114동앞 방면</em></span>
+                      </div>
+                      <!-- //flow-stats-detail -->
+                    </div>
+                    <!-- //flow-stats-bot -->
+                  </div>
+                  <!-- //flow-stats-wrap -->
+                </div>
+                <!-- //crossroads-flow-board -->
+              </section>
+              <!-- //crossroads-flow-view -->
+            </div>
+            <!-- //crossroads-flow-container -->
+          </div>
+          <!-- //ly-setting -->
+        </div>
+        <!-- //ly-sub -->
+      </main>
+      <!-- //ly-container -->
+
+      <footer class="ly-copyright c-white" include-html="/base/html/common/footer.html"></footer>
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      // 달력 날짜 초기화
+      function dateInit() {
+        return new Date().toISOString().substring(0, 10);
+      }
+      $('[data-start="date-start"]').attr('value', dateInit());
+      $('[data-end="date-end"]').attr('value', dateInit());
+    </script>
+  </body>
+</html>
